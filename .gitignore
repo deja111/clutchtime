@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# Pravi se iznova pri svakom pokretanju, ne treba čuvati na GitHub-u
+podaci/log.txt
+izvestaji/
+
+# Lične beleške i slike
+Claude outputs/
