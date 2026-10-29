@@ -324,17 +324,17 @@ def rezime(a, protivnik_naziv):
 
 # ----------------------------- HTML -----------------------------
 CSS = """
-:root{--bg:#f6f7f9;--card:#fff;--ink:#16191d;--ink2:#4a5058;--muted:#7a818b;--line:#e3e6ea;
---accent:#2a62d4;--accent-soft:#e8effc;--good:#1f7a4a;--bad:#b3372b;--bar:#2a62d4;--bar-avg:#9aa3ad}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--ink:#eceef1;--ink2:#b5bbc3;
---muted:#8a919b;--line:#2c3138;--accent:#7aa4f5;--accent-soft:#1f2a40;--good:#5cc28a;--bad:#ef7d70;
---bar:#7aa4f5;--bar-avg:#5d6570}}
+:root{--bg:#0d1015;--card:#161a21;--card2:#1d222b;--ink:#f2f4f7;--ink2:#b8bfc9;--muted:#858e9a;--line:#262c36;
+--accent:#ff7a1a;--accent-soft:#2b1e13;--good:#3fcf8e;--bad:#ff6b5e;--bar:#ff7a1a;--bar-avg:#6b7480}
+@media (prefers-color-scheme:light){:root{--bg:#f3f4f6;--card:#fff;--card2:#f7f8fa;--ink:#14171c;--ink2:#474e58;
+--muted:#78808b;--line:#e2e5ea;--accent:#d9590a;--accent-soft:#fff0e4;--good:#1b7a48;--bad:#b9322a;
+--bar:#e86a14;--bar-avg:#a0a8b2}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
-h1{font-size:26px;margin:0 0 4px}
+h1{font-size:28px;font-weight:800;letter-spacing:-.01em;margin:0 0 4px}
 .sub{color:var(--muted);margin:0 0 24px}
-h2{font-size:18px;margin:28px 0 12px}
+h2{font-size:18px;font-weight:800;margin:28px 0 12px}
 .highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
 .box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
 .box h3{margin:0 0 8px;font-size:15px}
@@ -373,9 +373,9 @@ border-radius:0 6px 6px 0;font-size:13.5px}
 .rezime p{margin:2px 0}
 .bedz{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.04em;padding:1px 6px;border-radius:4px;
 margin-left:6px;vertical-align:1px;white-space:nowrap}
-.st-ne{background:#fde2df;color:#9b2c20}.st-up{background:#fdf0cf;color:#7a5600}.st-vr{background:#dcf3e5;color:#1d6b40}
-@media (prefers-color-scheme:dark){.st-ne{background:#4a1f1b;color:#ffb4a9}.st-up{background:#45390f;color:#f5d27a}
-.st-vr{background:#173d29;color:#8fdcae}}
+.st-ne{background:#4a1f1b;color:#ffb4a9}.st-up{background:#45390f;color:#f5d27a}.st-vr{background:#173d29;color:#8fdcae}
+@media (prefers-color-scheme:light){.st-ne{background:#fde2df;color:#9b2c20}.st-up{background:#fdf0cf;color:#7a5600}
+.st-vr{background:#dcf3e5;color:#1d6b40}}
 .van{font-size:13px;margin:-4px 0 10px;color:var(--ink2)}
 .ostali{font-size:13px;color:var(--ink2);margin-top:6px}
 footer{margin-top:36px;color:var(--muted);font-size:12.5px}
@@ -498,8 +498,7 @@ def telo_najave(sezona, kolo, mecevi, timovi, skor, analize_po_mecu, sve_analize
             for a in igraci) + "</ol>"
 
     delovi = [f"""<h1>Najava {kolo}. kola</h1>
-<p class="sub">Evroliga {sezona}-{str(sezona + 1)[-2:]} · {len(mecevi)} utakmica ·
-napravljeno {datetime.now().strftime('%d.%m.%Y. %H:%M')}</p>
+<p class="sub">Evroliga {sezona}-{str(sezona + 1)[-2:]}</p>
 <div class="highlights">
   <div class="box"><h3>U najboljoj formi</h3>{lista(u_formi, 'up')}</div>
   <div class="box"><h3>Najveći pad forme</h3>{lista(pad, 'down')}</div>

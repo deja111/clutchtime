@@ -9,10 +9,12 @@ Pokretanje (Command Prompt, iz foldera Projekat):
 
 Stranice:
     index.html          - početna: pretraga, MVP kola, lideri, forma, rezultati
-    najava.html         - najava narednog kola
+    utakmice.html       - naredno kolo (samo mečevi) i rezultati po kolima
+    forma.html          - forma igrača: poslednjih 5 utakmica prema sezoni
+    najava.html         - samo preusmerava na utakmice.html (stara adresa)
     lideri.html         - lideri sezone po kategorijama
     utakmica/<id>.html  - box score svake odigrane utakmice tekuće sezone
-    igraci.html         - svi igrači tekuće sezone (pretraga i sortiranje)
+    igraci.html         - svi igrači tekuće sezone (pretraga i sortiranje) + kartice igrača narednog kola
     igrac/<id>.html     - profil igrača: proseci, grafikoni, utakmice, po sezonama
     timovi.html         - tabela lige
     tim/<sifra>.html    - tim: igrači, rezultati i raspored
@@ -38,15 +40,21 @@ NAZIV_SAJTA = "EuroCourt"
 
 DODATNI_CSS = """
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.nav{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav{background:var(--card);border-bottom:2px solid var(--accent);position:sticky;top:0;z-index:50}
 .nav .in{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;gap:18px;align-items:center}
-.nav .logo{font-weight:800;color:var(--ink);margin-right:auto;white-space:nowrap}
-.nav .meni{display:flex;gap:16px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.nav .logo{font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);margin-right:auto;white-space:nowrap}
+.nav .logo::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--accent);
+margin-right:8px;vertical-align:0}
+.nav .logo:hover{text-decoration:none}
+.nav .meni{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .nav .meni::-webkit-scrollbar{display:none}
-.nav a.akt{font-weight:700;color:var(--ink)}
+.nav .meni a{color:var(--ink2);font-weight:600;padding:6px 10px;border-radius:6px}
+.nav .meni a:hover{color:var(--ink);background:var(--card2);text-decoration:none}
+.nav .meni a.akt{color:var(--on-accent);background:var(--accent)}
 @media (max-width:640px){.nav .in{flex-direction:column;align-items:flex-start;gap:6px;padding:8px 16px}
-.nav .meni{width:100%;gap:14px}}
-.hero{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 18px;margin:8px 0 14px}
+.nav .meni{width:100%;gap:2px}.nav .meni a{padding:5px 8px}}
+.hero{background:linear-gradient(135deg,var(--accent-soft),var(--card) 60%);border:1px solid var(--line);
+border-radius:12px;padding:22px 18px;margin:8px 0 14px}
 .hero h1{margin:0 0 4px}
 .pretraga{position:relative;margin-top:14px}
 .pretraga input{width:100%;font:inherit;font-size:17px;padding:12px 14px;border:1px solid var(--line);
@@ -59,8 +67,8 @@ border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);z-index:40;max-height:3
 .rezultati span{color:var(--muted);font-size:13px}
 .mvp{display:flex;gap:16px;align-items:center;background:linear-gradient(135deg,var(--accent-soft),var(--card));
 border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
-:root{--on-accent:#fff}
-@media (prefers-color-scheme:dark){:root{--on-accent:#10141a}}
+:root{--on-accent:#140d06}
+@media (prefers-color-scheme:light){:root{--on-accent:#fff}}
 .mvp .krug{flex:none;width:64px;height:64px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:flex;
 align-items:center;justify-content:center;font-weight:800;font-size:22px}
 .mvp .oznaka{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2);font-weight:700}
@@ -87,7 +95,14 @@ a.mec-k:hover{border-color:var(--accent);text-decoration:none}
 .mec-k .r.pob{font-weight:700}
 .mec-k .d{color:var(--muted);font-size:12px;margin-bottom:4px}
 .naslov-sekcije{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 10px}
-.naslov-sekcije h2{margin:0;font-size:18px}
+.naslov-sekcije h2{margin:0;font-size:18px;padding-left:10px;border-left:4px solid var(--accent)}
+.mecevi{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.mec-red{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.mec-red .d{color:var(--muted);font-size:12.5px;margin-bottom:6px}
+.mec-red .t{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:16px}
+.mec-red .t small{color:var(--muted);font-weight:400;font-size:13px}
+.mec-red .st{font-size:12.5px;color:var(--ink2);margin-top:8px}
+.mec-red .vise{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600}
 .napomena{font-size:12.5px;color:var(--muted)}
 .box-glava{display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;text-align:center}
 .box-glava .tim-n{font-size:20px;font-weight:800}
@@ -158,8 +173,8 @@ if(f){var fi=function(){var q=document.getElementById('trazi').value.toLowerCase
 # ----------------------------- ZAJEDNIČKO -----------------------------
 def strana(naslov, telo, koren="", aktivno="", skripta=False, dodatak=""):
     """Okvir svake stranice: zaglavlje sa menijem, sadržaj, podnožje."""
-    meni = [("index.html", "Početna"), ("najava.html", "Naredno kolo"), ("igraci.html", "Igrači"),
-            ("timovi.html", "Timovi"), ("lideri.html", "Lideri")]
+    meni = [("index.html", "Početna"), ("utakmice.html", "Utakmice"), ("forma.html", "Forma"),
+            ("igraci.html", "Igrači"), ("timovi.html", "Timovi"), ("lideri.html", "Lideri")]
     linkovi = "".join(
         f'<a href="{koren}{h}"{" class=akt" if h == aktivno else ""}>{t}</a>' for h, t in meni)
     return f"""<!doctype html><html lang="sr"><head><meta charset="utf-8">
@@ -248,11 +263,132 @@ def tiles(z, klasa="tiles"):
 
 
 # ----------------------------- STRANICE -----------------------------
-def stranica_najava(k):
+def kartica_rezultata(k, u):
+    naziv = lambda t: k["timovi"].get(t, t)
+    dom_pob = u["poeni_domacin"] > u["poeni_gost"]
+    dt = datetime.strptime(u["datum"], "%Y-%m-%d %H:%M")
+    return (f'<a class="mec-k" href="utakmica/{u["sezona"]}-{u["sifra_utakmice"]}.html">'
+            f'<div class="d">{dt.strftime("%d.%m.")} · box score</div>'
+            f'<div class="r{" pob" if dom_pob else ""}"><span>{e(naziv(u["domacin"]))}</span><span>{u["poeni_domacin"]}</span></div>'
+            f'<div class="r{"" if dom_pob else " pob"}"><span>{e(naziv(u["gost"]))}</span><span>{u["poeni_gost"]}</span></div></a>')
+
+
+def stranica_utakmice(k, lista, utakmice):
+    """Naredno kolo (samo mečevi, bez kartica igrača) i rezultati svih odigranih kola."""
+    naziv = lambda t: k["timovi"].get(t, t)
+    skor = k["skor"]
+    po_id = {r["id"]: r for r in lista}
+
+    def status_tima(tim):
+        imena = [f'<a href="igrac/{i}.html">{e(po_id[i]["ime"])}</a>{A.bedz(i)}'
+                 for i in A.POVREDE if i in po_id and po_id[i]["tim"] == tim]
+        return f'<div class="st"><b>{e(naziv(tim))}:</b> {", ".join(imena)}</div>' if imena else ""
+
+    kartice = []
+    for m in k["mecevi"]:
+        dt = datetime.strptime(m["datum"], "%Y-%m-%d %H:%M")
+        dom, gost = m["domacin"], m["gost"]
+        kartice.append(
+            f'<div class="mec-red"><div class="d">{A.DANI[dt.weekday()]} {dt.strftime("%d.%m. u %H:%M")}</div>'
+            f'<div class="t"><a href="tim/{dom}.html">{e(naziv(dom))}</a><small>{skor[dom][0]}-{skor[dom][1]}</small></div>'
+            f'<div class="t"><a href="tim/{gost}.html">{e(naziv(gost))}</a><small>{skor[gost][0]}-{skor[gost][1]}</small></div>'
+            f'{status_tima(dom)}{status_tima(gost)}'
+            f'<a class="vise" href="igraci.html#mec-{m["sifra_utakmice"]}">Igrači ovog meča →</a></div>')
+
+    po_kolu = {}
+    for u in utakmice:
+        if u["odigrana"]:
+            po_kolu.setdefault(u["kolo"], []).append(u)
+    rezultati = "".join(
+        f'<div class="naslov-sekcije"><h2>{kolo}. kolo</h2></div><div class="traka">'
+        + "".join(kartica_rezultata(k, u) for u in sorted(po_kolu[kolo], key=lambda u: u["datum"])) + "</div>"
+        for kolo in sorted(po_kolu, reverse=True))
+
+    telo = f"""<h1>Utakmice</h1>
+<p class="sub">Evroliga {oznaka_sezone(k['sezona'])}</p>
+<div class="naslov-sekcije"><h2>Naredno kolo ({k['kolo']}.)</h2></div>
+<div class="mecevi">{''.join(kartice)}</div>
+<p class="napomena">Pored tima je skor u sezoni (pobede-porazi). Ispod su igrači sa statusom iz tabele povreda.</p>
+{rezultati}"""
+    snimi(SAJT / "utakmice.html", strana("Utakmice", telo, "", "utakmice.html"))
+    # Stara adresa najave vodi na novu stranicu (za sačuvane linkove)
+    snimi(SAJT / "najava.html", '<!doctype html><meta charset="utf-8">'
+          '<meta http-equiv="refresh" content="0;url=utakmice.html"><a href="utakmice.html">Utakmice</a>')
+
+
+def stranica_forma(k, lista):
+    """Forma: poslednjih 5 utakmica u odnosu na sezonski prosek."""
+    naziv = lambda t: k["timovi"].get(t, t)
+    redovi = []
+    for r in lista:
+        ut = k["po_sezona"][r["id"]]
+        if len(ut) < 3:
+            continue
+        f = zbirno(ut[-5:])
+        redovi.append({**r, "f": f, "razlika": f["pir"] - r["z"]["pir"]})
+    kandidati = [r for r in redovi if r["z"]["gp"] >= 4 and r["z"]["min"] >= 15]
+
+    def lista_forme(igraci, klasa, znak):
+        return "<ol>" + "".join(
+            f'<li><span class="ko"><a href="igrac/{r["id"]}.html">{e(r["ime"])}</a>{A.bedz(r["id"])} '
+            f'<small>{e(naziv(r["tim"]))}</small></span>'
+            f'<span>{broj(r["f"]["pir"])} <small class="napomena">(prosek {broj(r["z"]["pir"])})</small> '
+            f'<b class="{klasa}">{znak} {broj(abs(r["razlika"]))}</b></span></li>' for r in igraci) + "</ol>"
+    vruci = sorted(kandidati, key=lambda r: -r["razlika"])[:10]
+    hladni = sorted(kandidati, key=lambda r: r["razlika"])[:10]
+
+    tabela = "".join(
+        f'<tr><td class="l"><a href="igrac/{r["id"]}.html">{e(r["ime"])}</a>{A.bedz(r["id"])}</td>'
+        f'<td class="l"><a href="tim/{r["tim"]}.html">{e(naziv(r["tim"]))}</a></td>'
+        f'<td class="l">{e(r["poz"])}</td>'
+        f'<td data-v="{r["f"]["min"]:.2f}">{broj(r["f"]["min"])}</td>'
+        f'<td data-v="{r["f"]["pts"]:.2f}">{broj(r["f"]["pts"])}</td>'
+        f'<td data-v="{r["f"]["pir"]:.2f}"><b>{broj(r["f"]["pir"])}</b></td>'
+        f'<td data-v="{r["z"]["pir"]:.2f}">{broj(r["z"]["pir"])}</td>'
+        f'<td data-v="{r["razlika"]:.2f}" class="{"up" if r["razlika"] > 0 else "down"}">'
+        f'{"+" if r["razlika"] > 0 else ""}{broj(r["razlika"])}</td></tr>'
+        for r in sorted(redovi, key=lambda r: -r["razlika"]))
+
+    telo = f"""<h1>Forma igrača</h1>
+<p class="sub">Evroliga {oznaka_sezone(k['sezona'])} · poslednjih 5 utakmica u odnosu na sezonski prosek</p>
+<div class="mreza">
+<div class="mini"><h3>🔥 U najboljoj formi</h3>{lista_forme(vruci, 'up', '▲')}</div>
+<div class="mini"><h3>❄️ Najveći pad forme</h3>{lista_forme(hladni, 'down', '▼')}</div></div>
+<p class="napomena">PIR u poslednjih 5 utakmica. Na listama su igrači sa bar 4 utakmice i 15 minuta po meču.</p>
+<div class="naslov-sekcije"><h2>Svi igrači</h2><span class="napomena">klik na naslov kolone sortira</span></div>
+<div class="sekcija skrol" style="margin-top:0"><table class="tab sort"><thead><tr>
+<th class="l" data-k="t">Igrač</th><th class="l" data-k="t">Tim</th><th class="l" data-k="t">Poz</th>
+<th data-k="n">Min (5)</th><th data-k="n">Poeni (5)</th><th data-k="n">PIR (5)</th><th data-k="n">PIR sezona</th>
+<th data-k="n">Razlika</th></tr></thead><tbody>{tabela}</tbody></table>
+<p class="napomena">(5) = prosek poslednjih 5 utakmica. Prikazani su igrači sa bar 3 utakmice.</p></div>"""
+    snimi(SAJT / "forma.html", strana("Forma", telo, "", "forma.html", skripta=True))
+
+
+def naredno_kolo_igraci(k):
+    """Kartice igrača za svaki meč narednog kola (deo stranice Igrači)."""
     A.LINK_IGRACA = lambda i: f"igrac/{i}.html"
-    telo = A.telo_najave(k["sezona"], k["kolo"], k["mecevi"], k["timovi"], k["skor"],
-                         k["analize_po_mecu"], k["sve_analize"])
-    snimi(SAJT / "najava.html", strana(f"Najava {k['kolo']}. kola", telo, "", "najava.html"))
+    naziv = lambda t: k["timovi"].get(t, t)
+    skor, delovi = k["skor"], []
+    for m in k["mecevi"]:
+        dt = datetime.strptime(m["datum"], "%Y-%m-%d %H:%M")
+        dom, gost, s = m["domacin"], m["gost"], m["sifra_utakmice"]
+        delovi.append(f"""<details class="mec" id="mec-{s}"><summary>
+<span class="mec-naslov">{e(naziv(dom))} – {e(naziv(gost))}</span>
+<span class="mec-meta">{A.DANI[dt.weekday()]} {dt.strftime('%d.%m. u %H:%M')}</span></summary>
+<div class="mec-telo">
+{A.html_tim(dom, naziv(dom), skor, k['analize_po_mecu'][(s, dom)], naziv(gost), True)}
+{A.html_tim(gost, naziv(gost), skor, k['analize_po_mecu'][(s, gost)], naziv(dom), False)}
+</div></details>""")
+    return (f'<div class="naslov-sekcije" id="naredno-kolo"><h2>Naredno kolo ({k["kolo"]}.): igrači po utakmicama</h2></div>'
+            f'<p class="napomena">Klik na meč otvara kartice igrača: forma, kod kuće/u gostima, protiv protivnika.</p>'
+            + "".join(delovi))
+
+
+JS_OTVORI_MEC = """<script>
+function otvoriMec(){var d=location.hash&&document.getElementById(location.hash.slice(1));
+ if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView();}}
+otvoriMec();window.addEventListener('hashchange',otvoriMec);
+</script>"""
 
 
 def stranica_igraci(k, lista):
@@ -285,8 +421,10 @@ def stranica_igraci(k, lista):
 <th class="l" data-k="t">Igrač</th><th class="l" data-k="t">Tim</th><th class="l" data-k="t">Poz</th>
 <th data-k="n">UT</th><th data-k="n">Min</th><th data-k="n">Poeni</th><th data-k="n">Skok</th>
 <th data-k="n">Asist</th><th data-k="n">PIR</th><th data-k="n">TS%</th></tr></thead>
-<tbody>{''.join(redovi)}</tbody></table></div>"""
-    snimi(SAJT / "igraci.html", strana("Igrači", telo, "", "igraci.html", skripta=True))
+<tbody>{''.join(redovi)}</tbody></table></div>
+{naredno_kolo_igraci(k)}"""
+    snimi(SAJT / "igraci.html", strana("Igrači", telo, "", "igraci.html", skripta=True,
+                                       dodatak=JS_OTVORI_MEC))
 
 
 def tabela_lige(k, utakmice):
@@ -512,17 +650,9 @@ document.addEventListener('click',function(ev){if(!ev.target.closest('.pretraga'
     hladni = sorted(kandidati, key=lambda r: r["razlika"])[:5]
 
     # Trake: poslednje kolo (rezultati) i naredno kolo (raspored)
-    def kartica_rezultata(u):
-        dom_pob = u["poeni_domacin"] > u["poeni_gost"]
-        dt = datetime.strptime(u["datum"], "%Y-%m-%d %H:%M")
-        return (f'<a class="mec-k" href="utakmica/{u["sezona"]}-{u["sifra_utakmice"]}.html">'
-                f'<div class="d">{dt.strftime("%d.%m.")} · box score</div>'
-                f'<div class="r{" pob" if dom_pob else ""}"><span>{e(naziv(u["domacin"]))}</span><span>{u["poeni_domacin"]}</span></div>'
-                f'<div class="r{"" if dom_pob else " pob"}"><span>{e(naziv(u["gost"]))}</span><span>{u["poeni_gost"]}</span></div></a>')
-
     def kartica_rasporeda(u):
         dt = datetime.strptime(u["datum"], "%Y-%m-%d %H:%M")
-        return (f'<a class="mec-k" href="najava.html"><div class="d">{A.DANI[dt.weekday()]} '
+        return (f'<a class="mec-k" href="igraci.html#mec-{u["sifra_utakmice"]}"><div class="d">{A.DANI[dt.weekday()]} '
                 f'{dt.strftime("%d.%m. %H:%M")}</div><div class="r"><span>{e(naziv(u["domacin"]))}</span></div>'
                 f'<div class="r"><span>{e(naziv(u["gost"]))}</span></div></a>')
 
@@ -531,15 +661,15 @@ document.addEventListener('click',function(ev){if(!ev.target.closest('.pretraga'
 <div class="pretraga"><input id="pretraga" type="search" placeholder="Unesi ime igrača ili tima..."
 autocomplete="off" aria-label="Pretraga igrača i timova"><div class="rezultati" id="rezultati" hidden></div></div></div>
 {mvp_html}
-<div class="naslov-sekcije"><h2>Naredno kolo ({k['kolo']}.)</h2><a href="najava.html">najava za svaki meč →</a></div>
+<div class="naslov-sekcije"><h2>Naredno kolo ({k['kolo']}.)</h2><a href="utakmice.html">sve utakmice →</a></div>
 <div class="traka">{''.join(kartica_rasporeda(u) for u in k['mecevi'])}</div>
 {tabela_statusa(k, lista)}
 <div class="naslov-sekcije"><h2>Rezultati {kolo}. kola</h2><a href="timovi.html">tabela →</a></div>
-<div class="traka">{''.join(kartica_rezultata(u) for u in sorted(mecevi_kola, key=lambda u: u['datum']))}</div>
+<div class="traka">{''.join(kartica_rezultata(k, u) for u in sorted(mecevi_kola, key=lambda u: u['datum']))}</div>
 <div class="naslov-sekcije"><h2>Lideri sezone</h2><a href="lideri.html">svi lideri →</a></div>
 <div class="mreza">{mini_lideri}</div>
 <p class="napomena">Proseci po utakmici. Uslov: odigrano bar 60% utakmica svog tima.</p>
-<div class="naslov-sekcije"><h2>Forma: poslednje 3 utakmice</h2></div>
+<div class="naslov-sekcije"><h2>Forma: poslednje 3 utakmice</h2><a href="forma.html">forma svih igrača →</a></div>
 <div class="mreza">
 <div class="mini"><h3>🔥 U usponu</h3>{lista_forme(vruci, 'up', '▲')}</div>
 <div class="mini"><h3>❄️ U padu</h3>{lista_forme(hladni, 'down', '▼')}</div></div>
@@ -935,7 +1065,8 @@ def main():
     tabela = tabela_lige(k, utakmice)
     napredna_statistika(k, lista, tabela)
     stranica_pocetna(k, lista, tabela, utakmice)
-    stranica_najava(k)
+    stranica_utakmice(k, lista, utakmice)
+    stranica_forma(k, lista)
     stranica_lideri(k, lista, tabela)
     stranica_igraci(k, lista)
     stranica_timovi(k, tabela)
