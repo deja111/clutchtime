@@ -1,0 +1,5 @@
+Tvoja svakodnevna rutina za povrede:
+
+Upišeš, izmeniš ili obrišeš red u Google tabeli, sa računara ili telefona.
+Sajt se sam osveži u 8h, 15h i 19h, ako si dodao ta dva okidača u Task Scheduler. Ako ti treba odmah, pokreni pokreni_azuriranje.bat.
+Kad igrač ponovo zaigra, obriši njegov red. Ili prvo stavi Vraća se, pa obriši posle prve utakmice.

@@ -1,0 +1,8 @@
+-Izmeniti da se ne vidi ime github naloga
+-Izmeniti naziv sajta da se ne zove evroliga-statistika
+-Promeniti izgled sajta CSS
+-Promeniti menije na stranici
+-Promeniti tekst ispod Najave kola - Evroliga 2026-27 · 10 utakmica · napravljeno 24.10.2026. 10:49
+da ne pise kad je napravljeno i koliko utakmica mislim da je suvisno
+-Forme igraca staviti u menu bar
+-Sto se tice dela utakmice to staviti u menu bar al samo utakmica ne i igraci, deo sa igracima ispod te utakmice stavti u deo za igrace
