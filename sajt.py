@@ -401,6 +401,18 @@ def stranica_forma(k, lista):
 
 OCENE = {"jaka": "Jaka", "srednja": "Srednja", "slaba": "Slaba", "nema": "–"}
 
+# Brojke izmerene 30.10.2026. na 30.000+ učinaka (sezone 2024-25, 2025-26 i početak 2026-27)
+ZASTO_ISPOD = """<details class="svi-propovi"><summary>Zašto je većina predloga "ispod"?</summary>
+<div class="sekcija" style="margin-top:8px">
+<p style="margin:0 0 8px"><b>Igrači češće daju ispod svog proseka nego preko.</b> Prosek dižu retke velike
+utakmice: igrač sa prosekom 12 poena često daje 9, 10, 11, a povremeno 22. Na liniji jednakoj proseku igrača
+"preko" prolazi samo u 44-48% utakmica (kod trojki i asistencija 43-46%).</p>
+<p style="margin:0 0 8px"><b>Model nije pristrasan.</b> Na liniji za koju model kaže 50/50, igrači su je u
+prethodne dve i ovoj sezoni prešli u 49-51% slučajeva, u svim kategorijama.</p>
+<p style="margin:0"><b>Kladionice često postavljaju linije visoko</b>, jer većina igrača voli da igra "preko".
+Kad je linija iznad one koju model smatra fer, predlog je "ispod". Da li je to prava prednost ili kladionica
+zna nešto više, pokazuje tabela "Kako je model prošao".</p></div></details>"""
+
 
 def top_predlozi(rez, n=10, po_igracu=2):
     """Najbolji predlozi kola: bez sumnjivih, najviše 2 po igraču."""
@@ -584,6 +596,7 @@ utakmice i dan pre (ujutru i popodne).</p></div>
 <div class="naslov-sekcije"><h2>Top 10 predloga</h2></div>
 <div class="sekcija skrol" style="margin-top:0">{'<table class="tab">' + zaglavlje + '<tbody>' + redovi_top + '</tbody></table>'
                                                  if redovi_top else '<p style="margin:0">Model ovog puta ne vidi nijedan predlog sa prednošću.</p>'}</div>
+{ZASTO_ISPOD}
 {rezultati}
 <details class="svi-propovi"><summary>Prikaži sve propove ({len(redovi)})</summary>
 <div class="filteri" id="filter-p" style="margin-top:12px">
