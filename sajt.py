@@ -36,16 +36,33 @@ from analiza import broj, procenat, e, zbirno, datum_srb, utakmica_rec
 FOLDER = Path(__file__).parent
 BAZA = FOLDER / "podaci" / "evroliga.db"
 SAJT = FOLDER / "sajt"
-NAZIV_SAJTA = "CrunchTime"
+NAZIV_SAJTA = "ClutchTime"
+
+ZNAK = '<span class="znak">Clutch<b>Time</b></span>'  # naziv u logou, "Time" u boji akcenta
+
+# Logo: lopta kao štoperica (dugme na vrhu) - "clutch" = poslednje sekunde meča.
+# Isti crtež je i ikonica u kartici pregledača (sajt/logo.svg).
+LOGO_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+<rect x="12.5" y="0.5" width="7" height="3" rx="1.2" fill="#ff7a1a"/>
+<rect x="15" y="3" width="2" height="3.5" fill="#ff7a1a"/>
+<rect x="24.6" y="5.2" width="4" height="2.4" rx="1" transform="rotate(45 26.6 6.4)" fill="#ff7a1a"/>
+<circle cx="16" cy="19" r="12.3" fill="#ff7a1a"/>
+<g fill="none" stroke="#1a120b" stroke-width="1.5" stroke-linecap="round">
+<path d="M3.9 19h24.2M16 6.9v24.2"/>
+<path d="M7.6 10.2c3.6 4.2 3.6 13.4 0 17.6M24.4 10.2c-3.6 4.2-3.6 13.4 0 17.6"/></g>
+</svg>"""
 
 DODATNI_CSS = """
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .nav{background:var(--card);border-bottom:2px solid var(--accent);position:sticky;top:0;z-index:50}
 .nav .in{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;gap:18px;align-items:center}
-.nav .logo{font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);margin-right:auto;white-space:nowrap}
-.nav .logo::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--accent);
-margin-right:8px;vertical-align:0}
+.nav .logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:19px;letter-spacing:-.02em;
+color:var(--ink);margin-right:auto;white-space:nowrap}
+.nav .logo svg{width:28px;height:28px;flex:none}
 .nav .logo:hover{text-decoration:none}
+.znak b{color:var(--accent);font-weight:inherit}
+.hero .naslov{display:flex;align-items:center;gap:12px}
+.hero .naslov svg{width:46px;height:46px;flex:none}
 .nav .meni{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .nav .meni::-webkit-scrollbar{display:none}
 .nav .meni a{color:var(--ink2);font-weight:600;padding:6px 10px;border-radius:6px}
@@ -180,8 +197,9 @@ def strana(naslov, telo, koren="", aktivno="", skripta=False, dodatak=""):
     return f"""<!doctype html><html lang="sr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(naslov)} · {NAZIV_SAJTA}</title>
+<link rel="icon" href="{koren}logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{koren}stil.css"></head><body>
-<nav class="nav"><div class="in"><a class="logo" href="{koren}index.html">{NAZIV_SAJTA}</a>
+<nav class="nav"><div class="in"><a class="logo" href="{koren}index.html">{LOGO_SVG}{ZNAK}</a>
 <div class="meni">{linkovi}</div></div></nav>
 <div class="wrap">{telo}
 {A.FOOTER}
@@ -656,7 +674,7 @@ document.addEventListener('click',function(ev){if(!ev.target.closest('.pretraga'
                 f'{dt.strftime("%d.%m. %H:%M")}</div><div class="r"><span>{e(naziv(u["domacin"]))}</span></div>'
                 f'<div class="r"><span>{e(naziv(u["gost"]))}</span></div></a>')
 
-    telo = f"""<div class="hero"><h1>{NAZIV_SAJTA}</h1>
+    telo = f"""<div class="hero"><h1 class="naslov">{LOGO_SVG}{ZNAK}</h1>
 <p class="sub" style="margin:0">Evroliga {oznaka_sezone(k['sezona'])} · brojke, forma i povrede pred svaki meč</p>
 <div class="pretraga"><input id="pretraga" type="search" placeholder="Unesi ime igrača ili tima..."
 autocomplete="off" aria-label="Pretraga igrača i timova"><div class="rezultati" id="rezultati" hidden></div></div></div>
@@ -1060,6 +1078,7 @@ def main():
         else:
             stavka.unlink()
     (SAJT / "stil.css").write_text(A.CSS + DODATNI_CSS, encoding="utf-8")
+    (SAJT / "logo.svg").write_text(LOGO_SVG, encoding="utf-8")
     (SAJT / ".nojekyll").write_text("", encoding="utf-8")  # GitHub Pages: objavi fajlove kakvi jesu
 
     tabela = tabela_lige(k, utakmice)
