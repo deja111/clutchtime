@@ -408,7 +408,9 @@ def stranica_propovi(k, utakmice):
             delovi.append(f"prošla sezona {broj(r['prosla_prosek'])}")
         for y, q, dm in r["saigraci"]:
             ime_y = A.lepo_ime((k["igraci"].get(y) or {}).get("ime"))
-            delovi.append(f"{ime_y} {'ne igra' if q >= 1 else 'upitan'}: {'+' if dm >= 0 else ''}{broj(dm)} min")
+            status = "ne igra" if q >= 1 else "upitan"
+            delovi.append(f"{ime_y} {status}: " + ("već uračunato u formu (ne igra duže)" if dm is None
+                                                   else f"+{broj(dm)} min"))
         if abs(r["minuti_bez_saigraca"] - r["min_sezona"]) >= 2:
             delovi.append(f"minuti {'rastu' if r['minuti_bez_saigraca'] > r['min_sezona'] else 'padaju'}: "
                           f"{broj(r['minuti_bez_saigraca'], 0)} (sezona {broj(r['min_sezona'], 0)})")
