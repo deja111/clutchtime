@@ -707,7 +707,7 @@ utakmice i dan pre (ujutru i popodne).</p></div>
         opcije_tipa = "".join(f'<option value="{t}">{M.NAZIV_TIPA[t]}</option>' for t in tipovi)
         broj_ocena = {o: sum(r["ocena"] == o for r in rez) for o in OCENE}
         telo = f"""<h1>Propovi kola</h1>
-<p class="sub">Linije i kvote: Superbet (superbet.rs) · preuzeto {e(kv.get('preuzeto', ''))} ·
+<p class="sub">Linije i kvote kladionica · preuzeto {e(kv.get('preuzeto', ''))} ·
 {len(redovi)} propova · jakih {broj_ocena['jaka']}, srednjih {broj_ocena['srednja']}</p>
 {upozorenje}
 {tiket_html}
