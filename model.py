@@ -317,12 +317,24 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
     min_skoro = sum(a * b for a, b in zip(wm, mi)) / sum(wm)
     min_sezona = sum(mi) / n
     minuti = 0.6 * min_skoro + 0.4 * min_sezona
+    # Koraci od sezonskog proseka do očekivanog (za objašnjenje: koliko koji faktor dodaje/oduzima)
+    sezona_prosek = sum(vr) / n
+    koraci = []
+    pre = po_minutu * min_sezona
+    koraci.append(("ucinak", pre - sezona_prosek))        # skorašnji učinak po minutu (+ prošla sezona)
+    sad = po_minutu * minuti
+    koraci.append(("minuti", sad - pre))                  # trend minutaže
+
     dodatno, mnozilac, opis_saigraca = saigraci
     minuti_bez_saigraca = minuti
     minuti = max(0.0, min(max(MAKS_MINUTA, minuti), minuti + dodatno))
     po_minutu *= mnozilac
+    pre, sad = sad, po_minutu * minuti
+    koraci.append(("saigraci", sad - pre))
     razlika_min = minuti_zbog_razlike(minuti, ocekivana_razlika) if ocekivana_razlika is not None else 0.0
     minuti = max(0.0, minuti + razlika_min)
+    pre, sad = sad, po_minutu * minuti
+    koraci.append(("razlika", sad - pre))
 
     # Kod kuće / u gostima (po minutu), jako ublaženo
     dom = [(v, m) for v, m, r in zip(vr, mi, ut_sezona) if r["domacin"] == (1 if kod_kuce else 0)]
@@ -335,6 +347,8 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
     f_prot = 1 + (odnos_p - 1) * n_p / (n_p + PROTIVNIK_UBLAZI)
 
     ocekivano = po_minutu * minuti * f_dom * f_prot
+    koraci.append(("dom", sad * f_dom - sad))
+    koraci.append(("protivnik", ocekivano - sad * f_dom))
 
     # Rasipanje: varijansa/srednja vrednost iz utakmica ove i prošle sezone, ublaženo ka
     # tipičnoj vrednosti u ligi (iz malo utakmica procena je nepouzdana, obično preuska)
@@ -350,7 +364,7 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
             "prosla_prosek": prosla_prosek if n_ef < 3 * PRIOR_UTAKMICA else None,  # pomenuti samo kad dosta utiče
             "f_dom": f_dom, "f_prot": f_prot, "n_prot": n_p, "vrednosti": vr,
             "saigraci": opis_saigraca, "minuti_bez_saigraca": minuti_bez_saigraca, "mnozilac": mnozilac,
-            "ocekivana_razlika": ocekivana_razlika, "razlika_min": razlika_min}
+            "ocekivana_razlika": ocekivana_razlika, "razlika_min": razlika_min, "koraci": dict(koraci)}
 
 
 def glavne_linije(propovi):

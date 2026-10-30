@@ -514,28 +514,30 @@ def stranica_propovi(k, utakmice):
     MN = {"Guard": "bekovima", "Forward": "krilima", "Center": "centrima"}
 
     def zasto(r):
-        delovi = [f"očekivano {broj(r['ocekivano'])} (sezona {broj(r['sezona_prosek'])}, "
-                  f"posl. 5: {broj(r['poslednjih5'])})"]
-        if r["prosla_prosek"] is not None:
-            delovi.append(f"prošla sezona {broj(r['prosla_prosek'])}")
-        for y, q, dm in r["saigraci"]:
-            ime_y = A.lepo_ime((k["igraci"].get(y) or {}).get("ime"))
-            status = "ne igra" if q >= 1 else "upitan"
-            delovi.append(f"{ime_y} {status}: " + ("već uračunato u formu (ne igra duže)" if dm is None
-                                                   else f"+{broj(dm)} min"))
-        if abs(r["minuti_bez_saigraca"] - r["min_sezona"]) >= 2:
-            delovi.append(f"minuti {'rastu' if r['minuti_bez_saigraca'] > r['min_sezona'] else 'padaju'}: "
-                          f"{broj(r['minuti_bez_saigraca'], 0)} (sezona {broj(r['min_sezona'], 0)})")
-        if abs(r["razlika_min"]) >= 0.3:
-            raz = r["ocekivana_razlika"]
-            delovi.append(f"očekivana razlika {broj(abs(raz), 0)} poena ({'favorit' if raz > 0 else 'autsajder'}, "
-                          f"moguć rasplet ranije): {'+' if r['razlika_min'] > 0 else ''}{broj(r['razlika_min'])} min")
-        if abs(r["f_prot"] - 1) >= 0.04:
-            delovi.append(f"{naziv(r['protivnik'])} dozvoljava {MN.get(r['pozicija'], 'igračima')} "
-                          f"{'+' if r['f_prot'] > 1 else ''}{broj((r['f_prot'] - 1) * 100, 0)}%")
-        if abs(r["f_dom"] - 1) >= 0.02:
-            delovi.append(f"{'kod kuće' if r['kod_kuce'] else 'u gostima'} "
-                          f"{'+' if r['f_dom'] > 1 else ''}{broj((r['f_dom'] - 1) * 100, 0)}%")
+        """'sezona 3,5 → očekivano 2,7: faktor −0,5 · faktor −0,2 ...' (faktori poređani po uticaju)."""
+        znak = lambda x: f"{'+' if x >= 0 else '−'}{broj(abs(x))}"
+        kor = r["koraci"]
+        faktori = []  # (uticaj, tekst)
+        ucinak_opis = "skorašnja forma" + (f" (prošla sezona {broj(r['prosla_prosek'])})"
+                                           if r["prosla_prosek"] is not None else "")
+        faktori.append((kor["ucinak"], f"{ucinak_opis} {znak(kor['ucinak'])}"))
+        faktori.append((kor["minuti"], f"minuti {'rastu' if r['minuti_bez_saigraca'] >= r['min_sezona'] else 'padaju'}"
+                                       f" ({broj(r['minuti_bez_saigraca'])} umesto {broj(r['min_sezona'])} min) "
+                                       f"{znak(kor['minuti'])}"))
+        if r["saigraci"]:
+            imena = ", ".join(
+                f"{A.lepo_ime((k['igraci'].get(y) or {}).get('ime'))} {'ne igra' if q >= 1 else 'upitan'}"
+                + (" (već u formi)" if dm is None else "") for y, q, dm in r["saigraci"])
+            faktori.append((max(abs(kor["saigraci"]), 0.051), f"{imena} {znak(kor['saigraci'])}"))
+        raz = r["ocekivana_razlika"] or 0
+        faktori.append((kor["razlika"], f"očekivana razlika {broj(abs(raz), 0)} poena "
+                                        f"({'favorit' if raz > 0 else 'autsajder'}) {znak(kor['razlika'])}"))
+        faktori.append((kor["protivnik"], f"{naziv(r['protivnik'])} dozvoljava {MN.get(r['pozicija'], 'igračima')} "
+                                          f"{'više' if r['f_prot'] > 1 else 'manje'} od proseka {znak(kor['protivnik'])}"))
+        faktori.append((kor["dom"], f"{'kod kuće' if r['kod_kuce'] else 'u gostima'} {znak(kor['dom'])}"))
+        bitni = [t for u, t in sorted(faktori, key=lambda f: -abs(f[0])) if abs(u) >= 0.05]
+        delovi = [f"sezona {broj(r['sezona_prosek'])} → očekivano {broj(r['ocekivano'])}"
+                  + (": " + " · ".join(bitni) if bitni else "")]
         if r["sumnjivo"]:
             delovi.append("⚠ linija je daleko od proseka: kladionica možda zna nešto (uloga, povrede), proveri vesti")
         if r["malo_podataka"]:
