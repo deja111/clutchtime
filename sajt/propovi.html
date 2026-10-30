@@ -1,0 +1,51 @@
+<!doctype html><html lang="sr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Propovi kola · ClutchTime</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="stil.css"></head><body>
+<nav class="nav"><div class="in"><a class="logo" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
+<rect x="12.5" y="0.5" width="7" height="3" rx="1.2" fill="#ff7a1a"/>
+<rect x="15" y="3" width="2" height="3.5" fill="#ff7a1a"/>
+<rect x="24.6" y="5.2" width="4" height="2.4" rx="1" transform="rotate(45 26.6 6.4)" fill="#ff7a1a"/>
+<circle cx="16" cy="19" r="12.3" fill="#ff7a1a"/>
+<g fill="none" stroke="#1a120b" stroke-width="1.5" stroke-linecap="round">
+<path d="M3.9 19h24.2M16 6.9v24.2"/>
+<path d="M7.6 10.2c3.6 4.2 3.6 13.4 0 17.6M24.4 10.2c-3.6 4.2-3.6 13.4 0 17.6"/></g>
+</svg><span class="znak">Clutch<b>Time</b></span></a>
+<div class="meni"><a href="index.html">Početna</a><a href="utakmice.html">Utakmice</a><a href="propovi.html" class=akt>Propovi</a><a href="forma.html">Forma</a><a href="igraci.html">Igrači</a><a href="timovi.html">Timovi</a><a href="lideri.html">Lideri</a></div></div></nav>
+<div class="wrap"><h1>Propovi kola</h1><div class="upozorenje"><span class="g18">18+</span><div>Ovo je statistička analiza, <b>ne savet za klađenje</b>. Klađenje nosi rizik gubitka novca. Igrajte odgovorno.</div></div>
+<div class="sekcija"><p style="margin:0">Linije za naredno kolo još nisu dostupne. Kvote se preuzimaju na dan
+utakmice i dan pre (ujutru i popodne).</p></div>
+<footer>ClutchTime je nezavisan sajt i nije povezan sa Euroleague Basketball.
+Statistički podaci: Euroleague Basketball (javno dostupna statistika). PIR = indeks korisnosti; TS% = pravi procenat šuta; eFG% = efektivni procenat
+šuta iz igre. "Dozvoljava" = prosečan zbir svih igrača te pozicije protiv tog tima u ovoj sezoni,
+rang 1 = najviše dozvoljava.</footer>
+<p style="color:var(--muted);font-size:12px">Ažurirano 30.10.2026. 01:16</p>
+</div>
+<script>
+document.querySelectorAll('table.sort').forEach(function(t){
+  t.querySelectorAll('th[data-k]').forEach(function(th,i){
+    th.addEventListener('click',function(){
+      var tb=t.tBodies[0],r=[].slice.call(tb.rows),kol=th.cellIndex,
+          num=th.dataset.k==='n',smer=th.dataset.s==='d'?1:-1;
+      th.dataset.s=smer===1?'a':'d';
+      r.sort(function(a,b){var x=a.cells[kol].dataset.v||a.cells[kol].textContent,
+        y=b.cells[kol].dataset.v||b.cells[kol].textContent;
+        return num?(parseFloat(x)-parseFloat(y))*smer:x.localeCompare(y)*smer;});
+      r.forEach(function(x){tb.appendChild(x);});
+    });
+  });
+});
+var f=document.getElementById('filter');
+if(f){var fi=function(){var q=document.getElementById('trazi').value.toLowerCase(),
+  tm=document.getElementById('tim').value,pz=document.getElementById('poz').value;
+  document.querySelectorAll('#igraci tbody tr').forEach(function(r){
+    var ok=r.dataset.ime.indexOf(q)>-1&&(!tm||r.dataset.tim===tm)&&(!pz||r.dataset.poz===pz);
+    r.style.display=ok?'':'none';});};
+  f.addEventListener('input',fi);f.addEventListener('change',fi);}
+</script><script>
+(function(){var m=document.getElementById('p-mec');if(!m)return;var t=document.getElementById('p-tip'),
+ v=document.getElementById('p-ev');function f(){document.querySelectorAll('#propovi tbody tr').forEach(function(r){
+ var ok=(!m.value||r.dataset.mec===m.value)&&(!t.value||r.dataset.tip===t.value)&&(!v.checked||parseFloat(r.dataset.ev)>=0.05);
+ r.style.display=ok?'':'none';});}[m,t,v].forEach(function(x){x.addEventListener('change',f);});})();
+</script></body></html>
