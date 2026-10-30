@@ -89,7 +89,12 @@ Nalazi iz `istrazi_oddspapi.py` (30.10.2026, pravi odgovori u `podaci/oddspapi/`
   (stvarno/procena 0,97-1,00 ove i prošle sezone, prvih 8 kola) → Superbet verovatno diže linije (igrači vole "preko").
   Veličinu te prednosti tek treba izmeriti iz arhive.
 - [ ] Kad se skupi 3-4 kola u `podaci/kvote/arhiva/`: proveriti predloge prema stvarnim rezultatima i podesiti
-      `TEZINA_MODELA`. Dodati odsustvo saigrača (povrede) u očekivane minute.
+      `TEZINA_MODELA`.
+- [x] Odsustvo saigrača (30.10.2026): `Saigraci` u `model.py`. Odsutni iz tabele povreda (ne igra = 1, upitan = 0,5);
+      minuti se dele zdravim saigračima po minutaži i bliskosti pozicije, ili po istoriji "sa njim / bez njega".
+      Računa se samo deo odsustva koji NIJE već u igračevoj formi. Izmereno na 4.334 utakmice: stvarno se ostvari
+      ~1/3 minuta (`SKALA_MINUTA` 0,35) + mali rast učinka (`SKALA_UCINKA`, ne za skokove). Rezultat: greška kod
+      poena pala sa +0,56 na 0,02, minuta sa +0,88 na 0,00; bez odsustva nepromenjeno.
 - [ ] Izmene iz `izmene.txt` (naziv sajta, CSS, meni, ukloniti "napravljeno…" ispod najave, forma igrača i utakmice u meni).
 - [ ] Podnožje svake stranice: nije zvanično povezano sa Evroligom, podaci su vlasništvo Euroleague Basketball-a, 18+.
 - [ ] Ukloniti iz git-a ono što je ostalo pre `.gitignore`: `git rm -r --cached "Claude outputs" __pycache__`.

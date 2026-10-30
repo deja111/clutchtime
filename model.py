@@ -127,9 +127,123 @@ def faktori_protivnika(statistika, igraci, sezona):
             for k, x in proseci.items()}
 
 
+# ----------------------------- SAIGRAČI -----------------------------
+# Koliko minuta izostalog saigrača "pripada" igraču druge pozicije (ista pozicija = 1)
+BLISKOST_POZICIJA = {frozenset(("Guard", "Forward")): 0.4, frozenset(("Forward", "Center")): 0.4,
+                     frozenset(("Guard", "Center")): 0.1}
+MIN_ZA_SAIGRACA = 10.0        # saigrač se računa ako igra bar ovoliko minuta
+ISTORIJA_UBLAZI = 5.0         # težina istorije "bez njega" = n / (n + 5)
+MAKS_MINUTA = 36.0
+# Izmereno na 4.334 utakmice (2024-25 i 2025-26) u kojima je izostao igrač sa 15+ min:
+# od "pravedno raspodeljenih" minuta igrač stvarno dobije oko trećine (0,31 / 0,36 po sezoni),
+# a kod poena je najmanja greška kad se uračuna oko polovine efekta (deo dolazi kroz više šuteva).
+SKALA_MINUTA = 0.35
+SKALA_UCINKA = 0.15           # dodatni učinak po minutu = 1 + 0,15 × (dodatni minuti / igračevi minuti)
+BEZ_UCINKA = {"skokovi", "ukradene", "blokade"}  # ne rastu sa preuzimanjem šuteva (provera: bez ovoga gore)
+
+
+def bliskost(poz1, poz2):
+    return 1.0 if poz1 == poz2 else BLISKOST_POZICIJA.get(frozenset((poz1, poz2)), 0.2)
+
+
+class Saigraci:
+    """Ko je s kim igrao u kojoj utakmici (sve sezone u bazi), za procenu uticaja odsustva."""
+
+    def __init__(self, statistika, igraci, sezona):
+        self.igraci, self.sezona = igraci, sezona
+        self.igrali = defaultdict(set)    # (sezona, utakmica, tim) -> igrači koji su igrali
+        self.po_igracu = defaultdict(list)  # (igrač, sezona, tim) -> utakmice (hronološki)
+        self.stintovi = defaultdict(list)   # igrač -> [(sezona, tim, utakmice)]
+        for r in statistika:
+            if r["igrao"]:
+                self.igrali[(r["sezona"], r["sifra_utakmice"], r["tim"])].add(r["igrac_id"])
+                self.po_igracu[(r["igrac_id"], r["sezona"], r["tim"])].append(r)
+        for (igrac, sezona, t), ut in self.po_igracu.items():
+            self.stintovi[igrac].append((sezona, t, ut))
+        self.tim_sezona = defaultdict(list)  # (sezona, tim) -> igrači
+        for (igrac, sezona, t) in self.po_igracu:
+            self.tim_sezona[(sezona, t)].append(igrac)
+
+    def tim_sezona_skup(self, sezona, tim):
+        return set(self.tim_sezona[(sezona, tim)])
+
+    def poz(self, igrac_id):
+        return (self.igraci.get(igrac_id) or {}).get("pozicija")
+
+    def igrao(self, igrac_id, r):
+        return igrac_id in self.igrali[(r["sezona"], r["sifra_utakmice"], r["tim"])]
+
+    def istorija(self, x, y, tim, tip, do_datuma=None):
+        """Igrač x kad je saigrač y igrao / nije igrao (sezone kad su bili u istom timu, samo u periodu
+        kad je y bio u timu). Vraća (n bez njega, razlika minuta, odnos učinka po minutu) ili None."""
+        sa, bez = [], []
+        for sezona, t, ut_y in self.stintovi[y]:
+            if sezona == self.sezona and t != tim:
+                continue
+            od, do = ut_y[0]["datum"], ut_y[-1]["datum"]
+            for r in self.po_igracu.get((x, sezona, t), []):
+                if do_datuma and r["datum"] >= do_datuma:
+                    continue
+                if od <= r["datum"] <= do or (sezona == self.sezona and r["datum"] > do):
+                    (sa if self.igrao(y, r) else bez).append(r)
+        if len(bez) < 2 or len(sa) < 4:
+            return None
+        m = lambda l: sum(r["minuti"] or 0 for r in l)
+        s = lambda l: sum(vrednost(r, tip) for r in l)
+        odnos = (s(bez) / m(bez)) / (s(sa) / m(sa)) if m(bez) and m(sa) and s(sa) else 1.0
+        return len(bez), m(bez) / len(bez) - m(sa) / len(sa), odnos
+
+    def korekcija(self, x, tim, ut_x, odsutni, tip, do_datuma=None):
+        """Dodatni minuti i množilac učinka zbog odsutnih saigrača.
+        odsutni: {igrač: verovatnoća da ne igra}. Uračunava se samo deo odsustva koji NIJE već
+        u igračevim skorim utakmicama (ako y ne igra već 5 utakmica, forma to već sadrži)."""
+        if not odsutni or not ut_x:
+            return 0.0, 1.0, []
+        w = tezine(len(ut_x), POLUZIVOT_UCINAK)
+        poz_x = self.poz(x)
+        min_tima = {}
+        for igrac in self.tim_sezona[(self.sezona, tim)]:
+            ut = [r for r in self.po_igracu[(igrac, self.sezona, tim)] if not do_datuma or r["datum"] < do_datuma]
+            if ut:
+                wm = tezine(len(ut), POLUZIVOT_MINUTI)
+                min_tima[igrac] = sum(a * (r["minuti"] or 0) for a, r in zip(wm, ut)) / sum(wm)
+        m_x = min_tima.get(x, 0)
+        dodatno, mnozilac, opis = 0.0, 1.0, []
+        for y, q in odsutni.items():
+            m_y = min_tima.get(y, 0)
+            if y == x or m_y < MIN_ZA_SAIGRACA:
+                continue
+            prisustvo = sum(a for a, r in zip(w, ut_x) if self.igrao(y, r)) / sum(w)
+            if prisustvo < 0.2:
+                continue  # već dugo ne igra: igračeva forma to već sadrži
+            # Raspodela: zdravi saigrači, po minutaži i bliskosti pozicije
+            # (samo oni koji su igrali u nekoj od igračevih poslednjih 5 utakmica - ne i oni koji su otišli)
+            skoro = {z for r in ut_x[-5:] for z in self.igrali[(r["sezona"], r["sifra_utakmice"], r["tim"])]}
+            zdravi = {z: m for z, m in min_tima.items()
+                      if z != y and z in skoro and odsutni.get(z, 0) < 1 and m >= 5}
+            imenilac = sum(bliskost(self.poz(z), self.poz(y)) * m for z, m in zdravi.items())
+            udeo = bliskost(poz_x, self.poz(y)) * m_x / imenilac if imenilac else 0
+            dm = m_y * udeo
+            odnos = 1.0
+            ist = self.istorija(x, y, tim, tip, do_datuma)
+            if ist:
+                n, dm_ist, odnos_ist = ist
+                t_ist = n / (n + ISTORIJA_UBLAZI)
+                dm = t_ist * dm_ist + (1 - t_ist) * dm
+                odnos = 1 + t_ist * (max(0.8, min(1.25, odnos_ist)) - 1)
+            k = q * prisustvo
+            dodatno += k * dm * SKALA_MINUTA
+            ucinak = k * dm * SKALA_UCINKA / m_x if m_x and tip not in BEZ_UCINKA else 0
+            mnozilac *= 1 + k * (odnos - 1) + ucinak
+            if abs(k * dm * SKALA_MINUTA) >= 0.5:
+                opis.append((y, q, k * dm * SKALA_MINUTA))
+        return dodatno, mnozilac, opis
+
+
 # ----------------------------- PROCENA -----------------------------
-def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor):
-    """Očekivana vrednost, rasipanje i objašnjenja za jednog igrača i jedan tip."""
+def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigraci=(0.0, 1.0, [])):
+    """Očekivana vrednost, rasipanje i objašnjenja za jednog igrača i jedan tip.
+    saigraci: (dodatni minuti, množilac učinka, opis) iz Saigraci.korekcija."""
     n = len(ut_sezona)
     vr = [vrednost(r, tip) for r in ut_sezona]
     mi = [r["minuti"] or 0 for r in ut_sezona]
@@ -148,6 +262,10 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor):
     min_skoro = sum(a * b for a, b in zip(wm, mi)) / sum(wm)
     min_sezona = sum(mi) / n
     minuti = 0.6 * min_skoro + 0.4 * min_sezona
+    dodatno, mnozilac, opis_saigraca = saigraci
+    minuti_bez_saigraca = minuti
+    minuti = max(0.0, min(max(MAKS_MINUTA, minuti), minuti + dodatno))
+    po_minutu *= mnozilac
 
     # Kod kuće / u gostima (po minutu), jako ublaženo
     dom = [(v, m) for v, m, r in zip(vr, mi, ut_sezona) if r["domacin"] == (1 if kod_kuce else 0)]
@@ -173,7 +291,8 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor):
     return {"ocekivano": ocekivano, "rasipanje": rasipanje, "minuti": minuti, "min_sezona": min_sezona,
             "sezona_prosek": sum(vr) / n, "poslednjih5": sum(vr[-5:]) / len(vr[-5:]),
             "prosla_prosek": prosla_prosek if n_ef < 3 * PRIOR_UTAKMICA else None,  # pomenuti samo kad dosta utiče
-            "f_dom": f_dom, "f_prot": f_prot, "n_prot": n_p, "vrednosti": vr}
+            "f_dom": f_dom, "f_prot": f_prot, "n_prot": n_p, "vrednosti": vr,
+            "saigraci": opis_saigraca, "minuti_bez_saigraca": minuti_bez_saigraca, "mnozilac": mnozilac}
 
 
 def glavne_linije(propovi):
@@ -201,6 +320,9 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
             po_igracu_prosla[r["igrac_id"]].append(r)
     protivnik = faktori_protivnika(statistika, igraci, sezona)
     mecevi = {(u["sezona"], u["sifra_utakmice"]): u for u in utakmice}
+    saigraci = Saigraci(statistika, igraci, sezona)
+    # Iz tabele povreda: "ne igra" = sigurno odsustvo, "upitan" = pola
+    verovatnoca_odsustva = {i: {"st-ne": 1.0, "st-up": 0.5}.get(p.get("klasa"), 0.0) for i, p in povrede.items()}
 
     rezultati = []
     for p in glavne_linije(propovi):
@@ -217,8 +339,11 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
         prot = u["gost"] if kod_kuce else u["domacin"]
         poz = (igraci.get(p["igrac_id"]) or {}).get("pozicija")
 
+        odsutni = {y: q for y, q in verovatnoca_odsustva.items()
+                   if q and y != p["igrac_id"] and y in saigraci.tim_sezona_skup(sezona, p["tim"])}
         x = proceni_igraca(ut, po_igracu_prosla.get(p["igrac_id"], []), p["tip"], kod_kuce,
-                           protivnik.get((prot, poz, p["tip"])))
+                           protivnik.get((prot, poz, p["tip"])),
+                           saigraci.korekcija(p["igrac_id"], p["tim"], ut, odsutni, p["tip"]))
         kladionica = (1 / p["preko"]) / (1 / p["preko"] + 1 / p["ispod"])
         model = kalibrisi(p_preko(x["ocekivano"], x["rasipanje"], p["linija"]), p["tip"])
         verovatnoca = kladionica + TEZINA_MODELA * (model - kladionica)

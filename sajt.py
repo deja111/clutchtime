@@ -406,9 +406,12 @@ def stranica_propovi(k, utakmice):
                   f"posl. 5: {broj(r['poslednjih5'])})"]
         if r["prosla_prosek"] is not None:
             delovi.append(f"prošla sezona {broj(r['prosla_prosek'])}")
-        if abs(r["minuti"] - r["min_sezona"]) >= 2:
-            delovi.append(f"minuti {'rastu' if r['minuti'] > r['min_sezona'] else 'padaju'}: "
-                          f"{broj(r['minuti'], 0)} (sezona {broj(r['min_sezona'], 0)})")
+        for y, q, dm in r["saigraci"]:
+            ime_y = A.lepo_ime((k["igraci"].get(y) or {}).get("ime"))
+            delovi.append(f"{ime_y} {'ne igra' if q >= 1 else 'upitan'}: {'+' if dm >= 0 else ''}{broj(dm)} min")
+        if abs(r["minuti_bez_saigraca"] - r["min_sezona"]) >= 2:
+            delovi.append(f"minuti {'rastu' if r['minuti_bez_saigraca'] > r['min_sezona'] else 'padaju'}: "
+                          f"{broj(r['minuti_bez_saigraca'], 0)} (sezona {broj(r['min_sezona'], 0)})")
         if abs(r["f_prot"] - 1) >= 0.04:
             delovi.append(f"{naziv(r['protivnik'])} dozvoljava {MN.get(r['pozicija'], 'igračima')} "
                           f"{'+' if r['f_prot'] > 1 else ''}{broj((r['f_prot'] - 1) * 100, 0)}%")
@@ -478,8 +481,10 @@ Prikazana je glavna linija za svakog igrača (ona sa najujednačenijim kvotama).
 <p class="napomena">Model: učinak po minutu (skorije utakmice vrede više, na početku sezone pomešano sa prošlom),
 očekivani minuti (trend), šta protivnik dozvoljava toj poziciji i kod kuće/u gostima, uz negativnu binomnu
 raspodelu kalibrisanu na prethodne dve sezone. Konačna procena je pola model, pola kladionica.
-Igrači sa statusom "ne igra" su izostavljeni. Odsustvo saigrača još nije uračunato: zato ⚠ kod linija koje su
-daleko od proseka (takvi propovi nisu zeleni i ne ulaze u filter "5%+").</p>
+Igrači sa statusom "ne igra" su izostavljeni. Odsustvo saigrača iz tabele povreda je uračunato (dodatni minuti
+i nešto veći učinak, izmereno na ranijim utakmicama u kojima je izostao igrač sa 15+ minuta; "upitan" se računa
+upola). ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više (takvi propovi nisu
+zeleni i ne ulaze u filter "5%+").</p>
 <p class="napomena">Model često bira "ispod". Provera na ovoj i prošloj sezoni pokazuje da model igrače ne
 potcenjuje (stvarni učinak je u proseku 2-3% ispod procene), pa razlog verovatno leži u tome što kladionice
 postavljaju linije više jer igrači češće igraju "preko". Koliko je to stvarna prednost, pokazaće praćenje
