@@ -544,6 +544,54 @@ def ishodi_predloga(k, predlozi, utakmice):
     return sorted(ishodi, key=lambda x: (x["datum"], -x["ev"]), reverse=True)
 
 
+def sekcija_odsutnih(k, rez):
+    """Po utakmici: ko ne igra (tabela povreda) i kome model zbog toga daje najviše (poeni, ili druga kategorija)."""
+    naziv = lambda t: k["timovi"].get(t, t)
+    ime = lambda i: A.lepo_ime((k["igraci"].get(i) or {}).get("ime"))
+    mecevi = {}
+    for r in rez:
+        dom, gost = (r["tim"], r["protivnik"]) if r["kod_kuce"] else (r["protivnik"], r["tim"])
+        mecevi.setdefault(r["sifra_utakmice"], (r["datum"], dom, gost))
+    # Dobitak po igraču: prednost dajemo poenima, inače najveći dobitak u bilo kojoj kategoriji
+    dobitak = {}
+    for r in rez:
+        if not r["saigraci"]:
+            continue
+        d = r["koraci"]["saigraci"]
+        stari = dobitak.get(r["igrac_id"])
+        if not stari or (r["tip"] == "poeni" and stari["tip"] != "poeni") or (
+                stari["tip"] != "poeni" and d > stari["d"]):
+            dobitak[r["igrac_id"]] = {"tip": r["tip"], "d": d, "tim": r["tim"],
+                                      "dm": r["minuti"] - r["minuti_bez_saigraca"]}
+    kartice = []
+    for s, (datum, dom, gost) in sorted(mecevi.items(), key=lambda x: x[1][0]):
+        odsutni = [(t, i, p) for t in (dom, gost) for i, p in A.POVREDE.items()
+                   if k["poslednji_tim"].get(i) == t and p.get("klasa") in ("st-ne", "st-up")]
+        if not odsutni:
+            continue
+        spisak = "".join(
+            f'<div class="st"><b>{e(naziv(t))}:</b> ' + ", ".join(
+                f'{e(ime(i))}{" (upitan)" if p["klasa"] == "st-up" else ""}' for tt, i, p in odsutni if tt == t)
+            + "</div>" for t in (dom, gost) if any(tt == t for tt, _, _ in odsutni))
+        korisnici = sorted(((v["d"], i, v) for i, v in dobitak.items() if v["tim"] in (dom, gost) and v["d"] >= 0.2),
+                           reverse=True)[:4]
+        dobijaju = (" · ".join(
+            f'<a href="igrac/{i}.html">{e(ime(i))}</a> <b class="p">+{broj(d)}</b> '
+            f'{"p" if v["tip"] == "poeni" else M.NAZIV_TIPA[v["tip"]].lower()}'
+            + (f' <span class="napomena">(+{broj(v["dm"])} min)</span>' if v["dm"] >= 0.5 else "")
+            for d, i, v in korisnici) or '<span class="napomena">bez većeg uticaja (ili su već duže van)</span>')
+        kartice.append(f'<div class="mec-red"><div class="d">{datum[11:16]}</div>'
+                       f'<div class="t">{e(naziv(dom))} – {e(naziv(gost))}</div>'
+                       f'<div class="st" style="margin-top:6px;color:var(--muted)">Ne igraju:</div>{spisak}'
+                       f'<div class="st" style="margin-top:6px"><b>Najviše dobijaju:</b> {dobijaju}</div></div>')
+    if not kartice:
+        return ""
+    return f"""<div class="naslov-sekcije"><h2>Ko ne igra i ko dobija</h2></div>
+<div class="mecevi">{''.join(kartice)}</div>
+<p class="napomena">Odsutni iz tabele povreda. "Dobijaju" = koliko model dodaje igraču zbog odsustva saigrača
+(izmereno na ranijim utakmicama: oslobođeni minuti i šutevi se razliju na više igrača, pa su brojke umerene).</p>"""
+
+
 def sekcija_tiketa(k, tiketi, utakmice):
     """Tiket dana: poslednji tiket čije utakmice još nisu sve odigrane."""
     naziv = lambda t: k["timovi"].get(t, t)
@@ -711,6 +759,7 @@ utakmice i dan pre (ujutru i popodne).</p></div>
 <div class="naslov-sekcije"><h2>Top 10 predloga</h2></div>
 <div class="sekcija skrol" style="margin-top:0">{'<table class="tab">' + zaglavlje + '<tbody>' + redovi_top + '</tbody></table>'
                                                  if redovi_top else '<p style="margin:0">Model ovog puta ne vidi nijedan predlog sa prednošću.</p>'}</div>
+{sekcija_odsutnih(k, rez)}
 {ZASTO_ISPOD}
 {rezultati}
 <details class="svi-propovi"><summary>Prikaži sve propove ({len(redovi)})</summary>
