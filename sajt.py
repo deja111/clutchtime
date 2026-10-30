@@ -39,6 +39,7 @@ FOLDER = Path(__file__).parent
 BAZA = FOLDER / "podaci" / "evroliga.db"
 KVOTE = FOLDER / "podaci" / "kvote" / "kvote_poslednje.json"  # pravi ga kvote.py
 PREDLOZI = FOLDER / "podaci" / "kvote" / "predlozi.json"      # predlozi pre utakmica, za praćenje rezultata
+TIKETI = FOLDER / "podaci" / "kvote" / "tiketi.json"          # tiket dana (do 3 predloga), za praćenje
 SAJT = FOLDER / "sajt"
 NAZIV_SAJTA = "ClutchTime"
 
@@ -135,6 +136,12 @@ table.tab td.zasto{white-space:normal;min-width:260px;max-width:380px}
 .ocena{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:999px;letter-spacing:.02em}
 .o-jaka{background:var(--good);color:var(--on-accent)}.o-srednja{border:1px solid var(--good);color:var(--good)}
 .o-slaba{color:var(--ink2)}.o-nema{color:var(--muted)}
+.tiket{background:linear-gradient(135deg,var(--accent-soft),var(--card) 70%);border:1px solid var(--accent);
+border-radius:12px;padding:14px 16px;margin:14px 0}
+.tiket-glava{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tiket-glava h2{margin:0 0 8px;font-size:18px}
+.tiket-zbir{display:flex;gap:24px;flex-wrap:wrap;margin-top:10px;font-size:15px}
+.tiket-zbir b{font-size:20px;color:var(--accent);margin-left:6px}
 .svi-propovi{margin:14px 0}.svi-propovi>summary{cursor:pointer;font-weight:700;padding:10px 14px;background:var(--card);
 border:1px solid var(--line);border-radius:10px}.svi-propovi[open]>summary{border-color:var(--accent)}
 .napomena{font-size:12.5px;color:var(--muted)}
@@ -427,6 +434,75 @@ def top_predlozi(rez, n=10, po_igracu=2):
     return izabrani
 
 
+def tiket_dana(rez, najvise=3):
+    """Do 3 predloga sa najvećom procenjenom šansom za prvi naredni dan sa utakmicama. Samo predlozi sa
+    prednošću, bez ⚠ i bez upitnih igrača; jedan po igraču, prvo iz različitih utakmica."""
+    sada = datetime.now()
+    buduci = [r for r in rez if datetime.strptime(r["datum"], "%Y-%m-%d %H:%M") > sada]
+    if not buduci:
+        return None
+    dan = min(r["datum"][:10] for r in buduci)
+    kandidati = sorted((r for r in buduci if r["datum"][:10] == dan and r["ev"] > 0
+                        and not r["sumnjivo"] and not r["upitan"]), key=lambda r: -r["p_model"])
+    izabrani = []
+    for razliciti_mecevi in (True, False):
+        for r in kandidati:
+            if len(izabrani) == najvise:
+                break
+            if r in izabrani or any(x["igrac_id"] == r["igrac_id"] for x in izabrani):
+                continue
+            if razliciti_mecevi and any(x["sifra_utakmice"] == r["sifra_utakmice"] for x in izabrani):
+                continue
+            izabrani.append(r)
+    return {"dan": dan, "nogice": izabrani} if izabrani else None
+
+
+def sacuvaj_tiket(tiket):
+    """Tiket se menja dok nijedna njegova utakmica nije počela; posle je zaključan."""
+    tiketi = json.loads(TIKETI.read_text(encoding="utf-8")) if TIKETI.exists() else {}
+    if tiket:
+        stari = tiketi.get(tiket["dan"])
+        sada = datetime.now()
+        zakljucan = stari and any(datetime.strptime(n["datum"], "%Y-%m-%d %H:%M") <= sada for n in stari["nogice"])
+        if not zakljucan:
+            nogice = [{"kljuc": kljuc_predloga(r), "igrac_id": r["igrac_id"], "tim": r["tim"], "sezona": r["sezona"],
+                       "sifra_utakmice": r["sifra_utakmice"], "datum": r["datum"], "tip": r["tip"],
+                       "linija": r["linija"], "strana": r["strana"], "kvota": r["kvota"],
+                       "p_model": round(r["p_model"], 4)} for r in tiket["nogice"]]
+            kvota, sansa = 1.0, 1.0
+            for x in nogice:
+                kvota *= x["kvota"]
+                sansa *= x["p_model"]
+            tiketi[tiket["dan"]] = {"nogice": nogice, "kvota": round(kvota, 2), "sansa": round(sansa, 4),
+                                    "sacuvano": sada.strftime("%Y-%m-%d %H:%M")}
+    TIKETI.parent.mkdir(parents=True, exist_ok=True)
+    TIKETI.write_text(json.dumps(tiketi, ensure_ascii=False, indent=1), encoding="utf-8")
+    return tiketi
+
+
+def ishodi_tiketa(k, tiketi, utakmice):
+    """Odigrani tiketi: prošao ako su prošle sve nogice; nogica igrača koji nije igrao se izbacuje."""
+    odigrane = {(u["sezona"], u["sifra_utakmice"]) for u in utakmice if u["odigrana"]}
+    redovi = {(r["sezona"], r["sifra_utakmice"], r["igrac_id"]): r for r in k["statistika"] if r["igrao"]}
+    ishodi = []
+    for dan, t in sorted(tiketi.items(), reverse=True):
+        if not all((n["sezona"], n["sifra_utakmice"]) in odigrane for n in t["nogice"]):
+            continue
+        nogice, kvota = [], 1.0
+        for n in t["nogice"]:
+            r = redovi.get((n["sezona"], n["sifra_utakmice"], n["igrac_id"]))
+            if not r:
+                continue
+            stvarno = M.vrednost(r, n["tip"])
+            nogice.append({**n, "stvarno": stvarno, "prosao": (stvarno > n["linija"]) == (n["strana"] == "preko")})
+            kvota *= n["kvota"]
+        if nogice:
+            prosao = all(n["prosao"] for n in nogice)
+            ishodi.append({"dan": dan, "nogice": nogice, "kvota": kvota, "sansa": t["sansa"], "prosao": prosao,
+                           "dobit": kvota - 1 if prosao else -1.0})
+    return ishodi
+
+
 def kljuc_predloga(r):
     return f'{r["sezona"]}-{r["sifra_utakmice"]}-{r["igrac_id"]}-{r["tip"]}'
 
@@ -468,7 +544,36 @@ def ishodi_predloga(k, predlozi, utakmice):
     return sorted(ishodi, key=lambda x: (x["datum"], -x["ev"]), reverse=True)
 
 
-def sekcija_rezultata(k, ishodi):
+def sekcija_tiketa(k, tiketi, utakmice):
+    """Tiket dana: poslednji tiket čije utakmice još nisu sve odigrane."""
+    naziv = lambda t: k["timovi"].get(t, t)
+    odigrane = {(u["sezona"], u["sifra_utakmice"]) for u in utakmice if u["odigrana"]}
+    aktivni = [d for d, t in tiketi.items()
+               if not all((n["sezona"], n["sifra_utakmice"]) in odigrane for n in t["nogice"])]
+    if not aktivni:
+        return ""
+    dan = max(aktivni)
+    t = tiketi[dan]
+    redovi = "".join(
+        f'<tr><td class="l"><a class="ime" href="igrac/{n["igrac_id"]}.html">'
+        f'{e(A.lepo_ime((k["igraci"].get(n["igrac_id"]) or {}).get("ime")))}</a>'
+        f'<br><span class="napomena">{e(naziv(n["tim"]))} · {n["datum"][11:16]}</span></td>'
+        f'<td class="l">{M.NAZIV_TIPA[n["tip"]]}</td>'
+        f'<td class="l"><span class="strana {n["strana"]}">{n["strana"]}</span> {broj(n["linija"])}</td>'
+        f'<td>{broj(n["kvota"], 2)}</td><td><b>{procenat(n["p_model"])}</b></td></tr>' for n in t["nogice"])
+    zakljucan = any(datetime.strptime(n["datum"], "%Y-%m-%d %H:%M") <= datetime.now() for n in t["nogice"])
+    return f"""<div class="tiket"><div class="tiket-glava"><h2>Tiket dana · {datum_srb(dan)}</h2>
+<span class="napomena">{'zaključan (utakmice su počele)' if zakljucan else 'menja se do početka prve utakmice'}</span></div>
+<div class="skrol"><table class="tab"><thead><tr><th class="l">Igrač</th><th class="l">Kategorija</th>
+<th class="l">Predlog</th><th>Kvota</th><th>Procena</th></tr></thead><tbody>{redovi}</tbody></table></div>
+<div class="tiket-zbir"><span>Ukupna kvota <b>{broj(t['kvota'], 2)}</b></span>
+<span>Procena da prođe ceo tiket <b>{procenat(t['sansa'])}</b></span></div>
+<p class="napomena" style="margin:8px 0 0">Predlozi sa najvećom procenjenom šansom za ovaj dan (samo oni sa
+prednošću po modelu, bez ⚠ i upitnih igrača, po jedan po igraču, iz različitih utakmica kad god je moguće).
+Tiket prolazi samo ako prođu svi predlozi, pa je šansa manja od svakog pojedinačnog.</p></div>"""
+
+
+def sekcija_rezultata(k, ishodi, ishodi_t=()):
     naziv = lambda t: k["timovi"].get(t, t)
     if not ishodi:
         return """<div class="sekcija"><h2>Kako je model prošao</h2><p style="margin:0">Praćenje je počelo
@@ -488,6 +593,13 @@ def sekcija_rezultata(k, ishodi):
                    f'<td><b>{procenat(pogodjeno / n)}</b></td><td>{procenat(ocek)}</td>'
                    f'<td class="{"p" if dobit > 0 else "i"}">{"+" if dobit > 0 else ""}{broj(dobit, 1)}</td>'
                    f'<td>{"+" if dobit > 0 else ""}{broj(dobit / n * 100, 0)}%</td></tr>')
+    if ishodi_t:
+        n, pogodjeno, dobit = len(ishodi_t), sum(x["prosao"] for x in ishodi_t), sum(x["dobit"] for x in ishodi_t)
+        ocek = sum(x["sansa"] for x in ishodi_t) / n
+        red.insert(0, f'<tr><td class="l"><b>Tiketi dana</b></td><td>{n}</td><td>{pogodjeno}</td>'
+                      f'<td><b>{procenat(pogodjeno / n)}</b></td><td>{procenat(ocek)} (model)</td>'
+                      f'<td class="{"p" if dobit > 0 else "i"}">{"+" if dobit > 0 else ""}{broj(dobit, 1)}</td>'
+                      f'<td>{"+" if dobit > 0 else ""}{broj(dobit / n * 100, 0)}%</td></tr>')
     poslednji = [x for x in ishodi if x["top"]][:10]
     lista = "".join(
         f'<tr><td class="l">{datum_srb(x["datum"])}</td><td class="l"><a href="igrac/{x["igrac_id"]}.html">'
@@ -548,7 +660,10 @@ def stranica_propovi(k, utakmice):
 
     top = top_predlozi(rez)
     predlozi = sacuvaj_predloge(rez, top)
-    rezultati = sekcija_rezultata(k, ishodi_predloga(k, predlozi, utakmice))
+    tiketi = sacuvaj_tiket(tiket_dana(rez))
+    ishodi_t = ishodi_tiketa(k, tiketi, utakmice)
+    rezultati = sekcija_rezultata(k, ishodi_predloga(k, predlozi, utakmice), ishodi_t)
+    tiket_html = sekcija_tiketa(k, tiketi, utakmice)
 
     mecevi = {}
 
@@ -595,6 +710,7 @@ utakmice i dan pre (ujutru i popodne).</p></div>
 <p class="sub">Linije i kvote: Superbet (superbet.rs) · preuzeto {e(kv.get('preuzeto', ''))} ·
 {len(redovi)} propova · jakih {broj_ocena['jaka']}, srednjih {broj_ocena['srednja']}</p>
 {upozorenje}
+{tiket_html}
 <div class="naslov-sekcije"><h2>Top 10 predloga</h2></div>
 <div class="sekcija skrol" style="margin-top:0">{'<table class="tab">' + zaglavlje + '<tbody>' + redovi_top + '</tbody></table>'
                                                  if redovi_top else '<p style="margin:0">Model ovog puta ne vidi nijedan predlog sa prednošću.</p>'}</div>

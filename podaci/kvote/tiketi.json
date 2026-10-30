@@ -1,0 +1,48 @@
+{
+ "2026-10-30": {
+  "nogice": [
+   {
+    "kljuc": "2026-84-P015153-trojke",
+    "igrac_id": "P015153",
+    "tim": "HTA",
+    "sezona": 2026,
+    "sifra_utakmice": 84,
+    "datum": "2026-10-30 17:00",
+    "tip": "trojke",
+    "linija": 0.5,
+    "strana": "ispod",
+    "kvota": 1.39,
+    "p_model": 0.722
+   },
+   {
+    "kljuc": "2026-88-P008099-trojke",
+    "igrac_id": "P008099",
+    "tim": "IST",
+    "sezona": 2026,
+    "sifra_utakmice": 88,
+    "datum": "2026-10-30 18:30",
+    "tip": "trojke",
+    "linija": 1.5,
+    "strana": "ispod",
+    "kvota": 1.53,
+    "p_model": 0.669
+   },
+   {
+    "kljuc": "2026-87-P009862-skokovi",
+    "igrac_id": "P009862",
+    "tim": "BAR",
+    "sezona": 2026,
+    "sifra_utakmice": 87,
+    "datum": "2026-10-30 20:30",
+    "tip": "skokovi",
+    "linija": 2.5,
+    "strana": "ispod",
+    "kvota": 1.55,
+    "p_model": 0.66
+   }
+  ],
+  "kvota": 3.3,
+  "sansa": 0.3188,
+  "sacuvano": "2026-10-30 13:08"
+ }
+}

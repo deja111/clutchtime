@@ -133,6 +133,12 @@ table.tab td.zasto{white-space:normal;min-width:260px;max-width:380px}
 .ocena{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:999px;letter-spacing:.02em}
 .o-jaka{background:var(--good);color:var(--on-accent)}.o-srednja{border:1px solid var(--good);color:var(--good)}
 .o-slaba{color:var(--ink2)}.o-nema{color:var(--muted)}
+.tiket{background:linear-gradient(135deg,var(--accent-soft),var(--card) 70%);border:1px solid var(--accent);
+border-radius:12px;padding:14px 16px;margin:14px 0}
+.tiket-glava{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tiket-glava h2{margin:0 0 8px;font-size:18px}
+.tiket-zbir{display:flex;gap:24px;flex-wrap:wrap;margin-top:10px;font-size:15px}
+.tiket-zbir b{font-size:20px;color:var(--accent);margin-left:6px}
 .svi-propovi{margin:14px 0}.svi-propovi>summary{cursor:pointer;font-weight:700;padding:10px 14px;background:var(--card);
 border:1px solid var(--line);border-radius:10px}.svi-propovi[open]>summary{border-color:var(--accent)}
 .napomena{font-size:12.5px;color:var(--muted)}
