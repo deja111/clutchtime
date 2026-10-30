@@ -24,7 +24,7 @@ Tabele u bazi: `timovi`, `utakmice` (sezona 2026 = 2026-27, `odigrana` 0/1), `ig
 
 ## Automatizacija i objava
 
-- `.github/workflows/azuriranje.yml`: cron `0 7`, `0 14`, `0 18` UTC (8h/15h/19h zimi u Srbiji) + ručno "Run workflow".
+- `.github/workflows/azuriranje.yml`: cron `23 7`, `23 14`, `23 18` UTC (8:23/15:23/19:23 zimi u Srbiji; ne na pun sat jer GitHub tada preskače) + ručno "Run workflow".
   Redom: `azuriraj_bazu.py` → `analiza.py` → `sajt.py` → commit `podaci/evroliga.db`, `podaci/povrede_poslednje.csv`, `sajt/` → push.
   Poslednji korak pada (crveni X + mejl) ako u logu ima grešaka, ali tek posle objave.
 - Python 3.12, `TZ=Europe/Belgrade`, zavisnosti u `requirements.txt` (samo `requests`).

@@ -5,12 +5,13 @@ name: Ažuriranje sajta
 
 on:
   schedule:
-    # GitHub koristi UTC vreme. Ovo je 8h, 15h i 19h po zimskom vremenu u Srbiji;
-    # po letnjem vremenu (od kraja marta) pokreće se sat kasnije: 9h, 16h i 20h.
-    # GitHub ume da zakasni i 10-20 minuta kad su mu serveri opterećeni.
-    - cron: "0 7 * * *"
-    - cron: "0 14 * * *"
-    - cron: "0 18 * * *"
+    # GitHub koristi UTC vreme. Ovo je 8:23, 15:23 i 19:23 po zimskom vremenu u Srbiji;
+    # po letnjem vremenu (od kraja marta) pokreće se sat kasnije.
+    # Namerno NE na pun sat: tada je GitHub najopterećeniji i zakazana pokretanja
+    # kasne ili se preskoče (30.10.2026. pokretanje u 8:00 se nije ni pojavilo).
+    - cron: "23 7 * * *"
+    - cron: "23 14 * * *"
+    - cron: "23 18 * * *"
   workflow_dispatch:   # dugme "Run workflow" za ručno pokretanje (i sa telefona)
 
 permissions:
