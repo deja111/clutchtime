@@ -5,7 +5,8 @@ povrede.py
 imena iz tabele sa igračima u bazi. Koristi ga sajt.py.
 
 Kolone u tabeli: Igrač | Status | Razlog | Očekivani povratak | Ažurirano | Izvor
-Status: "Ne igra", "Upitan" ili "Vraća se".
+Status: "Ne igra", "Upitan" ili "Vraća se" (prepoznaje i engleske: Out, Game Time Decision,
+Questionable, Doubtful, Day To Day, Probable). Engleski razlozi i datumi (10/30/2026) se prevode.
 
 Ako tabela trenutno ne može da se preuzme (nema interneta i sl.), koristi se
 poslednja uspešno preuzeta verzija (podaci/povrede_poslednje.csv), da povrede
@@ -31,7 +32,52 @@ STATUSI = {
     "ne igra": ("NE IGRA", "st-ne"),
     "upitan": ("UPITAN", "st-up"),
     "vraca se": ("VRAĆA SE", "st-vr"),
+    # Engleski statusi (kad se tabela puni sa stranih sajtova o povredama)
+    "out": ("NE IGRA", "st-ne"),
+    "out for season": ("NE IGRA", "st-ne"),
+    "game time decision": ("UPITAN", "st-up"),
+    "gtd": ("UPITAN", "st-up"),
+    "questionable": ("UPITAN", "st-up"),
+    "doubtful": ("UPITAN", "st-up"),
+    "day to day": ("UPITAN", "st-up"),
+    "probable": ("VRAĆA SE", "st-vr"),
+    "returning": ("VRAĆA SE", "st-vr"),
 }
+
+# Engleski razlozi -> srpski (ostali se prikazuju kako su upisani)
+RAZLOZI = {
+    "knee": "koleno", "ankle": "skočni zglob", "foot": "stopalo", "shoulder": "rame", "wrist": "ručni zglob",
+    "hamstring": "zadnja loža", "back": "leđa", "thigh": "butina", "quadriceps": "kvadriceps",
+    "achilles": "Ahilova tetiva", "toe": "prst na nozi", "elbow": "lakat", "illness": "bolest",
+    "undisclosed": "nepoznato", "not injury related": "nije povreda", "calf": "list", "groin": "prepone",
+    "hip": "kuk", "concussion": "potres mozga", "hand": "šaka", "finger": "prst na ruci", "thumb": "palac",
+    "neck": "vrat", "rest": "odmor", "personal": "lični razlozi", "abdomen": "stomak", "adductor": "aduktor",
+    "shin": "potkolenica", "heel": "peta", "chest": "grudi", "ribs": "rebra", "face": "lice", "nose": "nos",
+    "eye": "oko", "head": "glava", "leg": "noga", "arm": "ruka", "lower back": "donji deo leđa",
+}
+
+
+def srpski_razlog(tekst):
+    prevod = RAZLOZI.get(normalizuj(tekst))
+    return prevod.capitalize() if prevod else tekst
+
+
+def srpski_datum(tekst):
+    """'10/30/2026' ili '10.30.2026' -> '30.10.2026.'. Sa '/' se podrazumeva američki redosled
+    (mesec/dan), sa '.' srpski (dan.mesec), osim kad je očigledno (broj veći od 12)."""
+    t = tekst.strip().rstrip(".")
+    znak = "/" if "/" in t else "."
+    delovi = t.split(znak)
+    if len(delovi) != 3 or not all(d.isdigit() for d in delovi):
+        return tekst
+    a, b, godina = int(delovi[0]), int(delovi[1]), delovi[2]
+    if a > 12:
+        dan, mesec = a, b
+    elif b > 12 or znak == "/":
+        dan, mesec = b, a
+    else:
+        dan, mesec = a, b
+    return f"{dan:02d}.{mesec:02d}.{godina}."
 
 
 def normalizuj(tekst):
@@ -114,7 +160,8 @@ def povezi(redovi, igraci):
             zapisi_upozorenje(f"Povrede: ne prepoznajem igrača '{r['igrac']}' - proveri ime u tabeli.")
             continue
         tekst, klasa = STATUSI.get(normalizuj(r["status"]), (r["status"].upper() or "STATUS?", "st-up"))
-        povrede[igrac_id] = dict(r, bedz=tekst, klasa=klasa)
+        povrede[igrac_id] = dict(r, bedz=tekst, klasa=klasa, razlog=srpski_razlog(r["razlog"]),
+                                 povratak=srpski_datum(r["povratak"]), azurirano=srpski_datum(r["azurirano"]))
     return povrede
 
 
