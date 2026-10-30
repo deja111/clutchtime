@@ -777,7 +777,8 @@ kvota, bez marže. <b>Ocena</b>: jaka / srednja / slaba prednost po modelu, "–
 <b>Posl. 10</b> = koliko puta u poslednjih 10 utakmica bi predlog prošao na ovoj liniji.
 Top 10: najviše 2 predloga po igraču, bez linija označenih sa ⚠.</p>
 <p class="napomena">Model: učinak po minutu i minuti iz poslednjih 5 utakmica (prošla sezona se ne koristi),
-šta protivnik dozvoljava toj poziciji, kod kuće/u gostima, odsutni saigrači iz tabele
+šta protivnik dozvoljava toj poziciji (samo asistencije i trojke: za poene i skokove se pokazalo kao šum),
+kod kuće/u gostima, odsutni saigrači iz tabele
 povreda i očekivana razlika u poenima (starteri sede kad je meč rešen). Sve je provereno na ranijim utakmicama.
 ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više. Model često bira "ispod":
 igrače ne potcenjuje, pa razlog verovatno leži u tome što kladionice podižu linije jer se češće igra "preko".

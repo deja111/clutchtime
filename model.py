@@ -8,7 +8,7 @@ Kako se računa očekivana vrednost (npr. poeni):
     1. Učinak po minutu u poslednjih 5 utakmica (prošla sezona se ne koristi).
     2. Očekivani minuti: prosek poslednjih 5 utakmica.
     3. Protivnik: koliko dozvoljava igračima te pozicije u toj kategoriji, u odnosu na
-       prosek lige. Ublaženo prema 1 kad protivnik ima malo odigranih utakmica.
+       prosek lige - samo za asistencije i trojke (za ostalo je provera pokazala da je šum).
     4. Kod kuće / u gostima: igračev odnos, jako ublažen (najviše ±6%).
 Raspodela: negativna binomna (brojevi poena/skokova su "rasutiji" od Poasonove),
 rasipanje se procenjuje iz igračevih utakmica. P(preko 14.5) = P(X >= 15).
@@ -27,7 +27,10 @@ from collections import defaultdict
 # Provera na 9.562 utakmice: ponderisana cela sezona (+ prošla) imala je manju grešku (poeni 5,49 prema 5,78),
 # ali je izabrano jednostavnije i "svežije" pravilo; kalibracija je ponovo naučena za ovaj način.
 UZORAK = 5
-PROTIVNIK_UBLAZI = 8.0        # težina protivnika = n / (n + 8)
+# Matchup (koliko protivnik dozvoljava poziciji): težina = n / (n + ublaži), samo gde je provera pokazala korist.
+# Provera 30.10.2026. na 9.379 utakmica (protivnik računat samo iz ranijih utakmica): kod poena, skokova i PSA
+# svaki matchup povećava grešku (šum), kod asistencija i trojki blag matchup (ublaži 16) malo pomaže.
+PROTIVNIK_UBLAZI = {"asistencije": 16.0, "trojke": 16.0}
 DOMACIN_MAX = 0.06
 MALO_UTAKMICA = 5             # ispod ovoga: oznaka "malo podataka"
 # Tipično rasipanje (varijansa/srednja vrednost) u ligi: medijana igrača sa 15+ utakmica (10+ min), 2023-2026
@@ -59,9 +62,10 @@ def ocena(ev, sumnjivo):
 # testirano na 2025-26 -> Brier bolji u svim kategorijama. b < 1 = model je bio previše samouveren.
 KALIBRACIJA = {
     # Naučeno ponovo 30.10.2026. za model "poslednjih 5 utakmica" (b manje = taj model je samouvereniji)
-    "poeni": (0.034, 0.731), "skokovi": (-0.043, 0.836), "asistencije": (-0.091, 0.824),
-    "trojke": (-0.181, 0.805), "ukradene": (-0.368, 0.803), "blokade": (-0.557, 0.865),
-    "PSA": (0.030, 0.764), "PS": (0.027, 0.747), "PA": (0.041, 0.764), "SA": (-0.016, 0.842),
+    # (ponovo posle izmene matchupa, 30.10.2026)
+    "poeni": (0.031, 0.740), "skokovi": (-0.045, 0.831), "asistencije": (-0.092, 0.823),
+    "trojke": (-0.181, 0.807), "ukradene": (-0.377, 0.797), "blokade": (-0.567, 0.868),
+    "PSA": (0.019, 0.734), "PS": (0.020, 0.744), "PA": (0.038, 0.768), "SA": (-0.019, 0.843),
 }
 
 
@@ -337,8 +341,8 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
         odnos = (sum(v for v, _ in dom) / sum(m for _, m in dom)) / (sum(vr) / sum(mi) if sum(mi) else 1)
         f_dom = max(1 - DOMACIN_MAX, min(1 + DOMACIN_MAX, 1 + 0.25 * (odnos - 1)))
 
-    odnos_p, n_p = protivnik_faktor or (1.0, 0)
-    f_prot = 1 + (odnos_p - 1) * n_p / (n_p + PROTIVNIK_UBLAZI)
+    odnos_p, n_p = (protivnik_faktor or (1.0, 0)) if tip in PROTIVNIK_UBLAZI else (1.0, 0)
+    f_prot = 1 + (odnos_p - 1) * n_p / (n_p + PROTIVNIK_UBLAZI.get(tip, 1.0))
 
     ocekivano = po_minutu * minuti * f_dom * f_prot
     koraci.append(("dom", sad * f_dom - sad))
