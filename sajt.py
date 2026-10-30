@@ -414,6 +414,10 @@ def stranica_propovi(k, utakmice):
         if abs(r["minuti_bez_saigraca"] - r["min_sezona"]) >= 2:
             delovi.append(f"minuti {'rastu' if r['minuti_bez_saigraca'] > r['min_sezona'] else 'padaju'}: "
                           f"{broj(r['minuti_bez_saigraca'], 0)} (sezona {broj(r['min_sezona'], 0)})")
+        if abs(r["razlika_min"]) >= 0.3:
+            raz = r["ocekivana_razlika"]
+            delovi.append(f"očekivana razlika {broj(abs(raz), 0)} poena ({'favorit' if raz > 0 else 'autsajder'}, "
+                          f"moguć rasplet ranije): {'+' if r['razlika_min'] > 0 else ''}{broj(r['razlika_min'])} min")
         if abs(r["f_prot"] - 1) >= 0.04:
             delovi.append(f"{naziv(r['protivnik'])} dozvoljava {MN.get(r['pozicija'], 'igračima')} "
                           f"{'+' if r['f_prot'] > 1 else ''}{broj((r['f_prot'] - 1) * 100, 0)}%")
@@ -485,7 +489,8 @@ očekivani minuti (trend), šta protivnik dozvoljava toj poziciji i kod kuće/u 
 raspodelu kalibrisanu na prethodne dve sezone. Konačna procena je pola model, pola kladionica.
 Igrači sa statusom "ne igra" su izostavljeni. Odsustvo saigrača iz tabele povreda je uračunato (dodatni minuti
 i nešto veći učinak, izmereno na ranijim utakmicama u kojima je izostao igrač sa 15+ minuta; "upitan" se računa
-upola). ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više (takvi propovi nisu
+upola). Kad se očekuje ubedljiva pobeda jednog tima, starteri dobijaju nešto manje minuta, a klupa više
+(izmereno na ranijim utakmicama). ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više (takvi propovi nisu
 zeleni i ne ulaze u filter "5%+").</p>
 <p class="napomena">Model često bira "ispod". Provera na ovoj i prošloj sezoni pokazuje da model igrače ne
 potcenjuje (stvarni učinak je u proseku 2-3% ispod procene), pa razlog verovatno leži u tome što kladionice

@@ -244,10 +244,49 @@ class Saigraci:
         return dodatno, mnozilac, opis
 
 
+# ----------------------------- OČEKIVANA RAZLIKA (BLOWOUT) -----------------------------
+# Izmereno na 11.164 utakmice (2024-25, 2025-26): kad je unapred očekivana razlika 8+ poena, starteri
+# igraju ~1,7-1,9 min manje od procene, klupa ~0,2-0,5 min više. Odmor (dani između utakmica) nije
+# pokazao efekat (±1,5%, u bazi nema domaćeg prvenstva), pa nije uključen.
+PREDNOST_DOMACINA = 3.0
+RAZLIKA_PRAG = 4.0            # do ove očekivane razlike nema efekta
+
+
+def rejtinzi_timova(statistika, sezona):
+    """Prosečna razlika u poenima po utakmici (ova sezona), na početku sezone ublažena ka pola prošlosezonske."""
+    mecevi = {}
+    for r in statistika:
+        if r["sezona"] in (sezona, sezona - 1) and r["poeni_domacin"] is not None:
+            gost = r["protivnik"] if r["domacin"] else r["tim"]
+            mecevi[(r["sezona"], r["sifra_utakmice"])] = (r["u_domacin"], gost, r["poeni_domacin"], r["poeni_gost"])
+    zbir = defaultdict(lambda: [0.0, 0])
+    for (s, _), (dom, gost, pd, pg) in mecevi.items():
+        for tim, raz in ((dom, pd - pg), (gost, pg - pd)):
+            zbir[(s, tim)][0] += raz
+            zbir[(s, tim)][1] += 1
+    timovi = {t for (s, t) in zbir if s == sezona}
+    rejting = {}
+    for t in timovi:
+        z, n = zbir[(sezona, t)]
+        zp, np_ = zbir.get((sezona - 1, t), (0.0, 0))
+        prosla = zp / np_ if np_ else 0.0
+        rejting[t] = (z + 5 * 0.5 * prosla) / (n + 5)
+    return rejting
+
+
+def minuti_zbog_razlike(minuti, ocekivana_razlika):
+    """Starteri (28+ min) gube do 0,25 min po poenu razlike iznad praga, klupa (15- min) dobija 0,08."""
+    visak = max(0.0, abs(ocekivana_razlika) - RAZLIKA_PRAG)
+    koef = 0.08 - 0.33 * max(0.0, min(1.0, (minuti - 15) / 13))
+    return max(-3.0, min(1.5, koef * visak))
+
+
 # ----------------------------- PROCENA -----------------------------
-def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigraci=(0.0, 1.0, [])):
+def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigraci=(0.0, 1.0, []),
+                   ocekivana_razlika=None):
     """Očekivana vrednost, rasipanje i objašnjenja za jednog igrača i jedan tip.
-    saigraci: (dodatni minuti, množilac učinka, opis) iz Saigraci.korekcija."""
+    saigraci: (dodatni minuti, množilac učinka, opis) iz Saigraci.korekcija.
+    ocekivana_razlika: očekivana razlika u poenima za igračev tim (+ = favorit)."""
     n = len(ut_sezona)
     vr = [vrednost(r, tip) for r in ut_sezona]
     mi = [r["minuti"] or 0 for r in ut_sezona]
@@ -270,6 +309,8 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
     minuti_bez_saigraca = minuti
     minuti = max(0.0, min(max(MAKS_MINUTA, minuti), minuti + dodatno))
     po_minutu *= mnozilac
+    razlika_min = minuti_zbog_razlike(minuti, ocekivana_razlika) if ocekivana_razlika is not None else 0.0
+    minuti = max(0.0, minuti + razlika_min)
 
     # Kod kuće / u gostima (po minutu), jako ublaženo
     dom = [(v, m) for v, m, r in zip(vr, mi, ut_sezona) if r["domacin"] == (1 if kod_kuce else 0)]
@@ -296,7 +337,8 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
             "sezona_prosek": sum(vr) / n, "poslednjih5": sum(vr[-5:]) / len(vr[-5:]),
             "prosla_prosek": prosla_prosek if n_ef < 3 * PRIOR_UTAKMICA else None,  # pomenuti samo kad dosta utiče
             "f_dom": f_dom, "f_prot": f_prot, "n_prot": n_p, "vrednosti": vr,
-            "saigraci": opis_saigraca, "minuti_bez_saigraca": minuti_bez_saigraca, "mnozilac": mnozilac}
+            "saigraci": opis_saigraca, "minuti_bez_saigraca": minuti_bez_saigraca, "mnozilac": mnozilac,
+            "ocekivana_razlika": ocekivana_razlika, "razlika_min": razlika_min}
 
 
 def glavne_linije(propovi):
@@ -325,6 +367,7 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
     protivnik = faktori_protivnika(statistika, igraci, sezona)
     mecevi = {(u["sezona"], u["sifra_utakmice"]): u for u in utakmice}
     saigraci = Saigraci(statistika, igraci, sezona)
+    rejting = rejtinzi_timova(statistika, sezona)
     # Iz tabele povreda: "ne igra" = sigurno odsustvo, "upitan" = pola
     verovatnoca_odsustva = {i: {"st-ne": 1.0, "st-up": 0.5}.get(p.get("klasa"), 0.0) for i, p in povrede.items()}
 
@@ -347,7 +390,9 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
                    if q and y != p["igrac_id"] and y in saigraci.tim_sezona_skup(sezona, p["tim"])}
         x = proceni_igraca(ut, po_igracu_prosla.get(p["igrac_id"], []), p["tip"], kod_kuce,
                            protivnik.get((prot, poz, p["tip"])),
-                           saigraci.korekcija(p["igrac_id"], p["tim"], ut, odsutni, p["tip"]))
+                           saigraci.korekcija(p["igrac_id"], p["tim"], ut, odsutni, p["tip"]),
+                           rejting.get(p["tim"], 0) - rejting.get(prot, 0)
+                           + (PREDNOST_DOMACINA if kod_kuce else -PREDNOST_DOMACINA))
         kladionica = (1 / p["preko"]) / (1 / p["preko"] + 1 / p["ispod"])
         model = kalibrisi(p_preko(x["ocekivano"], x["rasipanje"], p["linija"]), p["tip"])
         verovatnoca = kladionica + TEZINA_MODELA * (model - kladionica)

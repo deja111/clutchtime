@@ -95,6 +95,10 @@ Nalazi iz `istrazi_oddspapi.py` (30.10.2026, pravi odgovori u `podaci/oddspapi/`
       Računa se samo deo odsustva koji NIJE već u igračevoj formi. Izmereno na 4.334 utakmice: stvarno se ostvari
       ~1/3 minuta (`SKALA_MINUTA` 0,35) + mali rast učinka (`SKALA_UCINKA`, ne za skokove). Rezultat: greška kod
       poena pala sa +0,56 na 0,02, minuta sa +0,88 na 0,00; bez odsustva nepromenjeno.
+- [x] Očekivana razlika / blowout (30.10.2026): `rejtinzi_timova` (razlika u poenima, + pola prošle sezone) +
+      3 za domaćina; `minuti_zbog_razlike` (starteri do −0,25 min po poenu iznad 4, klupa +0,08). Izmereno na
+      11.164 utakmice, greška minuta manja u obe sezone. ODMOR (dani između utakmica) izmeren: bez efekta,
+      nije uključen (u bazi nema domaćeg prvenstva, pa pravi umor ne vidimo).
 - [ ] Izmene iz `izmene.txt` (naziv sajta, CSS, meni, ukloniti "napravljeno…" ispod najave, forma igrača i utakmice u meni).
 - [ ] Podnožje svake stranice: nije zvanično povezano sa Evroligom, podaci su vlasništvo Euroleague Basketball-a, 18+.
 - [ ] Ukloniti iz git-a ono što je ostalo pre `.gitignore`: `git rm -r --cached "Claude outputs" __pycache__`.
