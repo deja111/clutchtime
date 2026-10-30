@@ -16,7 +16,8 @@ a Vercel ga objavljuje.
 | `sajt.py` | Pravi ceo sajt u `sajt/` (index, najava, lideri, igraci, igrac/<id>, timovi, tim/<sifra>, utakmica/<id>). Koristi funkcije iz `analiza.py`. |
 | `preuzmi_kolo.py` | Stari pomoćni alat (CSV jednog kola). |
 | `objavi.py`, `pokreni_azuriranje.bat` | ZASTARELO (stari GitHub Pages + Task Scheduler). Ne pokretati. |
-| `istrazi_oddspapi.py` | Jednokratno istraživanje OddsPapi odgovora (vidi dole). |
+| `istrazi_oddspapi.py` | Jednokratno istraživanje OddsPapi odgovora (vidi dole). `--pregled` ponovo ispiše nalaze bez zahteva. |
+| `kvote.py` | Kvote za propove igrača (superbet.rs) → `podaci/kvote/kvote_poslednje.json` + `arhiva/`. Zove API samo dan utakmice/dan pre, najviše 2x dnevno (`pozivi.json`). `--sada`, `--fajl X` (obrada bez poziva). Bez ključa samo preskoči. |
 
 Tabele u bazi: `timovi`, `utakmice` (sezona 2026 = 2026-27, `odigrana` 0/1), `igraci`, `statistika` (jedan red = igrač na utakmici).
 
@@ -60,15 +61,28 @@ Model (plan): ponderisan prosek (skorije utakmice više vrede) + trend minutaže
 kvote (1/kvota, bez marže kladionice) → edge. Označiti igrače iz tabele povreda. Kalibracija na besplatnim istorijskim kvotama.
 Na stranici: oznaka 18+ i napomena da je to analiza, a ne savet za klađenje.
 
-Status (30.10.2026): `istrazi_oddspapi.py` napisan i testiran sa lažnim podacima, ali nije pokrenut sa pravim ključem.
-Treba ga pokrenuti na dan utakmica (troši najviše 4 zahteva) i na osnovu `podaci/oddspapi/*.json` napisati parser:
-koji market ID je poeni/skokovi/asistencije/PRA, gde je linija (verovatno u `bookmakerOutcomeId`, npr. `14.5/over`),
-kako upariti `playerName` sa `igrac_id` (pogledati `normalizuj()` u `povrede.py`).
+Nalazi iz `istrazi_oddspapi.py` (30.10.2026, pravi odgovori u `podaci/oddspapi/`):
+- Evroliga `tournamentId = 138`, košarka `sportId = 11`. Katalog marketa sačuvan (`marketi_*.json`, 8883 marketa, 440 za igrače).
+- `/v4/odds-by-tournaments` traži TAČNO JEDNU kladionicu: parametar `bookmaker` (jednina). Inače 400 (i naplati se).
+- `/v4/odds?fixtureId=...` vraća sve kladionice (~250) za jedan meč, 1 zahtev. Dobro za proveru pokrivenosti.
+- `/v4/account` vraća i `api_key`: pre snimanja obavezno ukloniti (`bez_kljuca()` u skripti). `nalog_*.json` su u `.gitignore`.
+- Pinnacle NEMA propove igrača za Evroligu (samo ishod, hendikep, ukupno). Srpske: samo `superbet.rs` ima propove
+  (mozzartbet, maxbet.rs, admiralbet.rs, balkanbet.rs nemaju; soccerbet.rs i meridianbet nisu na meču).
+  Najviše propova: `betano` (sve varijante). `bet365` ima samo "lestvice" (10+, 15+, 20+...), ne preko/ispod.
+- Format preko/ispod: `marketType` u katalogu, npr. `playertotals-points`, `-rebounds`, `-assists`, `-ptsassreb`, `-ptsreb`,
+  `-ptsass`, `-3pointers`. Svaka linija je poseban market ID; linija je `handicap` u katalogu (npr. 14.5), a ishodi
+  Over/Under su `outcomeId` iz kataloga (`outcomeName`). `bookmakerOutcomeId` je interni ID kladionice, NIJE linija.
+- U `players` ključ je ID igrača kod OddsPapi-ja, a `playerName` je "Prezime, Ime" (kao u našoj bazi). Gledati `active`
+  (neaktivne kvote preskočiti). Prosto uparivanje preko `normalizuj()` je uspelo za 14 od 16 imena; ne uspeva za imena
+  bez zareza ("McKinley Wright") i za igrače kojih nema u bazi.
 
 ## Otvoreni zadaci
 
-- [ ] Pokrenuti `istrazi_oddspapi.py`, pa napisati `kvote.py`, model i stranicu propova.
-- [ ] Dodati Secret `ODDSPAPI_KEY` na GitHub i korak u workflow.
+- [x] Pokrenuti `istrazi_oddspapi.py` (30.10.2026).
+- [x] `kvote.py` + korak u workflow (30.10.2026). Kladionica: samo `superbet.rs` (Dejanova odluka).
+- [ ] Dodati Secret `ODDSPAPI_KEY` na GitHub (dok ga nema, korak kvota samo preskoči).
+- [ ] Model (P(preko linije), edge) i stranica "Propovi kola". Superbet ima više linija po igraču/tipu:
+      glavna linija = ona sa kvotama najbližim jedna drugoj.
 - [ ] Izmene iz `izmene.txt` (naziv sajta, CSS, meni, ukloniti "napravljeno…" ispod najave, forma igrača i utakmice u meni).
 - [ ] Podnožje svake stranice: nije zvanično povezano sa Evroligom, podaci su vlasništvo Euroleague Basketball-a, 18+.
 - [ ] Ukloniti iz git-a ono što je ostalo pre `.gitignore`: `git rm -r --cached "Claude outputs" __pycache__`.

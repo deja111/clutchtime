@@ -10,16 +10,18 @@ Pokretanje (Command Prompt, iz foldera Projekat), NA DAN UTAKMICA:
     set ODDSPAPI_KEY=tvoj_kljuc
     python istrazi_oddspapi.py
 
-Troši najviše 3 zahteva (besplatan plan: 250 mesečno):
+Troši zahteve (besplatan plan: 250 mesečno):
     1. /v4/tournaments  - samo prvi put (posle se čita iz fajla)
     2. /v4/markets      - samo prvi put (posle se čita iz fajla)
-    3. /v4/odds-by-tournaments - kvote celog kola
+    3. /v4/odds-by-tournaments - kvote celog kola, 1 zahtev po kladionici
+    4. /v4/odds         - jedan meč sa svim kladionicama (ko ima propove), 1 zahtev
 Provera stanja (/v4/account) je besplatna i radi se pre i posle.
 
 Opcije:
-    --suvo         samo ispiše šta bi pozvao, ne zove ništa
-    --turnir ID    ručno zadat ID Evrolige (ako ga skripta ne nađe sama)
-    --pregled      bez poziva: samo ponovo ispiše pregled iz sačuvanih fajlova
+    --suvo             samo ispiše šta bi pozvao, ne zove ništa
+    --turnir ID        ručno zadat ID Evrolige (Evroliga = 138)
+    --kladionice a,b   kladionice odvojene zarezom (podrazumevano: pinnacle)
+    --pregled          bez poziva: samo ponovo ispiše pregled iz sačuvanih fajlova
 
 Pravila: ključ se nikad ne ispisuje i ne snima. Neuspeli poziv se NE ponavlja
 (i greške se naplaćuju), samo se snimi odgovor da vidimo šta je pošlo naopako.
@@ -44,6 +46,7 @@ OSNOVA = os.environ.get("ODDSPAPI_BASE", "https://api.oddspapi.io")  # drugačij
 KOSARKA = 11  # sportId za košarku
 GRANICA = 200  # ne trošimo zahteve ako je mesečno potrošeno ovoliko ili više
 PAUZA = 1.5  # sekundi između poziva
+KLADIONICE = "pinnacle"  # API prima tačno jednu kladionicu po pozivu (parametar 'bookmaker')
 
 
 # ----------------------------- POZIVI -----------------------------
@@ -62,6 +65,7 @@ def pozovi(putanja, parametri, naziv, kljuc, suvo=False):
         telo = odgovor.json()
     except ValueError:
         telo = {"_tekst": odgovor.text[:2000]}
+    telo = bez_kljuca(telo, kljuc)  # /v4/account vraća i sam ključ: nikad ga ne snimamo
     vreme = datetime.now().strftime("%Y%m%d_%H%M%S")
     IZLAZ.mkdir(parents=True, exist_ok=True)
     fajl = IZLAZ / f"{naziv}_{vreme}.json"
@@ -71,6 +75,17 @@ def pozovi(putanja, parametri, naziv, kljuc, suvo=False):
     print(f"  <- {odgovor.status_code}, snimljeno: {fajl.name}")
     time.sleep(PAUZA)
     return telo if odgovor.ok else None
+
+
+def bez_kljuca(obj, kljuc):
+    """Zameni sa *** svako polje čije ime sadrži 'key' i svaku pojavu samog ključa."""
+    if isinstance(obj, dict):
+        return {k: "***" if "key" in k.lower() else bez_kljuca(v, kljuc) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [bez_kljuca(x, kljuc) for x in obj]
+    if isinstance(obj, str) and kljuc and kljuc in obj:
+        return obj.replace(kljuc, "***")
+    return obj
 
 
 def poslednji_fajl(naziv):
@@ -160,11 +175,33 @@ def pregled(turnir_id):
         print(f"  {k}: {m.get('marketName')} | tip={m.get('marketType')} | handicap={m.get('handicap')}"
               f" | period={m.get('period')}")
 
-    kvote = poslednji_fajl("kvote")
-    if kvote is None:
+    # Pokrivenost: koje kladionice imaju propove igrača na jednom meču
+    mec = poslednji_fajl("mec_sve")
+    if mec:
+        mec = mec[0] if isinstance(mec, list) else mec
+        pokrivenost = []
+        for kladionica, bo in (mec.get("bookmakerOdds") or {}).items():
+            propovi = [mid for mid in (bo.get("markets") or {}) if str(mid) in igracki]
+            ukupno = len(bo.get("markets") or {})
+            pokrivenost.append((len(propovi), ukupno, kladionica))
+        pokrivenost.sort(reverse=True)
+        print(f"\nPokrivenost meča {mec.get('fixtureId')}: {len(pokrivenost)} kladionica, "
+              f"sa propovima igrača: {sum(1 for p in pokrivenost if p[0])}")
+        for broj_p, ukupno, kladionica in pokrivenost[:30]:
+            if broj_p:
+                print(f"  {kladionica}: {broj_p} marketa za igrače (od {ukupno})")
+        srpske = [p for p in pokrivenost if p[2].endswith(".rs") or p[2] in ("mozzartbet", "meridianbet")]
+        print("  Srpske: " + (", ".join(f"{k} ({b} za igrače)" for b, _, k in srpske) or "nijedna na ovom meču"))
+
+    # Svi uspešni odgovori sa kvotama (po jedan za svaku kladionicu)
+    mecevi = []
+    for fajl in sorted(IZLAZ.glob("kvote_*.json")):
+        podaci = json.loads(fajl.read_text(encoding="utf-8"))
+        if podaci.get("_status") == 200:
+            mecevi += kao_lista(podaci["odgovor"])
+    if not mecevi:
         print("\nNema sačuvanih kvota (fajl kvote_*.json sa statusom 200).")
         return
-    mecevi = kao_lista(kvote)
     print(f"\nMečeva u odgovoru: {len(mecevi)} (turnir {turnir_id})")
 
     # Imena iz baze za probno uparivanje (baza: "PREZIME, IME")
@@ -213,6 +250,7 @@ def main():
     arg = sys.argv[1:]
     suvo = "--suvo" in arg
     turnir_id = arg[arg.index("--turnir") + 1] if "--turnir" in arg else None
+    kladionice = (arg[arg.index("--kladionice") + 1] if "--kladionice" in arg else KLADIONICE).split(",")
     if "--pregled" in arg:
         pregled(turnir_id)
         return
@@ -260,9 +298,19 @@ def main():
     else:
         print("  Iz sačuvanog fajla (bez zahteva).")
 
-    print("\n4) Kvote celog kola (sve kladionice, da vidimo koje imaju propove)")
-    pozovi("/v4/odds-by-tournaments", {"tournamentIds": turnir_id, "oddsFormat": "decimal"},
-           "kvote", kljuc, suvo)
+    print(f"\n4) Kvote celog kola: {', '.join(kladionice)} (1 zahtev po kladionici)")
+    fixture_id = None
+    for kladionica in kladionice:
+        telo = pozovi("/v4/odds-by-tournaments", {"tournamentIds": turnir_id, "bookmaker": kladionica,
+                                                  "oddsFormat": "decimal"}, "kvote", kljuc, suvo)
+        prvi = next((m.get("fixtureId") for m in kao_lista(telo or []) if m.get("fixtureId")), None)
+        fixture_id = fixture_id or prvi
+
+    print("\n4b) Jedan meč sa SVIM kladionicama (da vidimo ko ima propove za Evroligu)")
+    if fixture_id or suvo:
+        pozovi("/v4/odds", {"fixtureId": fixture_id, "oddsFormat": "decimal"}, "mec_sve", kljuc, suvo)
+    else:
+        print("  Preskačem: nema ID meča iz prethodnog koraka.")
 
     print("\n5) Stanje posle (besplatno)")
     stanje_naloga(kljuc, "nalog_posle", suvo)
