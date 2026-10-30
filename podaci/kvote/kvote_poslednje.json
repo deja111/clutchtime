@@ -1,8 +1,10 @@
 {
- "preuzeto": "2026-10-30 01:19",
+ "preuzeto": "2026-10-30 11:12",
  "kladionica": "superbet.rs",
- "broj": 402,
- "neupareni": [],
+ "broj": 465,
+ "neupareni": [
+  "Stewart, D.J."
+ ],
  "propovi": [
   {
    "igrac_id": "P011286",
@@ -26,9 +28,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "PA",
    "linija": 19.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T07:52:12.424Z"
   },
   {
    "igrac_id": "P011286",
@@ -39,22 +41,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "PS",
    "linija": 20.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
-  },
-  {
-   "igrac_id": "P011286",
-   "ime": "Bacon, Dwayne",
-   "tim": "DUB",
-   "sezona": 2026,
-   "sifra_utakmice": 84,
-   "datum": "2026-10-30 17:00",
-   "tip": "PS",
-   "linija": 21.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "preko": 1.83,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T07:45:48.800Z"
   },
   {
    "igrac_id": "P011286",
@@ -65,9 +54,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.62,
-   "ispod": 2.32,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "preko": 1.66,
+   "ispod": 2.22,
+   "promenjeno": "2026-10-30T07:44:55.874Z"
   },
   {
    "igrac_id": "P011286",
@@ -79,8 +68,8 @@
    "tip": "poeni",
    "linija": 16.5,
    "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T06:55:48.833Z"
   },
   {
    "igrac_id": "P011286",
@@ -93,7 +82,7 @@
    "linija": 4.5,
    "preko": 1.97,
    "ispod": 1.85,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "promenjeno": "2026-10-30T04:37:44.912Z"
   },
   {
    "igrac_id": "P011286",
@@ -104,9 +93,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.2,
-   "ispod": 1.67,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "preko": 2.17,
+   "ispod": 1.7,
+   "promenjeno": "2026-10-30T08:08:51.619Z"
   },
   {
    "igrac_id": "P011231",
@@ -116,10 +105,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "PS",
-   "linija": 9.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "linija": 8.5,
+   "preko": 1.77,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:15:30.734Z"
   },
   {
    "igrac_id": "P011231",
@@ -130,22 +119,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.74,
-   "ispod": 2.1,
-   "promenjeno": "2026-10-29T17:12:01.020Z"
-  },
-  {
-   "igrac_id": "P011231",
-   "ime": "Blossomgame, Jaron",
-   "tim": "DUB",
-   "sezona": 2026,
-   "sifra_utakmice": 84,
-   "datum": "2026-10-30 17:00",
-   "tip": "poeni",
-   "linija": 6.5,
-   "preko": 2.07,
-   "ispod": 1.77,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:15:30.734Z"
   },
   {
    "igrac_id": "P011231",
@@ -156,9 +132,113 @@
    "datum": "2026-10-30 17:00",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 2.17,
+   "preko": 2.2,
    "ispod": 1.69,
-   "promenjeno": "2026-10-29T17:12:14.927Z"
+   "promenjeno": "2026-10-30T08:51:59.762Z"
+  },
+  {
+   "igrac_id": "P014027",
+   "ime": "Diakite, Mamadi",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "poeni",
+   "linija": 5.5,
+   "preko": 1.77,
+   "ispod": 2.07,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "PA",
+   "linija": 17.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T10:08:09.651Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "PS",
+   "linija": 23.5,
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T07:32:12.213Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "asistencije",
+   "linija": 0.5,
+   "preko": 1.66,
+   "ispod": 2.25,
+   "promenjeno": "2026-10-30T07:03:12.836Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "asistencije",
+   "linija": 1.5,
+   "preko": 2.65,
+   "ispod": 1.49,
+   "promenjeno": "2026-10-30T07:04:24.369Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "poeni",
+   "linija": 16.5,
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T07:45:48.800Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "skokovi",
+   "linija": 6.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T07:04:53.817Z"
+  },
+  {
+   "igrac_id": "P012796",
+   "ime": "Kabengele, Mfiondu",
+   "tim": "DUB",
+   "sezona": 2026,
+   "sifra_utakmice": 84,
+   "datum": "2026-10-30 17:00",
+   "tip": "trojke",
+   "linija": 0.5,
+   "preko": 1.5,
+   "ispod": 2.6,
+   "promenjeno": "2026-10-30T07:03:12.836Z"
   },
   {
    "igrac_id": "P012606",
@@ -169,9 +249,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "PA",
    "linija": 14.5,
-   "preko": 1.9,
+   "preko": 1.88,
    "ispod": 1.92,
-   "promenjeno": "2026-10-29T17:15:27.674Z"
+   "promenjeno": "2026-10-30T02:32:53.548Z"
   },
   {
    "igrac_id": "P012606",
@@ -182,9 +262,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "asistencije",
    "linija": 4.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "preko": 2.07,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T08:06:39.775Z"
   },
   {
    "igrac_id": "P012606",
@@ -195,9 +275,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 1.78,
+   "preko": 1.77,
    "ispod": 2.05,
-   "promenjeno": "2026-10-29T17:12:01.020Z"
+   "promenjeno": "2026-10-30T07:32:12.213Z"
   },
   {
    "igrac_id": "P012606",
@@ -208,9 +288,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
    "linija": 10.5,
-   "preko": 2.05,
-   "ispod": 1.78,
-   "promenjeno": "2026-10-29T17:12:49.661Z"
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T07:51:27.031Z"
   },
   {
    "igrac_id": "P012606",
@@ -222,21 +302,21 @@
    "tip": "trojke",
    "linija": 0.5,
    "preko": 1.48,
-   "ispod": 2.65,
-   "promenjeno": "2026-10-29T16:23:56.695Z"
+   "ispod": 2.67,
+   "promenjeno": "2026-10-30T07:00:56.585Z"
   },
   {
-   "igrac_id": "P011212",
-   "ime": "Okobo, Elie",
+   "igrac_id": "P006540",
+   "ime": "Musa, Dzanan",
    "tim": "DUB",
    "sezona": 2026,
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
-   "tip": "PA",
-   "linija": 14.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T16:23:29.617Z"
+   "tip": "poeni",
+   "linija": 10.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T10:08:09.651Z"
   },
   {
    "igrac_id": "P011212",
@@ -248,8 +328,8 @@
    "tip": "PA",
    "linija": 15.5,
    "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T14:52:31.093Z"
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T07:45:21.918Z"
   },
   {
    "igrac_id": "P011212",
@@ -262,7 +342,7 @@
    "linija": 12.5,
    "preko": 1.88,
    "ispod": 1.92,
-   "promenjeno": "2026-10-29T16:19:27.140Z"
+   "promenjeno": "2026-10-30T02:03:26.916Z"
   },
   {
    "igrac_id": "P011212",
@@ -273,9 +353,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "asistencije",
    "linija": 4.5,
-   "preko": 1.7,
-   "ispod": 2.17,
-   "promenjeno": "2026-10-29T17:08:23.647Z"
+   "preko": 1.75,
+   "ispod": 2.1,
+   "promenjeno": "2026-10-30T07:00:56.585Z"
   },
   {
    "igrac_id": "P011212",
@@ -301,7 +381,7 @@
    "linija": 10.5,
    "preko": 2.0,
    "ispod": 1.82,
-   "promenjeno": "2026-10-29T16:27:45.193Z"
+   "promenjeno": "2026-10-30T02:32:14.705Z"
   },
   {
    "igrac_id": "P011212",
@@ -312,9 +392,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 2.15,
-   "ispod": 1.71,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "preko": 2.12,
+   "ispod": 1.73,
+   "promenjeno": "2026-10-30T04:22:19.838Z"
   },
   {
    "igrac_id": "P011212",
@@ -325,9 +405,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.25,
-   "ispod": 1.65,
-   "promenjeno": "2026-10-29T16:21:10.998Z"
+   "preko": 2.22,
+   "ispod": 1.67,
+   "promenjeno": "2026-10-30T04:42:14.044Z"
   },
   {
    "igrac_id": "P011194",
@@ -338,9 +418,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "PS",
    "linija": 10.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T17:08:23.647Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T02:05:16.443Z"
   },
   {
    "igrac_id": "P011194",
@@ -351,22 +431,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
    "linija": 6.5,
-   "preko": 1.76,
+   "preko": 1.75,
    "ispod": 2.07,
-   "promenjeno": "2026-10-29T17:05:32.139Z"
-  },
-  {
-   "igrac_id": "P011194",
-   "ime": "Petrusev, Filip",
-   "tim": "DUB",
-   "sezona": 2026,
-   "sifra_utakmice": 84,
-   "datum": "2026-10-30 17:00",
-   "tip": "poeni",
-   "linija": 7.5,
-   "preko": 2.07,
-   "ispod": 1.76,
-   "promenjeno": "2026-10-29T17:08:23.647Z"
+   "promenjeno": "2026-10-30T10:01:39.604Z"
   },
   {
    "igrac_id": "P011194",
@@ -377,9 +444,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 1.95,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 1.97,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T07:45:21.918Z"
   },
   {
    "igrac_id": "P011194",
@@ -390,9 +457,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.5,
-   "ispod": 2.62,
-   "promenjeno": "2026-10-29T17:12:14.927Z"
+   "preko": 1.52,
+   "ispod": 2.57,
+   "promenjeno": "2026-10-30T07:00:56.585Z"
   },
   {
    "igrac_id": "P001133",
@@ -402,10 +469,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "asistencije",
-   "linija": 1.5,
-   "preko": 2.9,
-   "ispod": 1.42,
-   "promenjeno": "2026-10-29T17:08:31.058Z"
+   "linija": 0.5,
+   "preko": 1.44,
+   "ispod": 2.8,
+   "promenjeno": "2026-10-30T07:32:12.213Z"
   },
   {
    "igrac_id": "P013402",
@@ -415,10 +482,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "PA",
-   "linija": 15.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "linija": 14.5,
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:23:17.800Z"
   },
   {
    "igrac_id": "P013402",
@@ -428,10 +495,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "PS",
-   "linija": 16.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T17:08:23.647Z"
+   "linija": 15.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:23:17.800Z"
   },
   {
    "igrac_id": "P013402",
@@ -442,9 +509,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 2.57,
-   "ispod": 1.51,
-   "promenjeno": "2026-10-29T17:12:01.020Z"
+   "preko": 2.55,
+   "ispod": 1.52,
+   "promenjeno": "2026-10-30T02:30:21.047Z"
   },
   {
    "igrac_id": "P013402",
@@ -454,10 +521,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
-   "linija": 14.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T17:05:32.139Z"
+   "linija": 13.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:23:17.800Z"
   },
   {
    "igrac_id": "P013402",
@@ -470,7 +537,7 @@
    "linija": 1.5,
    "preko": 1.65,
    "ispod": 2.25,
-   "promenjeno": "2026-10-29T15:14:13.321Z"
+   "promenjeno": "2026-10-30T07:44:55.874Z"
   },
   {
    "igrac_id": "P013402",
@@ -482,8 +549,8 @@
    "tip": "trojke",
    "linija": 2.5,
    "preko": 2.0,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T17:12:14.927Z"
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T07:44:23.496Z"
   },
   {
    "igrac_id": "P009846",
@@ -506,10 +573,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "PA",
-   "linija": 19.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T17:12:14.927Z"
+   "linija": 20.5,
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T07:25:29.631Z"
   },
   {
    "igrac_id": "P009846",
@@ -533,9 +600,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "PS",
    "linija": 20.5,
-   "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T16:27:45.193Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T07:25:29.631Z"
   },
   {
    "igrac_id": "P009846",
@@ -546,9 +613,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "asistencije",
    "linija": 4.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:19:25.268Z"
   },
   {
    "igrac_id": "P009846",
@@ -558,10 +625,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
-   "linija": 14.5,
-   "preko": 1.83,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T16:27:45.193Z"
+   "linija": 15.5,
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T07:25:29.631Z"
   },
   {
    "igrac_id": "P009846",
@@ -572,9 +639,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "skokovi",
    "linija": 5.5,
-   "preko": 2.1,
-   "ispod": 1.75,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "preko": 2.12,
+   "ispod": 1.74,
+   "promenjeno": "2026-10-30T06:55:48.833Z"
   },
   {
    "igrac_id": "P009846",
@@ -585,9 +652,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.5,
-   "ispod": 2.62,
-   "promenjeno": "2026-10-29T16:16:38.886Z"
+   "preko": 1.49,
+   "ispod": 2.65,
+   "promenjeno": "2026-10-30T04:41:36.145Z"
   },
   {
    "igrac_id": "P015153",
@@ -613,7 +680,7 @@
    "linija": 9.5,
    "preko": 2.02,
    "ispod": 1.8,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "promenjeno": "2026-10-30T04:36:27.338Z"
   },
   {
    "igrac_id": "P015153",
@@ -624,9 +691,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
    "linija": 6.5,
-   "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T15:07:17.885Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:52:25.741Z"
   },
   {
    "igrac_id": "P015153",
@@ -637,9 +704,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "preko": 1.83,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T04:36:39.589Z"
   },
   {
    "igrac_id": "P015153",
@@ -650,9 +717,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 2.95,
-   "ispod": 1.41,
-   "promenjeno": "2026-10-29T22:05:53.201Z"
+   "preko": 3.0,
+   "ispod": 1.39,
+   "promenjeno": "2026-10-30T07:22:26.720Z"
   },
   {
    "igrac_id": "P008987",
@@ -676,22 +743,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "PS",
    "linija": 15.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T17:12:14.927Z"
-  },
-  {
-   "igrac_id": "P008987",
-   "ime": "LeDay, Zach",
-   "tim": "HTA",
-   "sezona": 2026,
-   "sifra_utakmice": 84,
-   "datum": "2026-10-30 17:00",
-   "tip": "poeni",
-   "linija": 10.5,
-   "preko": 1.78,
-   "ispod": 2.05,
-   "promenjeno": "2026-10-29T17:45:20.992Z"
+   "preko": 1.9,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T07:44:23.496Z"
   },
   {
    "igrac_id": "P008987",
@@ -704,7 +758,7 @@
    "linija": 11.5,
    "preko": 2.05,
    "ispod": 1.78,
-   "promenjeno": "2026-10-29T17:44:54.586Z"
+   "promenjeno": "2026-10-30T07:32:12.213Z"
   },
   {
    "igrac_id": "P008987",
@@ -716,8 +770,8 @@
    "tip": "skokovi",
    "linija": 4.5,
    "preko": 2.12,
-   "ispod": 1.73,
-   "promenjeno": "2026-10-29T16:20:56.753Z"
+   "ispod": 1.72,
+   "promenjeno": "2026-10-30T04:03:40.687Z"
   },
   {
    "igrac_id": "P008987",
@@ -730,7 +784,7 @@
    "linija": 0.5,
    "preko": 1.42,
    "ispod": 2.9,
-   "promenjeno": "2026-10-29T16:16:58.080Z"
+   "promenjeno": "2026-10-29T16:14:40.879Z"
   },
   {
    "igrac_id": "P008987",
@@ -741,9 +795,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.85,
-   "ispod": 1.43,
-   "promenjeno": "2026-10-29T17:08:23.647Z"
+   "preko": 2.8,
+   "ispod": 1.45,
+   "promenjeno": "2026-10-30T04:39:46.426Z"
   },
   {
    "igrac_id": "P012788",
@@ -753,10 +807,10 @@
    "sifra_utakmice": 84,
    "datum": "2026-10-30 17:00",
    "tip": "PS",
-   "linija": 16.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:11:01.822Z"
+   "linija": 17.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T04:39:46.426Z"
   },
   {
    "igrac_id": "P012788",
@@ -767,9 +821,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "poeni",
    "linija": 10.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T22:11:01.822Z"
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T04:42:14.044Z"
   },
   {
    "igrac_id": "P012788",
@@ -780,9 +834,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "skokovi",
    "linija": 6.5,
-   "preko": 2.15,
-   "ispod": 1.72,
-   "promenjeno": "2026-10-29T22:10:33.381Z"
+   "preko": 2.07,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T07:37:31.544Z"
   },
   {
    "igrac_id": "P002939",
@@ -794,8 +848,8 @@
    "tip": "PA",
    "linija": 8.5,
    "preko": 1.85,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:10:04.225Z"
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T04:34:25.263Z"
   },
   {
    "igrac_id": "P002939",
@@ -808,20 +862,7 @@
    "linija": 3.5,
    "preko": 1.61,
    "ispod": 2.32,
-   "promenjeno": "2026-10-29T17:12:49.661Z"
-  },
-  {
-   "igrac_id": "P002939",
-   "ime": "Satoransky, Tomas",
-   "tim": "HTA",
-   "sezona": 2026,
-   "sifra_utakmice": 84,
-   "datum": "2026-10-30 17:00",
-   "tip": "asistencije",
-   "linija": 4.5,
-   "preko": 2.32,
-   "ispod": 1.62,
-   "promenjeno": "2026-10-29T17:13:18.583Z"
+   "promenjeno": "2026-10-30T09:15:30.734Z"
   },
   {
    "igrac_id": "P002939",
@@ -833,8 +874,8 @@
    "tip": "poeni",
    "linija": 4.5,
    "preko": 1.85,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:10:04.225Z"
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T07:04:53.817Z"
   },
   {
    "igrac_id": "P002939",
@@ -845,9 +886,9 @@
    "datum": "2026-10-30 17:00",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.57,
-   "ispod": 2.42,
-   "promenjeno": "2026-10-29T17:08:31.058Z"
+   "preko": 1.53,
+   "ispod": 2.52,
+   "promenjeno": "2026-10-30T07:45:21.918Z"
   },
   {
    "igrac_id": "P013667",
@@ -858,9 +899,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PA",
    "linija": 6.5,
-   "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T17:37:05.301Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P013667",
@@ -871,9 +912,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 10.5,
-   "preko": 1.9,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P013667",
@@ -884,9 +925,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 0.5,
-   "preko": 1.69,
-   "ispod": 2.17,
-   "promenjeno": "2026-10-29T17:21:42.303Z"
+   "preko": 1.7,
+   "ispod": 2.15,
+   "promenjeno": "2026-10-30T00:25:23.129Z"
   },
   {
    "igrac_id": "P013667",
@@ -897,9 +938,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T17:37:05.301Z"
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P013667",
@@ -910,9 +951,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 1.72,
+   "preko": 1.71,
    "ispod": 2.15,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "promenjeno": "2026-10-30T07:43:51.297Z"
   },
   {
    "igrac_id": "P009754",
@@ -924,8 +965,8 @@
    "tip": "PA",
    "linija": 13.5,
    "preko": 1.9,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T22:14:52.735Z"
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T05:44:20.593Z"
   },
   {
    "igrac_id": "P009754",
@@ -936,9 +977,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 13.5,
-   "preko": 1.83,
+   "preko": 1.82,
    "ispod": 2.0,
-   "promenjeno": "2026-10-29T22:40:28.028Z"
+   "promenjeno": "2026-10-30T07:26:44.124Z"
   },
   {
    "igrac_id": "P009754",
@@ -961,23 +1002,10 @@
    "sifra_utakmice": 88,
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
-   "linija": 2.5,
-   "preko": 1.59,
-   "ispod": 2.37,
-   "promenjeno": "2026-10-29T22:38:10.385Z"
-  },
-  {
-   "igrac_id": "P009754",
-   "ime": "Loyd, Jordan",
-   "tim": "IST",
-   "sezona": 2026,
-   "sifra_utakmice": 88,
-   "datum": "2026-10-30 18:30",
-   "tip": "asistencije",
    "linija": 3.5,
-   "preko": 2.3,
-   "ispod": 1.63,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "preko": 2.4,
+   "ispod": 1.58,
+   "promenjeno": "2026-10-30T09:26:21.098Z"
   },
   {
    "igrac_id": "P009754",
@@ -990,7 +1018,7 @@
    "linija": 10.5,
    "preko": 1.95,
    "ispod": 1.87,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "promenjeno": "2026-10-30T07:26:16.469Z"
   },
   {
    "igrac_id": "P009754",
@@ -1001,9 +1029,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 2.07,
-   "ispod": 1.75,
-   "promenjeno": "2026-10-29T22:38:42.352Z"
+   "preko": 2.22,
+   "ispod": 1.66,
+   "promenjeno": "2026-10-30T10:04:53.259Z"
   },
   {
    "igrac_id": "P009754",
@@ -1016,7 +1044,7 @@
    "linija": 1.5,
    "preko": 1.8,
    "ispod": 2.02,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "promenjeno": "2026-10-30T07:26:16.469Z"
   },
   {
    "igrac_id": "P012609",
@@ -1027,9 +1055,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PA",
    "linija": 11.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T16:48:47.023Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T10:01:16.192Z"
   },
   {
    "igrac_id": "P012609",
@@ -1040,9 +1068,35 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 13.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T10:01:29.921Z"
+  },
+  {
+   "igrac_id": "P012609",
+   "ime": "Malcolm, Collin",
+   "tim": "IST",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "PS",
+   "linija": 14.5,
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T10:02:03.168Z"
+  },
+  {
+   "igrac_id": "P012609",
+   "ime": "Malcolm, Collin",
+   "tim": "IST",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "asistencije",
+   "linija": 1.5,
+   "preko": 1.53,
+   "ispod": 2.52,
+   "promenjeno": "2026-10-30T07:37:39.801Z"
   },
   {
    "igrac_id": "P012609",
@@ -1053,22 +1107,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 2.47,
-   "ispod": 1.55,
-   "promenjeno": "2026-10-29T23:20:26.898Z"
-  },
-  {
-   "igrac_id": "P012609",
-   "ime": "Malcolm, Collin",
-   "tim": "IST",
-   "sezona": 2026,
-   "sifra_utakmice": 88,
-   "datum": "2026-10-30 18:30",
-   "tip": "poeni",
-   "linija": 8.5,
-   "preko": 1.78,
-   "ispod": 2.05,
-   "promenjeno": "2026-10-29T14:26:38.204Z"
+   "preko": 2.5,
+   "ispod": 1.54,
+   "promenjeno": "2026-10-30T07:38:11.001Z"
   },
   {
    "igrac_id": "P012609",
@@ -1079,9 +1120,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 2.05,
-   "ispod": 1.77,
-   "promenjeno": "2026-10-29T17:30:58.759Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T07:44:12.163Z"
   },
   {
    "igrac_id": "P012609",
@@ -1092,9 +1133,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 2.07,
-   "ispod": 1.76,
-   "promenjeno": "2026-10-29T23:20:26.898Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T07:43:51.297Z"
   },
   {
    "igrac_id": "P012609",
@@ -1118,9 +1159,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T23:05:37.655Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T05:44:20.593Z"
   },
   {
    "igrac_id": "P014213",
@@ -1131,9 +1172,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PA",
    "linija": 18.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T22:32:25.294Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:24:19.782Z"
   },
   {
    "igrac_id": "P014213",
@@ -1144,9 +1185,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 3.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T17:01:06.594Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:24:19.782Z"
   },
   {
    "igrac_id": "P014213",
@@ -1157,9 +1198,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 14.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T22:12:37.400Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P014213",
@@ -1170,9 +1211,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T22:39:24.775Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T07:43:51.297Z"
   },
   {
    "igrac_id": "P003112",
@@ -1183,9 +1224,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "preko": 2.05,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T07:44:12.163Z"
   },
   {
    "igrac_id": "P003112",
@@ -1196,9 +1237,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 16.5,
-   "preko": 1.9,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T05:44:52.646Z"
   },
   {
    "igrac_id": "P003112",
@@ -1209,9 +1250,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 2.3,
-   "ispod": 1.63,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "preko": 2.22,
+   "ispod": 1.66,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P003112",
@@ -1224,7 +1265,7 @@
    "linija": 10.5,
    "preko": 1.9,
    "ispod": 1.9,
-   "promenjeno": "2026-10-29T22:40:28.028Z"
+   "promenjeno": "2026-10-30T05:44:20.593Z"
   },
   {
    "igrac_id": "P003112",
@@ -1235,9 +1276,22 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 5.5,
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T07:07:16.641Z"
+  },
+  {
+   "igrac_id": "P008099",
+   "ime": "Strazel, Matthew",
+   "tim": "IST",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "PA",
+   "linija": 15.5,
    "preko": 1.8,
    "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:32:25.294Z"
+   "promenjeno": "2026-10-30T07:43:32.677Z"
   },
   {
    "igrac_id": "P008099",
@@ -1248,9 +1302,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PA",
    "linija": 16.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T22:33:20.406Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P008099",
@@ -1261,9 +1315,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 13.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T22:14:52.735Z"
+   "preko": 1.97,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T05:44:52.646Z"
   },
   {
    "igrac_id": "P008099",
@@ -1275,8 +1329,8 @@
    "tip": "asistencije",
    "linija": 4.5,
    "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T23:20:26.898Z"
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T07:43:51.297Z"
   },
   {
    "igrac_id": "P008099",
@@ -1287,9 +1341,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 11.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T22:39:50.742Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T07:43:51.297Z"
   },
   {
    "igrac_id": "P008099",
@@ -1301,8 +1355,8 @@
    "tip": "skokovi",
    "linija": 1.5,
    "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T23:20:26.898Z"
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T01:29:23.985Z"
   },
   {
    "igrac_id": "P008099",
@@ -1313,9 +1367,22 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.5,
-   "ispod": 1.54,
-   "promenjeno": "2026-10-29T22:40:28.028Z"
+   "preko": 2.52,
+   "ispod": 1.53,
+   "promenjeno": "2026-10-30T07:43:51.297Z"
+  },
+  {
+   "igrac_id": "P005368",
+   "ime": "Yusta, Santiago",
+   "tim": "IST",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "poeni",
+   "linija": 4.5,
+   "preko": 1.57,
+   "ispod": 2.42,
+   "promenjeno": "2026-10-30T10:03:42.897Z"
   },
   {
    "igrac_id": "P005368",
@@ -1326,22 +1393,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.61,
-   "ispod": 2.32,
-   "promenjeno": "2026-10-29T22:37:39.609Z"
-  },
-  {
-   "igrac_id": "P005368",
-   "ime": "Yusta, Santiago",
-   "tim": "IST",
-   "sezona": 2026,
-   "sifra_utakmice": 88,
-   "datum": "2026-10-30 18:30",
-   "tip": "poeni",
-   "linija": 6.5,
-   "preko": 1.9,
+   "preko": 1.92,
    "ispod": 1.9,
-   "promenjeno": "2026-10-29T09:57:15.182Z"
+   "promenjeno": "2026-10-30T10:02:03.168Z"
   },
   {
    "igrac_id": "P005368",
@@ -1365,9 +1419,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PA",
    "linija": 17.5,
-   "preko": 1.92,
+   "preko": 1.9,
    "ispod": 1.9,
-   "promenjeno": "2026-10-29T22:39:50.742Z"
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P007975",
@@ -1380,7 +1434,7 @@
    "linija": 14.5,
    "preko": 1.83,
    "ispod": 2.0,
-   "promenjeno": "2026-10-29T22:39:50.742Z"
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P007975",
@@ -1391,9 +1445,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 4.5,
-   "preko": 1.85,
+   "preko": 1.87,
    "ispod": 1.95,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "promenjeno": "2026-10-30T07:44:12.163Z"
   },
   {
    "igrac_id": "P007975",
@@ -1405,8 +1459,8 @@
    "tip": "poeni",
    "linija": 12.5,
    "preko": 1.83,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T22:39:50.742Z"
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T09:24:53.456Z"
   },
   {
    "igrac_id": "P007975",
@@ -1418,8 +1472,8 @@
    "tip": "skokovi",
    "linija": 1.5,
    "preko": 1.6,
-   "ispod": 2.35,
-   "promenjeno": "2026-10-29T22:39:50.742Z"
+   "ispod": 2.37,
+   "promenjeno": "2026-10-30T01:29:23.985Z"
   },
   {
    "igrac_id": "P007975",
@@ -1443,9 +1497,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 2.35,
-   "ispod": 1.6,
-   "promenjeno": "2026-10-29T18:23:48.810Z"
+   "preko": 2.32,
+   "ispod": 1.61,
+   "promenjeno": "2026-10-30T09:22:59.480Z"
   },
   {
    "igrac_id": "P008962",
@@ -1469,9 +1523,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 17.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T23:10:20.186Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T08:00:21.627Z"
   },
   {
    "igrac_id": "P008962",
@@ -1482,9 +1536,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 13.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T22:40:28.028Z"
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:26:21.098Z"
   },
   {
    "igrac_id": "P008962",
@@ -1495,9 +1549,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 2.05,
-   "ispod": 1.77,
-   "promenjeno": "2026-10-29T23:20:26.898Z"
+   "preko": 2.12,
+   "ispod": 1.73,
+   "promenjeno": "2026-10-30T10:04:53.259Z"
   },
   {
    "igrac_id": "P008962",
@@ -1508,9 +1562,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.59,
-   "ispod": 2.37,
-   "promenjeno": "2026-10-29T22:38:10.385Z"
+   "preko": 1.62,
+   "ispod": 2.3,
+   "promenjeno": "2026-10-30T05:44:20.593Z"
   },
   {
    "igrac_id": "P012712",
@@ -1521,9 +1575,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 6.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T22:40:28.028Z"
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T10:03:49.098Z"
   },
   {
    "igrac_id": "P012712",
@@ -1534,9 +1588,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 2.12,
-   "ispod": 1.73,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "preko": 2.07,
+   "ispod": 1.76,
+   "promenjeno": "2026-10-30T07:44:12.163Z"
   },
   {
    "igrac_id": "P012712",
@@ -1547,9 +1601,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.45,
-   "ispod": 2.8,
-   "promenjeno": "2026-10-29T22:38:10.385Z"
+   "preko": 1.44,
+   "ispod": 2.82,
+   "promenjeno": "2026-10-30T07:38:11.001Z"
   },
   {
    "igrac_id": "P003842",
@@ -1559,10 +1613,10 @@
    "sifra_utakmice": 88,
    "datum": "2026-10-30 18:30",
    "tip": "PA",
-   "linija": 12.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:37:39.609Z"
+   "linija": 13.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P003842",
@@ -1573,9 +1627,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 20.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T22:37:39.609Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:21:28.037Z"
   },
   {
    "igrac_id": "P003842",
@@ -1586,9 +1640,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 2.3,
-   "ispod": 1.62,
-   "promenjeno": "2026-10-29T22:40:28.028Z"
+   "preko": 2.4,
+   "ispod": 1.58,
+   "promenjeno": "2026-10-30T10:02:28.952Z"
   },
   {
    "igrac_id": "P003842",
@@ -1599,9 +1653,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 11.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T22:38:10.385Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T01:29:23.985Z"
   },
   {
    "igrac_id": "P003842",
@@ -1612,9 +1666,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
    "linija": 8.5,
-   "preko": 2.07,
-   "ispod": 1.76,
-   "promenjeno": "2026-10-29T23:10:20.186Z"
+   "preko": 2.12,
+   "ispod": 1.73,
+   "promenjeno": "2026-10-30T05:43:09.720Z"
   },
   {
    "igrac_id": "P012774",
@@ -1625,9 +1679,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 4.5,
-   "preko": 1.74,
-   "ispod": 2.1,
-   "promenjeno": "2026-10-29T22:14:52.735Z"
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T07:43:32.677Z"
   },
   {
    "igrac_id": "P012774",
@@ -1651,9 +1705,9 @@
    "datum": "2026-10-30 18:30",
    "tip": "poeni",
    "linija": 16.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T22:14:52.735Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T01:29:23.985Z"
   },
   {
    "igrac_id": "P012774",
@@ -1677,9 +1731,35 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.71,
-   "ispod": 2.15,
-   "promenjeno": "2026-10-29T22:38:42.352Z"
+   "preko": 1.68,
+   "ispod": 2.2,
+   "promenjeno": "2026-10-30T07:44:12.163Z"
+  },
+  {
+   "igrac_id": "P001926",
+   "ime": "Sloukas, Kostas",
+   "tim": "PAN",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "asistencije",
+   "linija": 3.5,
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T09:26:21.098Z"
+  },
+  {
+   "igrac_id": "P001926",
+   "ime": "Sloukas, Kostas",
+   "tim": "PAN",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "poeni",
+   "linija": 6.5,
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:25:24.796Z"
   },
   {
    "igrac_id": "P010357",
@@ -1689,10 +1769,10 @@
    "sifra_utakmice": 88,
    "datum": "2026-10-30 18:30",
    "tip": "PA",
-   "linija": 10.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T23:22:54.134Z"
+   "linija": 11.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T07:43:32.677Z"
   },
   {
    "igrac_id": "P010357",
@@ -1703,9 +1783,22 @@
    "datum": "2026-10-30 18:30",
    "tip": "PS",
    "linija": 14.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T23:20:26.898Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T07:37:19.092Z"
+  },
+  {
+   "igrac_id": "P010357",
+   "ime": "Yabusele, Guerschon",
+   "tim": "PAN",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "PS",
+   "linija": 15.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T07:43:32.677Z"
   },
   {
    "igrac_id": "P010357",
@@ -1716,7 +1809,7 @@
    "datum": "2026-10-30 18:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 2.45,
+   "preko": 2.47,
    "ispod": 1.55,
    "promenjeno": "2026-10-29T23:14:12.605Z"
   },
@@ -1730,7 +1823,7 @@
    "tip": "poeni",
    "linija": 9.5,
    "preko": 1.85,
-   "ispod": 1.95,
+   "ispod": 1.97,
    "promenjeno": "2026-10-29T22:37:39.609Z"
   },
   {
@@ -1741,10 +1834,23 @@
    "sifra_utakmice": 88,
    "datum": "2026-10-30 18:30",
    "tip": "skokovi",
+   "linija": 4.5,
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T07:43:51.297Z"
+  },
+  {
+   "igrac_id": "P010357",
+   "ime": "Yabusele, Guerschon",
+   "tim": "PAN",
+   "sezona": 2026,
+   "sifra_utakmice": 88,
+   "datum": "2026-10-30 18:30",
+   "tip": "skokovi",
    "linija": 5.5,
-   "preko": 2.5,
-   "ispod": 1.54,
-   "promenjeno": "2026-10-29T22:38:10.385Z"
+   "preko": 2.52,
+   "ispod": 1.53,
+   "promenjeno": "2026-10-30T07:43:32.677Z"
   },
   {
    "igrac_id": "P010357",
@@ -1755,9 +1861,750 @@
    "datum": "2026-10-30 18:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.12,
-   "ispod": 1.72,
-   "promenjeno": "2026-10-29T17:21:42.303Z"
+   "preko": 2.1,
+   "ispod": 1.75,
+   "promenjeno": "2026-10-30T01:29:23.985Z"
+  },
+  {
+   "igrac_id": "P010390",
+   "ime": "Hayes, Kevarrius",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 9.5,
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:11:06.524Z"
+  },
+  {
+   "igrac_id": "P010390",
+   "ime": "Hayes, Kevarrius",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 11.5,
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T05:45:13.550Z"
+  },
+  {
+   "igrac_id": "P010390",
+   "ime": "Hayes, Kevarrius",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 5.5,
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:28:30.371Z"
+  },
+  {
+   "igrac_id": "P013369",
+   "ime": "Jones, Carlik",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 16.5,
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T08:47:15.743Z"
+  },
+  {
+   "igrac_id": "P013369",
+   "ime": "Jones, Carlik",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 5.5,
+   "preko": 2.1,
+   "ispod": 1.74,
+   "promenjeno": "2026-10-30T09:11:55.855Z"
+  },
+  {
+   "igrac_id": "P013369",
+   "ime": "Jones, Carlik",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 14.5,
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T08:35:36.955Z"
+  },
+  {
+   "igrac_id": "P013369",
+   "ime": "Jones, Carlik",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 2.5,
+   "preko": 2.07,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T08:59:45.371Z"
+  },
+  {
+   "igrac_id": "P013369",
+   "ime": "Jones, Carlik",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 0.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:10:56.052Z"
+  },
+  {
+   "igrac_id": "P006739",
+   "ime": "Pajola, Alessandro",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 4.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T09:10:56.052Z"
+  },
+  {
+   "igrac_id": "P006739",
+   "ime": "Pajola, Alessandro",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 5.5,
+   "preko": 2.1,
+   "ispod": 1.74,
+   "promenjeno": "2026-10-30T08:49:20.099Z"
+  },
+  {
+   "igrac_id": "P006739",
+   "ime": "Pajola, Alessandro",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 5.5,
+   "preko": 1.9,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T08:58:05.247Z"
+  },
+  {
+   "igrac_id": "P006739",
+   "ime": "Pajola, Alessandro",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 0.5,
+   "preko": 1.76,
+   "ispod": 2.07,
+   "promenjeno": "2026-10-30T09:11:06.524Z"
+  },
+  {
+   "igrac_id": "P015397",
+   "ime": "Reeves, Antonio",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 5.5,
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T09:11:35.368Z"
+  },
+  {
+   "igrac_id": "P014009",
+   "ime": "Stevens, Lamar",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 11.5,
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:09:56.966Z"
+  },
+  {
+   "igrac_id": "P014009",
+   "ime": "Stevens, Lamar",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 13.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T05:45:13.550Z"
+  },
+  {
+   "igrac_id": "P014009",
+   "ime": "Stevens, Lamar",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 4.5,
+   "preko": 1.71,
+   "ispod": 2.15,
+   "promenjeno": "2026-10-30T09:11:02.321Z"
+  },
+  {
+   "igrac_id": "P014009",
+   "ime": "Stevens, Lamar",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 0.5,
+   "preko": 1.46,
+   "ispod": 2.72,
+   "promenjeno": "2026-10-30T09:14:56.334Z"
+  },
+  {
+   "igrac_id": "P005637",
+   "ime": "Tanaskovic, Nikola",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 5.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:13:55.797Z"
+  },
+  {
+   "igrac_id": "P005637",
+   "ime": "Tanaskovic, Nikola",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 3.5,
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:11:35.368Z"
+  },
+  {
+   "igrac_id": "P014742",
+   "ime": "Thompson, Ethan",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PA",
+   "linija": 8.5,
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T09:20:51.740Z"
+  },
+  {
+   "igrac_id": "P014742",
+   "ime": "Thompson, Ethan",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 9.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:43:48.390Z"
+  },
+  {
+   "igrac_id": "P014742",
+   "ime": "Thompson, Ethan",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 1.5,
+   "preko": 2.3,
+   "ispod": 1.63,
+   "promenjeno": "2026-10-30T09:04:36.126Z"
+  },
+  {
+   "igrac_id": "P014742",
+   "ime": "Thompson, Ethan",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 7.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T09:43:48.390Z"
+  },
+  {
+   "igrac_id": "P014742",
+   "ime": "Thompson, Ethan",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 2.5,
+   "preko": 2.17,
+   "ispod": 1.69,
+   "promenjeno": "2026-10-30T09:28:30.371Z"
+  },
+  {
+   "igrac_id": "P007947",
+   "ime": "Vildoza, Luca",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 2.5,
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T09:11:06.524Z"
+  },
+  {
+   "igrac_id": "P007947",
+   "ime": "Vildoza, Luca",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 8.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:11:28.763Z"
+  },
+  {
+   "igrac_id": "P007947",
+   "ime": "Vildoza, Luca",
+   "tim": "PAR",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 1.5,
+   "preko": 2.52,
+   "ispod": 1.53,
+   "promenjeno": "2026-10-30T09:52:18.655Z"
+  },
+  {
+   "igrac_id": "P012720",
+   "ime": "Brown, Sterling",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 14.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:21:42.901Z"
+  },
+  {
+   "igrac_id": "P012720",
+   "ime": "Brown, Sterling",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 11.5,
+   "preko": 1.92,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T09:15:51.814Z"
+  },
+  {
+   "igrac_id": "P012720",
+   "ime": "Brown, Sterling",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 2.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:06:43.879Z"
+  },
+  {
+   "igrac_id": "P012720",
+   "ime": "Brown, Sterling",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 2.5,
+   "preko": 2.25,
+   "ispod": 1.66,
+   "promenjeno": "2026-10-30T09:06:43.879Z"
+  },
+  {
+   "igrac_id": "P011987",
+   "ime": "Edwards, Carsen",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PA",
+   "linija": 17.5,
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:11:35.368Z"
+  },
+  {
+   "igrac_id": "P011987",
+   "ime": "Edwards, Carsen",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 16.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:15:30.734Z"
+  },
+  {
+   "igrac_id": "P011987",
+   "ime": "Edwards, Carsen",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 2.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T08:53:10.712Z"
+  },
+  {
+   "igrac_id": "P011987",
+   "ime": "Edwards, Carsen",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 14.5,
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:15:51.814Z"
+  },
+  {
+   "igrac_id": "P011987",
+   "ime": "Edwards, Carsen",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 1.5,
+   "preko": 2.32,
+   "ispod": 1.61,
+   "promenjeno": "2026-10-30T09:04:36.126Z"
+  },
+  {
+   "igrac_id": "P011987",
+   "ime": "Edwards, Carsen",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 2.5,
+   "preko": 2.22,
+   "ispod": 1.66,
+   "promenjeno": "2026-10-30T09:43:48.390Z"
+  },
+  {
+   "igrac_id": "P002328",
+   "ime": "Grigonis, Marius",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 8.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:05:21.845Z"
+  },
+  {
+   "igrac_id": "P002328",
+   "ime": "Grigonis, Marius",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 1.5,
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T09:21:05.892Z"
+  },
+  {
+   "igrac_id": "P013389",
+   "ime": "Lee, Saben",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 4.5,
+   "preko": 1.65,
+   "ispod": 2.25,
+   "promenjeno": "2026-10-30T08:54:59.170Z"
+  },
+  {
+   "igrac_id": "P013389",
+   "ime": "Lee, Saben",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 6.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:06:43.879Z"
+  },
+  {
+   "igrac_id": "P013389",
+   "ime": "Lee, Saben",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 7.5,
+   "preko": 2.07,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T08:45:46.188Z"
+  },
+  {
+   "igrac_id": "P011927",
+   "ime": "Sleva, Dustin",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 7.5,
+   "preko": 2.07,
+   "ispod": 1.76,
+   "promenjeno": "2026-10-30T09:44:53.005Z"
+  },
+  {
+   "igrac_id": "P011927",
+   "ime": "Sleva, Dustin",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 3.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T08:48:31.094Z"
+  },
+  {
+   "igrac_id": "P011927",
+   "ime": "Sleva, Dustin",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "trojke",
+   "linija": 1.5,
+   "preko": 2.35,
+   "ispod": 1.61,
+   "promenjeno": "2026-10-30T09:06:45.396Z"
+  },
+  {
+   "igrac_id": "P008192",
+   "ime": "Tubelis, Azuolas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PA",
+   "linija": 13.5,
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T08:52:59.422Z"
+  },
+  {
+   "igrac_id": "P008192",
+   "ime": "Tubelis, Azuolas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 16.5,
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T10:01:29.921Z"
+  },
+  {
+   "igrac_id": "P008192",
+   "ime": "Tubelis, Azuolas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 17.5,
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T09:50:42.289Z"
+  },
+  {
+   "igrac_id": "P008192",
+   "ime": "Tubelis, Azuolas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 1.5,
+   "preko": 1.85,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T08:52:59.422Z"
+  },
+  {
+   "igrac_id": "P008192",
+   "ime": "Tubelis, Azuolas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 11.5,
+   "preko": 1.9,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T08:38:04.457Z"
+  },
+  {
+   "igrac_id": "P008192",
+   "ime": "Tubelis, Azuolas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 5.5,
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:15:51.814Z"
+  },
+  {
+   "igrac_id": "P000898",
+   "ime": "Valanciunas, Jonas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PA",
+   "linija": 15.5,
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:00:35.425Z"
+  },
+  {
+   "igrac_id": "P000898",
+   "ime": "Valanciunas, Jonas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PA",
+   "linija": 16.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T09:10:56.052Z"
+  },
+  {
+   "igrac_id": "P000898",
+   "ime": "Valanciunas, Jonas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "PS",
+   "linija": 22.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:15:50.834Z"
+  },
+  {
+   "igrac_id": "P000898",
+   "ime": "Valanciunas, Jonas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "asistencije",
+   "linija": 1.5,
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:11:35.368Z"
+  },
+  {
+   "igrac_id": "P000898",
+   "ime": "Valanciunas, Jonas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "poeni",
+   "linija": 14.5,
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T08:15:41.218Z"
+  },
+  {
+   "igrac_id": "P000898",
+   "ime": "Valanciunas, Jonas",
+   "tim": "ZAL",
+   "sezona": 2026,
+   "sifra_utakmice": 86,
+   "datum": "2026-10-30 19:00",
+   "tip": "skokovi",
+   "linija": 7.5,
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T09:13:26.172Z"
   },
   {
    "igrac_id": "P015164",
@@ -1768,9 +2615,22 @@
    "datum": "2026-10-30 20:00",
    "tip": "PA",
    "linija": 13.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T22:15:15.756Z"
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:18:46.111Z"
+  },
+  {
+   "igrac_id": "P015164",
+   "ime": "Besson, Hugo",
+   "tim": "ASV",
+   "sezona": 2026,
+   "sifra_utakmice": 85,
+   "datum": "2026-10-30 20:00",
+   "tip": "PA",
+   "linija": 14.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T01:32:22.879Z"
   },
   {
    "igrac_id": "P015164",
@@ -1781,9 +2641,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PS",
    "linija": 14.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T16:34:34.042Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T09:17:03.391Z"
   },
   {
    "igrac_id": "P015164",
@@ -1807,9 +2667,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T22:15:20.491Z"
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T08:48:05.382Z"
   },
   {
    "igrac_id": "P015164",
@@ -1822,7 +2682,7 @@
    "linija": 11.5,
    "preko": 1.97,
    "ispod": 1.85,
-   "promenjeno": "2026-10-29T16:39:27.878Z"
+   "promenjeno": "2026-10-30T05:25:47.237Z"
   },
   {
    "igrac_id": "P015164",
@@ -1833,22 +2693,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 1.6,
-   "ispod": 2.37,
-   "promenjeno": "2026-10-29T18:07:10.185Z"
-  },
-  {
-   "igrac_id": "P015164",
-   "ime": "Besson, Hugo",
-   "tim": "ASV",
-   "sezona": 2026,
-   "sifra_utakmice": 85,
-   "datum": "2026-10-30 20:00",
-   "tip": "skokovi",
-   "linija": 3.5,
-   "preko": 2.37,
-   "ispod": 1.6,
-   "promenjeno": "2026-10-29T20:30:04.598Z"
+   "preko": 1.7,
+   "ispod": 2.17,
+   "promenjeno": "2026-10-30T09:18:06.222Z"
   },
   {
    "igrac_id": "P015164",
@@ -1859,9 +2706,22 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.15,
-   "ispod": 1.71,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "preko": 2.22,
+   "ispod": 1.67,
+   "promenjeno": "2026-10-30T05:43:20.362Z"
+  },
+  {
+   "igrac_id": "P009035",
+   "ime": "Bolomboy, Joel",
+   "tim": "ASV",
+   "sezona": 2026,
+   "sifra_utakmice": 85,
+   "datum": "2026-10-30 20:00",
+   "tip": "PS",
+   "linija": 11.5,
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:16:17.496Z"
   },
   {
    "igrac_id": "P009035",
@@ -1872,9 +2732,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PS",
    "linija": 12.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T20:34:56.441Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:18:06.222Z"
   },
   {
    "igrac_id": "P009035",
@@ -1885,9 +2745,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
    "linija": 6.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T16:21:24.704Z"
+   "preko": 2.1,
+   "ispod": 1.75,
+   "promenjeno": "2026-10-30T09:17:03.391Z"
   },
   {
    "igrac_id": "P009035",
@@ -1898,22 +2758,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "skokovi",
    "linija": 5.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T16:39:27.878Z"
-  },
-  {
-   "igrac_id": "P009035",
-   "ime": "Bolomboy, Joel",
-   "tim": "ASV",
-   "sezona": 2026,
-   "sifra_utakmice": 85,
-   "datum": "2026-10-30 20:00",
-   "tip": "skokovi",
-   "linija": 6.5,
-   "preko": 2.1,
-   "ispod": 1.75,
-   "promenjeno": "2026-10-29T20:34:56.441Z"
+   "preko": 1.71,
+   "ispod": 2.15,
+   "promenjeno": "2026-10-30T09:18:06.222Z"
   },
   {
    "igrac_id": "P015166",
@@ -1924,9 +2771,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PS",
    "linija": 14.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T16:57:44.644Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T05:35:22.516Z"
   },
   {
    "igrac_id": "P015166",
@@ -1939,7 +2786,7 @@
    "linija": 10.5,
    "preko": 1.9,
    "ispod": 1.9,
-   "promenjeno": "2026-10-29T16:26:17.971Z"
+   "promenjeno": "2026-10-30T09:40:37.036Z"
   },
   {
    "igrac_id": "P015166",
@@ -1950,9 +2797,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 1.76,
-   "ispod": 2.07,
-   "promenjeno": "2026-10-29T17:48:33.887Z"
+   "preko": 1.77,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T05:51:05.877Z"
   },
   {
    "igrac_id": "P015166",
@@ -1963,9 +2810,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.6,
-   "ispod": 2.35,
-   "promenjeno": "2026-10-29T16:36:33.848Z"
+   "preko": 1.49,
+   "ispod": 2.62,
+   "promenjeno": "2026-10-30T05:07:33.598Z"
   },
   {
    "igrac_id": "P015163",
@@ -1976,9 +2823,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PA",
    "linija": 14.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:15:15.756Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T08:48:05.382Z"
   },
   {
    "igrac_id": "P015163",
@@ -1989,9 +2836,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.73,
-   "ispod": 2.12,
-   "promenjeno": "2026-10-29T16:33:41.675Z"
+   "preko": 1.74,
+   "ispod": 2.1,
+   "promenjeno": "2026-10-30T06:27:53.571Z"
   },
   {
    "igrac_id": "P015163",
@@ -2001,10 +2848,10 @@
    "sifra_utakmice": 85,
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
-   "linija": 13.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T21:31:10.363Z"
+   "linija": 12.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:43:48.390Z"
   },
   {
    "igrac_id": "P015163",
@@ -2015,9 +2862,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.78,
-   "ispod": 2.05,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "preko": 1.64,
+   "ispod": 2.27,
+   "promenjeno": "2026-10-30T09:24:19.782Z"
   },
   {
    "igrac_id": "P015162",
@@ -2030,20 +2877,7 @@
    "linija": 9.5,
    "preko": 1.8,
    "ispod": 2.02,
-   "promenjeno": "2026-10-29T16:33:03.399Z"
-  },
-  {
-   "igrac_id": "P015162",
-   "ime": "Washington Jr., Tyty",
-   "tim": "ASV",
-   "sezona": 2026,
-   "sifra_utakmice": 85,
-   "datum": "2026-10-30 20:00",
-   "tip": "PS",
-   "linija": 10.5,
-   "preko": 2.07,
-   "ispod": 1.77,
-   "promenjeno": "2026-10-29T16:16:13.229Z"
+   "promenjeno": "2026-10-30T06:03:14.619Z"
   },
   {
    "igrac_id": "P015162",
@@ -2054,9 +2888,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
    "linija": 7.5,
-   "preko": 1.9,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T06:27:53.571Z"
   },
   {
    "igrac_id": "P015162",
@@ -2069,7 +2903,7 @@
    "linija": 2.5,
    "preko": 2.2,
    "ispod": 1.68,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "promenjeno": "2026-10-30T05:32:50.081Z"
   },
   {
    "igrac_id": "P015162",
@@ -2080,22 +2914,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.62,
+   "preko": 1.63,
    "ispod": 2.3,
-   "promenjeno": "2026-10-29T16:33:03.399Z"
-  },
-  {
-   "igrac_id": "P015165",
-   "ime": "Waters, Tremont",
-   "tim": "ASV",
-   "sezona": 2026,
-   "sifra_utakmice": 85,
-   "datum": "2026-10-30 20:00",
-   "tip": "PA",
-   "linija": 14.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T16:36:33.848Z"
+   "promenjeno": "2026-10-30T05:40:22.140Z"
   },
   {
    "igrac_id": "P015165",
@@ -2106,9 +2927,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PA",
    "linija": 15.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T17:48:33.887Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T05:34:01.150Z"
   },
   {
    "igrac_id": "P015165",
@@ -2121,7 +2942,7 @@
    "linija": 3.5,
    "preko": 1.68,
    "ispod": 2.2,
-   "promenjeno": "2026-10-29T16:39:27.878Z"
+   "promenjeno": "2026-10-30T08:15:41.218Z"
   },
   {
    "igrac_id": "P015165",
@@ -2145,9 +2966,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
    "linija": 11.5,
-   "preko": 1.95,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T17:48:33.887Z"
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T05:25:22.291Z"
   },
   {
    "igrac_id": "P015165",
@@ -2158,9 +2979,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.63,
-   "ispod": 2.3,
-   "promenjeno": "2026-10-29T17:48:33.887Z"
+   "preko": 1.69,
+   "ispod": 2.2,
+   "promenjeno": "2026-10-30T06:03:14.619Z"
   },
   {
    "igrac_id": "P014736",
@@ -2171,9 +2992,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PA",
    "linija": 14.5,
-   "preko": 1.85,
+   "preko": 1.83,
    "ispod": 1.97,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "promenjeno": "2026-10-30T05:39:38.721Z"
   },
   {
    "igrac_id": "P014736",
@@ -2184,9 +3005,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PS",
    "linija": 11.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T16:34:34.042Z"
+   "preko": 1.9,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T04:52:53.777Z"
   },
   {
    "igrac_id": "P014736",
@@ -2197,9 +3018,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "asistencije",
    "linija": 5.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T17:48:33.887Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:27:58.116Z"
   },
   {
    "igrac_id": "P014736",
@@ -2209,10 +3030,10 @@
    "sifra_utakmice": 85,
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
-   "linija": 8.5,
-   "preko": 1.76,
-   "ispod": 2.07,
-   "promenjeno": "2026-10-29T21:31:10.363Z"
+   "linija": 9.5,
+   "preko": 2.05,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T06:07:00.377Z"
   },
   {
    "igrac_id": "P014736",
@@ -2225,7 +3046,7 @@
    "linija": 2.5,
    "preko": 2.07,
    "ispod": 1.76,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "promenjeno": "2026-10-30T05:53:30.311Z"
   },
   {
    "igrac_id": "P011284",
@@ -2248,23 +3069,10 @@
    "sifra_utakmice": 85,
    "datum": "2026-10-30 20:00",
    "tip": "PS",
-   "linija": 15.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T21:31:30.986Z"
-  },
-  {
-   "igrac_id": "P011284",
-   "ime": "Faried, Kenneth",
-   "tim": "BAS",
-   "sezona": 2026,
-   "sifra_utakmice": 85,
-   "datum": "2026-10-30 20:00",
-   "tip": "poeni",
-   "linija": 7.5,
-   "preko": 1.75,
-   "ispod": 2.1,
-   "promenjeno": "2026-10-29T21:31:21.168Z"
+   "linija": 16.5,
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T05:53:30.311Z"
   },
   {
    "igrac_id": "P011284",
@@ -2275,9 +3083,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
    "linija": 8.5,
-   "preko": 2.1,
-   "ispod": 1.75,
-   "promenjeno": "2026-10-29T21:31:10.363Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T06:03:14.619Z"
   },
   {
    "igrac_id": "P011284",
@@ -2288,9 +3096,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "skokovi",
    "linija": 7.5,
-   "preko": 2.47,
-   "ispod": 1.55,
-   "promenjeno": "2026-10-29T21:31:30.986Z"
+   "preko": 2.4,
+   "ispod": 1.58,
+   "promenjeno": "2026-10-30T05:25:47.237Z"
   },
   {
    "igrac_id": "P014107",
@@ -2301,9 +3109,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
    "linija": 8.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T21:31:10.363Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:40:37.036Z"
   },
   {
    "igrac_id": "P014107",
@@ -2314,9 +3122,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.27,
-   "ispod": 1.64,
-   "promenjeno": "2026-10-29T20:30:04.598Z"
+   "preko": 2.3,
+   "ispod": 1.63,
+   "promenjeno": "2026-10-30T05:49:52.097Z"
   },
   {
    "igrac_id": "P014734",
@@ -2327,9 +3135,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PA",
    "linija": 16.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T05:51:05.877Z"
   },
   {
    "igrac_id": "P014734",
@@ -2339,10 +3147,10 @@
    "sifra_utakmice": 85,
    "datum": "2026-10-30 20:00",
    "tip": "PS",
-   "linija": 18.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:15:15.756Z"
+   "linija": 19.5,
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:40:37.036Z"
   },
   {
    "igrac_id": "P014734",
@@ -2353,9 +3161,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "preko": 1.83,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T09:40:37.036Z"
   },
   {
    "igrac_id": "P014734",
@@ -2365,10 +3173,10 @@
    "sifra_utakmice": 85,
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
-   "linija": 15.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T16:44:38.213Z"
+   "linija": 14.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:48:17.042Z"
   },
   {
    "igrac_id": "P014734",
@@ -2379,9 +3187,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 1.7,
-   "ispod": 2.17,
-   "promenjeno": "2026-10-29T16:36:33.848Z"
+   "preko": 1.71,
+   "ispod": 2.15,
+   "promenjeno": "2026-10-30T05:08:39.454Z"
   },
   {
    "igrac_id": "P014734",
@@ -2392,9 +3200,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 2.32,
-   "ispod": 1.61,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 2.4,
+   "ispod": 1.58,
+   "promenjeno": "2026-10-30T06:08:58.182Z"
   },
   {
    "igrac_id": "P013289",
@@ -2406,8 +3214,8 @@
    "tip": "skokovi",
    "linija": 4.5,
    "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T16:58:21.765Z"
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T08:48:05.382Z"
   },
   {
    "igrac_id": "P014152",
@@ -2418,9 +3226,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 1.9,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T16:36:33.848Z"
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T01:32:26.280Z"
   },
   {
    "igrac_id": "P014152",
@@ -2431,9 +3239,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 2.15,
-   "ispod": 1.71,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 2.2,
+   "ispod": 1.67,
+   "promenjeno": "2026-10-30T05:38:16.288Z"
   },
   {
    "igrac_id": "P014152",
@@ -2444,9 +3252,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "poeni",
    "linija": 10.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T16:30:28.924Z"
+   "preko": 2.07,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T09:40:37.036Z"
   },
   {
    "igrac_id": "P014152",
@@ -2457,9 +3265,9 @@
    "datum": "2026-10-30 20:00",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.5,
-   "ispod": 1.54,
-   "promenjeno": "2026-10-29T17:28:23.526Z"
+   "preko": 2.6,
+   "ispod": 1.5,
+   "promenjeno": "2026-10-30T05:38:16.288Z"
   },
   {
    "igrac_id": "P008985",
@@ -2470,9 +3278,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 1.95,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P008985",
@@ -2485,7 +3293,7 @@
    "linija": 12.5,
    "preko": 1.92,
    "ispod": 1.88,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P008985",
@@ -2498,7 +3306,7 @@
    "linija": 2.5,
    "preko": 1.74,
    "ispod": 2.1,
-   "promenjeno": "2026-10-29T18:29:05.655Z"
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P008985",
@@ -2509,9 +3317,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 1.9,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P008985",
@@ -2522,9 +3330,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 1.75,
-   "ispod": 2.07,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 1.74,
+   "ispod": 2.1,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P008985",
@@ -2535,9 +3343,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.48,
-   "ispod": 2.67,
-   "promenjeno": "2026-10-29T14:49:47.507Z"
+   "preko": 1.49,
+   "ispod": 2.62,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P007056",
@@ -2549,8 +3357,8 @@
    "tip": "PA",
    "linija": 8.5,
    "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:34:16.960Z"
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P007056",
@@ -2562,8 +3370,8 @@
    "tip": "PS",
    "linija": 11.5,
    "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T15:07:32.213Z"
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P007056",
@@ -2574,9 +3382,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 2.45,
-   "ispod": 1.56,
-   "promenjeno": "2026-10-29T19:16:24.438Z"
+   "preko": 2.4,
+   "ispod": 1.58,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P007056",
@@ -2587,9 +3395,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 6.5,
-   "preko": 1.78,
-   "ispod": 2.05,
-   "promenjeno": "2026-10-29T18:29:05.655Z"
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P007056",
@@ -2600,9 +3408,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:45:04.536Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P007056",
@@ -2614,8 +3422,8 @@
    "tip": "trojke",
    "linija": 0.5,
    "preko": 2.65,
-   "ispod": 1.48,
-   "promenjeno": "2026-10-29T16:57:44.644Z"
+   "ispod": 1.49,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P014782",
@@ -2626,9 +3434,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 7.5,
-   "preko": 1.87,
+   "preko": 1.85,
    "ispod": 1.95,
-   "promenjeno": "2026-10-29T15:42:37.970Z"
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P014782",
@@ -2639,9 +3447,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 4.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T17:40:00.633Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P014782",
@@ -2654,7 +3462,7 @@
    "linija": 2.5,
    "preko": 1.78,
    "ispod": 2.05,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P013929",
@@ -2678,9 +3486,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 13.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T22:45:19.267Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P013929",
@@ -2691,9 +3499,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 11.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T22:44:15.310Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P013929",
@@ -2706,7 +3514,7 @@
    "linija": 3.5,
    "preko": 1.75,
    "ispod": 2.1,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P013929",
@@ -2717,9 +3525,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T19:20:04.140Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P013929",
@@ -2730,9 +3538,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 1.5,
-   "preko": 1.64,
-   "ispod": 2.27,
-   "promenjeno": "2026-10-29T17:45:50.990Z"
+   "preko": 1.62,
+   "ispod": 2.32,
+   "promenjeno": "2026-10-30T09:20:51.740Z"
   },
   {
    "igrac_id": "P013929",
@@ -2743,9 +3551,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.49,
+   "preko": 1.5,
    "ispod": 2.62,
-   "promenjeno": "2026-10-29T19:42:32.209Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P004004",
@@ -2755,10 +3563,10 @@
    "sifra_utakmice": 90,
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
-   "linija": 4.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T17:45:04.536Z"
+   "linija": 7.5,
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T05:40:42.608Z"
   },
   {
    "igrac_id": "P004004",
@@ -2768,10 +3576,10 @@
    "sifra_utakmice": 90,
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
-   "linija": 0.5,
-   "preko": 1.49,
-   "ispod": 2.65,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "linija": 1.5,
+   "preko": 2.75,
+   "ispod": 1.46,
+   "promenjeno": "2026-10-30T05:40:34.851Z"
   },
   {
    "igrac_id": "P011205",
@@ -2782,9 +3590,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 11.5,
-   "preko": 1.85,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:45:50.990Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P011205",
@@ -2797,7 +3605,7 @@
    "linija": 11.5,
    "preko": 1.95,
    "ispod": 1.85,
-   "promenjeno": "2026-10-29T17:46:09.201Z"
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P011205",
@@ -2810,7 +3618,7 @@
    "linija": 3.5,
    "preko": 2.02,
    "ispod": 1.8,
-   "promenjeno": "2026-10-29T14:47:18.202Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011205",
@@ -2823,7 +3631,7 @@
    "linija": 8.5,
    "preko": 2.05,
    "ispod": 1.78,
-   "promenjeno": "2026-10-29T17:45:50.990Z"
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P011205",
@@ -2834,22 +3642,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 1.59,
-   "ispod": 2.37,
-   "promenjeno": "2026-10-29T22:44:15.310Z"
-  },
-  {
-   "igrac_id": "P011205",
-   "ime": "Hall, Devon",
-   "tim": "MIL",
-   "sezona": 2026,
-   "sifra_utakmice": 90,
-   "datum": "2026-10-30 20:15",
-   "tip": "skokovi",
-   "linija": 3.5,
-   "preko": 2.35,
-   "ispod": 1.6,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "preko": 1.6,
+   "ispod": 2.35,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P011205",
@@ -2860,9 +3655,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.82,
-   "ispod": 1.44,
-   "promenjeno": "2026-10-29T22:48:17.245Z"
+   "preko": 2.8,
+   "ispod": 1.45,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011078",
@@ -2873,9 +3668,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 8.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T22:45:19.267Z"
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011078",
@@ -2886,9 +3681,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 2.22,
+   "preko": 2.25,
    "ispod": 1.66,
-   "promenjeno": "2026-10-29T22:23:35.393Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011078",
@@ -2899,9 +3694,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.83,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T22:48:17.245Z"
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P011078",
@@ -2912,9 +3707,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.74,
-   "ispod": 2.1,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 1.76,
+   "ispod": 2.07,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012878",
@@ -2925,22 +3720,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T17:45:04.536Z"
-  },
-  {
-   "igrac_id": "P012878",
-   "ime": "Wright, Moses",
-   "tim": "MIL",
-   "sezona": 2026,
-   "sifra_utakmice": 90,
-   "datum": "2026-10-30 20:15",
-   "tip": "PS",
-   "linija": 16.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:45:19.267Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P012878",
@@ -2951,9 +3733,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 17.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T22:44:15.310Z"
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T09:21:17.823Z"
   },
   {
    "igrac_id": "P012878",
@@ -2964,9 +3746,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 0.5,
-   "preko": 1.65,
-   "ispod": 2.25,
-   "promenjeno": "2026-10-29T22:44:15.310Z"
+   "preko": 1.63,
+   "ispod": 2.3,
+   "promenjeno": "2026-10-30T04:05:33.156Z"
   },
   {
    "igrac_id": "P012878",
@@ -2977,9 +3759,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 11.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T22:44:15.310Z"
+   "preko": 1.85,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P012878",
@@ -3003,9 +3785,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 5.5,
-   "preko": 2.17,
-   "ispod": 1.69,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 2.1,
+   "ispod": 1.74,
+   "promenjeno": "2026-10-30T09:21:17.823Z"
   },
   {
    "igrac_id": "P011196",
@@ -3017,8 +3799,8 @@
    "tip": "PS",
    "linija": 14.5,
    "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011196",
@@ -3031,7 +3813,7 @@
    "linija": 9.5,
    "preko": 1.9,
    "ispod": 1.9,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011196",
@@ -3042,9 +3824,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 1.76,
-   "ispod": 2.07,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P011981",
@@ -3054,10 +3836,10 @@
    "sifra_utakmice": 90,
    "datum": "2026-10-30 20:15",
    "tip": "PS",
-   "linija": 13.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "linija": 11.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P011981",
@@ -3080,10 +3862,10 @@
    "sifra_utakmice": 90,
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
-   "linija": 8.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "linija": 7.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P011981",
@@ -3106,10 +3888,23 @@
    "sifra_utakmice": 90,
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
-   "linija": 5.5,
-   "preko": 2.22,
-   "ispod": 1.67,
-   "promenjeno": "2026-10-29T22:22:45.238Z"
+   "linija": 3.5,
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:20:51.740Z"
+  },
+  {
+   "igrac_id": "P011981",
+   "ime": "Jones, Tyrique",
+   "tim": "OLY",
+   "sezona": 2026,
+   "sifra_utakmice": 90,
+   "datum": "2026-10-30 20:15",
+   "tip": "skokovi",
+   "linija": 4.5,
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T06:58:15.359Z"
   },
   {
    "igrac_id": "P014316",
@@ -3120,9 +3915,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 7.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T17:26:11.425Z"
+   "preko": 1.83,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P014316",
@@ -3133,9 +3928,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 2.42,
-   "ispod": 1.57,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 2.35,
+   "ispod": 1.6,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P014316",
@@ -3146,9 +3941,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T17:43:22.979Z"
+   "preko": 1.9,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P014316",
@@ -3159,9 +3954,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P009048",
@@ -3172,9 +3967,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 16.5,
-   "preko": 1.9,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P009048",
@@ -3198,9 +3993,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 13.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T17:44:47.629Z"
+   "preko": 1.83,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P009048",
@@ -3224,9 +4019,22 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 6.5,
-   "preko": 1.95,
+   "preko": 1.97,
    "ispod": 1.85,
-   "promenjeno": "2026-10-29T22:23:09.140Z"
+   "promenjeno": "2026-10-30T04:03:46.419Z"
+  },
+  {
+   "igrac_id": "P009048",
+   "ime": "Miller-McIntyre, Codi",
+   "tim": "OLY",
+   "sezona": 2026,
+   "sifra_utakmice": 90,
+   "datum": "2026-10-30 20:15",
+   "tip": "poeni",
+   "linija": 9.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T00:26:44.232Z"
   },
   {
    "igrac_id": "P009048",
@@ -3237,9 +4045,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 10.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T22:44:15.310Z"
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P009048",
@@ -3250,9 +4058,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T17:45:04.536Z"
+   "preko": 1.85,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P009048",
@@ -3263,9 +4071,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.57,
-   "ispod": 2.42,
-   "promenjeno": "2026-10-29T22:27:13.392Z"
+   "preko": 1.52,
+   "ispod": 2.55,
+   "promenjeno": "2026-10-30T08:23:27.256Z"
   },
   {
    "igrac_id": "P012731",
@@ -3276,9 +4084,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 11.5,
-   "preko": 2.05,
-   "ispod": 1.78,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012731",
@@ -3289,9 +4097,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 13.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P012731",
@@ -3302,9 +4110,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 0.5,
-   "preko": 1.55,
-   "ispod": 2.47,
-   "promenjeno": "2026-10-29T15:42:07.964Z"
+   "preko": 1.56,
+   "ispod": 2.42,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012731",
@@ -3317,7 +4125,7 @@
    "linija": 10.5,
    "preko": 2.05,
    "ispod": 1.78,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P012731",
@@ -3328,9 +4136,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012731",
@@ -3341,9 +4149,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.63,
+   "preko": 1.64,
    "ispod": 2.27,
-   "promenjeno": "2026-10-29T17:44:47.629Z"
+   "promenjeno": "2026-10-30T09:21:05.892Z"
   },
   {
    "igrac_id": "P001255",
@@ -3354,9 +4162,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 6.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:46:09.201Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P001255",
@@ -3367,9 +4175,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 6.5,
-   "preko": 1.75,
-   "ispod": 2.1,
-   "promenjeno": "2026-10-29T22:45:19.267Z"
+   "preko": 1.77,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P001255",
@@ -3393,9 +4201,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.77,
-   "ispod": 2.07,
-   "promenjeno": "2026-10-29T17:45:04.536Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P001255",
@@ -3406,9 +4214,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 4.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:46:09.201Z"
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P001255",
@@ -3419,9 +4227,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 2.1,
-   "ispod": 1.74,
-   "promenjeno": "2026-10-29T17:45:04.536Z"
+   "preko": 2.15,
+   "ispod": 1.72,
+   "promenjeno": "2026-10-30T06:58:15.359Z"
   },
   {
    "igrac_id": "P001255",
@@ -3432,9 +4240,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.55,
-   "ispod": 2.47,
-   "promenjeno": "2026-10-29T16:21:01.826Z"
+   "preko": 1.56,
+   "ispod": 2.45,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P003469",
@@ -3445,9 +4253,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 20.5,
-   "preko": 2.0,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T22:27:13.392Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P003469",
@@ -3460,7 +4268,7 @@
    "linija": 24.5,
    "preko": 1.83,
    "ispod": 2.0,
-   "promenjeno": "2026-10-29T19:16:24.438Z"
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P003469",
@@ -3471,9 +4279,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "preko": 2.12,
+   "ispod": 1.72,
+   "promenjeno": "2026-10-30T08:23:10.530Z"
   },
   {
    "igrac_id": "P003469",
@@ -3484,9 +4292,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 18.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P003469",
@@ -3497,9 +4305,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 5.5,
-   "preko": 1.72,
-   "ispod": 2.12,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "preko": 1.55,
+   "ispod": 2.47,
+   "promenjeno": "2026-10-30T09:21:17.823Z"
   },
   {
    "igrac_id": "P003469",
@@ -3523,9 +4331,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.67,
-   "ispod": 2.22,
-   "promenjeno": "2026-10-29T19:43:43.925Z"
+   "preko": 1.68,
+   "ispod": 2.2,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012610",
@@ -3536,9 +4344,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T19:04:08.420Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012610",
@@ -3549,9 +4357,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "PS",
    "linija": 14.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T17:45:50.990Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012610",
@@ -3562,9 +4370,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.69,
-   "ispod": 2.17,
-   "promenjeno": "2026-10-29T18:36:10.603Z"
+   "preko": 1.66,
+   "ispod": 2.22,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012610",
@@ -3575,9 +4383,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:27:13.392Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012610",
@@ -3601,9 +4409,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 1.78,
-   "ispod": 2.05,
-   "promenjeno": "2026-10-29T17:45:50.990Z"
+   "preko": 1.83,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:20:51.740Z"
   },
   {
    "igrac_id": "P012610",
@@ -3614,9 +4422,9 @@
    "datum": "2026-10-30 20:15",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.43,
-   "ispod": 2.85,
-   "promenjeno": "2026-10-29T22:44:38.344Z"
+   "preko": 1.46,
+   "ispod": 2.72,
+   "promenjeno": "2026-10-30T04:03:46.419Z"
   },
   {
    "igrac_id": "P012610",
@@ -3640,9 +4448,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 9.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T18:57:38.105Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T07:53:35.994Z"
   },
   {
    "igrac_id": "P009992",
@@ -3666,9 +4474,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T18:57:38.105Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T08:12:20.639Z"
   },
   {
    "igrac_id": "P009992",
@@ -3679,9 +4487,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 7.5,
-   "preko": 1.77,
+   "preko": 1.76,
    "ispod": 2.07,
-   "promenjeno": "2026-10-29T17:31:30.111Z"
+   "promenjeno": "2026-10-30T08:48:24.794Z"
   },
   {
    "igrac_id": "P009992",
@@ -3705,22 +4513,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.1,
-   "ispod": 1.74,
-   "promenjeno": "2026-10-29T17:33:33.114Z"
-  },
-  {
-   "igrac_id": "P015138",
-   "ime": "Martin, Tyrese",
-   "tim": "BAR",
-   "sezona": 2026,
-   "sifra_utakmice": 87,
-   "datum": "2026-10-30 20:30",
-   "tip": "PA",
-   "linija": 13.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "preko": 2.12,
+   "ispod": 1.73,
+   "promenjeno": "2026-10-30T06:48:24.522Z"
   },
   {
    "igrac_id": "P015138",
@@ -3731,9 +4526,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 14.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T13:26:41.872Z"
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T07:35:16.275Z"
   },
   {
    "igrac_id": "P015138",
@@ -3743,10 +4538,10 @@
    "sifra_utakmice": 87,
    "datum": "2026-10-30 20:30",
    "tip": "PS",
-   "linija": 15.5,
-   "preko": 1.85,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "linija": 17.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T07:35:16.275Z"
   },
   {
    "igrac_id": "P015138",
@@ -3757,9 +4552,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 2.95,
-   "ispod": 1.41,
-   "promenjeno": "2026-10-29T21:58:14.468Z"
+   "preko": 2.87,
+   "ispod": 1.43,
+   "promenjeno": "2026-10-30T08:12:20.639Z"
   },
   {
    "igrac_id": "P015138",
@@ -3769,10 +4564,10 @@
    "sifra_utakmice": 87,
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
-   "linija": 11.5,
-   "preko": 2.05,
-   "ispod": 1.78,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "linija": 12.5,
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T07:35:16.275Z"
   },
   {
    "igrac_id": "P015138",
@@ -3784,8 +4579,8 @@
    "tip": "skokovi",
    "linija": 4.5,
    "preko": 1.9,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T21:22:17.690Z"
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P015138",
@@ -3796,7 +4591,7 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.54,
+   "preko": 1.53,
    "ispod": 2.5,
    "promenjeno": "2026-10-29T18:20:12.542Z"
   },
@@ -3809,9 +4604,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 16.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T15:03:53.503Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T08:46:48.630Z"
   },
   {
    "igrac_id": "P011199",
@@ -3822,9 +4617,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 10.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T17:26:35.480Z"
+   "preko": 2.05,
+   "ispod": 1.77,
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P011199",
@@ -3836,21 +4631,8 @@
    "tip": "skokovi",
    "linija": 6.5,
    "preko": 2.17,
-   "ispod": 1.69,
-   "promenjeno": "2026-10-29T19:53:58.796Z"
-  },
-  {
-   "igrac_id": "P009862",
-   "ime": "Punter, Kevin",
-   "tim": "BAR",
-   "sezona": 2026,
-   "sifra_utakmice": 87,
-   "datum": "2026-10-30 20:30",
-   "tip": "PA",
-   "linija": 20.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:16:17.281Z"
+   "ispod": 1.7,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P009862",
@@ -3861,9 +4643,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 21.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T22:16:17.281Z"
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T08:12:20.639Z"
   },
   {
    "igrac_id": "P009862",
@@ -3874,9 +4656,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 20.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T19:29:37.818Z"
+   "preko": 1.92,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T08:12:57.964Z"
   },
   {
    "igrac_id": "P009862",
@@ -3887,9 +4669,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.69,
-   "ispod": 2.17,
-   "promenjeno": "2026-10-29T23:28:30.028Z"
+   "preko": 1.66,
+   "ispod": 2.22,
+   "promenjeno": "2026-10-30T08:49:06.134Z"
   },
   {
    "igrac_id": "P009862",
@@ -3900,9 +4682,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 18.5,
-   "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T18:57:38.105Z"
+   "preko": 2.25,
+   "ispod": 1.65,
+   "promenjeno": "2026-10-30T09:24:41.287Z"
   },
   {
    "igrac_id": "P009862",
@@ -3913,9 +4695,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 2.5,
-   "preko": 2.5,
-   "ispod": 1.54,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "preko": 2.47,
+   "ispod": 1.55,
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P009862",
@@ -3926,9 +4708,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T18:57:38.105Z"
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T09:24:41.287Z"
   },
   {
    "igrac_id": "P014008",
@@ -3939,9 +4721,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 19.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T23:28:30.028Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T07:28:55.124Z"
   },
   {
    "igrac_id": "P014008",
@@ -3952,9 +4734,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 15.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T06:44:20.621Z"
   },
   {
    "igrac_id": "P014008",
@@ -3965,9 +4747,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 5.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T23:28:30.028Z"
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T06:48:24.522Z"
   },
   {
    "igrac_id": "P014008",
@@ -3979,8 +4761,8 @@
    "tip": "poeni",
    "linija": 13.5,
    "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T18:17:40.123Z"
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T07:21:54.582Z"
   },
   {
    "igrac_id": "P014008",
@@ -3993,7 +4775,7 @@
    "linija": 1.5,
    "preko": 1.87,
    "ispod": 1.95,
-   "promenjeno": "2026-10-29T13:22:45.220Z"
+   "promenjeno": "2026-10-30T08:46:48.630Z"
   },
   {
    "igrac_id": "P014008",
@@ -4004,9 +4786,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 2.37,
-   "ispod": 1.59,
-   "promenjeno": "2026-10-29T19:29:37.818Z"
+   "preko": 2.27,
+   "ispod": 1.64,
+   "promenjeno": "2026-10-30T09:32:07.411Z"
   },
   {
    "igrac_id": "P015139",
@@ -4017,9 +4799,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 6.5,
-   "preko": 2.0,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T19:29:37.818Z"
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T09:28:17.956Z"
   },
   {
    "igrac_id": "P015139",
@@ -4030,9 +4812,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 4.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T17:26:35.480Z"
+   "preko": 1.83,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P015139",
@@ -4043,9 +4825,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 1.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T19:32:28.591Z"
+   "preko": 1.77,
+   "ispod": 2.07,
+   "promenjeno": "2026-10-30T09:28:17.956Z"
   },
   {
    "igrac_id": "P015139",
@@ -4056,9 +4838,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.51,
-   "ispod": 2.57,
-   "promenjeno": "2026-10-29T17:56:20.351Z"
+   "preko": 1.52,
+   "ispod": 2.55,
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P013384",
@@ -4069,7 +4851,7 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 16.5,
-   "preko": 1.9,
+   "preko": 1.88,
    "ispod": 1.92,
    "promenjeno": "2026-10-29T19:29:37.818Z"
   },
@@ -4082,9 +4864,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 19.5,
-   "preko": 1.95,
+   "preko": 1.97,
    "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:27:36.641Z"
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P013384",
@@ -4096,8 +4878,8 @@
    "tip": "asistencije",
    "linija": 1.5,
    "preko": 2.2,
-   "ispod": 1.67,
-   "promenjeno": "2026-10-29T18:57:38.105Z"
+   "ispod": 1.69,
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P013384",
@@ -4109,7 +4891,7 @@
    "tip": "poeni",
    "linija": 15.5,
    "preko": 1.97,
-   "ispod": 1.85,
+   "ispod": 1.83,
    "promenjeno": "2026-10-29T19:27:36.641Z"
   },
   {
@@ -4121,9 +4903,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 1.69,
-   "ispod": 2.17,
-   "promenjeno": "2026-10-29T12:29:38.111Z"
+   "preko": 1.67,
+   "ispod": 2.2,
+   "promenjeno": "2026-10-30T08:46:48.630Z"
   },
   {
    "igrac_id": "P013384",
@@ -4134,9 +4916,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:27:36.641Z"
+   "preko": 1.9,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T07:21:54.582Z"
   },
   {
    "igrac_id": "P010581",
@@ -4147,9 +4929,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 9.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T22:16:17.281Z"
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T07:35:52.250Z"
   },
   {
    "igrac_id": "P010581",
@@ -4162,7 +4944,7 @@
    "linija": 10.5,
    "preko": 2.05,
    "ispod": 1.78,
-   "promenjeno": "2026-10-29T14:32:40.103Z"
+   "promenjeno": "2026-10-29T14:54:46.403Z"
   },
   {
    "igrac_id": "P010581",
@@ -4173,9 +4955,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 12.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T19:53:58.796Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P010581",
@@ -4188,7 +4970,7 @@
    "linija": 1.5,
    "preko": 2.0,
    "ispod": 1.82,
-   "promenjeno": "2026-10-29T17:31:30.111Z"
+   "promenjeno": "2026-10-30T08:12:20.639Z"
   },
   {
    "igrac_id": "P010581",
@@ -4198,10 +4980,10 @@
    "sifra_utakmice": 87,
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
-   "linija": 8.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T21:22:17.690Z"
+   "linija": 7.5,
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T08:46:48.630Z"
   },
   {
    "igrac_id": "P010581",
@@ -4213,8 +4995,8 @@
    "tip": "skokovi",
    "linija": 4.5,
    "preko": 2.25,
-   "ispod": 1.66,
-   "promenjeno": "2026-10-29T13:03:49.690Z"
+   "ispod": 1.65,
+   "promenjeno": "2026-10-30T08:14:48.407Z"
   },
   {
    "igrac_id": "P010581",
@@ -4225,9 +5007,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T21:34:35.439Z"
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T07:21:54.582Z"
   },
   {
    "igrac_id": "P006643",
@@ -4238,9 +5020,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 6.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T22:16:17.281Z"
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T08:49:06.134Z"
   },
   {
    "igrac_id": "P006643",
@@ -4251,9 +5033,22 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.5,
-   "ispod": 1.54,
-   "promenjeno": "2026-10-29T19:21:38.239Z"
+   "preko": 2.42,
+   "ispod": 1.57,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
+  },
+  {
+   "igrac_id": "P011214",
+   "ime": "Rivero, Jasiel",
+   "tim": "PAM",
+   "sezona": 2026,
+   "sifra_utakmice": 87,
+   "datum": "2026-10-30 20:30",
+   "tip": "poeni",
+   "linija": 6.5,
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P010545",
@@ -4264,9 +5059,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 12.5,
-   "preko": 1.97,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T15:15:18.689Z"
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P010545",
@@ -4278,8 +5073,8 @@
    "tip": "poeni",
    "linija": 6.5,
    "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T14:16:02.531Z"
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T07:31:29.614Z"
   },
   {
    "igrac_id": "P010545",
@@ -4292,7 +5087,7 @@
    "linija": 5.5,
    "preko": 1.87,
    "ispod": 1.95,
-   "promenjeno": "2026-10-29T19:21:38.239Z"
+   "promenjeno": "2026-10-30T08:12:20.639Z"
   },
   {
    "igrac_id": "P012608",
@@ -4302,10 +5097,10 @@
    "sifra_utakmice": 87,
    "datum": "2026-10-30 20:30",
    "tip": "PA",
-   "linija": 25.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T22:16:17.281Z"
+   "linija": 24.5,
+   "preko": 1.97,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T09:32:07.411Z"
   },
   {
    "igrac_id": "P012608",
@@ -4316,9 +5111,22 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 20.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T19:53:58.796Z"
+   "preko": 1.95,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
+  },
+  {
+   "igrac_id": "P012608",
+   "ime": "Shorts, TJ",
+   "tim": "PAM",
+   "sezona": 2026,
+   "sifra_utakmice": 87,
+   "datum": "2026-10-30 20:30",
+   "tip": "asistencije",
+   "linija": 5.5,
+   "preko": 2.0,
+   "ispod": 1.83,
+   "promenjeno": "2026-10-30T09:30:44.191Z"
   },
   {
    "igrac_id": "P012608",
@@ -4329,9 +5137,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 6.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T19:32:28.591Z"
+   "preko": 2.2,
+   "ispod": 1.68,
+   "promenjeno": "2026-10-30T09:31:25.515Z"
   },
   {
    "igrac_id": "P012608",
@@ -4342,9 +5150,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 18.5,
-   "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P012608",
@@ -4355,9 +5163,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 1.5,
-   "preko": 1.62,
+   "preko": 1.61,
    "ispod": 2.32,
-   "promenjeno": "2026-10-29T19:53:58.796Z"
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P012608",
@@ -4381,9 +5189,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 15.5,
-   "preko": 1.87,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T21:27:22.282Z"
+   "preko": 1.9,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T09:32:07.411Z"
   },
   {
    "igrac_id": "P011217",
@@ -4407,9 +5215,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 17.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T19:27:36.641Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:28:17.956Z"
   },
   {
    "igrac_id": "P011217",
@@ -4420,9 +5228,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.66,
-   "ispod": 2.22,
-   "promenjeno": "2026-10-29T22:16:17.281Z"
+   "preko": 1.63,
+   "ispod": 2.3,
+   "promenjeno": "2026-10-30T09:32:07.411Z"
   },
   {
    "igrac_id": "P011217",
@@ -4433,9 +5241,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 13.5,
-   "preko": 1.9,
+   "preko": 1.88,
    "ispod": 1.92,
-   "promenjeno": "2026-10-29T19:29:37.818Z"
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P011217",
@@ -4446,9 +5254,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 4.5,
-   "preko": 2.2,
-   "ispod": 1.68,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "preko": 2.25,
+   "ispod": 1.66,
+   "promenjeno": "2026-10-30T01:31:29.245Z"
   },
   {
    "igrac_id": "P011217",
@@ -4459,9 +5267,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.12,
-   "ispod": 1.74,
-   "promenjeno": "2026-10-29T19:36:47.833Z"
+   "preko": 2.05,
+   "ispod": 1.78,
+   "promenjeno": "2026-10-30T09:07:46.216Z"
   },
   {
    "igrac_id": "P009025",
@@ -4498,9 +5306,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 2.3,
-   "ispod": 1.63,
-   "promenjeno": "2026-10-29T19:01:38.279Z"
+   "preko": 2.25,
+   "ispod": 1.65,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P009025",
@@ -4511,9 +5319,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 2.42,
-   "ispod": 1.57,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 2.45,
+   "ispod": 1.56,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P013383",
@@ -4524,9 +5332,22 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.85,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T13:33:59.453Z"
+   "preko": 1.88,
+   "ispod": 1.92,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
+  },
+  {
+   "igrac_id": "P009680",
+   "ime": "Morgan, Conor",
+   "tim": "BES",
+   "sezona": 2026,
+   "sifra_utakmice": 89,
+   "datum": "2026-10-30 20:30",
+   "tip": "poeni",
+   "linija": 7.5,
+   "preko": 1.97,
+   "ispod": 1.85,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P014786",
@@ -4537,7 +5358,7 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 14.5,
-   "preko": 1.88,
+   "preko": 1.9,
    "ispod": 1.92,
    "promenjeno": "2026-10-29T16:37:03.824Z"
   },
@@ -4551,8 +5372,8 @@
    "tip": "PS",
    "linija": 14.5,
    "preko": 1.92,
-   "ispod": 1.9,
-   "promenjeno": "2026-10-29T16:37:03.824Z"
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014786",
@@ -4563,9 +5384,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 1.54,
-   "ispod": 2.47,
-   "promenjeno": "2026-10-29T14:08:31.560Z"
+   "preko": 1.56,
+   "ispod": 2.45,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014786",
@@ -4577,8 +5398,8 @@
    "tip": "poeni",
    "linija": 12.5,
    "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T16:42:33.326Z"
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P014786",
@@ -4589,9 +5410,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 1.5,
-   "preko": 1.61,
-   "ispod": 2.32,
-   "promenjeno": "2026-10-29T19:48:20.995Z"
+   "preko": 1.62,
+   "ispod": 2.3,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014786",
@@ -4602,9 +5423,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.77,
-   "ispod": 1.45,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 2.82,
+   "ispod": 1.44,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014207",
@@ -4615,9 +5436,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 2.05,
-   "ispod": 1.78,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P014207",
@@ -4628,9 +5449,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 11.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P014207",
@@ -4641,9 +5462,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 12.5,
-   "preko": 2.05,
-   "ispod": 1.78,
-   "promenjeno": "2026-10-29T19:36:20.781Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P014207",
@@ -4654,9 +5475,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T19:36:20.781Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P014207",
@@ -4667,9 +5488,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 1.97,
-   "ispod": 1.83,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "preko": 1.92,
+   "ispod": 1.88,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P014207",
@@ -4681,8 +5502,8 @@
    "tip": "skokovi",
    "linija": 2.5,
    "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T16:42:33.326Z"
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P014207",
@@ -4693,9 +5514,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 0.5,
-   "preko": 1.85,
-   "ispod": 1.95,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P006661",
@@ -4707,7 +5528,7 @@
    "tip": "PA",
    "linija": 16.5,
    "preko": 1.95,
-   "ispod": 1.85,
+   "ispod": 1.87,
    "promenjeno": "2026-10-29T19:38:34.842Z"
   },
   {
@@ -4719,9 +5540,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T14:44:30.293Z"
+   "preko": 1.85,
+   "ispod": 1.97,
+   "promenjeno": "2026-10-30T05:05:15.123Z"
   },
   {
    "igrac_id": "P006661",
@@ -4733,7 +5554,7 @@
    "tip": "poeni",
    "linija": 13.5,
    "preko": 1.9,
-   "ispod": 1.9,
+   "ispod": 1.92,
    "promenjeno": "2026-10-29T19:38:34.842Z"
   },
   {
@@ -4745,9 +5566,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 2.5,
-   "preko": 2.1,
-   "ispod": 1.75,
-   "promenjeno": "2026-10-29T18:52:09.365Z"
+   "preko": 2.07,
+   "ispod": 1.76,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P004554",
@@ -4760,7 +5581,7 @@
    "linija": 10.5,
    "preko": 1.78,
    "ispod": 2.05,
-   "promenjeno": "2026-10-29T18:52:09.365Z"
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P004554",
@@ -4771,9 +5592,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 14.5,
-   "preko": 1.8,
-   "ispod": 2.02,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P004554",
@@ -4786,7 +5607,7 @@
    "linija": 15.5,
    "preko": 2.02,
    "ispod": 1.8,
-   "promenjeno": "2026-10-29T19:36:20.781Z"
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P004554",
@@ -4797,7 +5618,7 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 1.5,
-   "preko": 2.1,
+   "preko": 2.07,
    "ispod": 1.75,
    "promenjeno": "2026-10-29T18:58:41.288Z"
   },
@@ -4812,7 +5633,7 @@
    "linija": 9.5,
    "preko": 1.92,
    "ispod": 1.88,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P004554",
@@ -4836,22 +5657,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 14.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T23:19:37.539Z"
-  },
-  {
-   "igrac_id": "P014005",
-   "ime": "Alston Jr, Derrick Samuel",
-   "tim": "VIR",
-   "sezona": 2026,
-   "sifra_utakmice": 89,
-   "datum": "2026-10-30 20:30",
-   "tip": "PA",
-   "linija": 15.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T19:36:20.781Z"
+   "preko": 1.8,
+   "ispod": 2.02,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P014005",
@@ -4862,9 +5670,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 0.5,
-   "preko": 1.49,
-   "ispod": 2.65,
-   "promenjeno": "2026-10-29T23:19:37.539Z"
+   "preko": 1.48,
+   "ispod": 2.67,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014005",
@@ -4877,20 +5685,7 @@
    "linija": 13.5,
    "preko": 1.8,
    "ispod": 2.02,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
-  },
-  {
-   "igrac_id": "P014005",
-   "ime": "Alston Jr, Derrick Samuel",
-   "tim": "VIR",
-   "sezona": 2026,
-   "sifra_utakmice": 89,
-   "datum": "2026-10-30 20:30",
-   "tip": "poeni",
-   "linija": 14.5,
-   "preko": 2.02,
-   "ispod": 1.8,
-   "promenjeno": "2026-10-29T19:36:20.781Z"
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P014005",
@@ -4902,7 +5697,7 @@
    "tip": "trojke",
    "linija": 1.5,
    "preko": 1.55,
-   "ispod": 2.45,
+   "ispod": 2.47,
    "promenjeno": "2026-10-29T18:58:41.288Z"
   },
   {
@@ -4927,9 +5722,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 5.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T23:19:37.539Z"
+   "preko": 1.92,
+   "ispod": 1.9,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P014802",
@@ -4941,8 +5736,8 @@
    "tip": "trojke",
    "linija": 0.5,
    "preko": 3.0,
-   "ispod": 1.4,
-   "promenjeno": "2026-10-29T19:01:38.279Z"
+   "ispod": 1.39,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P012707",
@@ -4952,10 +5747,10 @@
    "sifra_utakmice": 89,
    "datum": "2026-10-30 20:30",
    "tip": "PA",
-   "linija": 18.5,
-   "preko": 1.82,
-   "ispod": 2.0,
-   "promenjeno": "2026-10-29T18:52:09.365Z"
+   "linija": 19.5,
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:46:28.769Z"
   },
   {
    "igrac_id": "P012707",
@@ -4965,10 +5760,10 @@
    "sifra_utakmice": 89,
    "datum": "2026-10-30 20:30",
    "tip": "PS",
-   "linija": 16.5,
-   "preko": 1.95,
-   "ispod": 1.85,
-   "promenjeno": "2026-10-29T19:27:26.341Z"
+   "linija": 17.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T09:46:28.769Z"
   },
   {
    "igrac_id": "P012707",
@@ -4979,9 +5774,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 4.5,
-   "preko": 1.85,
+   "preko": 1.87,
    "ispod": 1.95,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P012707",
@@ -4991,10 +5786,10 @@
    "sifra_utakmice": 89,
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
-   "linija": 14.5,
-   "preko": 2.3,
-   "ispod": 1.63,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "linija": 15.5,
+   "preko": 2.32,
+   "ispod": 1.62,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P012707",
@@ -5018,9 +5813,35 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 2.12,
-   "ispod": 1.73,
-   "promenjeno": "2026-10-29T16:50:20.288Z"
+   "preko": 2.15,
+   "ispod": 1.71,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
+  },
+  {
+   "igrac_id": "P014108",
+   "ime": "Diarra, Aliou",
+   "tim": "VIR",
+   "sezona": 2026,
+   "sifra_utakmice": 89,
+   "datum": "2026-10-30 20:30",
+   "tip": "poeni",
+   "linija": 10.5,
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T09:49:29.529Z"
+  },
+  {
+   "igrac_id": "P014108",
+   "ime": "Diarra, Aliou",
+   "tim": "VIR",
+   "sezona": 2026,
+   "sifra_utakmice": 89,
+   "datum": "2026-10-30 20:30",
+   "tip": "poeni",
+   "linija": 11.5,
+   "preko": 2.0,
+   "ispod": 1.82,
+   "promenjeno": "2026-10-30T09:49:32.717Z"
   },
   {
    "igrac_id": "P014416",
@@ -5044,9 +5865,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 10.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 1.82,
+   "ispod": 2.0,
+   "promenjeno": "2026-10-30T07:39:28.954Z"
   },
   {
    "igrac_id": "P014416",
@@ -5057,9 +5878,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 4.5,
-   "preko": 2.0,
-   "ispod": 1.82,
-   "promenjeno": "2026-10-29T19:01:38.279Z"
+   "preko": 1.76,
+   "ispod": 2.07,
+   "promenjeno": "2026-10-30T07:39:28.954Z"
   },
   {
    "igrac_id": "P014416",
@@ -5072,7 +5893,7 @@
    "linija": 5.5,
    "preko": 1.74,
    "ispod": 2.1,
-   "promenjeno": "2026-10-29T18:54:08.952Z"
+   "promenjeno": "2026-10-30T09:49:29.529Z"
   },
   {
    "igrac_id": "P015029",
@@ -5083,9 +5904,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 1.92,
-   "ispod": 1.88,
-   "promenjeno": "2026-10-29T19:38:34.842Z"
+   "preko": 1.95,
+   "ispod": 1.87,
+   "promenjeno": "2026-10-30T05:02:53.404Z"
   },
   {
    "igrac_id": "P015029",
@@ -5096,9 +5917,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PS",
    "linija": 10.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 1.85,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P015029",
@@ -5109,9 +5930,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 2.5,
-   "preko": 1.63,
+   "preko": 1.62,
    "ispod": 2.3,
-   "promenjeno": "2026-10-29T15:10:32.011Z"
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P015029",
@@ -5122,9 +5943,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 9.5,
-   "preko": 1.95,
-   "ispod": 1.87,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 2.02,
+   "ispod": 1.8,
+   "promenjeno": "2026-10-30T05:02:17.743Z"
   },
   {
    "igrac_id": "P015029",
@@ -5135,9 +5956,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 1.5,
-   "preko": 2.5,
-   "ispod": 1.54,
-   "promenjeno": "2026-10-29T14:54:36.663Z"
+   "preko": 2.42,
+   "ispod": 1.57,
+   "promenjeno": "2026-10-30T09:50:56.626Z"
   },
   {
    "igrac_id": "P015029",
@@ -5148,9 +5969,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "trojke",
    "linija": 1.5,
-   "preko": 1.54,
-   "ispod": 2.5,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 1.58,
+   "ispod": 2.4,
+   "promenjeno": "2026-10-30T05:05:15.123Z"
   },
   {
    "igrac_id": "P014737",
@@ -5161,9 +5982,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "PA",
    "linija": 12.5,
-   "preko": 1.92,
+   "preko": 1.9,
    "ispod": 1.9,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014737",
@@ -5187,9 +6008,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "asistencije",
    "linija": 0.5,
-   "preko": 1.66,
-   "ispod": 2.22,
-   "promenjeno": "2026-10-29T18:58:41.288Z"
+   "preko": 1.68,
+   "ispod": 2.2,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014737",
@@ -5200,9 +6021,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "poeni",
    "linija": 11.5,
-   "preko": 1.88,
-   "ispod": 1.92,
-   "promenjeno": "2026-10-29T14:25:53.112Z"
+   "preko": 1.87,
+   "ispod": 1.95,
+   "promenjeno": "2026-10-30T01:31:27.868Z"
   },
   {
    "igrac_id": "P014737",
@@ -5213,9 +6034,9 @@
    "datum": "2026-10-30 20:30",
    "tip": "skokovi",
    "linija": 3.5,
-   "preko": 1.83,
-   "ispod": 1.97,
-   "promenjeno": "2026-10-29T19:01:38.279Z"
+   "preko": 1.78,
+   "ispod": 2.05,
+   "promenjeno": "2026-10-30T05:02:17.743Z"
   },
   {
    "igrac_id": "P014737",
