@@ -36,7 +36,7 @@ from analiza import broj, procenat, e, zbirno, datum_srb, utakmica_rec
 FOLDER = Path(__file__).parent
 BAZA = FOLDER / "podaci" / "evroliga.db"
 SAJT = FOLDER / "sajt"
-NAZIV_SAJTA = "EuroCourt"
+NAZIV_SAJTA = "CrunchTime"
 
 DODATNI_CSS = """
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}

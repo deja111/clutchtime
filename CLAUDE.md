@@ -1,4 +1,4 @@
-# Projekat: clutchtime (sajt "EuroCourt") – statistika i propovi Evrolige
+# Projekat: clutchtime (sajt "CrunchTime", ranije "EuroCourt") – statistika i propovi Evrolige
 
 Vlasnik: Dejan (GitHub: deja111, repozitorijum `deja111/clutchtime`, privatan).
 Komuniciraj na srpskom (latinica). Sav tekst na sajtu je na srpskom, latinica.

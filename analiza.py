@@ -519,7 +519,7 @@ skor {skor[dom][0]}-{skor[dom][1]} / {skor[gost][0]}-{skor[gost][1]}</span></sum
     return "".join(delovi)
 
 
-FOOTER = """<footer>EuroCourt je nezavisan sajt i nije povezan sa Euroleague Basketball.
+FOOTER = """<footer>CrunchTime je nezavisan sajt i nije povezan sa Euroleague Basketball.
 Statistički podaci: Euroleague Basketball (javno dostupna statistika). PIR = indeks korisnosti; TS% = pravi procenat šuta; eFG% = efektivni procenat
 šuta iz igre. "Dozvoljava" = prosečan zbir svih igrača te pozicije protiv tog tima u ovoj sezoni,
 rang 1 = najviše dozvoljava.</footer>"""
