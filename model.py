@@ -214,8 +214,10 @@ class Saigraci:
             if y == x or m_y < MIN_ZA_SAIGRACA:
                 continue
             prisustvo = sum(a for a, r in zip(w, ut_x) if self.igrao(y, r)) / sum(w)
+            ista_pozicija = bliskost(poz_x, self.poz(y)) == 1
             if prisustvo < 0.2:
-                opis.append((y, q, None))  # već dugo ne igra: igračeva forma to već sadrži
+                if ista_pozicija:
+                    opis.append((y, q, None))  # već dugo ne igra: igračeva forma to već sadrži
                 continue
             # Raspodela: zdravi saigrači, po minutaži i bliskosti pozicije
             # (samo oni koji su igrali u nekoj od igračevih poslednjih 5 utakmica - ne i oni koji su otišli)
@@ -236,7 +238,8 @@ class Saigraci:
             dodatno += k * dm * SKALA_MINUTA
             ucinak = k * dm * SKALA_UCINKA / m_x if m_x and tip not in BEZ_UCINKA else 0
             mnozilac *= 1 + k * (odnos - 1) + ucinak
-            if dm > 0.1:  # navodimo svakog odsutnog saigrača koji igraču oslobađa minute, i kad je malo
+            # U objašnjenju: saigrač iste pozicije uvek (i kad je efekat mali), ostali od 0,2 min
+            if dm > 0 and (ista_pozicija or k * dm * SKALA_MINUTA >= 0.2):
                 opis.append((y, q, k * dm * SKALA_MINUTA))
         return dodatno, mnozilac, opis
 
