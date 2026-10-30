@@ -630,12 +630,9 @@ def stranica_propovi(k, utakmice):
         znak = lambda x: f"{'+' if x >= 0 else '−'}{broj(abs(x))}"
         kor = r["koraci"]
         faktori = []  # (uticaj, tekst)
-        ucinak_opis = "skorašnja forma" + (f" (prošla sezona {broj(r['prosla_prosek'])})"
-                                           if r["prosla_prosek"] is not None else "")
-        faktori.append((kor["ucinak"], f"{ucinak_opis} {znak(kor['ucinak'])}"))
-        faktori.append((kor["minuti"], f"minuti {'rastu' if r['minuti_bez_saigraca'] >= r['min_sezona'] else 'padaju'}"
-                                       f" ({broj(r['minuti_bez_saigraca'])} umesto {broj(r['min_sezona'])} min) "
-                                       f"{znak(kor['minuti'])}"))
+        faktori.append((kor["ucinak"], f"učinak po minutu u poslednjih 5 {znak(kor['ucinak'])}"))
+        faktori.append((kor["minuti"], f"minuti u poslednjih 5: {broj(r['minuti_bez_saigraca'])} "
+                                       f"(sezona {broj(r['min_sezona'])}) {znak(kor['minuti'])}"))
         if r["saigraci"]:
             imena = ", ".join(
                 f"{A.lepo_ime((k['igraci'].get(y) or {}).get('ime'))} {'ne igra' if q >= 1 else 'upitan'}"
@@ -730,8 +727,8 @@ utakmice i dan pre (ujutru i popodne).</p></div>
 kvota, bez marže. <b>Ocena</b>: jaka / srednja / slaba prednost po modelu, "–" = bez prednosti.
 <b>Posl. 10</b> = koliko puta u poslednjih 10 utakmica bi predlog prošao na ovoj liniji.
 Top 10: najviše 2 predloga po igraču, bez linija označenih sa ⚠.</p>
-<p class="napomena">Model: učinak po minutu (skorije utakmice vrede više, na početku sezone pomešano sa prošlom),
-očekivani minuti (trend), šta protivnik dozvoljava toj poziciji, kod kuće/u gostima, odsutni saigrači iz tabele
+<p class="napomena">Model: učinak po minutu i minuti iz poslednjih 5 utakmica (prošla sezona se ne koristi),
+šta protivnik dozvoljava toj poziciji, kod kuće/u gostima, odsutni saigrači iz tabele
 povreda i očekivana razlika u poenima (starteri sede kad je meč rešen). Sve je provereno na ranijim utakmicama.
 ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više. Model često bira "ispod":
 igrače ne potcenjuje, pa razlog verovatno leži u tome što kladionice podižu linije jer se češće igra "preko".

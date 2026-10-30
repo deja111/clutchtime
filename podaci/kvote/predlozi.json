@@ -10,12 +10,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.57,
-"p_model": 0.4479,
+"p_model": 0.4143,
 "p_kladionica": 0.3716,
-"ev": 0.151,
-"ocena": "jaka",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.0647,
+"ocena": "srednja",
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014734-trojke": {
 "igrac_id": "P014734",
@@ -28,12 +28,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 2.4,
-"p_model": 0.4703,
+"p_model": 0.4227,
 "p_kladionica": 0.397,
-"ev": 0.1288,
-"ocena": "jaka",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.0144,
+"ocena": "slaba",
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013389-asistencije": {
 "igrac_id": "P013389",
@@ -46,12 +46,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 2.25,
-"p_model": 0.4984,
+"p_model": 0.4501,
 "p_kladionica": 0.4231,
-"ev": 0.1215,
-"ocena": "jaka",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.0128,
+"ocena": "slaba",
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P000898-poeni": {
 "igrac_id": "P000898",
@@ -64,12 +64,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.605,
+"p_model": 0.601,
 "p_kladionica": 0.5222,
-"ev": 0.1071,
+"ev": 0.0999,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009862-asistencije": {
 "igrac_id": "P009862",
@@ -82,12 +82,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.22,
-"p_model": 0.4956,
+"p_model": 0.5103,
 "p_kladionica": 0.4278,
-"ev": 0.1002,
+"ev": 0.133,
 "ocena": "jaka",
 "top": true,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P013289-skokovi": {
 "igrac_id": "P013289",
@@ -100,12 +100,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5923,
+"p_model": 0.5631,
 "p_kladionica": 0.5132,
-"ev": 0.0957,
-"ocena": "jaka",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.0417,
+"ocena": "srednja",
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012609-skokovi": {
 "igrac_id": "P012609",
@@ -118,12 +118,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5878,
+"p_model": 0.5473,
 "p_kladionica": 0.5157,
-"ev": 0.0875,
+"ev": 0.0125,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014005-trojke": {
 "igrac_id": "P014005",
@@ -136,12 +136,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.47,
-"p_model": 0.4402,
+"p_model": 0.4302,
 "p_kladionica": 0.3856,
-"ev": 0.0873,
-"ocena": "jaka",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.0627,
+"ocena": "srednja",
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P000898-PA": {
 "igrac_id": "P000898",
@@ -154,12 +154,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5938,
+"p_model": 0.597,
 "p_kladionica": 0.5236,
-"ev": 0.0808,
-"ocena": "jaka",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.0865,
+"ocena": "slaba",
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008962-trojke": {
 "igrac_id": "P008962",
@@ -172,12 +172,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.3,
-"p_model": 0.4699,
+"p_model": 0.4944,
 "p_kladionica": 0.4133,
-"ev": 0.0807,
+"ev": 0.1372,
 "ocena": "jaka",
 "top": true,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P008192-asistencije": {
 "igrac_id": "P008192",
@@ -190,12 +190,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5542,
+"p_model": 0.5739,
 "p_kladionica": 0.4868,
-"ev": 0.0806,
+"ev": 0.1192,
 "ocena": "jaka",
 "top": true,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P005637-skokovi": {
 "igrac_id": "P005637",
@@ -208,12 +208,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5611,
+"p_model": 0.5444,
 "p_kladionica": 0.4947,
-"ev": 0.0773,
+"ev": 0.0452,
 "ocena": "srednja",
-"top": true,
-"sacuvano": "2026-10-30 13:31"
+"top": false,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P000898-PS": {
 "igrac_id": "P000898",
@@ -226,12 +226,12 @@
 "linija": 22.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5814,
+"p_model": 0.5734,
 "p_kladionica": 0.5157,
-"ev": 0.0757,
+"ev": 0.0608,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P014213-PA": {
 "igrac_id": "P014213",
@@ -244,12 +244,12 @@
 "linija": 18.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5602,
+"p_model": 0.5186,
 "p_kladionica": 0.4974,
-"ev": 0.0755,
-"ocena": "srednja",
+"ev": -0.0042,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003842-skokovi": {
 "igrac_id": "P003842",
@@ -262,12 +262,12 @@
 "linija": 8.5,
 "strana": "ispod",
 "kvota": 1.73,
-"p_model": 0.6209,
+"p_model": 0.5966,
 "p_kladionica": 0.5506,
-"ev": 0.0742,
+"ev": 0.0321,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014736-asistencije": {
 "igrac_id": "P014736",
@@ -280,12 +280,12 @@
 "linija": 5.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5652,
+"p_model": 0.5631,
 "p_kladionica": 0.5026,
-"ev": 0.0738,
+"ev": 0.0699,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009862-PS": {
 "igrac_id": "P009862",
@@ -298,12 +298,12 @@
 "linija": 20.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5651,
+"p_model": 0.5706,
 "p_kladionica": 0.5026,
-"ev": 0.0737,
-"ocena": "srednja",
+"ev": 0.0842,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P010390-poeni": {
 "igrac_id": "P010390",
@@ -316,12 +316,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5859,
+"p_model": 0.5556,
 "p_kladionica": 0.5222,
-"ev": 0.0722,
+"ev": 0.0168,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P001133-asistencije": {
 "igrac_id": "P001133",
@@ -334,12 +334,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.8,
-"p_model": 0.3828,
+"p_model": 0.4129,
 "p_kladionica": 0.3396,
-"ev": 0.0718,
-"ocena": "srednja",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.1562,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008962-poeni": {
 "igrac_id": "P008962",
@@ -352,12 +352,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.5305,
+"p_model": 0.5263,
 "p_kladionica": 0.4712,
-"ev": 0.0716,
+"ev": 0.0632,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009862-PA": {
 "igrac_id": "P009862",
@@ -370,12 +370,12 @@
 "linija": 21.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5855,
+"p_model": 0.5932,
 "p_kladionica": 0.5222,
-"ev": 0.0715,
-"ocena": "srednja",
+"ev": 0.0855,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P002328-poeni": {
 "igrac_id": "P002328",
@@ -386,14 +386,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "poeni",
 "linija": 8.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5787,
-"p_kladionica": 0.5157,
-"ev": 0.0707,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.97,
+"p_model": 0.4862,
+"p_kladionica": 0.4843,
+"ev": -0.0421,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P009025-skokovi": {
 "igrac_id": "P009025",
@@ -406,12 +406,12 @@
 "linija": 3.5,
 "strana": "preko",
 "kvota": 2.25,
-"p_model": 0.4752,
+"p_model": 0.4504,
 "p_kladionica": 0.4231,
-"ev": 0.0693,
-"ocena": "srednja",
+"ev": 0.0134,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012712-trojke": {
 "igrac_id": "P012712",
@@ -424,12 +424,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.82,
-"p_model": 0.3786,
+"p_model": 0.3918,
 "p_kladionica": 0.338,
-"ev": 0.0678,
-"ocena": "srednja",
+"ev": 0.1049,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009862-trojke": {
 "igrac_id": "P009862",
@@ -442,12 +442,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.78,
-"p_model": 0.5994,
+"p_model": 0.6125,
 "p_kladionica": 0.5352,
-"ev": 0.067,
-"ocena": "srednja",
+"ev": 0.0903,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P004554-PS": {
 "igrac_id": "P004554",
@@ -460,12 +460,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5335,
+"p_model": 0.5253,
 "p_kladionica": 0.4764,
-"ev": 0.0669,
+"ev": 0.0507,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014734-PA": {
 "igrac_id": "P014734",
@@ -478,12 +478,12 @@
 "linija": 16.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5615,
+"p_model": 0.5213,
 "p_kladionica": 0.5026,
-"ev": 0.0668,
-"ocena": "srednja",
+"ev": -0.0096,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P014213-poeni": {
 "igrac_id": "P014213",
@@ -496,12 +496,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5469,
+"p_model": 0.5037,
 "p_kladionica": 0.4895,
-"ev": 0.0665,
-"ocena": "srednja",
+"ev": -0.0177,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008099-poeni": {
 "igrac_id": "P008099",
@@ -514,12 +514,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5466,
+"p_model": 0.5335,
 "p_kladionica": 0.4895,
-"ev": 0.0659,
+"ev": 0.0403,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012610-asistencije": {
 "igrac_id": "P012610",
@@ -532,12 +532,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.22,
-"p_model": 0.4797,
+"p_model": 0.4924,
 "p_kladionica": 0.4278,
-"ev": 0.065,
-"ocena": "srednja",
+"ev": 0.0932,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P014008-asistencije": {
 "igrac_id": "P014008",
@@ -555,7 +555,7 @@
 "ev": 0.0649,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P010390-skokovi": {
 "igrac_id": "P010390",
@@ -568,12 +568,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5751,
+"p_model": 0.5555,
 "p_kladionica": 0.5132,
-"ev": 0.0639,
-"ocena": "srednja",
+"ev": 0.0277,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P015029-trojke": {
 "igrac_id": "P015029",
@@ -586,12 +586,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.4,
-"p_model": 0.4428,
+"p_model": 0.4401,
 "p_kladionica": 0.397,
-"ev": 0.0627,
+"ev": 0.0562,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P006739-poeni": {
 "igrac_id": "P006739",
@@ -604,12 +604,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5586,
+"p_model": 0.5688,
 "p_kladionica": 0.5,
-"ev": 0.0613,
-"ocena": "srednja",
+"ev": 0.0808,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P009754-trojke": {
 "igrac_id": "P009754",
@@ -622,12 +622,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.5253,
+"p_model": 0.5449,
 "p_kladionica": 0.4712,
-"ev": 0.0612,
-"ocena": "srednja",
+"ev": 0.1007,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014207-asistencije": {
 "igrac_id": "P014207",
@@ -640,12 +640,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.5171,
+"p_model": 0.506,
 "p_kladionica": 0.4648,
-"ev": 0.06,
-"ocena": "srednja",
+"ev": 0.0373,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P004554-PA": {
 "igrac_id": "P004554",
@@ -658,12 +658,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.5165,
+"p_model": 0.4978,
 "p_kladionica": 0.4648,
-"ev": 0.0587,
-"ocena": "srednja",
+"ev": 0.0205,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P015029-PA": {
 "igrac_id": "P015029",
@@ -676,12 +676,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5642,
+"p_model": 0.5697,
 "p_kladionica": 0.5105,
-"ev": 0.055,
+"ev": 0.0654,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012774-trojke": {
 "igrac_id": "P012774",
@@ -694,12 +694,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.2,
-"p_model": 0.4794,
+"p_model": 0.5154,
 "p_kladionica": 0.433,
-"ev": 0.0546,
-"ocena": "srednja",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.1339,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P009035-poeni": {
 "igrac_id": "P009035",
@@ -712,12 +712,12 @@
 "linija": 6.5,
 "strana": "preko",
 "kvota": 2.1,
-"p_model": 0.502,
+"p_model": 0.5053,
 "p_kladionica": 0.4545,
-"ev": 0.0543,
+"ev": 0.0612,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012774-asistencije": {
 "igrac_id": "P012774",
@@ -728,14 +728,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "asistencije",
 "linija": 4.5,
-"strana": "ispod",
-"kvota": 1.78,
-"p_model": 0.5922,
-"p_kladionica": 0.5352,
-"ev": 0.0541,
-"ocena": "srednja",
+"strana": "preko",
+"kvota": 2.05,
+"p_model": 0.4958,
+"p_kladionica": 0.4648,
+"ev": 0.0164,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014416-skokovi": {
 "igrac_id": "P014416",
@@ -748,12 +748,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 2.1,
-"p_model": 0.5018,
+"p_model": 0.5336,
 "p_kladionica": 0.4531,
-"ev": 0.0538,
-"ocena": "srednja",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.1205,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010581-asistencije": {
 "igrac_id": "P010581",
@@ -766,12 +766,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5789,
+"p_model": 0.5569,
 "p_kladionica": 0.5236,
-"ev": 0.0536,
-"ocena": "srednja",
+"ev": 0.0136,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014207-trojke": {
 "igrac_id": "P014207",
@@ -784,12 +784,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5258,
+"p_model": 0.5266,
 "p_kladionica": 0.4764,
-"ev": 0.0517,
+"ev": 0.0532,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012788-skokovi": {
 "igrac_id": "P012788",
@@ -802,12 +802,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.77,
-"p_model": 0.5939,
+"p_model": 0.595,
 "p_kladionica": 0.5391,
-"ev": 0.0512,
+"ev": 0.0532,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P004554-poeni": {
 "igrac_id": "P004554",
@@ -820,12 +820,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.88,
-"p_model": 0.5585,
+"p_model": 0.5412,
 "p_kladionica": 0.5053,
-"ev": 0.05,
-"ocena": "srednja",
+"ev": 0.0175,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P014213-trojke": {
 "igrac_id": "P014213",
@@ -838,12 +838,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.5329,
+"p_model": 0.4967,
 "p_kladionica": 0.4843,
-"ev": 0.0497,
-"ocena": "srednja",
+"ev": -0.0215,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012796-skokovi": {
 "igrac_id": "P012796",
@@ -856,12 +856,12 @@
 "linija": 6.5,
 "strana": "preko",
 "kvota": 1.8,
-"p_model": 0.5823,
+"p_model": 0.574,
 "p_kladionica": 0.5288,
-"ev": 0.0481,
+"ev": 0.0333,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P005368-poeni": {
 "igrac_id": "P005368",
@@ -874,12 +874,12 @@
 "linija": 5.5,
 "strana": "preko",
 "kvota": 1.92,
-"p_model": 0.5452,
+"p_model": 0.5372,
 "p_kladionica": 0.4974,
-"ev": 0.0467,
+"ev": 0.0315,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P013929-asistencije": {
 "igrac_id": "P013929",
@@ -892,12 +892,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 2.1,
-"p_model": 0.498,
+"p_model": 0.4748,
 "p_kladionica": 0.4545,
-"ev": 0.0458,
-"ocena": "srednja",
+"ev": -0.0028,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P010357-PS": {
 "igrac_id": "P010357",
@@ -910,12 +910,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5226,
+"p_model": 0.5368,
 "p_kladionica": 0.4764,
-"ev": 0.0453,
+"ev": 0.0736,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011196-poeni": {
 "igrac_id": "P011196",
@@ -928,12 +928,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5499,
+"p_model": 0.5544,
 "p_kladionica": 0.5,
-"ev": 0.0448,
-"ocena": "srednja",
+"ev": 0.0534,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003842-PS": {
 "igrac_id": "P003842",
@@ -946,12 +946,12 @@
 "linija": 20.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5436,
+"p_model": 0.4981,
 "p_kladionica": 0.4974,
-"ev": 0.0438,
-"ocena": "srednja",
+"ev": -0.0436,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011987-asistencije": {
 "igrac_id": "P011987",
@@ -964,12 +964,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5642,
+"p_model": 0.5455,
 "p_kladionica": 0.5157,
-"ev": 0.0437,
-"ocena": "srednja",
+"ev": 0.0091,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008962-PS": {
 "igrac_id": "P008962",
@@ -982,12 +982,12 @@
 "linija": 17.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5641,
+"p_model": 0.5598,
 "p_kladionica": 0.5157,
-"ev": 0.0437,
-"ocena": "srednja",
+"ev": 0.0357,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011196-skokovi": {
 "igrac_id": "P011196",
@@ -1000,12 +1000,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.509,
+"p_model": 0.5508,
 "p_kladionica": 0.4648,
-"ev": 0.0435,
-"ocena": "srednja",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.1292,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014734-asistencije": {
 "igrac_id": "P014734",
@@ -1018,12 +1018,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 1.83,
-"p_model": 0.5701,
+"p_model": 0.546,
 "p_kladionica": 0.5184,
-"ev": 0.0432,
-"ocena": "srednja",
+"ev": -0.0008,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010581-skokovi": {
 "igrac_id": "P010581",
@@ -1036,12 +1036,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.65,
-"p_model": 0.6315,
+"p_model": 0.6457,
 "p_kladionica": 0.5769,
-"ev": 0.042,
-"ocena": "srednja",
+"ev": 0.0654,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P004554-skokovi": {
 "igrac_id": "P004554",
@@ -1054,12 +1054,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5724,
+"p_model": 0.5811,
 "p_kladionica": 0.5236,
-"ev": 0.0417,
+"ev": 0.0575,
 "ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014737-poeni": {
 "igrac_id": "P014737",
@@ -1072,12 +1072,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5338,
+"p_model": 0.5155,
 "p_kladionica": 0.4895,
-"ev": 0.041,
-"ocena": "srednja",
+"ev": 0.0052,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015166-trojke": {
 "igrac_id": "P015166",
@@ -1090,12 +1090,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.62,
-"p_model": 0.3972,
+"p_model": 0.4298,
 "p_kladionica": 0.3625,
-"ev": 0.0406,
-"ocena": "srednja",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.1261,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008099-PS": {
 "igrac_id": "P008099",
@@ -1108,12 +1108,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5679,
+"p_model": 0.5642,
 "p_kladionica": 0.5184,
-"ev": 0.0393,
+"ev": 0.0325,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011927-skokovi": {
 "igrac_id": "P011927",
@@ -1126,12 +1126,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5324,
+"p_model": 0.5075,
 "p_kladionica": 0.4895,
-"ev": 0.0382,
-"ocena": "slaba",
+"ev": -0.0104,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P007056-skokovi": {
 "igrac_id": "P007056",
@@ -1144,12 +1144,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5765,
+"p_model": 0.5477,
 "p_kladionica": 0.5288,
-"ev": 0.0377,
-"ocena": "slaba",
+"ev": -0.0141,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012796-PS": {
 "igrac_id": "P012796",
@@ -1162,12 +1162,12 @@
 "linija": 23.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.546,
+"p_model": 0.555,
 "p_kladionica": 0.5026,
-"ev": 0.0375,
-"ocena": "slaba",
+"ev": 0.0545,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P007947-poeni": {
 "igrac_id": "P007947",
@@ -1180,12 +1180,12 @@
 "linija": 8.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5317,
+"p_model": 0.5578,
 "p_kladionica": 0.4895,
-"ev": 0.0368,
+"ev": 0.0877,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012731-PA": {
 "igrac_id": "P012731",
@@ -1198,12 +1198,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5694,
+"p_model": 0.5393,
 "p_kladionica": 0.5236,
-"ev": 0.0364,
-"ocena": "slaba",
+"ev": -0.0185,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014009-skokovi": {
 "igrac_id": "P014009",
@@ -1216,12 +1216,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 2.15,
-"p_model": 0.482,
+"p_model": 0.4617,
 "p_kladionica": 0.443,
-"ev": 0.0363,
-"ocena": "slaba",
+"ev": -0.0073,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012731-PS": {
 "igrac_id": "P012731",
@@ -1234,12 +1234,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5396,
+"p_model": 0.5213,
 "p_kladionica": 0.4974,
-"ev": 0.0361,
+"ev": 0.0009,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009992-PA": {
 "igrac_id": "P009992",
@@ -1252,12 +1252,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.88,
-"p_model": 0.551,
+"p_model": 0.578,
 "p_kladionica": 0.5053,
-"ev": 0.036,
+"ev": 0.0866,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015138-skokovi": {
 "igrac_id": "P015138",
@@ -1270,12 +1270,12 @@
 "linija": 4.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5446,
+"p_model": 0.5423,
 "p_kladionica": 0.5026,
-"ev": 0.0346,
+"ev": 0.0304,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010581-poeni": {
 "igrac_id": "P010581",
@@ -1288,12 +1288,12 @@
 "linija": 7.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.5115,
+"p_model": 0.5374,
 "p_kladionica": 0.4712,
-"ev": 0.0332,
+"ev": 0.0856,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P014213-asistencije": {
 "igrac_id": "P014213",
@@ -1306,12 +1306,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.504,
+"p_model": 0.5096,
 "p_kladionica": 0.4648,
-"ev": 0.0331,
-"ocena": "slaba",
+"ev": 0.0448,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012606-trojke": {
 "igrac_id": "P012606",
@@ -1324,12 +1324,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.67,
-"p_model": 0.3868,
+"p_model": 0.4264,
 "p_kladionica": 0.3566,
-"ev": 0.0328,
-"ocena": "slaba",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.1385,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015164-asistencije": {
 "igrac_id": "P015164",
@@ -1342,12 +1342,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 1.92,
-"p_model": 0.5377,
+"p_model": 0.4988,
 "p_kladionica": 0.4947,
-"ev": 0.0324,
-"ocena": "slaba",
+"ev": -0.0424,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P013929-trojke": {
 "igrac_id": "P013929",
@@ -1360,12 +1360,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.62,
-"p_model": 0.394,
+"p_model": 0.3957,
 "p_kladionica": 0.3641,
-"ev": 0.0323,
+"ev": 0.0367,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P015029-asistencije": {
 "igrac_id": "P015029",
@@ -1378,12 +1378,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.3,
-"p_model": 0.4485,
+"p_model": 0.4809,
 "p_kladionica": 0.4133,
-"ev": 0.0316,
-"ocena": "slaba",
+"ev": 0.1061,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011196-PS": {
 "igrac_id": "P011196",
@@ -1396,12 +1396,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5632,
+"p_model": 0.5826,
 "p_kladionica": 0.5184,
-"ev": 0.0307,
+"ev": 0.0661,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P005637-poeni": {
 "igrac_id": "P005637",
@@ -1414,12 +1414,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.51,
+"p_model": 0.5204,
 "p_kladionica": 0.4712,
-"ev": 0.0302,
-"ocena": "slaba",
+"ev": 0.0512,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010581-PS": {
 "igrac_id": "P010581",
@@ -1432,12 +1432,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5722,
+"p_model": 0.5977,
 "p_kladionica": 0.5288,
-"ev": 0.0299,
+"ev": 0.0758,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014734-poeni": {
 "igrac_id": "P014734",
@@ -1450,12 +1450,12 @@
 "linija": 14.5,
 "strana": "preko",
 "kvota": 1.8,
-"p_model": 0.5721,
+"p_model": 0.5348,
 "p_kladionica": 0.5288,
-"ev": 0.0297,
-"ocena": "slaba",
+"ev": -0.0374,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012774-poeni": {
 "igrac_id": "P012774",
@@ -1468,12 +1468,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5279,
+"p_model": 0.5018,
 "p_kladionica": 0.4895,
-"ev": 0.0293,
-"ocena": "slaba",
+"ev": -0.0215,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008099-PA": {
 "igrac_id": "P008099",
@@ -1486,12 +1486,12 @@
 "linija": 15.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.5096,
+"p_model": 0.4979,
 "p_kladionica": 0.4712,
-"ev": 0.0293,
+"ev": 0.0058,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014734-PS": {
 "igrac_id": "P014734",
@@ -1504,12 +1504,12 @@
 "linija": 19.5,
 "strana": "preko",
 "kvota": 2.02,
-"p_model": 0.5096,
+"p_model": 0.4749,
 "p_kladionica": 0.4712,
-"ev": 0.0293,
-"ocena": "slaba",
+"ev": -0.0406,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P006643-poeni": {
 "igrac_id": "P006643",
@@ -1522,12 +1522,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.556,
+"p_model": 0.5421,
 "p_kladionica": 0.5132,
-"ev": 0.0286,
+"ev": 0.003,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012731-poeni": {
 "igrac_id": "P012731",
@@ -1540,12 +1540,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 1.78,
-"p_model": 0.5779,
+"p_model": 0.5552,
 "p_kladionica": 0.5352,
-"ev": 0.0286,
-"ocena": "slaba",
+"ev": -0.0118,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011981-PS": {
 "igrac_id": "P011981",
@@ -1558,12 +1558,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5413,
+"p_model": 0.5309,
 "p_kladionica": 0.5,
-"ev": 0.0285,
+"ev": 0.0087,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010581-PA": {
 "igrac_id": "P010581",
@@ -1576,12 +1576,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5559,
+"p_model": 0.5736,
 "p_kladionica": 0.5132,
-"ev": 0.0283,
+"ev": 0.0612,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P010357-poeni": {
 "igrac_id": "P010357",
@@ -1594,12 +1594,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.522,
+"p_model": 0.5473,
 "p_kladionica": 0.4843,
-"ev": 0.0283,
+"ev": 0.0782,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P015029-poeni": {
 "igrac_id": "P015029",
@@ -1612,12 +1612,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5708,
+"p_model": 0.5689,
 "p_kladionica": 0.5288,
-"ev": 0.0275,
+"ev": 0.0239,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014152-asistencije": {
 "igrac_id": "P014152",
@@ -1630,12 +1630,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 2.2,
-"p_model": 0.4669,
+"p_model": 0.4381,
 "p_kladionica": 0.4315,
-"ev": 0.0272,
-"ocena": "slaba",
+"ev": -0.0361,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012609-PA": {
 "igrac_id": "P012609",
@@ -1646,14 +1646,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "PA",
 "linija": 11.5,
-"strana": "ispod",
-"kvota": 1.97,
-"p_model": 0.5213,
-"p_kladionica": 0.4843,
-"ev": 0.027,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.85,
+"p_model": 0.5331,
+"p_kladionica": 0.5157,
+"ev": -0.0138,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012712-poeni": {
 "igrac_id": "P012712",
@@ -1666,12 +1666,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5611,
+"p_model": 0.5489,
 "p_kladionica": 0.5222,
-"ev": 0.0269,
+"ev": 0.0045,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011078-trojke": {
 "igrac_id": "P011078",
@@ -1682,14 +1682,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "trojke",
 "linija": 0.5,
-"strana": "preko",
-"kvota": 1.76,
-"p_model": 0.5834,
-"p_kladionica": 0.5405,
-"ev": 0.0268,
-"ocena": "slaba",
+"strana": "ispod",
+"kvota": 2.07,
+"p_model": 0.4681,
+"p_kladionica": 0.4595,
+"ev": -0.031,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014737-trojke": {
 "igrac_id": "P014737",
@@ -1702,12 +1702,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.64,
-"p_model": 0.6255,
+"p_model": 0.6123,
 "p_kladionica": 0.5806,
-"ev": 0.0258,
+"ev": 0.0041,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P009754-asistencije": {
 "igrac_id": "P009754",
@@ -1720,12 +1720,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 1.58,
-"p_model": 0.6489,
+"p_model": 0.6172,
 "p_kladionica": 0.603,
-"ev": 0.0253,
-"ocena": "slaba",
+"ev": -0.0248,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P015029-PS": {
 "igrac_id": "P015029",
@@ -1738,12 +1738,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5256,
+"p_model": 0.5364,
 "p_kladionica": 0.4868,
-"ev": 0.025,
-"ocena": "slaba",
+"ev": 0.046,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012610-skokovi": {
 "igrac_id": "P012610",
@@ -1756,12 +1756,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5124,
+"p_model": 0.4879,
 "p_kladionica": 0.4778,
-"ev": 0.0248,
-"ocena": "slaba",
+"ev": -0.0241,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011205-skokovi": {
 "igrac_id": "P011205",
@@ -1774,12 +1774,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.35,
-"p_model": 0.436,
+"p_model": 0.4366,
 "p_kladionica": 0.4051,
-"ev": 0.0246,
+"ev": 0.0259,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P009754-PA": {
 "igrac_id": "P009754",
@@ -1792,12 +1792,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5392,
+"p_model": 0.5538,
 "p_kladionica": 0.5,
-"ev": 0.0244,
-"ocena": "slaba",
+"ev": 0.0521,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008099-trojke": {
 "igrac_id": "P008099",
@@ -1810,12 +1810,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.53,
-"p_model": 0.669,
+"p_model": 0.6771,
 "p_kladionica": 0.6222,
-"ev": 0.0235,
+"ev": 0.036,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009862-skokovi": {
 "igrac_id": "P009862",
@@ -1828,12 +1828,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.55,
-"p_model": 0.66,
+"p_model": 0.6657,
 "p_kladionica": 0.6144,
-"ev": 0.023,
+"ev": 0.0319,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P010357-PA": {
 "igrac_id": "P010357",
@@ -1846,12 +1846,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5677,
+"p_model": 0.5914,
 "p_kladionica": 0.5288,
-"ev": 0.0219,
+"ev": 0.0646,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013369-trojke": {
 "igrac_id": "P013369",
@@ -1864,12 +1864,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.5056,
+"p_model": 0.5338,
 "p_kladionica": 0.4712,
-"ev": 0.0214,
-"ocena": "slaba",
+"ev": 0.0782,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011286-asistencije": {
 "igrac_id": "P011286",
@@ -1880,14 +1880,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "asistencije",
 "linija": 2.5,
-"strana": "ispod",
-"kvota": 2.22,
-"p_model": 0.46,
-"p_kladionica": 0.4278,
-"ev": 0.0212,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.66,
+"p_model": 0.5754,
+"p_kladionica": 0.5722,
+"ev": -0.0448,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011987-skokovi": {
 "igrac_id": "P011987",
@@ -1900,12 +1900,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.32,
-"p_model": 0.44,
+"p_model": 0.4235,
 "p_kladionica": 0.4097,
-"ev": 0.0209,
-"ocena": "slaba",
+"ev": -0.0174,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011286-PA": {
 "igrac_id": "P011286",
@@ -1918,12 +1918,12 @@
 "linija": 19.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5458,
+"p_model": 0.5216,
 "p_kladionica": 0.5105,
-"ev": 0.0206,
-"ocena": "slaba",
+"ev": -0.0245,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P013383-poeni": {
 "igrac_id": "P013383",
@@ -1936,12 +1936,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5314,
+"p_model": 0.4965,
 "p_kladionica": 0.4947,
-"ev": 0.0202,
-"ocena": "slaba",
+"ev": -0.0467,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012609-PS": {
 "igrac_id": "P012609",
@@ -1952,14 +1952,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "PS",
 "linija": 13.5,
-"strana": "ispod",
-"kvota": 2.05,
-"p_model": 0.4971,
-"p_kladionica": 0.4648,
-"ev": 0.019,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.78,
+"p_model": 0.5529,
+"p_kladionica": 0.5352,
+"ev": -0.0158,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014802-poeni": {
 "igrac_id": "P014802",
@@ -1972,12 +1972,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.536,
+"p_model": 0.5204,
 "p_kladionica": 0.5026,
-"ev": 0.0184,
-"ocena": "slaba",
+"ev": -0.0112,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P009846-asistencije": {
 "igrac_id": "P009846",
@@ -1990,12 +1990,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5658,
+"p_model": 0.5566,
 "p_kladionica": 0.5288,
-"ev": 0.0184,
+"ev": 0.0019,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P009025-PS": {
 "igrac_id": "P009025",
@@ -2008,12 +2008,12 @@
 "linija": 13.5,
 "strana": "preko",
 "kvota": 2.0,
-"p_model": 0.5092,
+"p_model": 0.49,
 "p_kladionica": 0.4764,
-"ev": 0.0184,
-"ocena": "slaba",
+"ev": -0.02,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P007947-asistencije": {
 "igrac_id": "P007947",
@@ -2024,14 +2024,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "asistencije",
 "linija": 2.5,
-"strana": "preko",
-"kvota": 1.85,
-"p_model": 0.5504,
-"p_kladionica": 0.5157,
-"ev": 0.0182,
-"ocena": "slaba",
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.4985,
+"p_kladionica": 0.4843,
+"ev": -0.018,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011214-poeni": {
 "igrac_id": "P011214",
@@ -2044,12 +2044,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.88,
-"p_model": 0.5416,
+"p_model": 0.5568,
 "p_kladionica": 0.5053,
-"ev": 0.0181,
+"ev": 0.0467,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P001255-poeni": {
 "igrac_id": "P001255",
@@ -2060,14 +2060,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "poeni",
 "linija": 4.5,
-"strana": "ispod",
-"kvota": 1.92,
-"p_model": 0.5298,
-"p_kladionica": 0.4947,
-"ev": 0.0172,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.88,
+"p_model": 0.5095,
+"p_kladionica": 0.5053,
+"ev": -0.0422,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P009035-PS": {
 "igrac_id": "P009035",
@@ -2080,12 +2080,12 @@
 "linija": 12.5,
 "strana": "preko",
 "kvota": 1.97,
-"p_model": 0.5163,
+"p_model": 0.5071,
 "p_kladionica": 0.4843,
-"ev": 0.0171,
-"ocena": "slaba",
+"ev": -0.001,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P009846-PA": {
 "igrac_id": "P009846",
@@ -2098,12 +2098,12 @@
 "linija": 20.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5498,
+"p_model": 0.555,
 "p_kladionica": 0.5132,
-"ev": 0.0171,
+"ev": 0.0268,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P012720-trojke": {
 "igrac_id": "P012720",
@@ -2116,12 +2116,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.66,
-"p_model": 0.6124,
+"p_model": 0.6161,
 "p_kladionica": 0.5754,
-"ev": 0.0165,
+"ev": 0.0227,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P012707-PA": {
 "igrac_id": "P012707",
@@ -2134,12 +2134,12 @@
 "linija": 19.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5213,
+"p_model": 0.5416,
 "p_kladionica": 0.4895,
-"ev": 0.0165,
-"ocena": "slaba",
+"ev": 0.0562,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011217-asistencije": {
 "igrac_id": "P011217",
@@ -2152,12 +2152,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.3,
-"p_model": 0.4419,
+"p_model": 0.4613,
 "p_kladionica": 0.4148,
-"ev": 0.0163,
-"ocena": "slaba",
+"ev": 0.0609,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P002328-trojke": {
 "igrac_id": "P002328",
@@ -2168,14 +2168,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 1.87,
-"p_model": 0.5435,
-"p_kladionica": 0.5105,
-"ev": 0.0163,
+"strana": "preko",
+"kvota": 1.95,
+"p_model": 0.5176,
+"p_kladionica": 0.4895,
+"ev": 0.0094,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012731-trojke": {
 "igrac_id": "P012731",
@@ -2186,14 +2186,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "trojke",
 "linija": 0.5,
-"strana": "ispod",
-"kvota": 2.27,
-"p_model": 0.4477,
-"p_kladionica": 0.4194,
-"ev": 0.0162,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.64,
+"p_model": 0.5969,
+"p_kladionica": 0.5806,
+"ev": -0.0212,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014737-PA": {
 "igrac_id": "P014737",
@@ -2206,12 +2206,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5346,
+"p_model": 0.5174,
 "p_kladionica": 0.5,
-"ev": 0.0156,
-"ocena": "slaba",
+"ev": -0.017,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009862-poeni": {
 "igrac_id": "P009862",
@@ -2224,12 +2224,12 @@
 "linija": 18.5,
 "strana": "ispod",
 "kvota": 1.65,
-"p_model": 0.6154,
+"p_model": 0.6182,
 "p_kladionica": 0.5769,
-"ev": 0.0155,
+"ev": 0.02,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014736-skokovi": {
 "igrac_id": "P014736",
@@ -2242,12 +2242,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.76,
-"p_model": 0.5768,
+"p_model": 0.5516,
 "p_kladionica": 0.5405,
-"ev": 0.0152,
-"ocena": "slaba",
+"ev": -0.0292,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012609-poeni": {
 "igrac_id": "P012609",
@@ -2258,14 +2258,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "poeni",
 "linija": 9.5,
-"strana": "ispod",
-"kvota": 1.95,
-"p_model": 0.5203,
-"p_kladionica": 0.4895,
-"ev": 0.0145,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.87,
+"p_model": 0.5298,
+"p_kladionica": 0.5105,
+"ev": -0.0093,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014009-poeni": {
 "igrac_id": "P014009",
@@ -2278,12 +2278,12 @@
 "linija": 11.5,
 "strana": "preko",
 "kvota": 1.95,
-"p_model": 0.5198,
+"p_model": 0.5152,
 "p_kladionica": 0.4868,
-"ev": 0.0135,
+"ev": 0.0046,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011205-trojke": {
 "igrac_id": "P011205",
@@ -2296,12 +2296,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.8,
-"p_model": 0.3619,
+"p_model": 0.3524,
 "p_kladionica": 0.3412,
-"ev": 0.0134,
-"ocena": "slaba",
+"ev": -0.0132,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P014027-poeni": {
 "igrac_id": "P014027",
@@ -2314,12 +2314,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 2.07,
-"p_model": 0.4893,
+"p_model": 0.4918,
 "p_kladionica": 0.4609,
-"ev": 0.0129,
+"ev": 0.0181,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014737-PS": {
 "igrac_id": "P014737",
@@ -2332,12 +2332,12 @@
 "linija": 15.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.533,
+"p_model": 0.5152,
 "p_kladionica": 0.5026,
-"ev": 0.0127,
-"ocena": "slaba",
+"ev": -0.0212,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011217-PA": {
 "igrac_id": "P011217",
@@ -2350,12 +2350,12 @@
 "linija": 15.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.527,
+"p_model": 0.5205,
 "p_kladionica": 0.4974,
-"ev": 0.0118,
-"ocena": "slaba",
+"ev": -0.0006,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P002939-trojke": {
 "igrac_id": "P002939",
@@ -2368,12 +2368,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.52,
-"p_model": 0.4015,
+"p_model": 0.4468,
 "p_kladionica": 0.3778,
-"ev": 0.0117,
-"ocena": "slaba",
-"top": false,
-"sacuvano": "2026-10-30 13:31"
+"ev": 0.126,
+"ocena": "jaka",
+"top": true,
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003112-skokovi": {
 "igrac_id": "P003112",
@@ -2386,12 +2386,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5058,
+"p_model": 0.5082,
 "p_kladionica": 0.4764,
-"ev": 0.0117,
+"ev": 0.0164,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P012720-skokovi": {
 "igrac_id": "P012720",
@@ -2402,14 +2402,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "skokovi",
 "linija": 2.5,
-"strana": "ispod",
-"kvota": 2.02,
-"p_model": 0.5007,
-"p_kladionica": 0.4712,
-"ev": 0.0114,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.8,
+"p_model": 0.5338,
+"p_kladionica": 0.5288,
+"ev": -0.0392,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010581-trojke": {
 "igrac_id": "P010581",
@@ -2422,12 +2422,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.78,
-"p_model": 0.568,
+"p_model": 0.557,
 "p_kladionica": 0.5352,
-"ev": 0.011,
-"ocena": "slaba",
+"ev": -0.0086,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015164-trojke": {
 "igrac_id": "P015164",
@@ -2440,12 +2440,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.22,
-"p_model": 0.4554,
+"p_model": 0.4408,
 "p_kladionica": 0.4293,
-"ev": 0.011,
-"ocena": "slaba",
+"ev": -0.0214,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P012707-trojke": {
 "igrac_id": "P012707",
@@ -2458,12 +2458,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.71,
-"p_model": 0.5912,
+"p_model": 0.6208,
 "p_kladionica": 0.557,
-"ev": 0.0109,
-"ocena": "slaba",
+"ev": 0.0616,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009992-asistencije": {
 "igrac_id": "P009992",
@@ -2476,12 +2476,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5264,
+"p_model": 0.5218,
 "p_kladionica": 0.4974,
-"ev": 0.0107,
+"ev": 0.0019,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P007056-asistencije": {
 "igrac_id": "P007056",
@@ -2494,12 +2494,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.4,
-"p_model": 0.4209,
+"p_model": 0.4367,
 "p_kladionica": 0.397,
-"ev": 0.0102,
-"ocena": "slaba",
+"ev": 0.048,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P009754-poeni": {
 "igrac_id": "P009754",
@@ -2512,12 +2512,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.54,
+"p_model": 0.5651,
 "p_kladionica": 0.5105,
-"ev": 0.0099,
+"ev": 0.0566,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011286-poeni": {
 "igrac_id": "P011286",
@@ -2530,12 +2530,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5517,
+"p_model": 0.5382,
 "p_kladionica": 0.5222,
-"ev": 0.0096,
-"ocena": "slaba",
+"ev": -0.015,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P001255-PS": {
 "igrac_id": "P001255",
@@ -2546,14 +2546,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PS",
 "linija": 6.5,
-"strana": "ispod",
-"kvota": 2.05,
-"p_model": 0.492,
-"p_kladionica": 0.4634,
-"ev": 0.0085,
-"ocena": "slaba",
+"strana": "preko",
+"kvota": 1.77,
+"p_model": 0.5409,
+"p_kladionica": 0.5366,
+"ev": -0.0427,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014207-skokovi": {
 "igrac_id": "P014207",
@@ -2566,12 +2566,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 1.92,
-"p_model": 0.5247,
+"p_model": 0.4999,
 "p_kladionica": 0.4974,
-"ev": 0.0074,
-"ocena": "slaba",
+"ev": -0.0402,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012878-poeni": {
 "igrac_id": "P012878",
@@ -2584,12 +2584,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5163,
+"p_model": 0.5017,
 "p_kladionica": 0.4868,
-"ev": 0.0067,
-"ocena": "slaba",
+"ev": -0.0217,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P013929-PA": {
 "igrac_id": "P013929",
@@ -2602,12 +2602,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5592,
+"p_model": 0.5377,
 "p_kladionica": 0.5288,
-"ev": 0.0066,
-"ocena": "slaba",
+"ev": -0.0322,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012712-skokovi": {
 "igrac_id": "P012712",
@@ -2620,12 +2620,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.76,
-"p_model": 0.5718,
+"p_model": 0.5838,
 "p_kladionica": 0.5405,
-"ev": 0.0063,
+"ev": 0.0275,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014736-PS": {
 "igrac_id": "P014736",
@@ -2638,12 +2638,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5295,
+"p_model": 0.5154,
 "p_kladionica": 0.5,
-"ev": 0.006,
-"ocena": "slaba",
+"ev": -0.0208,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P006739-trojke": {
 "igrac_id": "P006739",
@@ -2656,12 +2656,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.07,
-"p_model": 0.4859,
+"p_model": 0.5297,
 "p_kladionica": 0.4595,
-"ev": 0.0058,
-"ocena": "slaba",
+"ev": 0.0964,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011286-PS": {
 "igrac_id": "P011286",
@@ -2674,12 +2674,12 @@
 "linija": 20.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.5103,
+"p_model": 0.5023,
 "p_kladionica": 0.4816,
-"ev": 0.0053,
-"ocena": "slaba",
+"ev": -0.0104,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P000898-asistencije": {
 "igrac_id": "P000898",
@@ -2690,14 +2690,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "asistencije",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 1.78,
-"p_model": 0.5647,
-"p_kladionica": 0.5352,
-"ev": 0.0052,
-"ocena": "slaba",
+"strana": "ispod",
+"kvota": 2.05,
+"p_model": 0.4663,
+"p_kladionica": 0.4648,
+"ev": -0.044,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014316-trojke": {
 "igrac_id": "P014316",
@@ -2710,12 +2710,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5375,
+"p_model": 0.5619,
 "p_kladionica": 0.5105,
-"ev": 0.0052,
-"ocena": "slaba",
+"ev": 0.0508,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015162-skokovi": {
 "igrac_id": "P015162",
@@ -2728,12 +2728,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.68,
-"p_model": 0.5981,
+"p_model": 0.5971,
 "p_kladionica": 0.567,
-"ev": 0.0049,
+"ev": 0.0032,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P013929-PS": {
 "igrac_id": "P013929",
@@ -2746,12 +2746,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5431,
+"p_model": 0.5325,
 "p_kladionica": 0.5157,
-"ev": 0.0048,
-"ocena": "slaba",
+"ev": -0.0149,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015138-PA": {
 "igrac_id": "P015138",
@@ -2764,12 +2764,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5232,
+"p_model": 0.5012,
 "p_kladionica": 0.4947,
-"ev": 0.0046,
-"ocena": "slaba",
+"ev": -0.0377,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P015153-trojke": {
 "igrac_id": "P015153",
@@ -2782,12 +2782,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 1.39,
-"p_model": 0.722,
+"p_model": 0.7116,
 "p_kladionica": 0.6834,
-"ev": 0.0036,
-"ocena": "slaba",
+"ev": -0.0109,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015138-poeni": {
 "igrac_id": "P015138",
@@ -2800,12 +2800,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5362,
+"p_model": 0.5166,
 "p_kladionica": 0.5105,
-"ev": 0.0026,
-"ocena": "slaba",
+"ev": -0.034,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014786-trojke": {
 "igrac_id": "P014786",
@@ -2818,12 +2818,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.82,
-"p_model": 0.3555,
+"p_model": 0.3651,
 "p_kladionica": 0.338,
-"ev": 0.0026,
+"ev": 0.0297,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011217-poeni": {
 "igrac_id": "P011217",
@@ -2836,12 +2836,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5221,
+"p_model": 0.5117,
 "p_kladionica": 0.4947,
-"ev": 0.0025,
-"ocena": "slaba",
+"ev": -0.0175,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P009754-PS": {
 "igrac_id": "P009754",
@@ -2854,12 +2854,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5011,
+"p_model": 0.5267,
 "p_kladionica": 0.4764,
-"ev": 0.0022,
-"ocena": "slaba",
+"ev": 0.0535,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P008192-skokovi": {
 "igrac_id": "P008192",
@@ -2872,12 +2872,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5417,
+"p_model": 0.5719,
 "p_kladionica": 0.5132,
-"ev": 0.0022,
-"ocena": "slaba",
+"ev": 0.0581,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P013929-poeni": {
 "igrac_id": "P013929",
@@ -2890,12 +2890,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5415,
+"p_model": 0.5278,
 "p_kladionica": 0.5157,
-"ev": 0.0018,
-"ocena": "slaba",
+"ev": -0.0235,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P007056-PS": {
 "igrac_id": "P007056",
@@ -2908,12 +2908,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.527,
+"p_model": 0.5105,
 "p_kladionica": 0.5026,
-"ev": 0.0014,
-"ocena": "slaba",
+"ev": -0.03,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P008192-PS": {
 "igrac_id": "P008192",
@@ -2926,12 +2926,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.4881,
+"p_model": 0.5369,
 "p_kladionica": 0.4648,
-"ev": 0.0006,
-"ocena": "slaba",
+"ev": 0.1007,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012796-poeni": {
 "igrac_id": "P012796",
@@ -2944,12 +2944,12 @@
 "linija": 16.5,
 "strana": "preko",
 "kvota": 1.88,
-"p_model": 0.5321,
+"p_model": 0.5406,
 "p_kladionica": 0.5053,
-"ev": 0.0003,
+"ev": 0.0164,
 "ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011217-PS": {
 "igrac_id": "P011217",
@@ -2962,12 +2962,12 @@
 "linija": 17.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.5001,
+"p_model": 0.4976,
 "p_kladionica": 0.4764,
-"ev": 0.0003,
-"ocena": "slaba",
+"ev": -0.0047,
+"ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P011284-skokovi": {
 "igrac_id": "P011284",
@@ -2980,12 +2980,12 @@
 "linija": 7.5,
 "strana": "ispod",
 "kvota": 1.58,
-"p_model": 0.6329,
+"p_model": 0.6291,
 "p_kladionica": 0.603,
-"ev": -0.0,
+"ev": -0.0061,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009992-trojke": {
 "igrac_id": "P009992",
@@ -2998,12 +2998,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.73,
-"p_model": 0.5778,
+"p_model": 0.6074,
 "p_kladionica": 0.5506,
-"ev": -0.0004,
-"ocena": "nema",
+"ev": 0.0509,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P007975-PA": {
 "igrac_id": "P007975",
@@ -3016,12 +3016,12 @@
 "linija": 17.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5257,
+"p_model": 0.513,
 "p_kladionica": 0.5,
-"ev": -0.0012,
+"ev": -0.0253,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011987-PA": {
 "igrac_id": "P011987",
@@ -3034,12 +3034,12 @@
 "linija": 17.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5201,
+"p_model": 0.5076,
 "p_kladionica": 0.4974,
-"ev": -0.0013,
+"ev": -0.0253,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P008192-PA": {
 "igrac_id": "P008192",
@@ -3052,12 +3052,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5457,
+"p_model": 0.5913,
 "p_kladionica": 0.5222,
-"ev": -0.0014,
-"ocena": "nema",
+"ev": 0.0822,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014737-asistencije": {
 "igrac_id": "P014737",
@@ -3070,12 +3070,12 @@
 "linija": 0.5,
 "strana": "preko",
 "kvota": 1.68,
-"p_model": 0.5942,
+"p_model": 0.5801,
 "p_kladionica": 0.567,
-"ev": -0.0018,
+"ev": -0.0254,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P001255-PA": {
 "igrac_id": "P001255",
@@ -3088,12 +3088,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5545,
+"p_model": 0.5293,
 "p_kladionica": 0.5288,
-"ev": -0.0018,
+"ev": -0.0473,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014742-skokovi": {
 "igrac_id": "P014742",
@@ -3106,12 +3106,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.69,
-"p_model": 0.5905,
+"p_model": 0.5627,
 "p_kladionica": 0.5622,
-"ev": -0.002,
+"ev": -0.049,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011286-trojke": {
 "igrac_id": "P011286",
@@ -3124,12 +3124,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.7,
-"p_model": 0.5869,
+"p_model": 0.5761,
 "p_kladionica": 0.5607,
-"ev": -0.0022,
+"ev": -0.0207,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P013402-asistencije": {
 "igrac_id": "P013402",
@@ -3142,12 +3142,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.52,
-"p_model": 0.6564,
+"p_model": 0.6405,
 "p_kladionica": 0.6265,
-"ev": -0.0022,
+"ev": -0.0264,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012609-asistencije": {
 "igrac_id": "P012609",
@@ -3160,12 +3160,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.54,
-"p_model": 0.6476,
+"p_model": 0.6285,
 "p_kladionica": 0.6188,
-"ev": -0.0026,
+"ev": -0.0322,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011927-poeni": {
 "igrac_id": "P011927",
@@ -3176,14 +3176,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "poeni",
 "linija": 7.5,
-"strana": "ispod",
-"kvota": 1.76,
-"p_model": 0.5667,
-"p_kladionica": 0.5405,
-"ev": -0.0027,
+"strana": "preko",
+"kvota": 2.07,
+"p_model": 0.4705,
+"p_kladionica": 0.4595,
+"ev": -0.0261,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011078-PA": {
 "igrac_id": "P011078",
@@ -3194,14 +3194,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PA",
 "linija": 8.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4985,
-"p_kladionica": 0.4778,
-"ev": -0.0029,
+"strana": "ispod",
+"kvota": 1.83,
+"p_model": 0.5371,
+"p_kladionica": 0.5222,
+"ev": -0.0172,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P014008-trojke": {
 "igrac_id": "P014008",
@@ -3214,12 +3214,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.64,
-"p_model": 0.608,
+"p_model": 0.6041,
 "p_kladionica": 0.5806,
-"ev": -0.0029,
+"ev": -0.0093,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011199-poeni": {
 "igrac_id": "P011199",
@@ -3232,12 +3232,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 1.77,
-"p_model": 0.5632,
+"p_model": 0.5808,
 "p_kladionica": 0.5366,
-"ev": -0.0031,
-"ocena": "nema",
+"ev": 0.028,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014316-poeni": {
 "igrac_id": "P014316",
@@ -3250,12 +3250,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5244,
+"p_model": 0.5483,
 "p_kladionica": 0.5,
-"ev": -0.0037,
-"ocena": "nema",
+"ev": 0.0417,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P013384-poeni": {
 "igrac_id": "P013384",
@@ -3268,12 +3268,12 @@
 "linija": 15.5,
 "strana": "ispod",
 "kvota": 1.83,
-"p_model": 0.5444,
+"p_model": 0.5186,
 "p_kladionica": 0.5184,
-"ev": -0.0037,
+"ev": -0.051,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P013929-skokovi": {
 "igrac_id": "P013929",
@@ -3286,12 +3286,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.32,
-"p_model": 0.4293,
+"p_model": 0.4371,
 "p_kladionica": 0.4112,
-"ev": -0.0041,
-"ocena": "nema",
+"ev": 0.0141,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003842-asistencije": {
 "igrac_id": "P003842",
@@ -3304,12 +3304,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.4,
-"p_model": 0.415,
+"p_model": 0.4233,
 "p_kladionica": 0.397,
-"ev": -0.0041,
-"ocena": "nema",
+"ev": 0.0158,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P008985-asistencije": {
 "igrac_id": "P008985",
@@ -3322,12 +3322,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.1,
-"p_model": 0.474,
+"p_model": 0.4701,
 "p_kladionica": 0.4531,
-"ev": -0.0046,
+"ev": -0.0128,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012878-PS": {
 "igrac_id": "P012878",
@@ -3340,12 +3340,12 @@
 "linija": 17.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5466,
+"p_model": 0.5393,
 "p_kladionica": 0.5236,
-"ev": -0.0051,
+"ev": -0.0185,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P013384-PA": {
 "igrac_id": "P013384",
@@ -3358,12 +3358,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.518,
+"p_model": 0.496,
 "p_kladionica": 0.4947,
-"ev": -0.0055,
+"ev": -0.0477,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P012720-PS": {
 "igrac_id": "P012720",
@@ -3376,12 +3376,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5374,
+"p_model": 0.5457,
 "p_kladionica": 0.5157,
-"ev": -0.0057,
-"ocena": "nema",
+"ev": 0.0095,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P011284-poeni": {
 "igrac_id": "P011284",
@@ -3394,12 +3394,12 @@
 "linija": 8.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.5046,
+"p_model": 0.5253,
 "p_kladionica": 0.4843,
-"ev": -0.0058,
-"ocena": "nema",
+"ev": 0.0349,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014736-poeni": {
 "igrac_id": "P014736",
@@ -3412,12 +3412,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.77,
-"p_model": 0.5615,
+"p_model": 0.5517,
 "p_kladionica": 0.5366,
-"ev": -0.0062,
+"ev": -0.0235,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011199-PS": {
 "igrac_id": "P011199",
@@ -3430,12 +3430,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5369,
+"p_model": 0.5471,
 "p_kladionica": 0.5157,
-"ev": -0.0067,
-"ocena": "nema",
+"ev": 0.012,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014005-asistencije": {
 "igrac_id": "P014005",
@@ -3446,14 +3446,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "asistencije",
 "linija": 0.5,
-"strana": "preko",
-"kvota": 1.48,
-"p_model": 0.671,
-"p_kladionica": 0.6434,
-"ev": -0.007,
+"strana": "ispod",
+"kvota": 2.67,
+"p_model": 0.3649,
+"p_kladionica": 0.3566,
+"ev": -0.0258,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012796-trojke": {
 "igrac_id": "P012796",
@@ -3466,12 +3466,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.6,
-"p_model": 0.3819,
+"p_model": 0.4037,
 "p_kladionica": 0.3659,
-"ev": -0.0071,
-"ocena": "nema",
+"ev": 0.0497,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012878-PA": {
 "igrac_id": "P012878",
@@ -3484,12 +3484,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5091,
+"p_model": 0.501,
 "p_kladionica": 0.4895,
-"ev": -0.0072,
+"ev": -0.0231,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014152-trojke": {
 "igrac_id": "P014152",
@@ -3502,12 +3502,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.5,
-"p_model": 0.6618,
+"p_model": 0.6768,
 "p_kladionica": 0.6341,
-"ev": -0.0073,
-"ocena": "nema",
+"ev": 0.0152,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013369-skokovi": {
 "igrac_id": "P013369",
@@ -3520,12 +3520,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 2.07,
-"p_model": 0.4795,
+"p_model": 0.4787,
 "p_kladionica": 0.4609,
-"ev": -0.0075,
+"ev": -0.0091,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015139-poeni": {
 "igrac_id": "P015139",
@@ -3536,14 +3536,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "poeni",
 "linija": 4.5,
-"strana": "preko",
-"kvota": 1.83,
-"p_model": 0.5423,
-"p_kladionica": 0.5184,
-"ev": -0.0075,
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.4828,
+"p_kladionica": 0.4816,
+"ev": -0.0488,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014786-skokovi": {
 "igrac_id": "P014786",
@@ -3556,12 +3556,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 1.62,
-"p_model": 0.6124,
+"p_model": 0.601,
 "p_kladionica": 0.5867,
-"ev": -0.008,
+"ev": -0.0263,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012731-skokovi": {
 "igrac_id": "P012731",
@@ -3574,12 +3574,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5511,
+"p_model": 0.5515,
 "p_kladionica": 0.5288,
-"ev": -0.008,
+"ev": -0.0073,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P009846-poeni": {
 "igrac_id": "P009846",
@@ -3592,12 +3592,12 @@
 "linija": 15.5,
 "strana": "ispod",
 "kvota": 1.88,
-"p_model": 0.5275,
+"p_model": 0.5412,
 "p_kladionica": 0.5053,
-"ev": -0.0082,
-"ocena": "nema",
+"ev": 0.0175,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P012720-poeni": {
 "igrac_id": "P012720",
@@ -3610,12 +3610,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.522,
+"p_model": 0.5387,
 "p_kladionica": 0.5026,
-"ev": -0.0082,
-"ocena": "nema",
+"ev": 0.0236,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P007975-asistencije": {
 "igrac_id": "P007975",
@@ -3628,12 +3628,12 @@
 "linija": 4.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.53,
+"p_model": 0.5289,
 "p_kladionica": 0.5105,
-"ev": -0.0089,
+"ev": -0.0109,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011231-skokovi": {
 "igrac_id": "P011231",
@@ -3644,14 +3644,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "skokovi",
 "linija": 3.5,
-"strana": "ispod",
-"kvota": 1.69,
-"p_model": 0.5863,
-"p_kladionica": 0.5656,
-"ev": -0.0091,
+"strana": "preko",
+"kvota": 2.2,
+"p_model": 0.4388,
+"p_kladionica": 0.4344,
+"ev": -0.0347,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014108-poeni": {
 "igrac_id": "P014108",
@@ -3664,12 +3664,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5443,
+"p_model": 0.5293,
 "p_kladionica": 0.5236,
-"ev": -0.0093,
+"ev": -0.0368,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P001255-skokovi": {
 "igrac_id": "P001255",
@@ -3682,12 +3682,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.72,
-"p_model": 0.5759,
+"p_model": 0.5598,
 "p_kladionica": 0.5556,
-"ev": -0.0095,
+"ev": -0.0372,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P012707-PS": {
 "igrac_id": "P012707",
@@ -3700,12 +3700,12 @@
 "linija": 17.5,
 "strana": "ispod",
 "kvota": 1.82,
-"p_model": 0.5442,
+"p_model": 0.5499,
 "p_kladionica": 0.5236,
-"ev": -0.0095,
-"ocena": "nema",
+"ev": 0.0009,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P003469-asistencije": {
 "igrac_id": "P003469",
@@ -3718,12 +3718,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.72,
-"p_model": 0.5759,
+"p_model": 0.5809,
 "p_kladionica": 0.5521,
-"ev": -0.0095,
+"ev": -0.0008,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P015029-skokovi": {
 "igrac_id": "P015029",
@@ -3734,14 +3734,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "skokovi",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 2.42,
-"p_model": 0.409,
-"p_kladionica": 0.3935,
-"ev": -0.0103,
+"strana": "ispod",
+"kvota": 1.57,
+"p_model": 0.6345,
+"p_kladionica": 0.6065,
+"ev": -0.0038,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014742-poeni": {
 "igrac_id": "P014742",
@@ -3754,12 +3754,12 @@
 "linija": 7.5,
 "strana": "preko",
 "kvota": 2.0,
-"p_model": 0.4948,
+"p_model": 0.5203,
 "p_kladionica": 0.4764,
-"ev": -0.0104,
-"ocena": "nema",
+"ev": 0.0407,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011194-PS": {
 "igrac_id": "P011194",
@@ -3772,12 +3772,12 @@
 "linija": 10.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5291,
+"p_model": 0.5361,
 "p_kladionica": 0.5105,
-"ev": -0.0106,
-"ocena": "nema",
+"ev": 0.0025,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P011284-PS": {
 "igrac_id": "P011284",
@@ -3790,12 +3790,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.4947,
+"p_model": 0.5075,
 "p_kladionica": 0.4764,
-"ev": -0.0107,
-"ocena": "nema",
+"ev": 0.015,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P012707-skokovi": {
 "igrac_id": "P012707",
@@ -3808,12 +3808,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 1.55,
-"p_model": 0.6382,
+"p_model": 0.63,
 "p_kladionica": 0.6144,
-"ev": -0.0107,
+"ev": -0.0235,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015164-skokovi": {
 "igrac_id": "P015164",
@@ -3826,12 +3826,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.17,
-"p_model": 0.4559,
+"p_model": 0.4431,
 "p_kladionica": 0.4393,
-"ev": -0.0108,
+"ev": -0.0385,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012796-PA": {
 "igrac_id": "P012796",
@@ -3844,12 +3844,12 @@
 "linija": 17.5,
 "strana": "preko",
 "kvota": 1.8,
-"p_model": 0.5493,
+"p_model": 0.557,
 "p_kladionica": 0.5288,
-"ev": -0.0113,
-"ocena": "nema",
+"ev": 0.0026,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P010357-trojke": {
 "igrac_id": "P010357",
@@ -3862,12 +3862,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.75,
-"p_model": 0.5646,
+"p_model": 0.5784,
 "p_kladionica": 0.5455,
-"ev": -0.0119,
-"ocena": "nema",
+"ev": 0.0122,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011078-asistencije": {
 "igrac_id": "P011078",
@@ -3878,14 +3878,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "asistencije",
 "linija": 2.5,
-"strana": "preko",
-"kvota": 2.25,
-"p_model": 0.4392,
-"p_kladionica": 0.4246,
-"ev": -0.0119,
+"strana": "ispod",
+"kvota": 1.66,
+"p_model": 0.5847,
+"p_kladionica": 0.5754,
+"ev": -0.0294,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015139-PS": {
 "igrac_id": "P015139",
@@ -3896,14 +3896,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 6.5,
-"strana": "preko",
-"kvota": 1.92,
-"p_model": 0.5144,
-"p_kladionica": 0.4947,
-"ev": -0.0124,
+"strana": "ispod",
+"kvota": 1.88,
+"p_model": 0.5207,
+"p_kladionica": 0.5053,
+"ev": -0.0211,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012606-asistencije": {
 "igrac_id": "P012606",
@@ -3914,14 +3914,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "asistencije",
 "linija": 4.5,
-"strana": "preko",
-"kvota": 2.07,
-"p_model": 0.4769,
-"p_kladionica": 0.4609,
-"ev": -0.0128,
+"strana": "ispod",
+"kvota": 1.77,
+"p_model": 0.547,
+"p_kladionica": 0.5391,
+"ev": -0.0318,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015163-PA": {
 "igrac_id": "P015163",
@@ -3934,12 +3934,12 @@
 "linija": 14.5,
 "strana": "preko",
 "kvota": 1.82,
-"p_model": 0.5422,
+"p_model": 0.5631,
 "p_kladionica": 0.5236,
-"ev": -0.0131,
-"ocena": "nema",
+"ev": 0.0249,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011217-trojke": {
 "igrac_id": "P011217",
@@ -3952,12 +3952,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.78,
-"p_model": 0.5544,
+"p_model": 0.5546,
 "p_kladionica": 0.5352,
-"ev": -0.0132,
+"ev": -0.0128,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008962-skokovi": {
 "igrac_id": "P008962",
@@ -3970,12 +3970,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 1.73,
-"p_model": 0.5704,
+"p_model": 0.5706,
 "p_kladionica": 0.5506,
-"ev": -0.0133,
+"ev": -0.0128,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P014008-PA": {
 "igrac_id": "P014008",
@@ -3988,12 +3988,12 @@
 "linija": 19.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5137,
+"p_model": 0.5124,
 "p_kladionica": 0.4974,
-"ev": -0.0138,
+"ev": -0.0162,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P013667-PA": {
 "igrac_id": "P013667",
@@ -4004,14 +4004,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "PA",
 "linija": 6.5,
-"strana": "preko",
-"kvota": 1.95,
-"p_model": 0.5057,
-"p_kladionica": 0.4895,
-"ev": -0.0138,
+"strana": "ispod",
+"kvota": 1.87,
+"p_model": 0.5171,
+"p_kladionica": 0.5105,
+"ev": -0.0329,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P009754-skokovi": {
 "igrac_id": "P009754",
@@ -4024,12 +4024,12 @@
 "linija": 3.5,
 "strana": "preko",
 "kvota": 2.22,
-"p_model": 0.4442,
+"p_model": 0.4389,
 "p_kladionica": 0.4278,
-"ev": -0.0139,
+"ev": -0.0257,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P014008-skokovi": {
 "igrac_id": "P014008",
@@ -4042,12 +4042,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5056,
+"p_model": 0.4915,
 "p_kladionica": 0.4895,
-"ev": -0.014,
+"ev": -0.0416,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P015153-skokovi": {
 "igrac_id": "P015153",
@@ -4060,12 +4060,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 1.83,
-"p_model": 0.5386,
+"p_model": 0.5391,
 "p_kladionica": 0.5184,
-"ev": -0.0143,
+"ev": -0.0135,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P007975-PS": {
 "igrac_id": "P007975",
@@ -4076,14 +4076,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "PS",
 "linija": 14.5,
-"strana": "preko",
-"kvota": 1.83,
-"p_model": 0.5386,
-"p_kladionica": 0.5222,
-"ev": -0.0143,
+"strana": "ispod",
+"kvota": 2.0,
+"p_model": 0.486,
+"p_kladionica": 0.4778,
+"ev": -0.028,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003112-PS": {
 "igrac_id": "P003112",
@@ -4096,12 +4096,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.527,
+"p_model": 0.5349,
 "p_kladionica": 0.5105,
-"ev": -0.0144,
-"ocena": "nema",
+"ev": 0.0003,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P005368-trojke": {
 "igrac_id": "P005368",
@@ -4114,12 +4114,12 @@
 "linija": 0.5,
 "strana": "preko",
 "kvota": 1.55,
-"p_model": 0.6357,
+"p_model": 0.618,
 "p_kladionica": 0.6144,
-"ev": -0.0146,
+"ev": -0.0421,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015138-trojke": {
 "igrac_id": "P015138",
@@ -4132,12 +4132,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.5,
-"p_model": 0.3939,
+"p_model": 0.3888,
 "p_kladionica": 0.3797,
-"ev": -0.0152,
+"ev": -0.0281,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P009992-poeni": {
 "igrac_id": "P009992",
@@ -4150,12 +4150,12 @@
 "linija": 7.5,
 "strana": "ispod",
 "kvota": 2.07,
-"p_model": 0.4755,
+"p_model": 0.5162,
 "p_kladionica": 0.4595,
-"ev": -0.0157,
-"ocena": "nema",
+"ev": 0.0686,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P012707-asistencije": {
 "igrac_id": "P012707",
@@ -4168,12 +4168,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.5047,
+"p_model": 0.556,
 "p_kladionica": 0.4895,
-"ev": -0.0159,
-"ocena": "nema",
+"ev": 0.0841,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008099-asistencije": {
 "igrac_id": "P008099",
@@ -4186,12 +4186,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5319,
+"p_model": 0.5243,
 "p_kladionica": 0.5157,
-"ev": -0.016,
+"ev": -0.03,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014005-poeni": {
 "igrac_id": "P014005",
@@ -4202,14 +4202,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "poeni",
 "linija": 13.5,
-"strana": "ispod",
-"kvota": 2.02,
-"p_model": 0.4871,
-"p_kladionica": 0.4712,
-"ev": -0.0161,
+"strana": "preko",
+"kvota": 1.8,
+"p_model": 0.548,
+"p_kladionica": 0.5288,
+"ev": -0.0135,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011212-skokovi": {
 "igrac_id": "P011212",
@@ -4222,12 +4222,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.73,
-"p_model": 0.5687,
+"p_model": 0.5976,
 "p_kladionica": 0.5506,
-"ev": -0.0161,
-"ocena": "nema",
+"ev": 0.0338,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P008985-PA": {
 "igrac_id": "P008985",
@@ -4238,14 +4238,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PA",
 "linija": 12.5,
-"strana": "ispod",
-"kvota": 1.82,
-"p_model": 0.5406,
-"p_kladionica": 0.5236,
-"ev": -0.0161,
+"strana": "preko",
+"kvota": 2.0,
+"p_model": 0.481,
+"p_kladionica": 0.4764,
+"ev": -0.038,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P009048-asistencije": {
 "igrac_id": "P009048",
@@ -4258,12 +4258,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5317,
+"p_model": 0.5787,
 "p_kladionica": 0.5157,
-"ev": -0.0164,
-"ocena": "nema",
+"ev": 0.0705,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P009846-skokovi": {
 "igrac_id": "P009846",
@@ -4274,14 +4274,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "skokovi",
 "linija": 5.5,
-"strana": "preko",
-"kvota": 2.12,
-"p_model": 0.4639,
-"p_kladionica": 0.4508,
-"ev": -0.0165,
+"strana": "ispod",
+"kvota": 1.74,
+"p_model": 0.5648,
+"p_kladionica": 0.5492,
+"ev": -0.0172,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P009048-PS": {
 "igrac_id": "P009048",
@@ -4292,14 +4292,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PS",
 "linija": 13.5,
-"strana": "ispod",
-"kvota": 2.0,
-"p_model": 0.4917,
-"p_kladionica": 0.4778,
-"ev": -0.0166,
+"strana": "preko",
+"kvota": 1.83,
+"p_model": 0.5308,
+"p_kladionica": 0.5222,
+"ev": -0.0286,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P012608-poeni": {
 "igrac_id": "P012608",
@@ -4310,14 +4310,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "poeni",
 "linija": 18.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5315,
-"p_kladionica": 0.5157,
-"ev": -0.0168,
+"strana": "preko",
+"kvota": 1.97,
+"p_model": 0.5011,
+"p_kladionica": 0.4843,
+"ev": -0.0128,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011286-skokovi": {
 "igrac_id": "P011286",
@@ -4330,12 +4330,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5312,
+"p_model": 0.5414,
 "p_kladionica": 0.5157,
-"ev": -0.0174,
-"ocena": "nema",
+"ev": 0.0017,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P013384-skokovi": {
 "igrac_id": "P013384",
@@ -4348,12 +4348,12 @@
 "linija": 3.5,
 "strana": "preko",
 "kvota": 1.67,
-"p_model": 0.5884,
+"p_model": 0.5997,
 "p_kladionica": 0.5685,
-"ev": -0.0174,
-"ocena": "nema",
+"ev": 0.0015,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014107-trojke": {
 "igrac_id": "P014107",
@@ -4366,12 +4366,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 2.3,
-"p_model": 0.4272,
+"p_model": 0.4259,
 "p_kladionica": 0.4148,
-"ev": -0.0175,
+"ev": -0.0205,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P010357-skokovi": {
 "igrac_id": "P010357",
@@ -4382,14 +4382,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "skokovi",
 "linija": 4.5,
-"strana": "ispod",
-"kvota": 1.92,
-"p_model": 0.5116,
-"p_kladionica": 0.4947,
-"ev": -0.0176,
+"strana": "preko",
+"kvota": 1.88,
+"p_model": 0.5088,
+"p_kladionica": 0.5053,
+"ev": -0.0435,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014742-asistencije": {
 "igrac_id": "P014742",
@@ -4400,14 +4400,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "asistencije",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 1.63,
-"p_model": 0.6024,
-"p_kladionica": 0.5852,
-"ev": -0.0181,
+"strana": "preko",
+"kvota": 2.3,
+"p_model": 0.4183,
+"p_kladionica": 0.4148,
+"ev": -0.038,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011987-poeni": {
 "igrac_id": "P011987",
@@ -4420,12 +4420,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.4909,
+"p_model": 0.4814,
 "p_kladionica": 0.4764,
-"ev": -0.0181,
+"ev": -0.0372,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013369-poeni": {
 "igrac_id": "P013369",
@@ -4438,12 +4438,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.88,
-"p_model": 0.5222,
+"p_model": 0.5431,
 "p_kladionica": 0.5053,
-"ev": -0.0182,
-"ocena": "nema",
+"ev": 0.021,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014737-skokovi": {
 "igrac_id": "P014737",
@@ -4456,12 +4456,12 @@
 "linija": 3.5,
 "strana": "preko",
 "kvota": 1.78,
-"p_model": 0.5516,
+"p_model": 0.5589,
 "p_kladionica": 0.5352,
-"ev": -0.0182,
+"ev": -0.0052,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P009048-poeni": {
 "igrac_id": "P009048",
@@ -4472,14 +4472,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "poeni",
 "linija": 9.5,
-"strana": "ispod",
-"kvota": 2.02,
-"p_model": 0.4859,
-"p_kladionica": 0.4712,
-"ev": -0.0186,
+"strana": "preko",
+"kvota": 1.8,
+"p_model": 0.532,
+"p_kladionica": 0.5288,
+"ev": -0.0425,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012788-PS": {
 "igrac_id": "P012788",
@@ -4492,12 +4492,12 @@
 "linija": 17.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5451,
+"p_model": 0.5536,
 "p_kladionica": 0.5288,
-"ev": -0.0188,
+"ev": -0.0035,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015163-poeni": {
 "igrac_id": "P015163",
@@ -4510,12 +4510,12 @@
 "linija": 12.5,
 "strana": "preko",
 "kvota": 1.8,
-"p_model": 0.5451,
+"p_model": 0.5648,
 "p_kladionica": 0.5288,
-"ev": -0.0188,
-"ocena": "nema",
+"ev": 0.0166,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P008985-PS": {
 "igrac_id": "P008985",
@@ -4526,14 +4526,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PS",
 "linija": 12.5,
-"strana": "ispod",
-"kvota": 1.88,
-"p_model": 0.5219,
-"p_kladionica": 0.5053,
-"ev": -0.0189,
+"strana": "preko",
+"kvota": 1.92,
+"p_model": 0.497,
+"p_kladionica": 0.4947,
+"ev": -0.0458,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014742-PA": {
 "igrac_id": "P014742",
@@ -4546,12 +4546,12 @@
 "linija": 8.5,
 "strana": "preko",
 "kvota": 1.85,
-"p_model": 0.5303,
+"p_model": 0.5594,
 "p_kladionica": 0.5157,
-"ev": -0.019,
-"ocena": "nema",
+"ev": 0.0349,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011205-PA": {
 "igrac_id": "P011205",
@@ -4564,12 +4564,12 @@
 "linija": 11.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5163,
+"p_model": 0.513,
 "p_kladionica": 0.5026,
-"ev": -0.0191,
+"ev": -0.0253,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P013402-trojke": {
 "igrac_id": "P013402",
@@ -4580,14 +4580,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "trojke",
 "linija": 2.5,
-"strana": "ispod",
-"kvota": 1.82,
-"p_model": 0.5389,
-"p_kladionica": 0.5236,
-"ev": -0.0192,
+"strana": "preko",
+"kvota": 2.0,
+"p_model": 0.4957,
+"p_kladionica": 0.4764,
+"ev": -0.0085,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015164-PA": {
 "igrac_id": "P015164",
@@ -4600,12 +4600,12 @@
 "linija": 13.5,
 "strana": "preko",
 "kvota": 1.8,
-"p_model": 0.5446,
+"p_model": 0.5289,
 "p_kladionica": 0.5288,
-"ev": -0.0196,
+"ev": -0.0479,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P009846-PS": {
 "igrac_id": "P009846",
@@ -4618,12 +4618,12 @@
 "linija": 20.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.4974,
+"p_model": 0.5182,
 "p_kladionica": 0.4843,
-"ev": -0.0202,
-"ocena": "nema",
+"ev": 0.0209,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010545-skokovi": {
 "igrac_id": "P010545",
@@ -4636,12 +4636,12 @@
 "linija": 5.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5239,
+"p_model": 0.5393,
 "p_kladionica": 0.5105,
-"ev": -0.0202,
-"ocena": "nema",
+"ev": 0.0084,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P007056-trojke": {
 "igrac_id": "P007056",
@@ -4654,12 +4654,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 1.49,
-"p_model": 0.6575,
+"p_model": 0.6552,
 "p_kladionica": 0.6401,
-"ev": -0.0203,
+"ev": -0.0237,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015165-poeni": {
 "igrac_id": "P015165",
@@ -4670,14 +4670,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "poeni",
 "linija": 11.5,
-"strana": "ispod",
-"kvota": 1.82,
-"p_model": 0.538,
-"p_kladionica": 0.5236,
-"ev": -0.0208,
+"strana": "preko",
+"kvota": 2.0,
+"p_model": 0.4898,
+"p_kladionica": 0.4764,
+"ev": -0.0203,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011078-poeni": {
 "igrac_id": "P011078",
@@ -4688,14 +4688,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "poeni",
 "linija": 5.5,
-"strana": "preko",
-"kvota": 1.8,
-"p_model": 0.5439,
-"p_kladionica": 0.5288,
-"ev": -0.0209,
+"strana": "ispod",
+"kvota": 2.02,
+"p_model": 0.4918,
+"p_kladionica": 0.4712,
+"ev": -0.0067,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011981-skokovi": {
 "igrac_id": "P011981",
@@ -4706,14 +4706,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "skokovi",
 "linija": 3.5,
-"strana": "ispod",
-"kvota": 1.92,
-"p_model": 0.5099,
-"p_kladionica": 0.4947,
-"ev": -0.0209,
+"strana": "preko",
+"kvota": 1.88,
+"p_model": 0.5061,
+"p_kladionica": 0.5053,
+"ev": -0.0486,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014152-PA": {
 "igrac_id": "P014152",
@@ -4724,14 +4724,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "PA",
 "linija": 12.5,
-"strana": "preko",
-"kvota": 1.92,
-"p_model": 0.5099,
-"p_kladionica": 0.4947,
-"ev": -0.021,
+"strana": "ispod",
+"kvota": 1.88,
+"p_model": 0.5092,
+"p_kladionica": 0.5053,
+"ev": -0.0426,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011231-poeni": {
 "igrac_id": "P011231",
@@ -4744,12 +4744,12 @@
 "linija": 5.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5234,
+"p_model": 0.5341,
 "p_kladionica": 0.5105,
-"ev": -0.0213,
+"ev": -0.0012,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P007975-poeni": {
 "igrac_id": "P007975",
@@ -4760,14 +4760,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "poeni",
 "linija": 12.5,
-"strana": "preko",
-"kvota": 1.83,
-"p_model": 0.5347,
-"p_kladionica": 0.5184,
-"ev": -0.0215,
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.4851,
+"p_kladionica": 0.4816,
+"ev": -0.0444,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014207-PA": {
 "igrac_id": "P014207",
@@ -4780,12 +4780,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5434,
+"p_model": 0.548,
 "p_kladionica": 0.5288,
-"ev": -0.0219,
+"ev": -0.0136,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P012608-PA": {
 "igrac_id": "P012608",
@@ -4796,14 +4796,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PA",
 "linija": 24.5,
-"strana": "ispod",
-"kvota": 1.83,
-"p_model": 0.5345,
-"p_kladionica": 0.5184,
-"ev": -0.0219,
+"strana": "preko",
+"kvota": 1.97,
+"p_model": 0.5022,
+"p_kladionica": 0.4816,
+"ev": -0.0106,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012610-trojke": {
 "igrac_id": "P012610",
@@ -4816,12 +4816,12 @@
 "linija": 0.5,
 "strana": "preko",
 "kvota": 1.46,
-"p_model": 0.6698,
+"p_model": 0.6606,
 "p_kladionica": 0.6507,
-"ev": -0.022,
+"ev": -0.0355,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P008985-poeni": {
 "igrac_id": "P008985",
@@ -4832,14 +4832,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "poeni",
 "linija": 9.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5286,
-"p_kladionica": 0.5132,
-"ev": -0.022,
+"strana": "preko",
+"kvota": 1.95,
+"p_model": 0.4921,
+"p_kladionica": 0.4868,
+"ev": -0.0405,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P002939-asistencije": {
 "igrac_id": "P002939",
@@ -4852,12 +4852,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 2.32,
-"p_model": 0.4215,
+"p_model": 0.4166,
 "p_kladionica": 0.4097,
-"ev": -0.0221,
+"ev": -0.0335,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P000898-skokovi": {
 "igrac_id": "P000898",
@@ -4870,12 +4870,12 @@
 "linija": 7.5,
 "strana": "preko",
 "kvota": 1.85,
-"p_model": 0.5283,
+"p_model": 0.5441,
 "p_kladionica": 0.5157,
-"ev": -0.0226,
-"ocena": "nema",
+"ev": 0.0067,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P009846-trojke": {
 "igrac_id": "P009846",
@@ -4888,12 +4888,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.65,
-"p_model": 0.3685,
+"p_model": 0.3609,
 "p_kladionica": 0.3599,
-"ev": -0.0234,
+"ev": -0.0436,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014786-poeni": {
 "igrac_id": "P014786",
@@ -4906,12 +4906,12 @@
 "linija": 12.5,
 "strana": "preko",
 "kvota": 1.92,
-"p_model": 0.5086,
+"p_model": 0.5165,
 "p_kladionica": 0.4974,
-"ev": -0.0235,
+"ev": -0.0083,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015163-asistencije": {
 "igrac_id": "P015163",
@@ -4924,12 +4924,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 1.74,
-"p_model": 0.5612,
+"p_model": 0.5635,
 "p_kladionica": 0.5469,
-"ev": -0.0235,
+"ev": -0.0195,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P007975-trojke": {
 "igrac_id": "P007975",
@@ -4942,12 +4942,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.61,
-"p_model": 0.6065,
+"p_model": 0.6371,
 "p_kladionica": 0.5903,
-"ev": -0.0235,
-"ocena": "nema",
+"ev": 0.0258,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011194-poeni": {
 "igrac_id": "P011194",
@@ -4960,12 +4960,12 @@
 "linija": 6.5,
 "strana": "preko",
 "kvota": 1.75,
-"p_model": 0.5577,
+"p_model": 0.5682,
 "p_kladionica": 0.5419,
-"ev": -0.024,
+"ev": -0.0056,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P012608-asistencije": {
 "igrac_id": "P012608",
@@ -4976,14 +4976,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "asistencije",
 "linija": 5.5,
-"strana": "ispod",
-"kvota": 1.83,
-"p_model": 0.5333,
-"p_kladionica": 0.5222,
-"ev": -0.024,
+"strana": "preko",
+"kvota": 2.0,
+"p_model": 0.485,
+"p_kladionica": 0.4778,
+"ev": -0.03,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011981-poeni": {
 "igrac_id": "P011981",
@@ -4996,12 +4996,12 @@
 "linija": 7.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5219,
+"p_model": 0.5201,
 "p_kladionica": 0.5105,
-"ev": -0.024,
+"ev": -0.0275,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014786-PA": {
 "igrac_id": "P014786",
@@ -5014,12 +5014,12 @@
 "linija": 14.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5136,
+"p_model": 0.5196,
 "p_kladionica": 0.5026,
-"ev": -0.0241,
+"ev": -0.0127,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015139-trojke": {
 "igrac_id": "P015139",
@@ -5032,12 +5032,12 @@
 "linija": 0.5,
 "strana": "preko",
 "kvota": 1.52,
-"p_model": 0.642,
+"p_model": 0.6314,
 "p_kladionica": 0.6265,
-"ev": -0.0241,
+"ev": -0.0402,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P015153-PS": {
 "igrac_id": "P015153",
@@ -5050,12 +5050,12 @@
 "linija": 9.5,
 "strana": "preko",
 "kvota": 2.02,
-"p_model": 0.4831,
+"p_model": 0.4923,
 "p_kladionica": 0.4712,
-"ev": -0.0242,
+"ev": -0.0055,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013369-PS": {
 "igrac_id": "P013369",
@@ -5068,12 +5068,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.4879,
+"p_model": 0.5104,
 "p_kladionica": 0.4764,
-"ev": -0.0242,
-"ocena": "nema",
+"ev": 0.0208,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P012608-PS": {
 "igrac_id": "P012608",
@@ -5084,14 +5084,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 20.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5274,
-"p_kladionica": 0.5132,
-"ev": -0.0243,
+"strana": "preko",
+"kvota": 1.95,
+"p_model": 0.5028,
+"p_kladionica": 0.4868,
+"ev": -0.0195,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014786-PS": {
 "igrac_id": "P014786",
@@ -5104,12 +5104,12 @@
 "linija": 14.5,
 "strana": "preko",
 "kvota": 1.92,
-"p_model": 0.5082,
+"p_model": 0.5148,
 "p_kladionica": 0.4947,
-"ev": -0.0243,
+"ev": -0.0115,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010545-poeni": {
 "igrac_id": "P010545",
@@ -5122,12 +5122,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5135,
+"p_model": 0.5321,
 "p_kladionica": 0.5026,
-"ev": -0.0244,
-"ocena": "nema",
+"ev": 0.0109,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P008192-poeni": {
 "igrac_id": "P008192",
@@ -5140,12 +5140,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5132,
+"p_model": 0.5594,
 "p_kladionica": 0.5,
-"ev": -0.025,
-"ocena": "nema",
+"ev": 0.063,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011205-poeni": {
 "igrac_id": "P011205",
@@ -5158,12 +5158,12 @@
 "linija": 8.5,
 "strana": "preko",
 "kvota": 2.05,
-"p_model": 0.4756,
+"p_model": 0.4706,
 "p_kladionica": 0.4648,
-"ev": -0.0251,
+"ev": -0.0352,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P012609-trojke": {
 "igrac_id": "P012609",
@@ -5174,14 +5174,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "trojke",
 "linija": 0.5,
-"strana": "preko",
-"kvota": 2.02,
-"p_model": 0.4826,
-"p_kladionica": 0.4712,
-"ev": -0.0251,
+"strana": "ispod",
+"kvota": 1.8,
+"p_model": 0.5374,
+"p_kladionica": 0.5288,
+"ev": -0.0328,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P009048-PA": {
 "igrac_id": "P009048",
@@ -5194,12 +5194,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.4999,
+"p_model": 0.4993,
 "p_kladionica": 0.4895,
-"ev": -0.0251,
+"ev": -0.0263,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P002939-PA": {
 "igrac_id": "P002939",
@@ -5210,14 +5210,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "PA",
 "linija": 8.5,
-"strana": "preko",
-"kvota": 1.85,
-"p_model": 0.5269,
-"p_kladionica": 0.5157,
-"ev": -0.0252,
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.4848,
+"p_kladionica": 0.4843,
+"ev": -0.0449,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012610-poeni": {
 "igrac_id": "P012610",
@@ -5230,12 +5230,12 @@
 "linija": 9.5,
 "strana": "preko",
 "kvota": 1.85,
-"p_model": 0.5267,
+"p_model": 0.5223,
 "p_kladionica": 0.5157,
-"ev": -0.0256,
+"ev": -0.0338,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014802-trojke": {
 "igrac_id": "P014802",
@@ -5248,12 +5248,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 1.39,
-"p_model": 0.701,
+"p_model": 0.7059,
 "p_kladionica": 0.6834,
-"ev": -0.0256,
+"ev": -0.0188,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P009680-poeni": {
 "igrac_id": "P009680",
@@ -5266,12 +5266,12 @@
 "linija": 7.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5267,
+"p_model": 0.5623,
 "p_kladionica": 0.5157,
-"ev": -0.0257,
-"ocena": "nema",
+"ev": 0.0403,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015165-asistencije": {
 "igrac_id": "P015165",
@@ -5284,12 +5284,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 2.2,
-"p_model": 0.4428,
+"p_model": 0.4365,
 "p_kladionica": 0.433,
-"ev": -0.0258,
+"ev": -0.0396,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P013384-PS": {
 "igrac_id": "P013384",
@@ -5300,14 +5300,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 19.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5265,
-"p_kladionica": 0.5157,
-"ev": -0.0259,
+"strana": "preko",
+"kvota": 1.97,
+"p_model": 0.501,
+"p_kladionica": 0.4843,
+"ev": -0.0131,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012796-asistencije": {
 "igrac_id": "P012796",
@@ -5318,14 +5318,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "asistencije",
 "linija": 0.5,
-"strana": "preko",
-"kvota": 1.66,
-"p_model": 0.5868,
-"p_kladionica": 0.5754,
-"ev": -0.026,
+"strana": "ispod",
+"kvota": 2.25,
+"p_model": 0.4331,
+"p_kladionica": 0.4246,
+"ev": -0.0255,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P006643-trojke": {
 "igrac_id": "P006643",
@@ -5338,12 +5338,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.57,
-"p_model": 0.6203,
+"p_model": 0.613,
 "p_kladionica": 0.6065,
-"ev": -0.0261,
+"ev": -0.0376,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P001255-asistencije": {
 "igrac_id": "P001255",
@@ -5356,12 +5356,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.475,
+"p_model": 0.5206,
 "p_kladionica": 0.4648,
-"ev": -0.0262,
-"ocena": "nema",
+"ev": 0.0672,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P012707-poeni": {
 "igrac_id": "P012707",
@@ -5374,12 +5374,12 @@
 "linija": 15.5,
 "strana": "ispod",
 "kvota": 1.62,
-"p_model": 0.6011,
+"p_model": 0.6045,
 "p_kladionica": 0.5888,
-"ev": -0.0263,
+"ev": -0.0208,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P007947-trojke": {
 "igrac_id": "P007947",
@@ -5392,12 +5392,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.53,
-"p_model": 0.6364,
+"p_model": 0.6591,
 "p_kladionica": 0.6222,
-"ev": -0.0263,
-"ocena": "nema",
+"ev": 0.0084,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P013402-skokovi": {
 "igrac_id": "P013402",
@@ -5410,12 +5410,12 @@
 "linija": 1.5,
 "strana": "preko",
 "kvota": 1.65,
-"p_model": 0.5899,
+"p_model": 0.6148,
 "p_kladionica": 0.5769,
-"ev": -0.0266,
-"ocena": "nema",
+"ev": 0.0145,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014316-PA": {
 "igrac_id": "P014316",
@@ -5428,12 +5428,12 @@
 "linija": 7.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.4941,
+"p_model": 0.5269,
 "p_kladionica": 0.4816,
-"ev": -0.0267,
-"ocena": "nema",
+"ev": 0.0379,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003112-asistencije": {
 "igrac_id": "P003112",
@@ -5444,14 +5444,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "asistencije",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 2.22,
-"p_model": 0.4384,
-"p_kladionica": 0.4278,
-"ev": -0.0267,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.66,
+"p_model": 0.6048,
+"p_kladionica": 0.5722,
+"ev": 0.0039,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003842-poeni": {
 "igrac_id": "P003842",
@@ -5462,14 +5462,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "poeni",
 "linija": 11.5,
-"strana": "ispod",
-"kvota": 1.97,
-"p_model": 0.494,
-"p_kladionica": 0.4843,
-"ev": -0.0268,
-"ocena": "nema",
+"strana": "preko",
+"kvota": 1.85,
+"p_model": 0.5447,
+"p_kladionica": 0.5157,
+"ev": 0.0077,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P009025-trojke": {
 "igrac_id": "P009025",
@@ -5482,12 +5482,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.56,
-"p_model": 0.6238,
+"p_model": 0.6387,
 "p_kladionica": 0.611,
-"ev": -0.0269,
+"ev": -0.0036,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014416-poeni": {
 "igrac_id": "P014416",
@@ -5498,14 +5498,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "poeni",
 "linija": 4.5,
-"strana": "preko",
-"kvota": 1.76,
-"p_model": 0.5529,
-"p_kladionica": 0.5405,
-"ev": -0.0269,
+"strana": "ispod",
+"kvota": 2.07,
+"p_model": 0.478,
+"p_kladionica": 0.4595,
+"ev": -0.0105,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013369-asistencije": {
 "igrac_id": "P013369",
@@ -5518,12 +5518,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.74,
-"p_model": 0.5592,
+"p_model": 0.5628,
 "p_kladionica": 0.5469,
-"ev": -0.027,
+"ev": -0.0207,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P008985-trojke": {
 "igrac_id": "P008985",
@@ -5536,12 +5536,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.62,
-"p_model": 0.3713,
+"p_model": 0.3654,
 "p_kladionica": 0.3625,
-"ev": -0.0271,
+"ev": -0.0426,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003112-poeni": {
 "igrac_id": "P003112",
@@ -5554,12 +5554,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5117,
+"p_model": 0.5214,
 "p_kladionica": 0.5,
-"ev": -0.0279,
+"ev": -0.0093,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014416-PS": {
 "igrac_id": "P014416",
@@ -5572,12 +5572,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.486,
+"p_model": 0.5202,
 "p_kladionica": 0.4764,
-"ev": -0.028,
-"ocena": "nema",
+"ev": 0.0405,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P004004-trojke": {
 "igrac_id": "P004004",
@@ -5588,14 +5588,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 2.75,
-"p_model": 0.3534,
-"p_kladionica": 0.3468,
-"ev": -0.028,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.46,
+"p_model": 0.6934,
+"p_kladionica": 0.6532,
+"ev": 0.0124,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011212-trojke": {
 "igrac_id": "P011212",
@@ -5606,14 +5606,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 1.67,
-"p_model": 0.582,
-"p_kladionica": 0.5707,
-"ev": -0.0281,
+"strana": "preko",
+"kvota": 2.22,
+"p_model": 0.4477,
+"p_kladionica": 0.4293,
+"ev": -0.0061,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015162-PS": {
 "igrac_id": "P015162",
@@ -5626,12 +5626,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.4811,
+"p_model": 0.4764,
 "p_kladionica": 0.4712,
-"ev": -0.0282,
+"ev": -0.0377,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P004004-poeni": {
 "igrac_id": "P004004",
@@ -5644,12 +5644,12 @@
 "linija": 7.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5197,
+"p_model": 0.5741,
 "p_kladionica": 0.5105,
-"ev": -0.0283,
-"ocena": "nema",
+"ev": 0.0736,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P009035-skokovi": {
 "igrac_id": "P009035",
@@ -5662,12 +5662,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 2.15,
-"p_model": 0.452,
+"p_model": 0.4885,
 "p_kladionica": 0.443,
-"ev": -0.0283,
-"ocena": "nema",
+"ev": 0.0503,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P007975-skokovi": {
 "igrac_id": "P007975",
@@ -5678,14 +5678,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "skokovi",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 1.6,
-"p_model": 0.6072,
-"p_kladionica": 0.597,
-"ev": -0.0285,
+"strana": "ispod",
+"kvota": 2.37,
+"p_model": 0.4217,
+"p_kladionica": 0.403,
+"ev": -0.0006,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015165-PA": {
 "igrac_id": "P015165",
@@ -5696,14 +5696,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "PA",
 "linija": 15.5,
-"strana": "ispod",
-"kvota": 1.8,
-"p_model": 0.5397,
-"p_kladionica": 0.5288,
-"ev": -0.0286,
+"strana": "preko",
+"kvota": 2.02,
+"p_model": 0.4891,
+"p_kladionica": 0.4712,
+"ev": -0.012,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P007056-poeni": {
 "igrac_id": "P007056",
@@ -5716,12 +5716,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.4808,
+"p_model": 0.4739,
 "p_kladionica": 0.4712,
-"ev": -0.0289,
+"ev": -0.0428,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P002939-poeni": {
 "igrac_id": "P002939",
@@ -5732,14 +5732,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "poeni",
 "linija": 4.5,
-"strana": "preko",
-"kvota": 1.85,
-"p_model": 0.5249,
-"p_kladionica": 0.5157,
-"ev": -0.0289,
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.498,
+"p_kladionica": 0.4843,
+"ev": -0.019,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P009048-skokovi": {
 "igrac_id": "P009048",
@@ -5750,14 +5750,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "skokovi",
 "linija": 3.5,
-"strana": "ispod",
-"kvota": 1.95,
-"p_model": 0.4979,
-"p_kladionica": 0.4868,
-"ev": -0.0292,
+"strana": "preko",
+"kvota": 1.85,
+"p_model": 0.5329,
+"p_kladionica": 0.5132,
+"ev": -0.014,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P013667-asistencije": {
 "igrac_id": "P013667",
@@ -5770,12 +5770,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.15,
-"p_model": 0.4515,
+"p_model": 0.4443,
 "p_kladionica": 0.4416,
-"ev": -0.0292,
+"ev": -0.0447,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P006661-poeni": {
 "igrac_id": "P006661",
@@ -5788,12 +5788,12 @@
 "linija": 13.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.5056,
+"p_model": 0.5043,
 "p_kladionica": 0.4974,
-"ev": -0.0293,
+"ev": -0.0317,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011987-trojke": {
 "igrac_id": "P011987",
@@ -5804,14 +5804,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "trojke",
 "linija": 2.5,
-"strana": "ispod",
-"kvota": 1.66,
-"p_model": 0.5846,
-"p_kladionica": 0.5722,
-"ev": -0.0295,
+"strana": "preko",
+"kvota": 2.22,
+"p_model": 0.4354,
+"p_kladionica": 0.4278,
+"ev": -0.0333,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011212-PA": {
 "igrac_id": "P011212",
@@ -5822,14 +5822,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "PA",
 "linija": 15.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4851,
-"p_kladionica": 0.4778,
-"ev": -0.0299,
+"strana": "ispod",
+"kvota": 1.83,
+"p_model": 0.5254,
+"p_kladionica": 0.5222,
+"ev": -0.0385,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P003469-trojke": {
 "igrac_id": "P003469",
@@ -5842,12 +5842,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 2.2,
-"p_model": 0.4408,
+"p_model": 0.4589,
 "p_kladionica": 0.433,
-"ev": -0.0301,
-"ocena": "nema",
+"ev": 0.0097,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P003469-poeni": {
 "igrac_id": "P003469",
@@ -5860,12 +5860,12 @@
 "linija": 18.5,
 "strana": "ispod",
 "kvota": 1.95,
-"p_model": 0.4972,
+"p_model": 0.5218,
 "p_kladionica": 0.4895,
-"ev": -0.0305,
-"ocena": "nema",
+"ev": 0.0176,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P013384-asistencije": {
 "igrac_id": "P013384",
@@ -5878,12 +5878,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.69,
-"p_model": 0.5737,
+"p_model": 0.5898,
 "p_kladionica": 0.5656,
-"ev": -0.0305,
+"ev": -0.0032,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P003469-PA": {
 "igrac_id": "P003469",
@@ -5896,12 +5896,12 @@
 "linija": 20.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5385,
+"p_model": 0.5613,
 "p_kladionica": 0.5288,
-"ev": -0.0307,
-"ocena": "nema",
+"ev": 0.0103,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014782-skokovi": {
 "igrac_id": "P014782",
@@ -5914,12 +5914,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 2.05,
-"p_model": 0.4728,
+"p_model": 0.5108,
 "p_kladionica": 0.4648,
-"ev": -0.0308,
-"ocena": "nema",
+"ev": 0.0471,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014207-PS": {
 "igrac_id": "P014207",
@@ -5930,14 +5930,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 12.5,
-"strana": "preko",
-"kvota": 2.02,
-"p_model": 0.4798,
-"p_kladionica": 0.4712,
-"ev": -0.0309,
+"strana": "ispod",
+"kvota": 1.8,
+"p_model": 0.5341,
+"p_kladionica": 0.5288,
+"ev": -0.0386,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015164-PS": {
 "igrac_id": "P015164",
@@ -5950,12 +5950,12 @@
 "linija": 14.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5182,
+"p_model": 0.5162,
 "p_kladionica": 0.5105,
-"ev": -0.031,
+"ev": -0.0348,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014316-asistencije": {
 "igrac_id": "P014316",
@@ -5966,14 +5966,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "asistencije",
 "linija": 2.5,
-"strana": "preko",
-"kvota": 2.35,
-"p_model": 0.4122,
-"p_kladionica": 0.4051,
-"ev": -0.0313,
+"strana": "ispod",
+"kvota": 1.6,
+"p_model": 0.6177,
+"p_kladionica": 0.5949,
+"ev": -0.0116,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011205-asistencije": {
 "igrac_id": "P011205",
@@ -5986,12 +5986,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 1.8,
-"p_model": 0.5382,
+"p_model": 0.5427,
 "p_kladionica": 0.5288,
-"ev": -0.0313,
+"ev": -0.0231,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P013667-poeni": {
 "igrac_id": "P013667",
@@ -6002,14 +6002,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "poeni",
 "linija": 5.5,
-"strana": "preko",
-"kvota": 1.8,
-"p_model": 0.5381,
-"p_kladionica": 0.5288,
-"ev": -0.0314,
+"strana": "ispod",
+"kvota": 2.02,
+"p_model": 0.4938,
+"p_kladionica": 0.4712,
+"ev": -0.0024,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P008987-trojke": {
 "igrac_id": "P008987",
@@ -6020,14 +6020,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 2.8,
-"p_model": 0.3459,
-"p_kladionica": 0.3412,
-"ev": -0.0315,
+"strana": "ispod",
+"kvota": 1.45,
+"p_model": 0.6889,
+"p_kladionica": 0.6588,
+"ev": -0.0011,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011927-trojke": {
 "igrac_id": "P011927",
@@ -6038,14 +6038,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 1.61,
-"p_model": 0.6015,
-"p_kladionica": 0.5934,
-"ev": -0.0316,
-"ocena": "nema",
+"strana": "preko",
+"kvota": 2.35,
+"p_model": 0.4312,
+"p_kladionica": 0.4066,
+"ev": 0.0133,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P010357-asistencije": {
 "igrac_id": "P010357",
@@ -6058,12 +6058,12 @@
 "linija": 1.5,
 "strana": "ispod",
 "kvota": 1.55,
-"p_model": 0.6247,
+"p_model": 0.6278,
 "p_kladionica": 0.6144,
-"ev": -0.0318,
+"ev": -0.027,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P013667-skokovi": {
 "igrac_id": "P013667",
@@ -6074,14 +6074,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "skokovi",
 "linija": 4.5,
-"strana": "ispod",
-"kvota": 2.15,
-"p_model": 0.4503,
-"p_kladionica": 0.443,
-"ev": -0.0318,
+"strana": "preko",
+"kvota": 1.71,
+"p_model": 0.5823,
+"p_kladionica": 0.557,
+"ev": -0.0042,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014005-PA": {
 "igrac_id": "P014005",
@@ -6092,14 +6092,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PA",
 "linija": 14.5,
-"strana": "ispod",
-"kvota": 2.02,
-"p_model": 0.4791,
-"p_kladionica": 0.4712,
-"ev": -0.0322,
+"strana": "preko",
+"kvota": 1.8,
+"p_model": 0.5524,
+"p_kladionica": 0.5288,
+"ev": -0.0057,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P006661-PA": {
 "igrac_id": "P006661",
@@ -6112,12 +6112,12 @@
 "linija": 16.5,
 "strana": "ispod",
 "kvota": 1.87,
-"p_model": 0.5174,
+"p_model": 0.519,
 "p_kladionica": 0.5105,
-"ev": -0.0324,
+"ev": -0.0294,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011212-asistencije": {
 "igrac_id": "P011212",
@@ -6130,12 +6130,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 2.1,
-"p_model": 0.4603,
+"p_model": 0.4777,
 "p_kladionica": 0.4545,
-"ev": -0.0334,
-"ocena": "nema",
+"ev": 0.0032,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011199-skokovi": {
 "igrac_id": "P011199",
@@ -6146,14 +6146,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "skokovi",
 "linija": 6.5,
-"strana": "ispod",
-"kvota": 1.7,
-"p_model": 0.5685,
-"p_kladionica": 0.5607,
-"ev": -0.0336,
+"strana": "preko",
+"kvota": 2.17,
+"p_model": 0.4446,
+"p_kladionica": 0.4393,
+"ev": -0.0353,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P010545-PS": {
 "igrac_id": "P010545",
@@ -6164,14 +6164,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 12.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4831,
-"p_kladionica": 0.4778,
-"ev": -0.0338,
+"strana": "ispod",
+"kvota": 1.83,
+"p_model": 0.5228,
+"p_kladionica": 0.5222,
+"ev": -0.0434,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014782-poeni": {
 "igrac_id": "P014782",
@@ -6182,14 +6182,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "poeni",
 "linija": 4.5,
-"strana": "preko",
-"kvota": 1.82,
-"p_model": 0.5306,
-"p_kladionica": 0.5236,
-"ev": -0.0344,
+"strana": "ispod",
+"kvota": 2.0,
+"p_model": 0.4784,
+"p_kladionica": 0.4764,
+"ev": -0.0432,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011194-skokovi": {
 "igrac_id": "P011194",
@@ -6200,14 +6200,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "skokovi",
 "linija": 3.5,
-"strana": "preko",
-"kvota": 1.97,
-"p_model": 0.4901,
-"p_kladionica": 0.4816,
-"ev": -0.0345,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.83,
+"p_model": 0.5585,
+"p_kladionica": 0.5184,
+"ev": 0.022,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P001255-trojke": {
 "igrac_id": "P001255",
@@ -6220,12 +6220,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.45,
-"p_model": 0.3941,
+"p_model": 0.3911,
 "p_kladionica": 0.389,
-"ev": -0.0345,
+"ev": -0.0419,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P003469-PS": {
 "igrac_id": "P003469",
@@ -6238,12 +6238,12 @@
 "linija": 24.5,
 "strana": "ispod",
 "kvota": 2.0,
-"p_model": 0.4827,
+"p_model": 0.5065,
 "p_kladionica": 0.4778,
-"ev": -0.0347,
-"ocena": "nema",
+"ev": 0.0129,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012878-skokovi": {
 "igrac_id": "P012878",
@@ -6256,12 +6256,12 @@
 "linija": 5.5,
 "strana": "ispod",
 "kvota": 1.74,
-"p_model": 0.5546,
+"p_model": 0.5724,
 "p_kladionica": 0.5469,
-"ev": -0.035,
+"ev": -0.004,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P014782-PS": {
 "igrac_id": "P014782",
@@ -6272,14 +6272,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PS",
 "linija": 7.5,
-"strana": "preko",
-"kvota": 1.85,
-"p_model": 0.5215,
-"p_kladionica": 0.5132,
-"ev": -0.0353,
+"strana": "ispod",
+"kvota": 1.95,
+"p_model": 0.4992,
+"p_kladionica": 0.4868,
+"ev": -0.0266,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012731-asistencije": {
 "igrac_id": "P012731",
@@ -6292,12 +6292,12 @@
 "linija": 0.5,
 "strana": "preko",
 "kvota": 1.56,
-"p_model": 0.6182,
+"p_model": 0.6327,
 "p_kladionica": 0.608,
-"ev": -0.0355,
+"ev": -0.013,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015138-PS": {
 "igrac_id": "P015138",
@@ -6308,14 +6308,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 17.5,
-"strana": "ispod",
-"kvota": 1.82,
-"p_model": 0.5299,
-"p_kladionica": 0.5236,
-"ev": -0.0356,
+"strana": "preko",
+"kvota": 2.0,
+"p_model": 0.4856,
+"p_kladionica": 0.4764,
+"ev": -0.0288,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011212-poeni": {
 "igrac_id": "P011212",
@@ -6326,14 +6326,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "poeni",
 "linija": 10.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4822,
-"p_kladionica": 0.4764,
-"ev": -0.0356,
+"strana": "ispod",
+"kvota": 1.82,
+"p_model": 0.5245,
+"p_kladionica": 0.5236,
+"ev": -0.0455,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P011987-PS": {
 "igrac_id": "P011987",
@@ -6344,14 +6344,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "PS",
 "linija": 16.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5212,
-"p_kladionica": 0.5157,
-"ev": -0.0358,
+"strana": "preko",
+"kvota": 1.97,
+"p_model": 0.485,
+"p_kladionica": 0.4843,
+"ev": -0.0446,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P013667-PS": {
 "igrac_id": "P013667",
@@ -6364,12 +6364,12 @@
 "linija": 10.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5156,
+"p_model": 0.5117,
 "p_kladionica": 0.5105,
-"ev": -0.0358,
+"ev": -0.0431,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P008987-poeni": {
 "igrac_id": "P008987",
@@ -6382,12 +6382,12 @@
 "linija": 11.5,
 "strana": "preko",
 "kvota": 2.05,
-"p_model": 0.4702,
+"p_model": 0.4764,
 "p_kladionica": 0.4648,
-"ev": -0.036,
+"ev": -0.0234,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P003469-skokovi": {
 "igrac_id": "P003469",
@@ -6398,14 +6398,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "skokovi",
 "linija": 6.5,
-"strana": "preko",
-"kvota": 2.2,
-"p_model": 0.4381,
-"p_kladionica": 0.4344,
-"ev": -0.0362,
+"strana": "ispod",
+"kvota": 1.69,
+"p_model": 0.5669,
+"p_kladionica": 0.5656,
+"ev": -0.0419,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P015153-poeni": {
 "igrac_id": "P015153",
@@ -6418,12 +6418,12 @@
 "linija": 6.5,
 "strana": "preko",
 "kvota": 2.02,
-"p_model": 0.4771,
+"p_model": 0.4869,
 "p_kladionica": 0.4712,
-"ev": -0.0363,
+"ev": -0.0166,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015139-skokovi": {
 "igrac_id": "P015139",
@@ -6434,14 +6434,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "skokovi",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 1.77,
-"p_model": 0.5444,
-"p_kladionica": 0.5391,
-"ev": -0.0364,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 2.07,
+"p_model": 0.5131,
+"p_kladionica": 0.4609,
+"ev": 0.0622,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014207-poeni": {
 "igrac_id": "P014207",
@@ -6454,12 +6454,12 @@
 "linija": 9.5,
 "strana": "ispod",
 "kvota": 1.88,
-"p_model": 0.5125,
+"p_model": 0.5223,
 "p_kladionica": 0.5053,
-"ev": -0.0365,
+"ev": -0.0181,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014734-skokovi": {
 "igrac_id": "P014734",
@@ -6472,12 +6472,12 @@
 "linija": 3.5,
 "strana": "ispod",
 "kvota": 2.15,
-"p_model": 0.4481,
+"p_model": 0.4693,
 "p_kladionica": 0.443,
-"ev": -0.0366,
-"ocena": "nema",
+"ev": 0.0091,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P013402-PA": {
 "igrac_id": "P013402",
@@ -6488,14 +6488,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "PA",
 "linija": 14.5,
-"strana": "ispod",
-"kvota": 2.0,
-"p_model": 0.4815,
-"p_kladionica": 0.4764,
-"ev": -0.0371,
-"ocena": "nema",
+"strana": "preko",
+"kvota": 1.82,
+"p_model": 0.5555,
+"p_kladionica": 0.5236,
+"ev": 0.011,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014742-PS": {
 "igrac_id": "P014742",
@@ -6508,12 +6508,12 @@
 "linija": 9.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5148,
+"p_model": 0.5449,
 "p_kladionica": 0.5105,
-"ev": -0.0374,
-"ocena": "nema",
+"ev": 0.019,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P006661-trojke": {
 "igrac_id": "P006661",
@@ -6524,14 +6524,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "trojke",
 "linija": 2.5,
-"strana": "preko",
-"kvota": 2.07,
-"p_model": 0.465,
-"p_kladionica": 0.4595,
-"ev": -0.0374,
+"strana": "ispod",
+"kvota": 1.76,
+"p_model": 0.541,
+"p_kladionica": 0.5405,
+"ev": -0.0479,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012788-poeni": {
 "igrac_id": "P012788",
@@ -6542,14 +6542,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "poeni",
 "linija": 10.5,
-"strana": "preko",
-"kvota": 1.88,
-"p_model": 0.5117,
-"p_kladionica": 0.5053,
-"ev": -0.038,
+"strana": "ispod",
+"kvota": 1.92,
+"p_model": 0.5048,
+"p_kladionica": 0.4947,
+"ev": -0.0308,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012878-asistencije": {
 "igrac_id": "P012878",
@@ -6562,12 +6562,12 @@
 "linija": 0.5,
 "strana": "ispod",
 "kvota": 2.3,
-"p_model": 0.4182,
+"p_model": 0.4763,
 "p_kladionica": 0.4148,
-"ev": -0.0382,
-"ocena": "nema",
+"ev": 0.0955,
+"ocena": "jaka",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012606-PA": {
 "igrac_id": "P012606",
@@ -6578,14 +6578,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "PA",
 "linija": 14.5,
-"strana": "preko",
-"kvota": 1.88,
-"p_model": 0.5114,
-"p_kladionica": 0.5053,
-"ev": -0.0385,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.92,
+"p_model": 0.5315,
+"p_kladionica": 0.4947,
+"ev": 0.0205,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P014786-asistencije": {
 "igrac_id": "P014786",
@@ -6596,14 +6596,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "asistencije",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 1.56,
-"p_model": 0.6161,
-"p_kladionica": 0.611,
-"ev": -0.0389,
+"strana": "ispod",
+"kvota": 2.45,
+"p_model": 0.3997,
+"p_kladionica": 0.389,
+"ev": -0.0207,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P007056-PA": {
 "igrac_id": "P007056",
@@ -6614,14 +6614,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PA",
 "linija": 8.5,
-"strana": "ispod",
-"kvota": 1.83,
-"p_model": 0.5251,
-"p_kladionica": 0.5222,
-"ev": -0.039,
+"strana": "preko",
+"kvota": 2.0,
+"p_model": 0.4857,
+"p_kladionica": 0.4778,
+"ev": -0.0285,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003842-PA": {
 "igrac_id": "P003842",
@@ -6632,14 +6632,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "PA",
 "linija": 13.5,
-"strana": "ispod",
-"kvota": 1.8,
-"p_model": 0.5338,
-"p_kladionica": 0.5288,
-"ev": -0.0391,
-"ocena": "nema",
+"strana": "preko",
+"kvota": 2.02,
+"p_model": 0.5108,
+"p_kladionica": 0.4712,
+"ev": 0.0317,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P003112-PA": {
 "igrac_id": "P003112",
@@ -6652,12 +6652,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.77,
-"p_model": 0.5428,
+"p_model": 0.558,
 "p_kladionica": 0.5366,
-"ev": -0.0393,
+"ev": -0.0124,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014152-poeni": {
 "igrac_id": "P014152",
@@ -6668,14 +6668,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "poeni",
 "linija": 10.5,
-"strana": "preko",
-"kvota": 2.07,
-"p_model": 0.464,
-"p_kladionica": 0.4609,
-"ev": -0.0396,
+"strana": "ispod",
+"kvota": 1.77,
+"p_model": 0.5456,
+"p_kladionica": 0.5391,
+"ev": -0.0343,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P009025-poeni": {
 "igrac_id": "P009025",
@@ -6686,14 +6686,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "poeni",
 "linija": 9.5,
-"strana": "preko",
-"kvota": 1.83,
-"p_model": 0.5247,
-"p_kladionica": 0.5184,
-"ev": -0.0397,
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.4893,
+"p_kladionica": 0.4816,
+"ev": -0.036,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P013384-trojke": {
 "igrac_id": "P013384",
@@ -6706,12 +6706,12 @@
 "linija": 2.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5054,
+"p_model": 0.5109,
 "p_kladionica": 0.5,
-"ev": -0.0397,
+"ev": -0.0292,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015165-trojke": {
 "igrac_id": "P015165",
@@ -6722,14 +6722,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 2.2,
-"p_model": 0.4365,
-"p_kladionica": 0.4344,
-"ev": -0.0398,
+"strana": "preko",
+"kvota": 1.69,
+"p_model": 0.5859,
+"p_kladionica": 0.5656,
+"ev": -0.0098,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P014008-PS": {
 "igrac_id": "P014008",
@@ -6740,14 +6740,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "PS",
 "linija": 15.5,
-"strana": "ispod",
-"kvota": 1.92,
-"p_model": 0.5,
-"p_kladionica": 0.4974,
-"ev": -0.04,
+"strana": "preko",
+"kvota": 1.9,
+"p_model": 0.5049,
+"p_kladionica": 0.5026,
+"ev": -0.0407,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P012608-skokovi": {
 "igrac_id": "P012608",
@@ -6758,14 +6758,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "skokovi",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 1.61,
-"p_model": 0.596,
-"p_kladionica": 0.5903,
-"ev": -0.0405,
+"strana": "ispod",
+"kvota": 2.32,
+"p_model": 0.4156,
+"p_kladionica": 0.4097,
+"ev": -0.0359,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012610-PS": {
 "igrac_id": "P012610",
@@ -6776,14 +6776,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PS",
 "linija": 14.5,
-"strana": "ispod",
-"kvota": 1.92,
-"p_model": 0.4997,
-"p_kladionica": 0.4974,
-"ev": -0.0405,
+"strana": "preko",
+"kvota": 1.9,
+"p_model": 0.5086,
+"p_kladionica": 0.5026,
+"ev": -0.0337,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015162-trojke": {
 "igrac_id": "P015162",
@@ -6794,14 +6794,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "trojke",
 "linija": 0.5,
-"strana": "preko",
-"kvota": 1.63,
-"p_model": 0.5885,
-"p_kladionica": 0.5852,
-"ev": -0.0407,
+"strana": "ispod",
+"kvota": 2.3,
+"p_model": 0.4195,
+"p_kladionica": 0.4148,
+"ev": -0.0352,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015164-poeni": {
 "igrac_id": "P015164",
@@ -6814,12 +6814,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5184,
+"p_model": 0.5216,
 "p_kladionica": 0.5157,
-"ev": -0.0409,
+"ev": -0.035,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P015138-asistencije": {
 "igrac_id": "P015138",
@@ -6830,14 +6830,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "asistencije",
 "linija": 2.5,
-"strana": "ispod",
-"kvota": 1.43,
-"p_model": 0.6707,
-"p_kladionica": 0.6674,
-"ev": -0.0409,
+"strana": "preko",
+"kvota": 2.87,
+"p_model": 0.3473,
+"p_kladionica": 0.3326,
+"ev": -0.0031,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P009048-trojke": {
 "igrac_id": "P009048",
@@ -6850,12 +6850,12 @@
 "linija": 0.5,
 "strana": "preko",
 "kvota": 1.52,
-"p_model": 0.6306,
+"p_model": 0.6388,
 "p_kladionica": 0.6265,
-"ev": -0.0415,
+"ev": -0.029,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P013402-PS": {
 "igrac_id": "P013402",
@@ -6868,12 +6868,12 @@
 "linija": 15.5,
 "strana": "preko",
 "kvota": 1.87,
-"p_model": 0.5123,
+"p_model": 0.5509,
 "p_kladionica": 0.5105,
-"ev": -0.0419,
-"ocena": "nema",
+"ev": 0.0302,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014736-PA": {
 "igrac_id": "P014736",
@@ -6886,12 +6886,12 @@
 "linija": 14.5,
 "strana": "preko",
 "kvota": 1.83,
-"p_model": 0.5233,
+"p_model": 0.5301,
 "p_kladionica": 0.5184,
-"ev": -0.0424,
+"ev": -0.0299,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P006739-asistencije": {
 "igrac_id": "P006739",
@@ -6902,14 +6902,14 @@
 "datum": "2026-10-30 19:00",
 "tip": "asistencije",
 "linija": 4.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4786,
-"p_kladionica": 0.4764,
-"ev": -0.0428,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.82,
+"p_model": 0.5657,
+"p_kladionica": 0.5236,
+"ev": 0.0296,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P014008-poeni": {
 "igrac_id": "P014008",
@@ -6922,12 +6922,12 @@
 "linija": 13.5,
 "strana": "preko",
 "kvota": 1.83,
-"p_model": 0.523,
+"p_model": 0.5239,
 "p_kladionica": 0.5222,
-"ev": -0.0429,
+"ev": -0.0412,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P006661-asistencije": {
 "igrac_id": "P006661",
@@ -6940,12 +6940,12 @@
 "linija": 2.5,
 "strana": "ispod",
 "kvota": 1.97,
-"p_model": 0.4858,
+"p_model": 0.4999,
 "p_kladionica": 0.4843,
-"ev": -0.043,
+"ev": -0.0151,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015163-trojke": {
 "igrac_id": "P015163",
@@ -6956,14 +6956,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "trojke",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 2.27,
-"p_model": 0.4216,
-"p_kladionica": 0.4194,
-"ev": -0.0431,
+"strana": "preko",
+"kvota": 1.64,
+"p_model": 0.5859,
+"p_kladionica": 0.5806,
+"ev": -0.0392,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P008985-skokovi": {
 "igrac_id": "P008985",
@@ -6974,14 +6974,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "skokovi",
 "linija": 2.5,
-"strana": "preko",
-"kvota": 1.74,
-"p_model": 0.5499,
-"p_kladionica": 0.5469,
-"ev": -0.0431,
+"strana": "ispod",
+"kvota": 2.1,
+"p_model": 0.4562,
+"p_kladionica": 0.4531,
+"ev": -0.0421,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P012610-PA": {
 "igrac_id": "P012610",
@@ -6992,14 +6992,14 @@
 "datum": "2026-10-30 20:15",
 "tip": "PA",
 "linija": 12.5,
-"strana": "preko",
-"kvota": 1.85,
-"p_model": 0.5171,
-"p_kladionica": 0.5157,
-"ev": -0.0434,
+"strana": "ispod",
+"kvota": 1.97,
+"p_model": 0.4888,
+"p_kladionica": 0.4843,
+"ev": -0.0371,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P013402-poeni": {
 "igrac_id": "P013402",
@@ -7010,14 +7010,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "poeni",
 "linija": 13.5,
-"strana": "ispod",
-"kvota": 1.95,
-"p_model": 0.4905,
-"p_kladionica": 0.4895,
-"ev": -0.0435,
-"ocena": "nema",
+"strana": "preko",
+"kvota": 1.87,
+"p_model": 0.5455,
+"p_kladionica": 0.5105,
+"ev": 0.0202,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-87-P011217-skokovi": {
 "igrac_id": "P011217",
@@ -7030,12 +7030,12 @@
 "linija": 4.5,
 "strana": "ispod",
 "kvota": 1.66,
-"p_model": 0.576,
+"p_model": 0.5929,
 "p_kladionica": 0.5754,
-"ev": -0.0438,
+"ev": -0.0159,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-88-P008099-skokovi": {
 "igrac_id": "P008099",
@@ -7046,14 +7046,14 @@
 "datum": "2026-10-30 18:30",
 "tip": "skokovi",
 "linija": 1.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4778,
-"p_kladionica": 0.4778,
-"ev": -0.0443,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.83,
+"p_model": 0.5633,
+"p_kladionica": 0.5222,
+"ev": 0.0309,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011212-PS": {
 "igrac_id": "P011212",
@@ -7066,12 +7066,12 @@
 "linija": 12.5,
 "strana": "ispod",
 "kvota": 1.92,
-"p_model": 0.4976,
+"p_model": 0.5106,
 "p_kladionica": 0.4947,
-"ev": -0.0446,
+"ev": -0.0197,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015166-PS": {
 "igrac_id": "P015166",
@@ -7084,12 +7084,12 @@
 "linija": 14.5,
 "strana": "preko",
 "kvota": 1.95,
-"p_model": 0.4899,
+"p_model": 0.4965,
 "p_kladionica": 0.4895,
-"ev": -0.0448,
+"ev": -0.0318,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P014107-poeni": {
 "igrac_id": "P014107",
@@ -7100,14 +7100,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "poeni",
 "linija": 8.5,
-"strana": "ispod",
-"kvota": 1.85,
-"p_model": 0.5163,
-"p_kladionica": 0.5157,
-"ev": -0.0448,
+"strana": "preko",
+"kvota": 1.97,
+"p_model": 0.4907,
+"p_kladionica": 0.4843,
+"ev": -0.0333,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015162-poeni": {
 "igrac_id": "P015162",
@@ -7118,14 +7118,14 @@
 "datum": "2026-10-30 20:00",
 "tip": "poeni",
 "linija": 7.5,
-"strana": "ispod",
-"kvota": 1.88,
-"p_model": 0.5077,
-"p_kladionica": 0.5053,
-"ev": -0.0454,
+"strana": "preko",
+"kvota": 1.92,
+"p_model": 0.4979,
+"p_kladionica": 0.4947,
+"ev": -0.0441,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-89-P004554-asistencije": {
 "igrac_id": "P004554",
@@ -7136,14 +7136,14 @@
 "datum": "2026-10-30 20:30",
 "tip": "asistencije",
 "linija": 1.5,
-"strana": "ispod",
-"kvota": 1.75,
-"p_model": 0.5454,
-"p_kladionica": 0.5419,
-"ev": -0.0455,
+"strana": "preko",
+"kvota": 2.07,
+"p_model": 0.47,
+"p_kladionica": 0.4581,
+"ev": -0.027,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015166-skokovi": {
 "igrac_id": "P015166",
@@ -7156,12 +7156,12 @@
 "linija": 3.5,
 "strana": "preko",
 "kvota": 1.77,
-"p_model": 0.5391,
+"p_model": 0.5639,
 "p_kladionica": 0.5366,
-"ev": -0.0457,
+"ev": -0.0019,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P008987-PS": {
 "igrac_id": "P008987",
@@ -7174,12 +7174,12 @@
 "linija": 15.5,
 "strana": "preko",
 "kvota": 1.9,
-"p_model": 0.5022,
+"p_model": 0.5182,
 "p_kladionica": 0.5,
-"ev": -0.0459,
+"ev": -0.0154,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-85-P015166-poeni": {
 "igrac_id": "P015166",
@@ -7192,12 +7192,12 @@
 "linija": 10.5,
 "strana": "ispod",
 "kvota": 1.9,
-"p_model": 0.5022,
+"p_model": 0.506,
 "p_kladionica": 0.5,
-"ev": -0.0459,
+"ev": -0.0385,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P013389-poeni": {
 "igrac_id": "P013389",
@@ -7210,12 +7210,12 @@
 "linija": 6.5,
 "strana": "ispod",
 "kvota": 2.02,
-"p_model": 0.4721,
+"p_model": 0.4989,
 "p_kladionica": 0.4712,
-"ev": -0.0465,
-"ocena": "nema",
+"ev": 0.0077,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P011231-PS": {
 "igrac_id": "P011231",
@@ -7228,12 +7228,12 @@
 "linija": 8.5,
 "strana": "preko",
 "kvota": 1.77,
-"p_model": 0.5385,
+"p_model": 0.5534,
 "p_kladionica": 0.5366,
-"ev": -0.0468,
+"ev": -0.0205,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P012606-poeni": {
 "igrac_id": "P012606",
@@ -7244,14 +7244,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "poeni",
 "linija": 10.5,
-"strana": "preko",
-"kvota": 2.0,
-"p_model": 0.4765,
-"p_kladionica": 0.4764,
-"ev": -0.0471,
-"ocena": "nema",
+"strana": "ispod",
+"kvota": 1.82,
+"p_model": 0.5642,
+"p_kladionica": 0.5236,
+"ev": 0.0268,
+"ocena": "slaba",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-90-P011205-PS": {
 "igrac_id": "P011205",
@@ -7264,12 +7264,12 @@
 "linija": 11.5,
 "strana": "ispod",
 "kvota": 1.85,
-"p_model": 0.5146,
+"p_model": 0.5167,
 "p_kladionica": 0.5132,
-"ev": -0.048,
+"ev": -0.0441,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-84-P008987-skokovi": {
 "igrac_id": "P008987",
@@ -7280,14 +7280,14 @@
 "datum": "2026-10-30 17:00",
 "tip": "skokovi",
 "linija": 4.5,
-"strana": "ispod",
-"kvota": 1.72,
-"p_model": 0.5534,
-"p_kladionica": 0.5521,
-"ev": -0.0482,
-"ocena": "nema",
+"strana": "preko",
+"kvota": 2.12,
+"p_model": 0.4916,
+"p_kladionica": 0.4479,
+"ev": 0.0423,
+"ocena": "srednja",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 },
 "2026-86-P014009-trojke": {
 "igrac_id": "P014009",
@@ -7298,13 +7298,13 @@
 "datum": "2026-10-30 19:00",
 "tip": "trojke",
 "linija": 0.5,
-"strana": "ispod",
-"kvota": 2.72,
-"p_model": 0.3497,
-"p_kladionica": 0.3493,
-"ev": -0.0488,
+"strana": "preko",
+"kvota": 1.46,
+"p_model": 0.6591,
+"p_kladionica": 0.6507,
+"ev": -0.0376,
 "ocena": "nema",
 "top": false,
-"sacuvano": "2026-10-30 13:31"
+"sacuvano": "2026-10-30 13:38"
 }
 }

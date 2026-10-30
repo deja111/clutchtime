@@ -5,9 +5,8 @@ Procena verovatnoće da igrač pređe liniju (preko/ispod) za propove iz kvote.p
 Koristi ga sajt.py (stranica propovi.html).
 
 Kako se računa očekivana vrednost (npr. poeni):
-    1. Učinak po minutu ove sezone; skorije utakmice vrede više (poluživot 6 utakmica).
-       Na početku sezone se meša sa prošlom sezonom, da 3-4 utakmice ne odluče sve.
-    2. Očekivani minuti: mešavina skorih (poluživot 3) i sezonskog proseka (trend minutaže).
+    1. Učinak po minutu u poslednjih 5 utakmica (prošla sezona se ne koristi).
+    2. Očekivani minuti: prosek poslednjih 5 utakmica.
     3. Protivnik: koliko dozvoljava igračima te pozicije u toj kategoriji, u odnosu na
        prosek lige. Ublaženo prema 1 kad protivnik ima malo odigranih utakmica.
     4. Kod kuće / u gostima: igračev odnos, jako ublažen (najviše ±6%).
@@ -15,7 +14,7 @@ Raspodela: negativna binomna (brojevi poena/skokova su "rasutiji" od Poasonove),
 rasipanje se procenjuje iz igračevih utakmica. P(preko 14.5) = P(X >= 15).
 
 Kladionica: 1/kvota, normalizovano da preko + ispod = 100% (bez marže).
-Konačna procena je pola model, pola kladionica (TEZINA_MODELA, objašnjenje niže).
+Konačna procena je 30% model, 70% kladionica (TEZINA_MODELA, objašnjenje niže).
 Očekivani povraćaj (EV) = procena × kvota - 1. Rang je po EV.
 
 Ovo je statistička procena, ne savet za klađenje. Tačnost se proverava kroz arhivu kvota.
@@ -24,9 +23,10 @@ Ovo je statistička procena, ne savet za klađenje. Tačnost se proverava kroz a
 import math
 from collections import defaultdict
 
-POLUZIVOT_UCINAK = 6.0
-POLUZIVOT_MINUTI = 3.0
-PRIOR_UTAKMICA = 4.0          # koliko "utakmica" vredi prošla sezona kao početna procena
+# Učinak i minuti iz poslednjih UZORAK utakmica tekuće sezone, bez prošle sezone (Dejanova odluka 30.10.2026).
+# Provera na 9.562 utakmice: ponderisana cela sezona (+ prošla) imala je manju grešku (poeni 5,49 prema 5,78),
+# ali je izabrano jednostavnije i "svežije" pravilo; kalibracija je ponovo naučena za ovaj način.
+UZORAK = 5
 PROTIVNIK_UBLAZI = 8.0        # težina protivnika = n / (n + 8)
 DOMACIN_MAX = 0.06
 MALO_UTAKMICA = 5             # ispod ovoga: oznaka "malo podataka"
@@ -58,9 +58,10 @@ def ocena(ev, sumnjivo):
 # Naučeno na sezonama 2024-25 i 2025-26 (linije na proseku ±2), provereno: učeno na 2024-25,
 # testirano na 2025-26 -> Brier bolji u svim kategorijama. b < 1 = model je bio previše samouveren.
 KALIBRACIJA = {
-    "poeni": (0.071, 0.871), "skokovi": (-0.013, 0.945), "asistencije": (0.033, 0.932),
-    "trojke": (-0.049, 0.926), "ukradene": (-0.144, 0.914), "blokade": (-0.209, 0.973),
-    "PSA": (0.075, 0.863), "PS": (0.053, 0.848), "PA": (0.089, 0.896), "SA": (0.032, 0.937),
+    # Naučeno ponovo 30.10.2026. za model "poslednjih 5 utakmica" (b manje = taj model je samouvereniji)
+    "poeni": (0.034, 0.731), "skokovi": (-0.043, 0.836), "asistencije": (-0.091, 0.824),
+    "trojke": (-0.181, 0.805), "ukradene": (-0.368, 0.803), "blokade": (-0.557, 0.865),
+    "PSA": (0.030, 0.764), "PS": (0.027, 0.747), "PA": (0.041, 0.764), "SA": (-0.016, 0.842),
 }
 
 
@@ -211,14 +212,14 @@ class Saigraci:
         u igračevim skorim utakmicama (ako y ne igra već 5 utakmica, forma to već sadrži)."""
         if not odsutni or not ut_x:
             return 0.0, 1.0, []
-        w = tezine(len(ut_x), POLUZIVOT_UCINAK)
+        # Isto kao procena igrača: gleda se samo poslednjih UZORAK utakmica, jednako
+        w = [1.0 if i >= len(ut_x) - UZORAK else 0.0 for i in range(len(ut_x))]
         poz_x = self.poz(x)
         min_tima = {}
         for igrac in self.tim_sezona[(self.sezona, tim)]:
             ut = [r for r in self.po_igracu[(igrac, self.sezona, tim)] if not do_datuma or r["datum"] < do_datuma]
             if ut:
-                wm = tezine(len(ut), POLUZIVOT_MINUTI)
-                min_tima[igrac] = sum(a * (r["minuti"] or 0) for a, r in zip(wm, ut)) / sum(wm)
+                min_tima[igrac] = sum(r["minuti"] or 0 for r in ut[-UZORAK:]) / len(ut[-UZORAK:])
         m_x = min_tima.get(x, 0)
         dodatno, mnozilac, opis = 0.0, 1.0, []
         for y, q in odsutni.items():
@@ -303,25 +304,18 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
     vr = [vrednost(r, tip) for r in ut_sezona]
     mi = [r["minuti"] or 0 for r in ut_sezona]
 
-    w = tezine(n, POLUZIVOT_UCINAK)
-    min_w = sum(a * b for a, b in zip(w, mi))
-    po_minutu = sum(a * b for a, b in zip(w, vr)) / min_w if min_w else 0
-    n_ef = sum(w)
-    min_prosla = sum(r["minuti"] or 0 for r in ut_prosla)
-    prosla_prosek = sum(vrednost(r, tip) for r in ut_prosla) / len(ut_prosla) if min_prosla >= 100 else None
-    if min_prosla >= 100:
-        po_minutu_prosla = sum(vrednost(r, tip) for r in ut_prosla) / min_prosla
-        po_minutu = (n_ef * po_minutu + PRIOR_UTAKMICA * po_minutu_prosla) / (n_ef + PRIOR_UTAKMICA)
-
-    wm = tezine(n, POLUZIVOT_MINUTI)
-    min_skoro = sum(a * b for a, b in zip(wm, mi)) / sum(wm)
+    # Učinak po minutu i minuti: samo poslednjih UZORAK utakmica, jednako (Dejanova odluka 30.10.2026;
+    # prošla sezona se ne koristi). ut_prosla se više ne koristi, ostaje zbog poziva.
+    vr5, mi5 = vr[-UZORAK:], mi[-UZORAK:]
+    po_minutu = sum(vr5) / sum(mi5) if sum(mi5) else 0
+    prosla_prosek = None
     min_sezona = sum(mi) / n
-    minuti = 0.6 * min_skoro + 0.4 * min_sezona
+    minuti = sum(mi5) / len(mi5)
     # Koraci od sezonskog proseka do očekivanog (za objašnjenje: koliko koji faktor dodaje/oduzima)
     sezona_prosek = sum(vr) / n
     koraci = []
     pre = po_minutu * min_sezona
-    koraci.append(("ucinak", pre - sezona_prosek))        # skorašnji učinak po minutu (+ prošla sezona)
+    koraci.append(("ucinak", pre - sezona_prosek))        # učinak po minutu u poslednjih 5
     sad = po_minutu * minuti
     koraci.append(("minuti", sad - pre))                  # trend minutaže
 
@@ -352,7 +346,7 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
 
     # Rasipanje: varijansa/srednja vrednost iz utakmica ove i prošle sezone, ublaženo ka
     # tipičnoj vrednosti u ligi (iz malo utakmica procena je nepouzdana, obično preuska)
-    sve = vr + [vrednost(r, tip) for r in ut_prosla]
+    sve = vr
     sr = sum(sve) / len(sve)
     var = sum((x - sr) ** 2 for x in sve) / max(len(sve) - 1, 1)
     igracevo = var / sr if sr else RASIPANJE_LIGA[tip]
@@ -361,7 +355,7 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
 
     return {"ocekivano": ocekivano, "rasipanje": rasipanje, "minuti": minuti, "min_sezona": min_sezona,
             "sezona_prosek": sum(vr) / n, "poslednjih5": sum(vr[-5:]) / len(vr[-5:]),
-            "prosla_prosek": prosla_prosek if n_ef < 3 * PRIOR_UTAKMICA else None,  # pomenuti samo kad dosta utiče
+            "prosla_prosek": prosla_prosek,
             "f_dom": f_dom, "f_prot": f_prot, "n_prot": n_p, "vrednosti": vr,
             "saigraci": opis_saigraca, "minuti_bez_saigraca": minuti_bez_saigraca, "mnozilac": mnozilac,
             "ocekivana_razlika": ocekivana_razlika, "razlika_min": razlika_min, "koraci": dict(koraci)}

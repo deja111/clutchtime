@@ -2,17 +2,17 @@
  "2026-10-30": {
   "nogice": [
    {
-    "kljuc": "2026-84-P015153-trojke",
-    "igrac_id": "P015153",
-    "tim": "HTA",
+    "kljuc": "2026-90-P004004-trojke",
+    "igrac_id": "P004004",
+    "tim": "MIL",
     "sezona": 2026,
-    "sifra_utakmice": 84,
-    "datum": "2026-10-30 17:00",
+    "sifra_utakmice": 90,
+    "datum": "2026-10-30 20:15",
     "tip": "trojke",
-    "linija": 0.5,
+    "linija": 1.5,
     "strana": "ispod",
-    "kvota": 1.39,
-    "p_model": 0.722
+    "kvota": 1.46,
+    "p_model": 0.6934
    },
    {
     "kljuc": "2026-88-P008099-trojke",
@@ -25,24 +25,24 @@
     "linija": 1.5,
     "strana": "ispod",
     "kvota": 1.53,
-    "p_model": 0.669
+    "p_model": 0.6771
    },
    {
-    "kljuc": "2026-87-P009862-skokovi",
-    "igrac_id": "P009862",
-    "tim": "BAR",
+    "kljuc": "2026-85-P014152-trojke",
+    "igrac_id": "P014152",
+    "tim": "BAS",
     "sezona": 2026,
-    "sifra_utakmice": 87,
-    "datum": "2026-10-30 20:30",
-    "tip": "skokovi",
-    "linija": 2.5,
+    "sifra_utakmice": 85,
+    "datum": "2026-10-30 20:00",
+    "tip": "trojke",
+    "linija": 1.5,
     "strana": "ispod",
-    "kvota": 1.55,
-    "p_model": 0.66
+    "kvota": 1.5,
+    "p_model": 0.6768
    }
   ],
-  "kvota": 3.3,
-  "sansa": 0.3188,
-  "sacuvano": "2026-10-30 13:31"
+  "kvota": 3.35,
+  "sansa": 0.3178,
+  "sacuvano": "2026-10-30 13:38"
  }
 }
