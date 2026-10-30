@@ -17,7 +17,7 @@ a Vercel ga objavljuje.
 | `preuzmi_kolo.py` | Stari pomoćni alat (CSV jednog kola). |
 | `objavi.py`, `pokreni_azuriranje.bat` | ZASTARELO (stari GitHub Pages + Task Scheduler). Ne pokretati. |
 | `istrazi_oddspapi.py` | Jednokratno istraživanje OddsPapi odgovora (vidi dole). `--pregled` ponovo ispiše nalaze bez zahteva. |
-| `model.py` | P(preko/ispod) za glavnu liniju svakog propa: učinak po minutu (ponderisan, + prošla sezona), očekivani minuti, protivnik po poziciji, kod kuće/gosti; negativna binomna (rasipanje ublaženo ka `RASIPANJE_LIGA`) + Platt kalibracija po kategoriji (`KALIBRACIJA`, naučeno na 2024-26). Konačno = 50% model + 50% kladionica (`TEZINA_MODELA`). `sumnjivo` = linija 25%+ od procene (bez zelenog). Koristi ga `sajt.py` → `propovi.html`. |
+| `model.py` | P(preko/ispod) za glavnu liniju svakog propa: učinak po minutu (ponderisan, + prošla sezona), očekivani minuti, protivnik po poziciji, kod kuće/gosti; negativna binomna (rasipanje ublaženo ka `RASIPANJE_LIGA`) + Platt kalibracija po kategoriji (`KALIBRACIJA`, naučeno na 2024-26). Konačno = 30% model + 70% kladionica (`TEZINA_MODELA`, bilo 0,5 do 30.10.2026). Ocena jaka/srednja/slaba (`OCENA_JAKA` 8%, `OCENA_SREDNJA` 4% EV). `sumnjivo` = linija 25%+ od procene (bez zelenog). Koristi ga `sajt.py` → `propovi.html`. |
 | `kvote.py` | Kvote za propove igrača (superbet.rs) → `podaci/kvote/kvote_poslednje.json` + `arhiva/`. Zove API samo dan utakmice/dan pre, najviše 2x dnevno (`pozivi.json`). `--sada`, `--fajl X` (obrada bez poziva). Bez ključa samo preskoči. |
 
 Tabele u bazi: `timovi`, `utakmice` (sezona 2026 = 2026-27, `odigrana` 0/1), `igraci`, `statistika` (jedan red = igrač na utakmici).
@@ -95,6 +95,9 @@ Nalazi iz `istrazi_oddspapi.py` (30.10.2026, pravi odgovori u `podaci/oddspapi/`
       Računa se samo deo odsustva koji NIJE već u igračevoj formi. Izmereno na 4.334 utakmice: stvarno se ostvari
       ~1/3 minuta (`SKALA_MINUTA` 0,35) + mali rast učinka (`SKALA_UCINKA`, ne za skokove). Rezultat: greška kod
       poena pala sa +0,56 na 0,02, minuta sa +0,88 na 0,00; bez odsustva nepromenjeno.
+- [x] Praćenje rezultata (30.10.2026): `sajt.py` čuva predloge u `podaci/kvote/predlozi.json` dok utakmica ne počne
+      (posle zaključano), a posle odigrane utakmice računa prošao/nije, dobit na ulog 1, po grupama (top 10, jaki,
+      srednji, slabi). Prikaz na vrhu `propovi.html` (Top 10, pa "Kako je model prošao", ostali skriveni).
 - [x] Očekivana razlika / blowout (30.10.2026): `rejtinzi_timova` (razlika u poenima, + pola prošle sezone) +
       3 za domaćina; `minuti_zbog_razlike` (starteri do −0,25 min po poenu iznad 4, klupa +0,08). Izmereno na
       11.164 utakmice, greška minuta manja u obe sezone. ODMOR (dani između utakmica) izmeren: bez efekta,

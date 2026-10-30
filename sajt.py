@@ -38,6 +38,7 @@ from analiza import broj, procenat, e, zbirno, datum_srb, utakmica_rec
 FOLDER = Path(__file__).parent
 BAZA = FOLDER / "podaci" / "evroliga.db"
 KVOTE = FOLDER / "podaci" / "kvote" / "kvote_poslednje.json"  # pravi ga kvote.py
+PREDLOZI = FOLDER / "podaci" / "kvote" / "predlozi.json"      # predlozi pre utakmica, za praćenje rezultata
 SAJT = FOLDER / "sajt"
 NAZIV_SAJTA = "ClutchTime"
 
@@ -131,7 +132,11 @@ table.tab td.zasto{white-space:normal;min-width:260px;max-width:380px}
 .zasto .ime{font-weight:700}.zasto small{display:block;color:var(--muted);font-size:12px;line-height:1.4;margin-top:2px}
 .strana{font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.04em}
 .strana.preko{color:var(--good)}.strana.ispod{color:var(--bad)}
-.ev-dobar{color:var(--good);font-weight:800}.ev-los{color:var(--muted)}
+.ocena{display:inline-block;font-size:11.5px;font-weight:800;padding:2px 8px;border-radius:999px;letter-spacing:.02em}
+.o-jaka{background:var(--good);color:var(--on-accent)}.o-srednja{border:1px solid var(--good);color:var(--good)}
+.o-slaba{color:var(--ink2)}.o-nema{color:var(--muted)}
+.svi-propovi{margin:14px 0}.svi-propovi>summary{cursor:pointer;font-weight:700;padding:10px 14px;background:var(--card);
+border:1px solid var(--line);border-radius:10px}.svi-propovi[open]>summary{border-color:var(--accent)}
 .napomena{font-size:12.5px;color:var(--muted)}
 .box-glava{display:flex;justify-content:center;align-items:center;gap:22px;flex-wrap:wrap;text-align:center}
 .box-glava .tim-n{font-size:20px;font-weight:800}
@@ -394,6 +399,101 @@ def stranica_forma(k, lista):
     snimi(SAJT / "forma.html", strana("Forma", telo, "", "forma.html", skripta=True))
 
 
+OCENE = {"jaka": "Jaka", "srednja": "Srednja", "slaba": "Slaba", "nema": "–"}
+
+
+def top_predlozi(rez, n=10, po_igracu=2):
+    """Najbolji predlozi kola: bez sumnjivih, najviše 2 po igraču."""
+    izabrani, broj_po_igracu = [], {}
+    for r in rez:  # već sortirano po EV
+        if r["ev"] <= 0 or r["sumnjivo"] or broj_po_igracu.get(r["igrac_id"], 0) >= po_igracu:
+            continue
+        izabrani.append(r)
+        broj_po_igracu[r["igrac_id"]] = broj_po_igracu.get(r["igrac_id"], 0) + 1
+        if len(izabrani) == n:
+            break
+    return izabrani
+
+
+def kljuc_predloga(r):
+    return f'{r["sezona"]}-{r["sifra_utakmice"]}-{r["igrac_id"]}-{r["tip"]}'
+
+
+def sacuvaj_predloge(rez, top):
+    """Upisuje predloge za utakmice koje još nisu počele. Posle početka utakmice se više ne menjaju,
+    pa se posle mogu pošteno proveriti (podaci/kvote/predlozi.json, čuva ga workflow)."""
+    predlozi = json.loads(PREDLOZI.read_text(encoding="utf-8")) if PREDLOZI.exists() else {}
+    sada = datetime.now()
+    top_kljucevi = {kljuc_predloga(r) for r in top}
+    for r in rez:
+        if datetime.strptime(r["datum"], "%Y-%m-%d %H:%M") <= sada:
+            continue
+        predlozi[kljuc_predloga(r)] = {
+            "igrac_id": r["igrac_id"], "tim": r["tim"], "protivnik": r["protivnik"], "sezona": r["sezona"],
+            "sifra_utakmice": r["sifra_utakmice"], "datum": r["datum"], "tip": r["tip"], "linija": r["linija"],
+            "strana": r["strana"], "kvota": r["kvota"], "p_model": round(r["p_model"], 4),
+            "p_kladionica": round(r["p_kladionica"], 4), "ev": round(r["ev"], 4), "ocena": r["ocena"],
+            "top": kljuc_predloga(r) in top_kljucevi, "sacuvano": sada.strftime("%Y-%m-%d %H:%M")}
+    PREDLOZI.parent.mkdir(parents=True, exist_ok=True)
+    PREDLOZI.write_text(json.dumps(predlozi, ensure_ascii=False, indent=0), encoding="utf-8")
+    return predlozi
+
+
+def ishodi_predloga(k, predlozi, utakmice):
+    """Za predloge iz odigranih utakmica: prošao / nije prošao / igrač nije igrao (ne računa se)."""
+    odigrane = {(u["sezona"], u["sifra_utakmice"]) for u in utakmice if u["odigrana"]}
+    redovi = {(r["sezona"], r["sifra_utakmice"], r["igrac_id"]): r for r in k["statistika"] if r["igrao"]}
+    ishodi = []
+    for p in predlozi.values():
+        if (p["sezona"], p["sifra_utakmice"]) not in odigrane or p["ocena"] == "nema":
+            continue
+        r = redovi.get((p["sezona"], p["sifra_utakmice"], p["igrac_id"]))
+        if not r:
+            continue  # nije igrao: kladionica vraća ulog
+        stvarno = M.vrednost(r, p["tip"])
+        prosao = (stvarno > p["linija"]) == (p["strana"] == "preko")
+        ishodi.append({**p, "stvarno": stvarno, "prosao": prosao, "dobit": p["kvota"] - 1 if prosao else -1.0})
+    return sorted(ishodi, key=lambda x: (x["datum"], -x["ev"]), reverse=True)
+
+
+def sekcija_rezultata(k, ishodi):
+    naziv = lambda t: k["timovi"].get(t, t)
+    if not ishodi:
+        return """<div class="sekcija"><h2>Kako je model prošao</h2><p style="margin:0">Praćenje je počelo
+30.10.2026. Prvi rezultati se pojavljuju posle prvog odigranog kola sa sačuvanim predlozima.</p></div>"""
+    grupe = [("Top 10 predloga", [x for x in ishodi if x["top"]]),
+             ("Jaki", [x for x in ishodi if x["ocena"] == "jaka"]),
+             ("Srednji", [x for x in ishodi if x["ocena"] == "srednja"]),
+             ("Slabi", [x for x in ishodi if x["ocena"] == "slaba"]),
+             ("Svi sa prednošću", ishodi)]
+    red = []
+    for ime, g in grupe:
+        if not g:
+            continue
+        n, pogodjeno, dobit = len(g), sum(x["prosao"] for x in g), sum(x["dobit"] for x in g)
+        ocek = sum(x["p_kladionica"] for x in g) / n
+        red.append(f'<tr><td class="l"><b>{ime}</b></td><td>{n}</td><td>{pogodjeno}</td>'
+                   f'<td><b>{procenat(pogodjeno / n)}</b></td><td>{procenat(ocek)}</td>'
+                   f'<td class="{"p" if dobit > 0 else "i"}">{"+" if dobit > 0 else ""}{broj(dobit, 1)}</td>'
+                   f'<td>{"+" if dobit > 0 else ""}{broj(dobit / n * 100, 0)}%</td></tr>')
+    poslednji = [x for x in ishodi if x["top"]][:10]
+    lista = "".join(
+        f'<tr><td class="l">{datum_srb(x["datum"])}</td><td class="l"><a href="igrac/{x["igrac_id"]}.html">'
+        f'{e(A.lepo_ime((k["igraci"].get(x["igrac_id"]) or {}).get("ime")))}</a> '
+        f'<span class="napomena">{e(naziv(x["tim"]))}</span></td><td class="l">{M.NAZIV_TIPA[x["tip"]]}</td>'
+        f'<td class="l"><span class="strana {x["strana"]}">{x["strana"]}</span> {broj(x["linija"])}</td>'
+        f'<td>{broj(x["kvota"], 2)}</td><td><b>{broj(x["stvarno"], 0)}</b></td>'
+        f'<td class="{"p" if x["prosao"] else "i"}">{"✔" if x["prosao"] else "✘"}</td></tr>' for x in poslednji)
+    return f"""<div class="sekcija skrol"><h2>Kako je model prošao</h2>
+<table class="tab"><thead><tr><th class="l"></th><th>Predloga</th><th>Prošlo</th><th>Uspešnost</th>
+<th>Kladionica očekuje</th><th>Dobit (ulog 1)</th><th>Povraćaj</th></tr></thead><tbody>{''.join(red)}</tbody></table>
+<p class="napomena">Predlozi se zaključavaju pred početak utakmice i posle se ne menjaju. <b>Kladionica očekuje</b> =
+koliko bi prošlo da su kvote bez marže tačne. <b>Dobit</b> = zbir da je na svaki predlog uložena 1 jedinica po
+ponuđenoj kvoti. Ako igrač nije igrao, predlog se ne računa. Malo predloga = rezultat je uglavnom sreća.</p>
+{f'<h2 style="margin-top:16px">Poslednji top predlozi</h2><table class="tab"><thead><tr><th class="l">Datum</th><th class="l">Igrač</th><th class="l">Kategorija</th><th class="l">Predlog</th><th>Kvota</th><th>Stvarno</th><th></th></tr></thead><tbody>{lista}</tbody></table>' if lista else ''}
+</div>"""
+
+
 def stranica_propovi(k, utakmice):
     """Propovi kola: linije sa superbet.rs + procena modela (model.py), rang po očekivanom povraćaju."""
     naziv = lambda t: k["timovi"].get(t, t)
@@ -432,17 +532,20 @@ def stranica_propovi(k, utakmice):
             delovi.append("UPITAN za meč")
         return " · ".join(delovi)
 
+    top = top_predlozi(rez)
+    predlozi = sacuvaj_predloge(rez, top)
+    rezultati = sekcija_rezultata(k, ishodi_predloga(k, predlozi, utakmice))
+
     mecevi = {}
-    redovi = []
-    for r in rez:
+
+    def red_propa(r, sa_filterom=True):
         dom, gost = (r["tim"], r["protivnik"]) if r["kod_kuce"] else (r["protivnik"], r["tim"])
-        mec = f"{naziv(dom)} – {naziv(gost)}"
-        mecevi[r["sifra_utakmice"]] = (r["datum"], mec)
+        mecevi[r["sifra_utakmice"]] = (r["datum"], f"{naziv(dom)} – {naziv(gost)}")
         ime = A.lepo_ime((k["igraci"].get(r["igrac_id"]) or {}).get("ime"))
-        klasa = "ev-dobar" if r["ev"] >= 0.05 and not r["sumnjivo"] else ("ev-los" if r["ev"] < 0 else "")
-        ev_filter = 0 if r["sumnjivo"] else r["ev"]  # "samo prednost 5%+" ne prikazuje sumnjive
-        redovi.append(
-            f'<tr data-mec="{r["sifra_utakmice"]}" data-tip="{r["tip"]}" data-ev="{ev_filter:.4f}">'
+        podaci = (f' data-mec="{r["sifra_utakmice"]}" data-tip="{r["tip"]}" data-ocena="{r["ocena"]}"'
+                  if sa_filterom else "")
+        return (
+            f'<tr{podaci}>'
             f'<td class="l zasto"><a class="ime" href="igrac/{r["igrac_id"]}.html">{e(ime)}</a>'
             f'{A.bedz(r["igrac_id"])}<small>{e(zasto(r))}</small></td>'
             f'<td class="l">{e(naziv(r["tim"]))}<br><span class="napomena">{"vs" if r["kod_kuce"] else "@"} '
@@ -452,54 +555,61 @@ def stranica_propovi(k, utakmice):
             f'<td data-v="{r["kvota"]}">{broj(r["kvota"], 2)}</td>'
             f'<td data-v="{r["p_model"]:.4f}"><b>{procenat(r["p_model"])}</b></td>'
             f'<td data-v="{r["p_kladionica"]:.4f}">{procenat(r["p_kladionica"])}</td>'
-            f'<td data-v="{r["ev"]:.4f}" class="{klasa}">{"+" if r["ev"] > 0 else ""}{broj(r["ev"] * 100, 1)}%</td>'
+            f'<td data-v="{r["ev"]:.4f}"><span class="ocena o-{r["ocena"]}">{OCENE[r["ocena"]]}</span></td>'
             f'<td data-v="{r["presao"] / max(r["od"], 1):.3f}">{r["presao"]}/{r["od"]}</td></tr>')
+
+    zaglavlje = """<thead><tr><th class="l">Igrač i zašto</th><th class="l">Tim</th><th class="l" data-k="t">Kategorija</th>
+<th class="l">Predlog</th><th data-k="n">Kvota</th><th data-k="n">Procena</th><th data-k="n">Kladionica</th>
+<th data-k="n">Ocena</th><th data-k="n">Posl. 10</th></tr></thead>"""
+    redovi_top = "".join(red_propa(r, False) for r in top)
+    redovi = [red_propa(r) for r in rez]
 
     upozorenje = ('<div class="upozorenje"><span class="g18">18+</span><div>Ovo je statistička analiza, '
                   '<b>ne savet za klađenje</b>. Klađenje nosi rizik gubitka novca. Igrajte odgovorno.</div></div>')
     if not redovi:
         telo = f"""<h1>Propovi kola</h1>{upozorenje}
 <div class="sekcija"><p style="margin:0">Linije za naredno kolo još nisu dostupne. Kvote se preuzimaju na dan
-utakmice i dan pre (ujutru i popodne).</p></div>"""
+utakmice i dan pre (ujutru i popodne).</p></div>
+{rezultati}"""
     else:
         opcije_meca = "".join(f'<option value="{s}">{e(m)}</option>'
                               for s, (d, m) in sorted(mecevi.items(), key=lambda x: x[1][0]))
         tipovi = sorted({r["tip"] for r in rez}, key=list(M.KOLONE).index)
         opcije_tipa = "".join(f'<option value="{t}">{M.NAZIV_TIPA[t]}</option>' for t in tipovi)
+        broj_ocena = {o: sum(r["ocena"] == o for r in rez) for o in OCENE}
         telo = f"""<h1>Propovi kola</h1>
 <p class="sub">Linije i kvote: Superbet (superbet.rs) · preuzeto {e(kv.get('preuzeto', ''))} ·
-{len(redovi)} propova</p>
+{len(redovi)} propova · jakih {broj_ocena['jaka']}, srednjih {broj_ocena['srednja']}</p>
 {upozorenje}
-<div class="filteri" id="filter-p">
+<div class="naslov-sekcije"><h2>Top 10 predloga</h2></div>
+<div class="sekcija skrol" style="margin-top:0">{'<table class="tab">' + zaglavlje + '<tbody>' + redovi_top + '</tbody></table>'
+                                                 if redovi_top else '<p style="margin:0">Model ovog puta ne vidi nijedan predlog sa prednošću.</p>'}</div>
+{rezultati}
+<details class="svi-propovi"><summary>Prikaži sve propove ({len(redovi)})</summary>
+<div class="filteri" id="filter-p" style="margin-top:12px">
   <select id="p-mec"><option value="">Sve utakmice</option>{opcije_meca}</select>
   <select id="p-tip"><option value="">Sve kategorije</option>{opcije_tipa}</select>
-  <label style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="p-ev"> samo prednost 5%+</label>
+  <select id="p-oc"><option value="">Sve ocene</option><option value="jaka">Jaka</option>
+    <option value="srednja">Srednja i jača</option></select>
 </div>
-<div class="sekcija skrol"><table class="tab sort" id="propovi"><thead><tr>
-<th class="l">Igrač i zašto</th><th class="l">Tim</th><th class="l" data-k="t">Kategorija</th><th class="l">Predlog</th>
-<th data-k="n">Kvota</th><th data-k="n">Model</th><th data-k="n">Kladionica</th><th data-k="n">Prednost</th>
-<th data-k="n">Posl. 10</th></tr></thead><tbody>{''.join(redovi)}</tbody></table></div>
-<p class="napomena"><b>Predlog</b> = strana (preko/ispod) sa boljim očekivanim povraćajem po modelu.
-<b>Model</b> = procenjena verovatnoća da predlog prođe. <b>Kladionica</b> = verovatnoća iz kvota, bez marže.
-<b>Prednost</b> = očekivani povraćaj po uloženom dinaru (model × kvota − 1); zeleno = 5% i više.
+<div class="sekcija skrol"><table class="tab sort" id="propovi">{zaglavlje}<tbody>{''.join(redovi)}</tbody></table></div>
+</details>
+<p class="napomena"><b>Predlog</b> = strana (preko/ispod) koja po modelu više vredi.
+<b>Procena</b> = verovatnoća da predlog prođe (30% model, 70% kladionica). <b>Kladionica</b> = verovatnoća iz
+kvota, bez marže. <b>Ocena</b>: jaka / srednja / slaba prednost po modelu, "–" = bez prednosti.
 <b>Posl. 10</b> = koliko puta u poslednjih 10 utakmica bi predlog prošao na ovoj liniji.
-Prikazana je glavna linija za svakog igrača (ona sa najujednačenijim kvotama).</p>
+Top 10: najviše 2 predloga po igraču, bez linija označenih sa ⚠.</p>
 <p class="napomena">Model: učinak po minutu (skorije utakmice vrede više, na početku sezone pomešano sa prošlom),
-očekivani minuti (trend), šta protivnik dozvoljava toj poziciji i kod kuće/u gostima, uz negativnu binomnu
-raspodelu kalibrisanu na prethodne dve sezone. Konačna procena je pola model, pola kladionica.
-Igrači sa statusom "ne igra" su izostavljeni. Odsustvo saigrača iz tabele povreda je uračunato (dodatni minuti
-i nešto veći učinak, izmereno na ranijim utakmicama u kojima je izostao igrač sa 15+ minuta; "upitan" se računa
-upola). Kad se očekuje ubedljiva pobeda jednog tima, starteri dobijaju nešto manje minuta, a klupa više
-(izmereno na ranijim utakmicama). ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više (takvi propovi nisu
-zeleni i ne ulaze u filter "5%+").</p>
-<p class="napomena">Model često bira "ispod". Provera na ovoj i prošloj sezoni pokazuje da model igrače ne
-potcenjuje (stvarni učinak je u proseku 2-3% ispod procene), pa razlog verovatno leži u tome što kladionice
-postavljaju linije više jer igrači češće igraju "preko". Koliko je to stvarna prednost, pokazaće praćenje
-rezultata kroz naredna kola; do tada procene uzmite sa rezervom.</p>"""
+očekivani minuti (trend), šta protivnik dozvoljava toj poziciji, kod kuće/u gostima, odsutni saigrači iz tabele
+povreda i očekivana razlika u poenima (starteri sede kad je meč rešen). Sve je provereno na ranijim utakmicama.
+⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više. Model često bira "ispod":
+igrače ne potcenjuje, pa razlog verovatno leži u tome što kladionice podižu linije jer se češće igra "preko".
+Da li to zaista donosi prednost pokazuje tabela "Kako je model prošao".</p>"""
     filter_js = """<script>
 (function(){var m=document.getElementById('p-mec');if(!m)return;var t=document.getElementById('p-tip'),
- v=document.getElementById('p-ev');function f(){document.querySelectorAll('#propovi tbody tr').forEach(function(r){
- var ok=(!m.value||r.dataset.mec===m.value)&&(!t.value||r.dataset.tip===t.value)&&(!v.checked||parseFloat(r.dataset.ev)>=0.05);
+ v=document.getElementById('p-oc');function f(){document.querySelectorAll('#propovi tbody tr').forEach(function(r){
+ var o=r.dataset.ocena,ok=(!m.value||r.dataset.mec===m.value)&&(!t.value||r.dataset.tip===t.value)&&
+ (!v.value||(v.value==='jaka'?o==='jaka':(o==='jaka'||o==='srednja')));
  r.style.display=ok?'':'none';});}[m,t,v].forEach(function(x){x.addEventListener('change',f);});})();
 </script>"""
     snimi(SAJT / "propovi.html", strana("Propovi kola", telo, "", "propovi.html", skripta=True, dodatak=filter_js))

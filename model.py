@@ -40,7 +40,19 @@ VELIKA_RAZLIKA = 0.25         # očekivano se razlikuje od linije za 25%+ -> upo
 # očekivana vrednost je bez sistematske greške, ali na liniji blizu proseka model jedva bolje od 50/50
 # (Brier 0,249). Kladionice postavljaju liniju baš tu i znaju više (sastavi, vesti), pa model
 # ublažavamo dok arhiva kvota ne pokaže koliko mu se sme verovati.
-TEZINA_MODELA = 0.5
+# 30.10.2026: smanjeno sa 0,5 na 0,3 (sa 0,5 je 124 od 406 propova imalo "prednost" 5%+, nerealno).
+TEZINA_MODELA = 0.3
+# Ocena predloga prema očekivanom povraćaju (EV); "sumnjivi" (linija daleko od procene) su najviše "slaba"
+OCENA_JAKA = 0.08
+OCENA_SREDNJA = 0.04
+
+
+def ocena(ev, sumnjivo):
+    if ev <= 0:
+        return "nema"
+    if sumnjivo or ev < OCENA_SREDNJA:
+        return "slaba"
+    return "jaka" if ev >= OCENA_JAKA else "srednja"
 
 # Kalibracija (Platt): p_kal = sigmoid(a + b * logit(p_model)), po kategoriji.
 # Naučeno na sezonama 2024-25 i 2025-26 (linije na proseku ±2), provereno: učeno na 2024-25,
@@ -416,5 +428,6 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
             "upitan": bool(status) and status.get("klasa") == "st-up",
             **x,
         })
+        rezultati[-1]["ocena"] = ocena(rezultati[-1]["ev"], rezultati[-1]["sumnjivo"])
     rezultati.sort(key=lambda r: -r["ev"])
     return rezultati
