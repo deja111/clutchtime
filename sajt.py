@@ -415,6 +415,8 @@ def stranica_propovi(k, utakmice):
         if abs(r["f_dom"] - 1) >= 0.02:
             delovi.append(f"{'kod kuće' if r['kod_kuce'] else 'u gostima'} "
                           f"{'+' if r['f_dom'] > 1 else ''}{broj((r['f_dom'] - 1) * 100, 0)}%")
+        if r["sumnjivo"]:
+            delovi.append("⚠ linija je daleko od proseka: kladionica možda zna nešto (uloga, povrede), proveri vesti")
         if r["malo_podataka"]:
             delovi.append("malo utakmica ove sezone")
         if r["upitan"]:
@@ -428,9 +430,10 @@ def stranica_propovi(k, utakmice):
         mec = f"{naziv(dom)} – {naziv(gost)}"
         mecevi[r["sifra_utakmice"]] = (r["datum"], mec)
         ime = A.lepo_ime((k["igraci"].get(r["igrac_id"]) or {}).get("ime"))
-        klasa = "ev-dobar" if r["ev"] >= 0.05 else ("ev-los" if r["ev"] < 0 else "")
+        klasa = "ev-dobar" if r["ev"] >= 0.05 and not r["sumnjivo"] else ("ev-los" if r["ev"] < 0 else "")
+        ev_filter = 0 if r["sumnjivo"] else r["ev"]  # "samo prednost 5%+" ne prikazuje sumnjive
         redovi.append(
-            f'<tr data-mec="{r["sifra_utakmice"]}" data-tip="{r["tip"]}" data-ev="{r["ev"]:.4f}">'
+            f'<tr data-mec="{r["sifra_utakmice"]}" data-tip="{r["tip"]}" data-ev="{ev_filter:.4f}">'
             f'<td class="l zasto"><a class="ime" href="igrac/{r["igrac_id"]}.html">{e(ime)}</a>'
             f'{A.bedz(r["igrac_id"])}<small>{e(zasto(r))}</small></td>'
             f'<td class="l">{e(naziv(r["tim"]))}<br><span class="napomena">{"vs" if r["kod_kuce"] else "@"} '
@@ -474,8 +477,13 @@ utakmice i dan pre (ujutru i popodne).</p></div>"""
 Prikazana je glavna linija za svakog igrača (ona sa najujednačenijim kvotama).</p>
 <p class="napomena">Model: učinak po minutu (skorije utakmice vrede više, na početku sezone pomešano sa prošlom),
 očekivani minuti (trend), šta protivnik dozvoljava toj poziciji i kod kuće/u gostima, uz negativnu binomnu
-raspodelu. Igrači sa statusom "ne igra" su izostavljeni. Odsustvo saigrača još nije uračunato. Tačnost modela
-se tek proverava, pa procene uzmite sa rezervom.</p>"""
+raspodelu kalibrisanu na prethodne dve sezone. Konačna procena je pola model, pola kladionica.
+Igrači sa statusom "ne igra" su izostavljeni. Odsustvo saigrača još nije uračunato: zato ⚠ kod linija koje su
+daleko od proseka (takvi propovi nisu zeleni i ne ulaze u filter "5%+").</p>
+<p class="napomena">Model često bira "ispod". Provera na ovoj i prošloj sezoni pokazuje da model igrače ne
+potcenjuje (stvarni učinak je u proseku 2-3% ispod procene), pa razlog verovatno leži u tome što kladionice
+postavljaju linije više jer igrači češće igraju "preko". Koliko je to stvarna prednost, pokazaće praćenje
+rezultata kroz naredna kola; do tada procene uzmite sa rezervom.</p>"""
     filter_js = """<script>
 (function(){var m=document.getElementById('p-mec');if(!m)return;var t=document.getElementById('p-tip'),
  v=document.getElementById('p-ev');function f(){document.querySelectorAll('#propovi tbody tr').forEach(function(r){

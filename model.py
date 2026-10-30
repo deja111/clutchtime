@@ -30,12 +30,32 @@ PRIOR_UTAKMICA = 4.0          # koliko "utakmica" vredi prošla sezona kao poče
 PROTIVNIK_UBLAZI = 8.0        # težina protivnika = n / (n + 8)
 DOMACIN_MAX = 0.06
 MALO_UTAKMICA = 5             # ispod ovoga: oznaka "malo podataka"
+# Tipično rasipanje (varijansa/srednja vrednost) u ligi: medijana igrača sa 15+ utakmica (10+ min), 2023-2026
+RASIPANJE_LIGA = {"poeni": 2.73, "skokovi": 1.14, "asistencije": 1.11, "trojke": 1.04, "ukradene": 1.02,
+                  "blokade": 1.03, "PSA": 2.64, "PS": 2.74, "PA": 2.60, "SA": 1.31}
+RASIPANJE_UTAKMICA = 10       # koliko "utakmica" vredi tipična vrednost lige
+VELIKA_RAZLIKA = 0.25         # očekivano se razlikuje od linije za 25%+ -> upozorenje "proveri vesti"
 # Konačna procena = kladionica + TEZINA_MODELA × (model - kladionica).
 # Provera na sezonama 2024-25 i 2025-26 (procena iz ranijih utakmica, poređenje sa stvarnim):
 # očekivana vrednost je bez sistematske greške, ali na liniji blizu proseka model jedva bolje od 50/50
 # (Brier 0,249). Kladionice postavljaju liniju baš tu i znaju više (sastavi, vesti), pa model
 # ublažavamo dok arhiva kvota ne pokaže koliko mu se sme verovati.
 TEZINA_MODELA = 0.5
+
+# Kalibracija (Platt): p_kal = sigmoid(a + b * logit(p_model)), po kategoriji.
+# Naučeno na sezonama 2024-25 i 2025-26 (linije na proseku ±2), provereno: učeno na 2024-25,
+# testirano na 2025-26 -> Brier bolji u svim kategorijama. b < 1 = model je bio previše samouveren.
+KALIBRACIJA = {
+    "poeni": (0.071, 0.871), "skokovi": (-0.013, 0.945), "asistencije": (0.033, 0.932),
+    "trojke": (-0.049, 0.926), "ukradene": (-0.144, 0.914), "blokade": (-0.209, 0.973),
+    "PSA": (0.075, 0.863), "PS": (0.053, 0.848), "PA": (0.089, 0.896), "SA": (0.032, 0.937),
+}
+
+
+def kalibrisi(p, tip):
+    a, b = KALIBRACIJA.get(tip, (0.0, 1.0))
+    p = min(max(p, 1e-4), 1 - 1e-4)
+    return 1 / (1 + math.exp(-(a + b * math.log(p / (1 - p)))))
 
 # naš naziv tipa -> kolone iz tabele statistika koje se sabiraju
 KOLONE = {
@@ -141,11 +161,14 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor):
 
     ocekivano = po_minutu * minuti * f_dom * f_prot
 
-    # Rasipanje: varijansa/srednja vrednost iz utakmica ove i prošle sezone (između 1 i 3)
+    # Rasipanje: varijansa/srednja vrednost iz utakmica ove i prošle sezone, ublaženo ka
+    # tipičnoj vrednosti u ligi (iz malo utakmica procena je nepouzdana, obično preuska)
     sve = vr + [vrednost(r, tip) for r in ut_prosla]
     sr = sum(sve) / len(sve)
     var = sum((x - sr) ** 2 for x in sve) / max(len(sve) - 1, 1)
-    rasipanje = max(1.0, min(3.0, var / sr if sr else 1.0))
+    igracevo = var / sr if sr else RASIPANJE_LIGA[tip]
+    rasipanje = (len(sve) * igracevo + RASIPANJE_UTAKMICA * RASIPANJE_LIGA[tip]) / (len(sve) + RASIPANJE_UTAKMICA)
+    rasipanje = max(1.0, min(3.5, rasipanje))
 
     return {"ocekivano": ocekivano, "rasipanje": rasipanje, "minuti": minuti, "min_sezona": min_sezona,
             "sezona_prosek": sum(vr) / n, "poslednjih5": sum(vr[-5:]) / len(vr[-5:]),
@@ -197,7 +220,7 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
         x = proceni_igraca(ut, po_igracu_prosla.get(p["igrac_id"], []), p["tip"], kod_kuce,
                            protivnik.get((prot, poz, p["tip"])))
         kladionica = (1 / p["preko"]) / (1 / p["preko"] + 1 / p["ispod"])
-        model = p_preko(x["ocekivano"], x["rasipanje"], p["linija"])
+        model = kalibrisi(p_preko(x["ocekivano"], x["rasipanje"], p["linija"]), p["tip"])
         verovatnoca = kladionica + TEZINA_MODELA * (model - kladionica)
         ev_preko = verovatnoca * p["preko"] - 1
         ev_ispod = (1 - verovatnoca) * p["ispod"] - 1
@@ -214,6 +237,8 @@ def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
             "presao": sum(1 for v in poslednjih10 if (v > p["linija"]) == preko),
             "od": len(poslednjih10),
             "malo_podataka": len(ut) < MALO_UTAKMICA,
+            # Linija daleko od naše procene: kladionica verovatno zna nešto (uloga, povrede saigrača)
+            "sumnjivo": abs(x["ocekivano"] - p["linija"]) > VELIKA_RAZLIKA * max(p["linija"], 6),
             "upitan": bool(status) and status.get("klasa") == "st-up",
             **x,
         })

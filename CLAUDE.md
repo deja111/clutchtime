@@ -17,7 +17,7 @@ a Vercel ga objavljuje.
 | `preuzmi_kolo.py` | Stari pomoćni alat (CSV jednog kola). |
 | `objavi.py`, `pokreni_azuriranje.bat` | ZASTARELO (stari GitHub Pages + Task Scheduler). Ne pokretati. |
 | `istrazi_oddspapi.py` | Jednokratno istraživanje OddsPapi odgovora (vidi dole). `--pregled` ponovo ispiše nalaze bez zahteva. |
-| `model.py` | P(preko/ispod) za glavnu liniju svakog propa: učinak po minutu (ponderisan, + prošla sezona), očekivani minuti, protivnik po poziciji, kod kuće/gosti; negativna binomna. Konačno = 50% model + 50% kladionica (`TEZINA_MODELA`). Koristi ga `sajt.py` → `propovi.html`. |
+| `model.py` | P(preko/ispod) za glavnu liniju svakog propa: učinak po minutu (ponderisan, + prošla sezona), očekivani minuti, protivnik po poziciji, kod kuće/gosti; negativna binomna (rasipanje ublaženo ka `RASIPANJE_LIGA`) + Platt kalibracija po kategoriji (`KALIBRACIJA`, naučeno na 2024-26). Konačno = 50% model + 50% kladionica (`TEZINA_MODELA`). `sumnjivo` = linija 25%+ od procene (bez zelenog). Koristi ga `sajt.py` → `propovi.html`. |
 | `kvote.py` | Kvote za propove igrača (superbet.rs) → `podaci/kvote/kvote_poslednje.json` + `arhiva/`. Zove API samo dan utakmice/dan pre, najviše 2x dnevno (`pozivi.json`). `--sada`, `--fajl X` (obrada bez poziva). Bez ključa samo preskoči. |
 
 Tabele u bazi: `timovi`, `utakmice` (sezona 2026 = 2026-27, `odigrana` 0/1), `igraci`, `statistika` (jedan red = igrač na utakmici).
@@ -85,6 +85,9 @@ Nalazi iz `istrazi_oddspapi.py` (30.10.2026, pravi odgovori u `podaci/oddspapi/`
 - [x] `model.py` i stranica "Propovi kola" (30.10.2026). Provera na sezonama 2024-25/2025-26: očekivana vrednost
       bez sistematske greške, NB raspodela najbolja u repovima, ali kod linije blizu proseka model ≈ 50/50
       (Brier 0,249) → zato mešavina sa kladionicom. Blaga sklonost ka "ispod" (3-5 p.p.) kod linija oko proseka.
+- Nalaz 30.10.2026 (prave Superbet linije, 406 glavnih): model bira "ispod" u ~75%. Provera: model NE potcenjuje
+  (stvarno/procena 0,97-1,00 ove i prošle sezone, prvih 8 kola) → Superbet verovatno diže linije (igrači vole "preko").
+  Veličinu te prednosti tek treba izmeriti iz arhive.
 - [ ] Kad se skupi 3-4 kola u `podaci/kvote/arhiva/`: proveriti predloge prema stvarnim rezultatima i podesiti
       `TEZINA_MODELA`. Dodati odsustvo saigrača (povrede) u očekivane minute.
 - [ ] Izmene iz `izmene.txt` (naziv sajta, CSS, meni, ukloniti "napravljeno…" ispod najave, forma igrača i utakmice u meni).
