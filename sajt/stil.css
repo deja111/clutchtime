@@ -142,6 +142,9 @@ border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(-
 background:var(--card)}
 .gr-u b{display:block;font-size:17px}.gr-u.da{border-color:var(--good)}.gr-u.da b{color:var(--good)}
 .gr-u.ne b{color:var(--bad)}
+.analiza{margin-top:14px}.analiza h3{margin:0;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.analiza ul{margin:6px 0 0;padding-left:18px}.analiza li{margin:5px 0;font-size:14px;line-height:1.45}
+.analiza b.p,.analiza h3.p{color:var(--good)}.analiza b.i,.analiza h3.i{color:var(--bad)}
 .strana{font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .strana.preko{color:var(--good)}.strana.ispod{color:var(--bad)}
 .napomena{font-size:12.5px;color:var(--muted)}

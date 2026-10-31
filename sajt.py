@@ -141,6 +141,9 @@ border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(-
 background:var(--card)}
 .gr-u b{display:block;font-size:17px}.gr-u.da{border-color:var(--good)}.gr-u.da b{color:var(--good)}
 .gr-u.ne b{color:var(--bad)}
+.analiza{margin-top:14px}.analiza h3{margin:0;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.analiza ul{margin:6px 0 0;padding-left:18px}.analiza li{margin:5px 0;font-size:14px;line-height:1.45}
+.analiza b.p,.analiza h3.p{color:var(--good)}.analiza b.i,.analiza h3.i{color:var(--bad)}
 .strana{font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .strana.preko{color:var(--good)}.strana.ispod{color:var(--bad)}
 .napomena{font-size:12.5px;color:var(--muted)}
@@ -433,6 +436,44 @@ function kartica(naziv,l,L,opis){if(!l.length)return '<div class="gr-k"><div cla
  var x=l.filter(function(v){return v>L;}).length,pr=x/l.length;
  return '<div class="gr-k"><div class="n">'+naziv+'</div><div class="v '+(pr>=0.5?'p':'i')+'">'+x+'/'+l.length+'</div>'+
  '<div class="o">preko '+Math.round(pr*100)+'%% · prosek '+br(l.reduce(function(s,v){return s+v;},0)/l.length)+(opis?'<br>'+opis:'')+'</div></div>';}
+var MN={'Bek':'bekovima','Krilo':'krilima','Centar':'centrima'};
+function znak(x){return (x>0?'+':'−')+br(Math.abs(x));}
+function udeo(l,L){return l.filter(function(v){return v>L;}).length;}
+function analiza(p,k,L,sve,d){
+ var za=[],protiv=[],e=p.m&&p.m.e[k],kn=K[k].n.toLowerCase(),uvod,n=sve.length;
+ function dodaj(v,t){(v>0?za:protiv).push(t);}
+ if(n){var avg=sve.reduce(function(a,b){return a+b;},0)/n;
+  if(Math.abs(avg-L)>=0.3)dodaj(avg-L,'Sezonski prosek je '+br(avg)+', '+(avg>L?'iznad':'ispod')+' granice.');}
+ var l5=sve.slice(-5),x5=udeo(l5,L);
+ if(l5.length>=4){if(x5/l5.length>=0.6)za.push('Prešao je u '+x5+' od poslednjih '+l5.length+' utakmica.');
+  else if(x5/l5.length<=0.4)protiv.push('Prešao je u samo '+x5+' od poslednjih '+l5.length+' utakmica.');}
+ if(e){var c=e[2],m=p.m,prag=Math.max(0.1,0.03*e[0]);
+  if(Math.abs(c[0])>=prag)dodaj(c[0],'U poslednjih 5 utakmica daje '+(c[0]>0?'više':'manje')+' po minutu nego inače ove sezone ('+znak(c[0])+').');
+  if(Math.abs(c[1])>=prag)dodaj(c[1],'Igra '+br(m.mi[0])+' min u poslednjih 5 (sezona '+br(m.mi[1])+') ('+znak(c[1])+').');
+  if(Math.abs(c[2])>=prag){var im=m.sg.filter(function(s){return !s[2];}).map(function(s){return s[0]+' '+s[1];}).join(', ');
+   dodaj(c[2],(im||'Promene u sastavu')+': '+(c[2]>0?'više minuta i šuteva za njega':'manje prostora za njega')+' ('+znak(c[2])+').');}
+  if(Math.abs(c[3])>=prag)dodaj(c[3],'Očekuje se ubedljiv meč (razlika oko '+br(Math.abs(m.raz),0)+' poena): '+
+   (c[3]<0?'starteri mogu ranije na klupu':'igrači sa klupe dobijaju više minuta')+' ('+znak(c[3])+').');
+  if(Math.abs(c[4])>=prag)dodaj(c[4],(m.d?'Igra kod kuće':'Igra u gostima')+', gde mu ide '+(c[4]>0?'bolje':'slabije')+' ('+znak(c[4])+').');
+  if(Math.abs(c[5])>=prag)dodaj(c[5],m.o+' dozvoljava '+(MN[p.p]||'igračima')+' '+(c[5]>0?'više':'manje')+' od proseka lige ('+znak(c[5])+').');
+  var mesto=sve.filter(function(v,i){return d[i]==m.d;});
+  if(mesto.length>=3){var xm=udeo(mesto,L),r=xm/mesto.length,gde=m.d?'kod kuće':'u gostima';
+   if(r>=0.6)za.push('Sledeći meč igra '+gde+', a '+gde+' je prešao '+xm+'/'+mesto.length+'.');
+   else if(r<=0.4)protiv.push('Sledeći meč igra '+gde+', a '+gde+' je prešao samo '+xm+'/'+mesto.length+'.');}
+  var h=p.h.map(function(u){return vr(u,k);});
+  if(h.length>=2){var xh=udeo(h,L);
+   if(xh/h.length>=0.75)za.push('Protiv tima '+m.o+' je prešao '+xh+'/'+h.length+' (sve sezone; mali uzorak).');
+   else if(xh/h.length<=0.25)protiv.push('Protiv tima '+m.o+' je prešao '+xh+'/'+h.length+' (sve sezone; mali uzorak).');}
+  var q=kal(pPreko(e[0],e[1],L),k),s=Math.abs(q-0.5),strana=q>=0.5?'PREKO':'ISPOD';
+  uvod='Model očekuje <b>'+br(e[0])+'</b> ('+kn+', granica '+br(L,1)+'). '+(s<0.04?'To je otprilike <b>50/50</b>, bez jasne strane.':
+   (s<0.1?'Blaga prednost za ':'Jasnija prednost za ')+'<b class="'+(q>=0.5?'p':'i')+'">'+strana+'</b> ('+Math.round(Math.max(q,1-q)*100)+'%%).');
+ }else uvod='Tim ne igra u narednom kolu ili za igrača nema procene, pa je analiza samo po prošlim utakmicama.';
+ var blizu=sve.slice(-10).filter(function(v){return Math.abs(v-L)<=2;}).length;
+ var napom=blizu>=4?'Često je blizu granice ('+blizu+' od poslednjih '+Math.min(10,n)+' utakmica na ±2), pa ishod lako ode na obe strane.':'';
+ var li=function(l){return l.length?l.map(function(t){return '<li>'+t+'</li>';}).join(''):'<li class="napomena">nema jakih razloga</li>';};
+ return '<div class="sekcija analiza"><h2>Kratka analiza</h2><p style="margin:0 0 10px">'+uvod+'</p><div class="dva">'+
+  '<div><h3 class="p">Za PREKO</h3><ul>'+li(za)+'</ul></div><div><h3 class="i">Za ISPOD</h3><ul>'+li(protiv)+'</ul></div></div>'+
+  (napom?'<p class="napomena" style="margin:8px 0 0">'+napom+'</p>':'')+'</div>';}
 function crtaj(){if(!izabran){izl.innerHTML='<p class="napomena">Izaberi igrača.</p>';return;}
  var p=izabran,k=kat.value,L=parseFloat(String(lin.value).replace(',','.'));
  if(isNaN(L)){izl.innerHTML='<p class="napomena">Upiši granicu (npr. 14,5).</p>';return;}
@@ -446,7 +487,7 @@ function crtaj(){if(!izabran){izl.innerHTML='<p class="napomena">Izaberi igrača
  html+=kartica('Poslednjih 5',sve.slice(-5),L)+kartica('Poslednjih 10',sve.slice(-10),L)+kartica('Cela sezona',sve,L)+
   kartica('Kod kuće',sve.filter(function(v,i){return d[i];}),L)+kartica('U gostima',sve.filter(function(v,i){return !d[i];}),L);
  if(p.m)html+=kartica('Protiv: '+p.m.o,p.h.map(function(u){return vr(u,k);}),L,'sve sezone u bazi');
- html+='</div><h3 style="margin:18px 0 4px;font-size:15px">Poslednjih 10 utakmica</h3><div class="gr-utakmice">'+
+ html+='</div>'+analiza(p,k,L,sve,d)+'<h3 style="margin:18px 0 4px;font-size:15px">Poslednjih 10 utakmica</h3><div class="gr-utakmice">'+
   p.g.slice(-10).reverse().map(function(u){var v=vr(u,k);return '<div class="gr-u '+(v>L?'da':'ne')+'"><b>'+v+'</b>'+
   (u[2]?'vs ':'@ ')+u[1]+'<br><span class="napomena">'+u[0]+' · '+u[3]+' min</span></div>';}).join('')+'</div>';
  izl.innerHTML=html;}
@@ -487,9 +528,22 @@ def stranica_granice(k, lista):
         m = procene.get(r["id"])
         if m:
             dt = datetime.strptime(m["datum"], "%Y-%m-%d %H:%M")
+            x0 = m["tipovi"]["poeni"]
+            # Saigrači koji utiču (ne igra / upitan / se vraća); isti spisak za sve kategorije
+            sg = {}
+            for x in m["tipovi"].values():
+                for y, q, dm in x["saigraci"]:
+                    sg[y] = [A.lepo_ime((k["igraci"].get(y) or {}).get("ime")),
+                             "ne igra" if q >= 1 else ("upitan" if q > 0 else "se vraća"), dm is None]
             p["m"] = {"o": naziv(m["protivnik"]), "d": int(m["kod_kuce"]),
                       "dt": f"{A.DANI[dt.weekday()]} {dt.strftime('%d.%m. %H:%M')}",
-                      "e": {t: [round(x["ocekivano"], 3), round(x["rasipanje"], 3)] for t, x in m["tipovi"].items()}}
+                      "mi": [round(x0["minuti_bez_saigraca"], 1), round(x0["min_sezona"], 1)],
+                      "raz": round(x0["ocekivana_razlika"] or 0, 1), "sg": list(sg.values()),
+                      # po kategoriji: [očekivano, rasipanje, [doprinosi: učinak, minuti, saigrači, razlika, dom, protivnik]]
+                      "e": {t: [round(x["ocekivano"], 3), round(x["rasipanje"], 3),
+                                [round(x["koraci"][kl], 2) for kl in ("ucinak", "minuti", "saigraci", "razlika",
+                                                                      "dom", "protivnik")]]
+                            for t, x in m["tipovi"].items()}}
             p["h"] = [red(u, datetime.strptime(u["datum"][:10], "%Y-%m-%d").strftime("%d.%m.%y"))
                       for u in k["po_sve"][r["id"]] if u["protivnik"] == m["protivnik"]]
         podaci.append(p)
