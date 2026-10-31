@@ -12,6 +12,7 @@ Stranice:
     utakmice.html       - naredno kolo (samo mečevi) i rezultati po kolima
     forma.html          - forma igrača: poslednjih 5 utakmica prema sezoni
     najava.html         - samo preusmerava na utakmice.html (stara adresa)
+    odbrana.html        - kako brani svaki tim (dozvoljeno po poziciji i kategoriji, rang)
     lideri.html         - lideri sezone po kategorijama
     utakmica/<id>.html  - box score svake odigrane utakmice tekuće sezone
     igraci.html         - svi igrači tekuće sezone (pretraga i sortiranje) + kartice igrača narednog kola
@@ -121,7 +122,9 @@ a.mec-k:hover{border-color:var(--accent);text-decoration:none}
 .mec-red .t small{color:var(--muted);font-weight:400;font-size:13px}
 .mec-red .st{font-size:12.5px;color:var(--ink2);margin-top:8px}
 .mec-red .vise{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600}
-.gr-forma{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px;align-items:end}
+.gr-forma{display:grid;grid-template-columns:2fr 1.2fr 0.8fr 1.4fr;gap:10px;align-items:end}
+.bez-oznaka{margin:0 0 8px;font-size:13.5px;color:var(--ink2);padding:6px 10px;border-left:3px solid var(--accent);
+background:var(--accent-soft);border-radius:0 6px 6px 0}
 @media (max-width:640px){.gr-forma{grid-template-columns:1fr 1fr}.gr-forma .pretraga{grid-column:1/-1}}
 .gr-forma label{display:block;font-size:12px;color:var(--ink2);font-weight:600;margin-bottom:4px}
 .gr-forma select,.gr-forma input[type=number]{width:100%;font:inherit;font-size:17px;padding:11px 12px;
@@ -217,7 +220,8 @@ if(f){var fi=function(){var q=document.getElementById('trazi').value.toLowerCase
 def strana(naslov, telo, koren="", aktivno="", skripta=False, dodatak=""):
     """Okvir svake stranice: zaglavlje sa menijem, sadržaj, podnožje."""
     meni = [("index.html", "Početna"), ("utakmice.html", "Utakmice"), ("granice.html", "Granice"),
-            ("forma.html", "Forma"), ("igraci.html", "Igrači"), ("timovi.html", "Timovi"), ("lideri.html", "Lideri")]
+            ("odbrana.html", "Odbrana"), ("forma.html", "Forma"), ("igraci.html", "Igrači"), ("timovi.html", "Timovi"),
+            ("lideri.html", "Lideri")]
     linkovi = "".join(
         f'<a href="{koren}{h}"{" class=akt" if h == aktivno else ""}>{t}</a>' for h, t in meni)
     return f"""<!doctype html><html lang="sr"><head><meta charset="utf-8">
@@ -408,6 +412,100 @@ def stranica_forma(k, lista):
     snimi(SAJT / "forma.html", strana("Forma", telo, "", "forma.html", skripta=True))
 
 
+# Kolone odbrane: (ključ, naslov, opis, "dozv" = šta tim dozvoljava protivnicima / "svoje" = šta tim sam radi)
+ODBRANA_KOLONE = [
+    ("pts", "Poeni", "dozvoljenih poena po meču", "dozv"),
+    ("pts_Bek", "Bekovima", "poena koje postižu bekovi protiv njih", "dozv"),
+    ("pts_Krilo", "Krilima", "poena koje postižu krila protiv njih", "dozv"),
+    ("pts_Centar", "Centrima", "poena koje postižu centri protiv njih", "dozv"),
+    ("reb_Centar", "Skok centrima", "skokova koje hvataju centri protiv njih", "dozv"),
+    ("ast_Bek", "Asist. bekovima", "asistencija bekova protiv njih", "dozv"),
+    ("p3a", "Trojke (pok.)", "šuteva za tri koje protivnici uzmu", "dozv"),
+    ("p3p", "Trojke %", "procenat protivnika za tri", "dozv"),
+    ("fta", "Slobodna", "slobodnih bacanja protivnika (koliko fauliraju)", "dozv"),
+    ("oreb", "Skok u napadu", "skokova u napadu protivnika", "dozv"),
+    ("ast", "Asistencije", "asistencija protivnika", "dozv"),
+    ("tov", "Izgubljene", "izgubljenih lopti protivnika (koliko ih teraju na greške)", "svoje"),
+    ("blk", "Blokade", "njihovih blokada", "svoje"),
+    ("stl", "Ukradene", "njihovih ukradenih lopti", "svoje"),
+]
+
+
+def odbrana_timova(k):
+    """Kako brani svaki tim ove sezone: {tim: {kljuc: (vrednost po meču, rang, broj timova)}}.
+    Za "dozv" kolone rang 1 = dozvoljava najviše (najslabija odbrana u tome), za "svoje" rang 1 = radi najviše."""
+    s = k["sezona"]
+    g = lambda r, kl: r[kl] or 0
+    zbir = defaultdict(lambda: defaultdict(float))
+    mecevi = defaultdict(set)
+    for r in k["statistika"]:
+        if r["sezona"] != s or not r["igrao"]:
+            continue
+        t, o = r["tim"], r["protivnik"]
+        mecevi[o].add(r["sifra_utakmice"])
+        z = zbir[o]  # sve što igrač tima t napravi, "dozvolio" je tim o
+        z["pts"] += g(r, "poeni"); z["p3a"] += g(r, "sut3_pokusano"); z["p3m"] += g(r, "sut3_pogodjeno")
+        z["fta"] += g(r, "slobodna_pokusano"); z["oreb"] += g(r, "skokovi_napad"); z["ast"] += g(r, "asistencije")
+        z["tov"] += g(r, "izgubljene")
+        poz = A.POZICIJA.get((k["igraci"].get(r["igrac_id"]) or {}).get("pozicija"))
+        if poz:
+            z[f"pts_{poz}"] += g(r, "poeni"); z[f"reb_{poz}"] += g(r, "skokovi_ukupno"); z[f"ast_{poz}"] += g(r, "asistencije")
+        zbir[t]["blk"] += g(r, "blokade"); zbir[t]["stl"] += g(r, "ukradene")
+    vrednosti = {}
+    for t, n in ((t, len(m)) for t, m in mecevi.items()):
+        z = zbir[t]
+        v = {kl: z[kl] / n for kl, *_ in ODBRANA_KOLONE if kl != "p3p"}
+        v["p3p"] = z["p3m"] / z["p3a"] if z["p3a"] else 0
+        vrednosti[t] = v
+    rez = {t: {} for t in vrednosti}
+    for kl, *_ in ODBRANA_KOLONE:
+        poredak = sorted(vrednosti, key=lambda t: -vrednosti[t][kl])
+        for i, t in enumerate(poredak, start=1):
+            rez[t][kl] = (vrednosti[t][kl], i, len(poredak))
+    return rez
+
+
+def celija_odbrane(kl, x, vrsta):
+    """Vrednost + rang; zeleno = povoljno za napad protiv njih, crveno = tvrdo."""
+    v, r, n = x
+    lako = r <= 5 if vrsta == "dozv" else r > n - 5
+    tesko = r > n - 5 if vrsta == "dozv" else r <= 5
+    tekst = f"{v * 100:.0f}%" if kl == "p3p" else broj(v)
+    return (f'<td data-v="{v:.4f}"><span class="{"p" if lako else "i" if tesko else ""}">{tekst}</span>'
+            f' <small class="napomena">{r}.</small></td>')
+
+
+def stranica_odbrana(k, odbrana):
+    naziv = lambda t: k["timovi"].get(t, t)
+    zaglavlje = "".join(f'<th data-k="n" title="{e(opis)}">{e(nas)}</th>' for _, nas, opis, _ in ODBRANA_KOLONE)
+    redovi = "".join(
+        f'<tr><td class="l"><a href="tim/{t}.html#odbrana">{e(naziv(t))}</a></td>'
+        + "".join(celija_odbrane(kl, odbrana[t][kl], vrsta) for kl, _, _, vrsta in ODBRANA_KOLONE) + "</tr>"
+        for t in sorted(odbrana, key=lambda t: naziv(t)))
+    telo = f"""<h1>Kako brane timovi</h1>
+<p class="sub">Evroliga {oznaka_sezone(k['sezona'])} · po utakmici · klik na naslov kolone sortira</p>
+<div class="sekcija skrol"><table class="tab sort"><thead><tr><th class="l" data-k="t">Tim</th>{zaglavlje}</tr></thead>
+<tbody>{redovi}</tbody></table></div>
+<p class="napomena"><b class="p">Zeleno</b> = povoljno za igrače koji igraju protiv njih (dozvoljavaju mnogo ili malo
+blokiraju/kradu, među 5 timova), <b class="i">crveno</b> = tvrda odbrana u tome (među 5 najboljih). Mali broj je rang
+(1. = najviše). "Bekovima / Krilima / Centrima" = poeni koje igrači te pozicije zajedno postignu protiv njih.
+Izgubljene, blokade i ukradene su njihove (koliko teraju protivnika na greške, blokiraju i kradu).</p>"""
+    snimi(SAJT / "odbrana.html", strana("Odbrana", telo, "", "odbrana.html", skripta=True))
+
+
+def sekcija_odbrane_tima(k, tim, odbrana):
+    """Za stranicu tima: kako brani (sve kolone sa rangom)."""
+    if tim not in odbrana:
+        return ""
+    stavke = "".join(
+        f'<tr><td class="l">{e(nas)} <span class="napomena">({e(opis)})</span></td>'
+        + celija_odbrane(kl, odbrana[tim][kl], vrsta) + "</tr>" for kl, nas, opis, vrsta in ODBRANA_KOLONE)
+    return (f'<div class="sekcija skrol" id="odbrana"><h2>Kako brani</h2><table class="tab"><tbody>{stavke}</tbody></table>'
+            f'<p class="napomena"><b class="p">Zeleno</b> = povoljno za protivnike, <b class="i">crveno</b> = tvrda odbrana '
+            f'u tome. Broj posle vrednosti je rang među timovima (1. = najviše). '
+            f'<a href="../odbrana.html">Svi timovi →</a></p></div>')
+
+
 def prednosti_i_mane(k, lista):
     """Za igrače timova iz narednog kola: činjenice (ne predviđanje) - igračeve jake strane naspram onoga
     što naredni protivnik dozvoljava ili dobro brani ove sezone. Vraća {igrac_id: {"o", "za", "protiv"}}."""
@@ -547,7 +645,8 @@ JS_GRANICE = """<script>
 (function(){
 var P=%s,K=%s,po={};P.forEach(function(p){po[p.i]=p;p.s=norm(p.n);});
 var inp=document.getElementById('gr-pretraga'),box=document.getElementById('gr-rezultati'),
- kat=document.getElementById('gr-kat'),lin=document.getElementById('gr-lin'),izl=document.getElementById('gr-izlaz'),izabran=null,sel=-1;
+ kat=document.getElementById('gr-kat'),lin=document.getElementById('gr-lin'),bez=document.getElementById('gr-bez'),
+ izl=document.getElementById('gr-izlaz'),izabran=null,sel=-1;
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/đ/g,'dj');}
 function br(x,d){return (d===undefined?x.toFixed(1):x.toFixed(d)).replace('.',',');}
 function vr(u,k){return K[k].c.reduce(function(s,i){return s+u[i];},0);}
@@ -563,21 +662,30 @@ function prednosti(p){if(!p.a)return '';var a=p.a,li=function(l){return l.length
 function crtaj(){if(!izabran){izl.innerHTML='<p class="napomena">Izaberi igrača.</p>';return;}
  var p=izabran,k=kat.value,L=parseFloat(String(lin.value).replace(',','.'));
  if(isNaN(L)){izl.innerHTML='<p class="napomena">Upiši granicu (npr. 14,5).</p>';return;}
- var sve=p.g.map(function(u){return vr(u,k);}),d=p.g.map(function(u){return u[2];});
+ var sg=(p.sg||[]).filter(function(s){return s[0]===bez.value;})[0],
+  g=sg?p.g.filter(function(u,i){return sg[2][i]==='0';}):p.g;
+ var sve=g.map(function(u){return vr(u,k);}),d=g.map(function(u){return u[2];});
  var html='<div class="gr-igrac"><h2><a href="igrac/'+p.i+'.html">'+p.n+'</a></h2><span class="napomena">'+p.t+' · '+p.p+
-  ' · '+K[k].n+' · granica <b>'+br(L,1)+'</b></span></div><div class="gr-mreza">';
+  ' · '+K[k].n+' · granica <b>'+br(L,1)+'</b></span></div>'+
+  (sg?'<p class="bez-oznaka">Samo utakmice ove sezone <b>bez: '+sg[1]+'</b> ('+g.length+' od '+p.g.length+')</p>':'')+
+  '<div class="gr-mreza">';
  html+=kartica('Poslednjih 5',sve.slice(-5),L)+kartica('Poslednjih 10',sve.slice(-10),L)+kartica('Cela sezona',sve,L)+
   kartica('Kod kuće',sve.filter(function(v,i){return d[i];}),L)+kartica('U gostima',sve.filter(function(v,i){return !d[i];}),L);
- if(p.a)html+=kartica('Protiv: '+p.a.o,p.h.map(function(u){return vr(u,k);}),L,'sve sezone u bazi');
- html+='</div>'+prednosti(p)+'<h3 style="margin:18px 0 4px;font-size:15px">Poslednjih 10 utakmica</h3><div class="gr-utakmice">'+
-  p.g.slice(-10).reverse().map(function(u){var v=vr(u,k);return '<div class="gr-u '+(v>L?'da':'ne')+'"><b>'+v+'</b>'+
+ if(p.a)html+=kartica('Protiv: '+p.a.o,p.h.map(function(u){return vr(u,k);}),L,'sve sezone u bazi'+(sg?' (bez filtera)':''));
+ html+='</div>'+prednosti(p)+'<h3 style="margin:18px 0 4px;font-size:15px">Poslednjih 10 utakmica'+(sg?' bez: '+sg[1]:'')+
+  '</h3><div class="gr-utakmice">'+(g.length?'':'<p class="napomena">Nema takvih utakmica.</p>')+
+  g.slice(-10).reverse().map(function(u){var v=vr(u,k);return '<div class="gr-u '+(v>L?'da':'ne')+'"><b>'+v+'</b>'+
   (u[2]?'vs ':'@ ')+u[1]+'<br><span class="napomena">'+u[0]+' · '+u[3]+' min</span></div>';}).join('')+'</div>';
  izl.innerHTML=html;}
-function izaberi(id,k2,L2){izabran=po[id];if(!izabran)return;inp.value=izabran.n;box.hidden=true;
+function adresa(){history.replaceState(null,'','#'+izabran.i+'/'+kat.value+'/'+lin.value+(bez.value?'/'+bez.value:''));}
+function izaberi(id,k2,L2,b2){var nov=!izabran||izabran.i!==id;izabran=po[id];if(!izabran)return;inp.value=izabran.n;box.hidden=true;
  if(k2&&K[k2])kat.value=k2;
+ if(nov){bez.innerHTML='<option value="">— sve utakmice —</option>'+(izabran.sg||[]).map(function(s){
+  var n=s[2].split('').filter(function(c){return c==='0';}).length;return '<option value="'+s[0]+'">'+s[1]+' ('+n+' ut.)</option>';}).join('');
+  bez.value=b2||'';bez.disabled=!(izabran.sg||[]).length;}
  if(L2!==undefined&&L2!=='')lin.value=L2;else{var s=izabran.g.map(function(u){return vr(u,kat.value);});
   lin.value=(Math.floor(s.reduce(function(a,b){return a+b;},0)/s.length)+0.5).toFixed(1);}
- history.replaceState(null,'','#'+izabran.i+'/'+kat.value+'/'+lin.value);crtaj();}
+ adresa();crtaj();}
 function prikazi(){var q=norm(inp.value.trim());sel=-1;if(q.length<2){box.hidden=true;return;}
  var r=P.filter(function(p){return q.split(' ').every(function(d){return p.s.indexOf(d)>-1;});}).slice(0,8);
  box.innerHTML=r.length?r.map(function(p){return '<a href="#" data-id="'+p.i+'">'+p.n+'<span>'+p.t+' · '+p.p+'</span></a>';}).join(''):'<a>Nema rezultata<span></span></a>';
@@ -590,8 +698,9 @@ inp.addEventListener('keydown',function(ev){var a=box.querySelectorAll('a[data-i
 box.addEventListener('click',function(ev){var a=ev.target.closest('a[data-id]');if(a){ev.preventDefault();izaberi(a.dataset.id);}});
 document.addEventListener('click',function(ev){if(!ev.target.closest('.pretraga'))box.hidden=true;});
 kat.addEventListener('change',function(){if(izabran)izaberi(izabran.i,kat.value);});
-lin.addEventListener('input',function(){if(izabran){history.replaceState(null,'','#'+izabran.i+'/'+kat.value+'/'+lin.value);crtaj();}});
-var h=decodeURIComponent(location.hash.slice(1)).split('/');if(h[0])izaberi(h[0],h[1],h[2]);else crtaj();
+lin.addEventListener('input',function(){if(izabran){adresa();crtaj();}});
+bez.addEventListener('change',function(){if(izabran){adresa();crtaj();}});
+var h=decodeURIComponent(location.hash.slice(1)).split('/');if(h[0])izaberi(h[0],h[1],h[2],h[3]);else crtaj();
 })();</script>"""
 
 
@@ -609,10 +718,34 @@ def stranica_granice(k, lista):
                              u["poeni"] or 0, u["skokovi_ukupno"] or 0, u["asistencije"] or 0,
                              u["sut3_pogodjeno"] or 0, u["ukradene"] or 0, u["blokade"] or 0]
     datum = lambda u, f: datetime.strptime(u["datum"][:10], "%Y-%m-%d").strftime(f)
+    # Za filter "bez saigrača": ko je igrao u kojoj utakmici i koliko minuta igra za koji tim (ova sezona)
+    igrali, za_tim = set(), defaultdict(list)
+    for u in k["statistika"]:
+        if u["sezona"] == k["sezona"] and u["igrao"]:
+            igrali.add((u["sifra_utakmice"], u["igrac_id"]))
+            za_tim[(u["tim"], u["igrac_id"])].append(u)
+    ime_igraca = {r["id"]: r["ime"] for r in lista}
+
+    def bez_saigraca(r):
+        """[[id, ime, maska]]: maska po igračevim utakmicama - '1' saigrač igrao, '0' nije, '-' ne računa se
+        (igrač tada u drugom timu ili saigrač još nije došao / otišao je iz tima)."""
+        rez = []
+        for (tim, z), ut_z in za_tim.items():
+            if tim != r["tim"] or z == r["id"] or len(ut_z) < 2 or sum(u["minuti"] or 0 for u in ut_z) / len(ut_z) < 10:
+                continue
+            prvi, poslednji = ut_z[0]["datum"], ut_z[-1]["datum"]
+            maska = "".join(
+                "-" if u["tim"] != tim else "1" if (u["sifra_utakmice"], z) in igrali else
+                "-" if u["datum"] < prvi or (u["datum"] > poslednji and k["poslednji_tim"].get(z) != tim) else "0"
+                for u in k["po_sezona"][r["id"]])
+            if "0" in maska:
+                rez.append((-sum(u["minuti"] or 0 for u in ut_z) / len(ut_z), [z, ime_igraca.get(z, z), maska]))
+        return [x for _, x in sorted(rez)]
+
     podaci = []
     for r in sorted(lista, key=lambda r: -r["zp"]["min"]):
         p = {"i": r["id"], "n": r["ime"], "t": naziv(r["tim"]), "p": r["poz"],
-             "g": [red(u, datum(u, "%d.%m.")) for u in k["po_sezona"][r["id"]]]}
+             "g": [red(u, datum(u, "%d.%m.")) for u in k["po_sezona"][r["id"]]], "sg": bez_saigraca(r)}
         if r["id"] in pm:
             m, kod_kuce = mec_tima[r["tim"]]
             dt = datetime.strptime(m["datum"], "%Y-%m-%d %H:%M")
@@ -631,6 +764,7 @@ def stranica_granice(k, lista):
 placeholder="Unesi ime igrača..." autocomplete="off"><div class="rezultati" id="gr-rezultati" hidden></div></div>
 <div><label for="gr-kat">Kategorija</label><select id="gr-kat">{opcije}</select></div>
 <div><label for="gr-lin">Granica</label><input id="gr-lin" type="number" step="0.5" min="0" inputmode="decimal"></div>
+<div><label for="gr-bez">Bez saigrača</label><select id="gr-bez" disabled><option value="">— sve utakmice —</option></select></div>
 </div></div>
 <div id="gr-izlaz"></div>
 <p class="napomena" style="margin-top:18px">"Preko" = više od granice (npr. preko 14,5 = 15 ili više).
@@ -741,7 +875,7 @@ pobeda zbog međusobnih duela).</p></div>"""
     snimi(SAJT / "timovi.html", strana("Timovi", telo, "", "timovi.html"))
 
 
-def stranica_tim(k, tim, lista, utakmice, tabela):
+def stranica_tim(k, tim, lista, utakmice, tabela, odbrana):
     naziv = lambda t: k["timovi"].get(t, t)
     poz_tabela = next((i for i, (t, _) in enumerate(tabela, start=1) if t == tim), None)
     x = dict(tabela).get(tim, {"p": 0, "i": 0})
@@ -778,7 +912,8 @@ def stranica_tim(k, tim, lista, utakmice, tabela):
 <th>TS%</th></tr></thead><tbody>{red_ig}</tbody></table></div>
 <div class="sekcija skrol"><h2>Rezultati i raspored</h2><table class="tab"><thead><tr><th>Kolo</th>
 <th class="l">Datum</th><th class="l">Protivnik</th><th class="l">Rezultat / vreme</th></tr></thead>
-<tbody>{''.join(red_ut)}</tbody></table></div>"""
+<tbody>{''.join(red_ut)}</tbody></table></div>
+{sekcija_odbrane_tima(k, tim, odbrana)}"""
     snimi(SAJT / "tim" / f"{tim}.html", strana(naziv(tim), telo, "../", ""))
 
 
@@ -1351,12 +1486,14 @@ def main():
     stranica_pocetna(k, lista, tabela, utakmice)
     stranica_utakmice(k, lista, utakmice)
     stranica_granice(k, lista)
+    odbrana = odbrana_timova(k)
+    stranica_odbrana(k, odbrana)
     stranica_forma(k, lista)
     stranica_lideri(k, lista, tabela)
     stranica_igraci(k, lista)
     stranica_timovi(k, tabela)
     for tim, _ in tabela:
-        stranica_tim(k, tim, lista, utakmice, tabela)
+        stranica_tim(k, tim, lista, utakmice, tabela, odbrana)
     for r in lista:
         stranica_igrac(k, r, najava.get(r["id"]), tabela)
     for u in utakmice:

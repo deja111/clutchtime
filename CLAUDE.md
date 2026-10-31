@@ -14,7 +14,7 @@ a Vercel ga objavljuje.
 | `povrede.py` | Čita Dejanovu Google tabelu sa povredama (objavljen CSV, URL u fajlu) i povezuje imena sa `igrac_id`. Razume i engleske statuse (Out, Game Time Decision...), prevodi razloge i datume. Rezerva: `podaci/povrede_poslednje.csv`. |
 | `analiza.py` | Najava narednog kola: forma, trend minutaže, kod kuće/u gostima, protiv protivnika, automatski rezime. CSS sajta (`CSS`). |
 | `model.py` | TRENUTNO SE NE KORISTI na sajtu (31.10.2026 Dejan ne želi predikciju modela). Procena za sledeći meč (`procene_kola`) i sve provere ostaju ovde ako se vraća. Detalji ispod. |
-| `sajt.py` | Pravi ceo sajt u `sajt/`: index, utakmice, granice, forma, igraci (+ kartice narednog kola), igrac/<id>, timovi, tim/<sifra>, lideri, utakmica/<id>. `najava.html` i `propovi.html` samo preusmeravaju. |
+| `sajt.py` | Pravi ceo sajt u `sajt/`: index, utakmice, granice, odbrana (kako brani svaki tim, `odbrana_timova`; i sekcija na tim/<sifra>), forma, igraci (+ kartice narednog kola), igrac/<id>, timovi, tim/<sifra>, lideri, utakmica/<id>. `najava.html` i `propovi.html` samo preusmeravaju. |
 | `preuzmi_kolo.py` | Stari pomoćni alat (CSV jednog kola). |
 | `objavi.py`, `pokreni_azuriranje.bat` | ZASTARELO (stari GitHub Pages + Task Scheduler). Ne pokretati. |
 
@@ -44,7 +44,8 @@ i granicu → vidi prelaske (posl. 5 / 10 / sezona / kod kuće / u gostima / pro
 poslednjih 10 utakmica i "Prednosti i mane protiv <protivnik>" (`prednosti_i_mane` u sajt.py: činjenice, bez
 predviđanja – igračeve jake strane po percentilu (šut za tri, SB, skok u napadu, asistencije, blokade, izgubljene)
 naspram onoga što protivnik dozvoljava/brani ove sezone, šta dozvoljava njegovoj poziciji (rang), i ranije protiv tog
-tima). Procenu modela Dejan NE želi na sajtu (31.10.2026: ne slaže se sa njom, npr. Koloko). Link `granice.html#<igrac_id>/<kategorija>/<granica>`;
+tima). Filter "Bez saigrača": prelasci samo u utakmicama kad izabrani saigrač (10+ min) nije igrao (`bez_saigraca`,
+maska po utakmici; link dobija 4. deo `#igrac/kat/granica/saigrac`). Procenu modela Dejan NE želi na sajtu (31.10.2026: ne slaže se sa njom, npr. Koloko). Link `granice.html#<igrac_id>/<kategorija>/<granica>`;
 sa profila igrača "Proveri granicu →". Podaci su ugrađeni u stranicu, sve računa JS.
 
 Model (`model.py`), sve provereno na 2024-25/2025-26:
