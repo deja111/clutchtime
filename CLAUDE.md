@@ -13,7 +13,7 @@ a Vercel ga objavljuje.
 | `azuriraj_bazu.py` | Puni `podaci/evroliga.db` iz nezvaničnog Evroliga API-ja (`api-live.euroleague.net/v2`, box score sa `live.euroleague.net/api/Boxscore`). Tekuća + 3 prethodne sezone, inkrementalno. Greške beleži u `podaci/log.txt` i nastavlja. |
 | `povrede.py` | Čita Dejanovu Google tabelu sa povredama (objavljen CSV, URL u fajlu) i povezuje imena sa `igrac_id`. Razume i engleske statuse (Out, Game Time Decision...), prevodi razloge i datume. Rezerva: `podaci/povrede_poslednje.csv`. |
 | `analiza.py` | Najava narednog kola: forma, trend minutaže, kod kuće/u gostima, protiv protivnika, automatski rezime. CSS sajta (`CSS`). |
-| `model.py` | Procena za sledeći meč po igraču i kategoriji (`procene_kola`) → očekivano + rasipanje, a verovatnoću za bilo koju granicu računa JS na stranici Granice. Detalji ispod. |
+| `model.py` | TRENUTNO SE NE KORISTI na sajtu (31.10.2026 Dejan ne želi predikciju modela). Procena za sledeći meč (`procene_kola`) i sve provere ostaju ovde ako se vraća. Detalji ispod. |
 | `sajt.py` | Pravi ceo sajt u `sajt/`: index, utakmice, granice, forma, igraci (+ kartice narednog kola), igrac/<id>, timovi, tim/<sifra>, lideri, utakmica/<id>. `najava.html` i `propovi.html` samo preusmeravaju. |
 | `preuzmi_kolo.py` | Stari pomoćni alat (CSV jednog kola). |
 | `objavi.py`, `pokreni_azuriranje.bat` | ZASTARELO (stari GitHub Pages + Task Scheduler). Ne pokretati. |
@@ -37,11 +37,14 @@ Tabele u bazi: `timovi`, `utakmice` (sezona 2026 = 2026-27, `odigrana` 0/1), `ig
 - Svaku izmenu modela prvo proveri na prethodnim sezonama (procena samo iz ranijih utakmica → poređenje sa stvarnim), pa tek onda uključi.
 - Dejan radi na Windowsu (CMD), nije programer: objašnjavaj kratko, korak po korak.
 
-## Stranica Granice i model (od 31.10.2026)
+## Stranica Granice (od 31.10.2026) i model (sačuvan, ne prikazuje se)
 
 Koncept: posetilac bira igrača, kategoriju (poeni, skokovi, asistencije, PSA, PS, PA, SA, trojke, ukradene, blokade)
 i granicu → vidi prelaske (posl. 5 / 10 / sezona / kod kuće / u gostima / protiv sledećeg protivnika, sve sezone),
-poslednjih 10 utakmica i procenu modela za sledeći meč. Link `granice.html#<igrac_id>/<kategorija>/<granica>`;
+poslednjih 10 utakmica i "Prednosti i mane protiv <protivnik>" (`prednosti_i_mane` u sajt.py: činjenice, bez
+predviđanja – igračeve jake strane po percentilu (šut za tri, SB, skok u napadu, asistencije, blokade, izgubljene)
+naspram onoga što protivnik dozvoljava/brani ove sezone, šta dozvoljava njegovoj poziciji (rang), i ranije protiv tog
+tima). Procenu modela Dejan NE želi na sajtu (31.10.2026: ne slaže se sa njom, npr. Koloko). Link `granice.html#<igrac_id>/<kategorija>/<granica>`;
 sa profila igrača "Proveri granicu →". Podaci su ugrađeni u stranicu, sve računa JS.
 
 Model (`model.py`), sve provereno na 2024-25/2025-26:
