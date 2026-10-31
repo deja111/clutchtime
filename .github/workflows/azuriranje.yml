@@ -45,13 +45,6 @@ jobs:
       - name: Ažuriraj bazu (Evroliga API)
         run: python azuriraj_bazu.py
 
-      - name: Kvote za propove (OddsPapi, samo na dan utakmice ili dan pre)
-        # Bez Secret-a ODDSPAPI_KEY samo preskoči. Greška ovde ne sme da zaustavi sajt.
-        continue-on-error: true
-        env:
-          ODDSPAPI_KEY: ${{ secrets.ODDSPAPI_KEY }}
-        run: python kvote.py
-
       - name: Napravi najavu kola
         run: python analiza.py
 
@@ -63,7 +56,7 @@ jobs:
           # Autor izmena je vlasnik naloga, da bi Vercel prihvatio objavu
           git config user.name  "${{ github.actor }}"
           git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
-          git add -A podaci/evroliga.db podaci/povrede_poslednje.csv podaci/kvote sajt
+          git add -A podaci/evroliga.db podaci/povrede_poslednje.csv sajt
           if git diff --cached --quiet; then
             echo "Nema izmena, ništa ne šaljem."
             exit 0

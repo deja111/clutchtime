@@ -1,8 +1,8 @@
 """
 model.py
 ---------
-Procena verovatnoće da igrač pređe liniju (preko/ispod) za propove iz kvote.py.
-Koristi ga sajt.py (stranica propovi.html).
+Procena verovatnoće da igrač pređe granicu (preko/ispod) na sledećoj utakmici.
+Koristi ga sajt.py (stranica granice.html: posetilac bira igrača, kategoriju i granicu).
 
 Kako se računa očekivana vrednost (npr. poeni):
     1. Učinak po minutu u poslednjih 5 utakmica (prošla sezona se ne koristi).
@@ -13,11 +13,10 @@ Kako se računa očekivana vrednost (npr. poeni):
 Raspodela: negativna binomna (brojevi poena/skokova su "rasutiji" od Poasonove),
 rasipanje se procenjuje iz igračevih utakmica. P(preko 14.5) = P(X >= 15).
 
-Kladionica: 1/kvota, normalizovano da preko + ispod = 100% (bez marže).
-Konačna procena je 30% model, 70% kladionica (TEZINA_MODELA, objašnjenje niže).
-Očekivani povraćaj (EV) = procena × kvota - 1. Rang je po EV.
+Verovatnoća se kalibriše (KALIBRACIJA) na prethodnim sezonama. Kvote kladionica se više ne koriste
+(31.10.2026: propovi iz kladionice ugašeni, sajt prikazuje granice koje bira posetilac).
 
-Ovo je statistička procena, ne savet za klađenje. Tačnost se proverava kroz arhivu kvota.
+Ovo je statistička procena, ne savet za klađenje.
 """
 
 import math
@@ -37,25 +36,6 @@ MALO_UTAKMICA = 5             # ispod ovoga: oznaka "malo podataka"
 RASIPANJE_LIGA = {"poeni": 2.73, "skokovi": 1.14, "asistencije": 1.11, "trojke": 1.04, "ukradene": 1.02,
                   "blokade": 1.03, "PSA": 2.64, "PS": 2.74, "PA": 2.60, "SA": 1.31}
 RASIPANJE_UTAKMICA = 10       # koliko "utakmica" vredi tipična vrednost lige
-VELIKA_RAZLIKA = 0.25         # očekivano se razlikuje od linije za 25%+ -> upozorenje "proveri vesti"
-# Konačna procena = kladionica + TEZINA_MODELA × (model - kladionica).
-# Provera na sezonama 2024-25 i 2025-26 (procena iz ranijih utakmica, poređenje sa stvarnim):
-# očekivana vrednost je bez sistematske greške, ali na liniji blizu proseka model jedva bolje od 50/50
-# (Brier 0,249). Kladionice postavljaju liniju baš tu i znaju više (sastavi, vesti), pa model
-# ublažavamo dok arhiva kvota ne pokaže koliko mu se sme verovati.
-# 30.10.2026: smanjeno sa 0,5 na 0,3 (sa 0,5 je 124 od 406 propova imalo "prednost" 5%+, nerealno).
-TEZINA_MODELA = 0.3
-# Ocena predloga prema očekivanom povraćaju (EV); "sumnjivi" (linija daleko od procene) su najviše "slaba"
-OCENA_JAKA = 0.08
-OCENA_SREDNJA = 0.04
-
-
-def ocena(ev, sumnjivo):
-    if ev <= 0:
-        return "nema"
-    if sumnjivo or ev < OCENA_SREDNJA:
-        return "slaba"
-    return "jaka" if ev >= OCENA_JAKA else "srednja"
 
 # Kalibracija (Platt): p_kal = sigmoid(a + b * logit(p_model)), po kategoriji.
 # Naučeno na sezonama 2024-25 i 2025-26 (linije na proseku ±2), provereno: učeno na 2024-25,
@@ -425,82 +405,39 @@ def proceni_igraca(ut_sezona, ut_prosla, tip, kod_kuce, protivnik_faktor, saigra
             "saigraci": opis_saigraca, "minuti_bez_saigraca": minuti_bez_saigraca, "mnozilac": mnozilac,
             "ocekivana_razlika": ocekivana_razlika, "razlika_min": razlika_min, "koraci": dict(koraci)}
 
-
-def glavne_linije(propovi):
-    """Superbet nudi više linija po igraču i tipu; zadržavamo onu sa najujednačenijim kvotama."""
-    najbolje = {}
-    for p in propovi:
-        k = (p["igrac_id"], p["sifra_utakmice"], p["tip"])
-        razlika = abs(1 / p["preko"] - 1 / p["ispod"])
-        if k not in najbolje or razlika < najbolje[k][0]:
-            najbolje[k] = (razlika, p)
-    return [p for _, p in najbolje.values()]
-
-
-def proceni(propovi, statistika, igraci, sezona, utakmice, povrede=None):
-    """Za svaki prop (glavna linija): verovatnoće, predlog strane, EV i objašnjenja."""
+def procene_kola(statistika, igraci, sezona, mecevi, povrede=None):
+    """Za svakog igrača timova iz narednih utakmica: očekivana vrednost i rasipanje po kategoriji
+    (sa saigračima, povratkom, očekivanom razlikom, protivnikom i domaćim terenom).
+    Vraća {igrac_id: {"tim", "protivnik", "kod_kuce", "datum", "tipovi": {tip: rezultat proceni_igraca}}}.
+    Igrači sa statusom "ne igra" se preskaču."""
     povrede = povrede or {}
     po_igracu = defaultdict(list)
-    po_igracu_prosla = defaultdict(list)
+    poslednji_tim = {}
     for r in statistika:
-        if not r["igrao"]:
-            continue
-        if r["sezona"] == sezona:
+        if r["sezona"] == sezona and r["igrao"]:
             po_igracu[r["igrac_id"]].append(r)
-        elif r["sezona"] == sezona - 1:
-            po_igracu_prosla[r["igrac_id"]].append(r)
+            poslednji_tim[r["igrac_id"]] = r["tim"]
     protivnik = faktori_protivnika(statistika, igraci, sezona)
-    mecevi = {(u["sezona"], u["sifra_utakmice"]): u for u in utakmice}
     saigraci = Saigraci(statistika, igraci, sezona)
     rejting = rejtinzi_timova(statistika, sezona)
-    # Iz tabele povreda: "ne igra" = sigurno odsustvo, "upitan" = pola
     verovatnoca_odsustva = {i: {"st-ne": 1.0, "st-up": 0.5}.get(p.get("klasa"), 0.0) for i, p in povrede.items()}
 
-    rezultati = []
-    for p in glavne_linije(propovi):
-        if p["tip"] not in KOLONE:
-            continue
-        u = mecevi.get((p["sezona"], p["sifra_utakmice"]))
-        ut = po_igracu.get(p["igrac_id"], [])
-        if not u or u["odigrana"] or len(ut) < 2:
-            continue
-        status = povrede.get(p["igrac_id"])
-        if status and status.get("klasa") == "st-ne":
-            continue  # ne igra
-        kod_kuce = u["domacin"] == p["tim"]
-        prot = u["gost"] if kod_kuce else u["domacin"]
-        poz = (igraci.get(p["igrac_id"]) or {}).get("pozicija")
-
-        odsutni = {y: q for y, q in verovatnoca_odsustva.items()
-                   if q and y != p["igrac_id"] and y in saigraci.tim_sezona_skup(sezona, p["tim"])}
-        x = proceni_igraca(ut, po_igracu_prosla.get(p["igrac_id"], []), p["tip"], kod_kuce,
-                           protivnik.get((prot, poz, p["tip"])),
-                           saigraci.korekcija(p["igrac_id"], p["tim"], ut, odsutni, p["tip"]),
-                           rejting.get(p["tim"], 0) - rejting.get(prot, 0)
-                           + (PREDNOST_DOMACINA if kod_kuce else -PREDNOST_DOMACINA))
-        kladionica = (1 / p["preko"]) / (1 / p["preko"] + 1 / p["ispod"])
-        model = kalibrisi(p_preko(x["ocekivano"], x["rasipanje"], p["linija"]), p["tip"])
-        verovatnoca = kladionica + TEZINA_MODELA * (model - kladionica)
-        ev_preko = verovatnoca * p["preko"] - 1
-        ev_ispod = (1 - verovatnoca) * p["ispod"] - 1
-        preko = ev_preko >= ev_ispod
-        poslednjih10 = x["vrednosti"][-10:]
-        rezultati.append({
-            **p, "protivnik": prot, "kod_kuce": kod_kuce, "pozicija": poz,
-            "strana": "preko" if preko else "ispod",
-            "kvota": p["preko"] if preko else p["ispod"],
-            "p_model": verovatnoca if preko else 1 - verovatnoca,
-            "p_cist_model": model if preko else 1 - model,
-            "p_kladionica": kladionica if preko else 1 - kladionica,
-            "ev": ev_preko if preko else ev_ispod,
-            "presao": sum(1 for v in poslednjih10 if (v > p["linija"]) == preko),
-            "od": len(poslednjih10),
-            "malo_podataka": len(ut) < MALO_UTAKMICA,
-            # Linija daleko od naše procene: kladionica verovatno zna nešto (uloga, povrede saigrača)
-            "sumnjivo": abs(x["ocekivano"] - p["linija"]) > VELIKA_RAZLIKA * max(p["linija"], 6),
-            "upitan": bool(status) and status.get("klasa") == "st-up",
-            **x,
-        })
-        rezultati[-1]["ocena"] = ocena(rezultati[-1]["ev"], rezultati[-1]["sumnjivo"])
-    rezultati.sort(key=lambda r: -r["ev"])
-    return rezultati
+    rezultat = {}
+    for m in mecevi:
+        for tim, prot in ((m["domacin"], m["gost"]), (m["gost"], m["domacin"])):
+            kod_kuce = tim == m["domacin"]
+            razlika = (rejting.get(tim, 0) - rejting.get(prot, 0)
+                       + (PREDNOST_DOMACINA if kod_kuce else -PREDNOST_DOMACINA))
+            clanovi = saigraci.tim_sezona_skup(sezona, tim)
+            for x, ut in po_igracu.items():
+                if poslednji_tim.get(x) != tim or len(ut) < 2 or verovatnoca_odsustva.get(x, 0) >= 1:
+                    continue
+                odsutni = {y: q for y, q in verovatnoca_odsustva.items() if q and y != x and y in clanovi}
+                poz = (igraci.get(x) or {}).get("pozicija")
+                tipovi = {}
+                for tip in KOLONE:
+                    tipovi[tip] = proceni_igraca(ut, [], tip, kod_kuce, protivnik.get((prot, poz, tip)),
+                                                 saigraci.korekcija(x, tim, ut, odsutni, tip), razlika)
+                rezultat[x] = {"tim": tim, "protivnik": prot, "kod_kuce": kod_kuce, "datum": m["datum"],
+                               "tipovi": tipovi}
+    return rezultat
