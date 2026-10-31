@@ -26,7 +26,7 @@ Tabele u bazi: `timovi`, `utakmice` (sezona 2026 = 2026-27, `odigrana` 0/1), `ig
   Redom: `azuriraj_bazu.py` → `analiza.py` → `sajt.py` → commit `podaci/evroliga.db`, `podaci/povrede_poslednje.csv`, `sajt/` → push.
   Poslednji korak pada (crveni X + mejl) ako u logu ima grešaka, ali tek posle objave.
 - Python 3.12, `TZ=Europe/Belgrade`, zavisnosti u `requirements.txt` (samo `requests`).
-- Vercel: projekat `clutchtime-sajt` (adresa još nije zapisana – pitati Dejana), Root Directory = `sajt`, preset Other, bez build komande. Svaki push na `main` = nova objava.
+- Vercel: projekat `clutchtime-sajt`, adresa **https://clutchtime-sajt.vercel.app** (adrese pojedinačnih deploymenta prikazuju staru verziju), Root Directory = `sajt`, preset Other, bez build komande. Svaki push na `main` = nova objava.
 
 ## Pravila za rad
 
@@ -67,7 +67,6 @@ Evroligu, od srpskih samo superbet.rs; Betano i bwin najbolje pokrivaju iste pro
 
 ## Otvoreni zadaci
 
-- [ ] Zapisati adresu sajta na Vercelu.
 - [ ] Podnožje svake stranice: nije zvanično povezano sa Evroligom, podaci su vlasništvo Euroleague Basketball-a.
 - [ ] Ukloniti iz git-a ono što je ostalo pre `.gitignore`: `git rm -r --cached "Claude outputs" __pycache__`.
 - [ ] Isključiti stari GitHub Pages repozitorijum i Task Scheduler zadatke (proveriti sa Dejanom).
