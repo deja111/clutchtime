@@ -98,6 +98,9 @@ Nalazi iz `istrazi_oddspapi.py` (30.10.2026, pravi odgovori u `podaci/oddspapi/`
 - [x] Praćenje rezultata (30.10.2026): `sajt.py` čuva predloge u `podaci/kvote/predlozi.json` dok utakmica ne počne
       (posle zaključano), a posle odigrane utakmice računa prošao/nije, dobit na ulog 1, po grupama (top 10, jaki,
       srednji, slabi). Prikaz na vrhu `propovi.html` (Top 10, pa "Kako je model prošao", ostali skriveni).
+- [x] Povratak saigrača (31.10.2026): `POVRATAK=True` u model.py - korekcija = (verovatnoća odsustva sada) −
+      (udeo odsustva u poslednjih 5). Provera 9.379 utakmica: bolje u svim kategorijama (poeni 5,822→5,765).
+      Usage-raspodela (malo gore) i tempo (bez efekta) izmereni i isključeni.
 - [x] Tiket dana (30.10.2026): do 3 predloga sa najvećom procenom (EV>0, bez ⚠ i upitnih, 1 po igraču, različiti
       mečevi), `podaci/kvote/tiketi.json`, zaključava se kad počne prva utakmica tiketa; praćen u "Kako je model prošao".
 - [x] Očekivana razlika / blowout (30.10.2026): `rejtinzi_timova` (razlika u poenima, + pola prošle sezone) +

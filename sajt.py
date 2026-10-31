@@ -683,7 +683,8 @@ def stranica_propovi(k, utakmice):
                                        f"(sezona {broj(r['min_sezona'])}) {znak(kor['minuti'])}"))
         if r["saigraci"]:
             imena = ", ".join(
-                f"{A.lepo_ime((k['igraci'].get(y) or {}).get('ime'))} {'ne igra' if q >= 1 else 'upitan'}"
+                f"{A.lepo_ime((k['igraci'].get(y) or {}).get('ime'))} "
+                f"{'ne igra' if q >= 1 else ('upitan' if q > 0 else 'se vraća (propustio deo posl. 5)')}"
                 + (" (već u formi)" if dm is None else "") for y, q, dm in r["saigraci"])
             faktori.append((max(abs(kor["saigraci"]), 0.051), f"{imena} {znak(kor['saigraci'])}"))
         raz = r["ocekivana_razlika"] or 0
@@ -779,7 +780,7 @@ Top 10: najviše 2 predloga po igraču, bez linija označenih sa ⚠.</p>
 <p class="napomena">Model: učinak po minutu i minuti iz poslednjih 5 utakmica (prošla sezona se ne koristi),
 šta protivnik dozvoljava toj poziciji (samo asistencije i trojke: za poene i skokove se pokazalo kao šum),
 kod kuće/u gostima, odsutni saigrači iz tabele
-povreda i očekivana razlika u poenima (starteri sede kad je meč rešen). Sve je provereno na ranijim utakmicama.
+povreda, saigrači koji se vraćaju posle izostanka (uzimaju minute onima koji su ih menjali) i očekivana razlika u poenima (starteri sede kad je meč rešen). Sve je provereno na ranijim utakmicama.
 ⚠ stoji kod linija koje su daleko od proseka: tu kladionica verovatno zna nešto više. Model često bira "ispod":
 igrače ne potcenjuje, pa razlog verovatno leži u tome što kladionice podižu linije jer se češće igra "preko".
 Da li to zaista donosi prednost pokazuje tabela "Kako je model prošao".</p>"""
