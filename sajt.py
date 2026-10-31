@@ -123,9 +123,16 @@ a.mec-k:hover{border-color:var(--accent);text-decoration:none}
 .mec-red .st{font-size:12.5px;color:var(--ink2);margin-top:8px}
 .mec-red .vise{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:600}
 .gr-forma{display:grid;grid-template-columns:2fr 1.2fr 0.8fr 1.4fr;gap:10px;align-items:end}
+.vise{position:relative}.vise>summary{list-style:none;cursor:pointer;font-size:15px;padding:12px;border:1px solid var(--line);
+border-radius:10px;background:var(--bg);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vise>summary::-webkit-details-marker{display:none}.vise.off>summary{opacity:.5;pointer-events:none}
+.vise-lista{position:absolute;z-index:40;left:0;right:0;top:100%;margin-top:4px;background:var(--card);border:1px solid var(--line);
+border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);max-height:320px;overflow:auto;padding:6px;min-width:240px}
+.gr-forma .vise-lista label{display:flex;gap:8px;align-items:center;padding:7px 8px;font-size:14px;color:var(--ink);
+font-weight:400;margin:0;cursor:pointer;border-radius:6px}.gr-forma .vise-lista label:hover{background:var(--card2)}
 .bez-oznaka{margin:0 0 8px;font-size:13.5px;color:var(--ink2);padding:6px 10px;border-left:3px solid var(--accent);
 background:var(--accent-soft);border-radius:0 6px 6px 0}
-@media (max-width:640px){.gr-forma{grid-template-columns:1fr 1fr}.gr-forma .pretraga{grid-column:1/-1}}
+@media (max-width:640px){.gr-forma{grid-template-columns:1fr 1fr}.gr-forma .pretraga,.gr-forma>div:last-child{grid-column:1/-1}}
 .gr-forma label{display:block;font-size:12px;color:var(--ink2);font-weight:600;margin-bottom:4px}
 .gr-forma select,.gr-forma input[type=number]{width:100%;font:inherit;font-size:17px;padding:11px 12px;
 border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
@@ -646,6 +653,7 @@ JS_GRANICE = """<script>
 var P=%s,K=%s,po={};P.forEach(function(p){po[p.i]=p;p.s=norm(p.n);});
 var inp=document.getElementById('gr-pretraga'),box=document.getElementById('gr-rezultati'),
  kat=document.getElementById('gr-kat'),lin=document.getElementById('gr-lin'),bez=document.getElementById('gr-bez'),
+ bezN=document.getElementById('gr-bez-n'),bezL=document.getElementById('gr-bez-l'),izbor=[],
  izl=document.getElementById('gr-izlaz'),izabran=null,sel=-1;
 function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/đ/g,'dj');}
 function br(x,d){return (d===undefined?x.toFixed(1):x.toFixed(d)).replace('.',',');}
@@ -659,11 +667,23 @@ function prednosti(p){if(!p.a)return '';var a=p.a,li=function(l){return l.length
  return '<div class="sekcija analiza"><h2>Prednosti i mane protiv: '+a.o+'</h2><p class="napomena" style="margin:0 0 10px">'+
  (p.sl?p.sl+' · ':'')+'Njegove jake strane naspram onoga što '+a.o+' dozvoljava ili dobro brani ove sezone.</p><div class="dva">'+
  '<div><h3 class="p">Prednosti</h3><ul>'+li(a.za)+'</ul></div><div><h3 class="i">Mane</h3><ul>'+li(a.protiv)+'</ul></div></div></div>';}
+function poredjenje(bezNj,saNj,k,imena){
+ var pr=function(l,f){return l.length?l.reduce(function(s,u){return s+f(u);},0)/l.length:null;},
+  stavke=[['Minuti',function(u){return u[13];}],['Šutevi iz igre',function(u){return u[10];}],
+  ['Šutevi za tri',function(u){return u[11];}],['Slobodna bacanja',function(u){return u[12];}],['Poeni',function(u){return u[4];}]];
+ if(k!=='poeni')stavke.push([K[k].n,function(u){return vr(u,k);}]);
+ var redovi=stavke.map(function(st){var a=pr(bezNj,st[1]),b=pr(saNj,st[1]),r=(a!==null&&b!==null)?a-b:null;
+  return '<tr><td class="l">'+st[0]+'</td><td><b>'+(a===null?'–':br(a))+'</b></td><td>'+(b===null?'–':br(b))+'</td><td class="'+
+  (r===null?'':r>0?'p':r<0?'i':'')+'">'+(r===null?'–':(r>0?'+':'')+br(r))+'</td></tr>';}).join('');
+ return '<div class="sekcija skrol"><h2>Bez njih / sa njima (ova sezona)</h2><table class="tab"><thead><tr><th class="l">Po utakmici</th>'+
+  '<th>Bez: '+imena+' ('+bezNj.length+')</th><th>Ostale utakmice ('+saNj.length+')</th><th>Razlika</th></tr></thead><tbody>'+redovi+
+  '</tbody></table><p class="napomena">Mali broj utakmica = velika uloga slučaja. Ostale = utakmice u kojima je bar jedan od njih igrao.</p></div>';}
 function crtaj(){if(!izabran){izl.innerHTML='<p class="napomena">Izaberi igrača.</p>';return;}
  var p=izabran,k=kat.value,L=parseFloat(String(lin.value).replace(',','.'));
  if(isNaN(L)){izl.innerHTML='<p class="napomena">Upiši granicu (npr. 14,5).</p>';return;}
- var sg=(p.sg||[]).filter(function(s){return s[0]===bez.value;})[0],
-  g=sg?p.g.filter(function(u,i){return sg[2][i]==='0';}):p.g;
+ var sel=(p.sg||[]).filter(function(s){return izbor.indexOf(s[0])>-1;}),sg=sel.length?{1:sel.map(function(s){return s[1];}).join(', ')}:null,
+  g=sg?p.g.filter(function(u,i){return sel.every(function(s){return s[2][i]==='0';});}):p.g,
+  ostale=sg?p.g.filter(function(u,i){return g.indexOf(u)<0&&sel.every(function(s){return s[2][i]!=='-';});}):[];
  var sve=g.map(function(u){return vr(u,k);}),d=g.map(function(u){return u[2];});
  var html='<div class="gr-igrac"><h2><a href="igrac/'+p.i+'.html">'+p.n+'</a></h2><span class="napomena">'+p.t+' · '+p.p+
   ' · '+K[k].n+' · granica <b>'+br(L,1)+'</b></span></div>'+
@@ -672,17 +692,20 @@ function crtaj(){if(!izabran){izl.innerHTML='<p class="napomena">Izaberi igrača
  html+=kartica('Poslednjih 5',sve.slice(-5),L)+kartica('Poslednjih 10',sve.slice(-10),L)+kartica('Cela sezona',sve,L)+
   kartica('Kod kuće',sve.filter(function(v,i){return d[i];}),L)+kartica('U gostima',sve.filter(function(v,i){return !d[i];}),L);
  if(p.a)html+=kartica('Protiv: '+p.a.o,p.h.map(function(u){return vr(u,k);}),L,'sve sezone u bazi'+(sg?' (bez filtera)':''));
- html+='</div>'+prednosti(p)+'<h3 style="margin:18px 0 4px;font-size:15px">Poslednjih 10 utakmica'+(sg?' bez: '+sg[1]:'')+
+ html+='</div>'+(sg?poredjenje(g,ostale,k,sg[1]):'')+prednosti(p)+'<h3 style="margin:18px 0 4px;font-size:15px">Poslednjih 10 utakmica'+(sg?' bez: '+sg[1]:'')+
   '</h3><div class="gr-utakmice">'+(g.length?'':'<p class="napomena">Nema takvih utakmica.</p>')+
   g.slice(-10).reverse().map(function(u){var v=vr(u,k);return '<div class="gr-u '+(v>L?'da':'ne')+'"><b>'+v+'</b>'+
   (u[2]?'vs ':'@ ')+u[1]+'<br><span class="napomena">'+u[0]+' · '+u[3]+' min</span></div>';}).join('')+'</div>';
  izl.innerHTML=html;}
-function adresa(){history.replaceState(null,'','#'+izabran.i+'/'+kat.value+'/'+lin.value+(bez.value?'/'+bez.value:''));}
+function adresa(){history.replaceState(null,'','#'+izabran.i+'/'+kat.value+'/'+lin.value+(izbor.length?'/'+izbor.join(','):''));}
+function natpis(){var imena=(izabran.sg||[]).filter(function(s){return izbor.indexOf(s[0])>-1;}).map(function(s){return s[1];});
+ bezN.textContent=imena.length?'bez: '+imena.join(', '):'— sve utakmice —';}
 function izaberi(id,k2,L2,b2){var nov=!izabran||izabran.i!==id;izabran=po[id];if(!izabran)return;inp.value=izabran.n;box.hidden=true;
  if(k2&&K[k2])kat.value=k2;
- if(nov){bez.innerHTML='<option value="">— sve utakmice —</option>'+(izabran.sg||[]).map(function(s){
-  var n=s[2].split('').filter(function(c){return c==='0';}).length;return '<option value="'+s[0]+'">'+s[1]+' ('+n+' ut.)</option>';}).join('');
-  bez.value=b2||'';bez.disabled=!(izabran.sg||[]).length;}
+ if(nov){izbor=b2?b2.split(','):[];bezL.innerHTML=(izabran.sg||[]).map(function(s){
+  var n=s[2].split('').filter(function(c){return c==='0';}).length;return '<label><input type="checkbox" value="'+s[0]+'"'+
+  (izbor.indexOf(s[0])>-1?' checked':'')+'> '+s[1]+' <span class="napomena">(nije igrao '+n+')</span></label>';}).join('');
+  bez.classList.toggle('off',!(izabran.sg||[]).length);bez.open=false;natpis();}
  if(L2!==undefined&&L2!=='')lin.value=L2;else{var s=izabran.g.map(function(u){return vr(u,kat.value);});
   lin.value=(Math.floor(s.reduce(function(a,b){return a+b;},0)/s.length)+0.5).toFixed(1);}
  adresa();crtaj();}
@@ -699,7 +722,9 @@ box.addEventListener('click',function(ev){var a=ev.target.closest('a[data-id]');
 document.addEventListener('click',function(ev){if(!ev.target.closest('.pretraga'))box.hidden=true;});
 kat.addEventListener('change',function(){if(izabran)izaberi(izabran.i,kat.value);});
 lin.addEventListener('input',function(){if(izabran){adresa();crtaj();}});
-bez.addEventListener('change',function(){if(izabran){adresa();crtaj();}});
+bezL.addEventListener('change',function(){izbor=[].slice.call(bezL.querySelectorAll('input:checked')).map(function(x){return x.value;});
+ natpis();if(izabran){adresa();crtaj();}});
+document.addEventListener('click',function(ev){if(!ev.target.closest('#gr-bez'))bez.open=false;});
 var h=decodeURIComponent(location.hash.slice(1)).split('/');if(h[0])izaberi(h[0],h[1],h[2],h[3]);else crtaj();
 })();</script>"""
 
@@ -716,7 +741,9 @@ def stranica_granice(k, lista):
             mec_tima[t] = (m, kod_kuce)
     red = lambda u, oznaka: [oznaka, u["protivnik"], int(u["domacin"]), round(u["minuti"] or 0),
                              u["poeni"] or 0, u["skokovi_ukupno"] or 0, u["asistencije"] or 0,
-                             u["sut3_pogodjeno"] or 0, u["ukradene"] or 0, u["blokade"] or 0]
+                             u["sut3_pogodjeno"] or 0, u["ukradene"] or 0, u["blokade"] or 0,
+                             (u["sut2_pokusano"] or 0) + (u["sut3_pokusano"] or 0), u["sut3_pokusano"] or 0,
+                             u["slobodna_pokusano"] or 0, round(u["minuti"] or 0, 1)]
     datum = lambda u, f: datetime.strptime(u["datum"][:10], "%Y-%m-%d").strftime(f)
     # Za filter "bez saigrača": ko je igrao u kojoj utakmici i koliko minuta igra za koji tim (ova sezona)
     igrali, za_tim = set(), defaultdict(list)
@@ -764,7 +791,8 @@ def stranica_granice(k, lista):
 placeholder="Unesi ime igrača..." autocomplete="off"><div class="rezultati" id="gr-rezultati" hidden></div></div>
 <div><label for="gr-kat">Kategorija</label><select id="gr-kat">{opcije}</select></div>
 <div><label for="gr-lin">Granica</label><input id="gr-lin" type="number" step="0.5" min="0" inputmode="decimal"></div>
-<div><label for="gr-bez">Bez saigrača</label><select id="gr-bez" disabled><option value="">— sve utakmice —</option></select></div>
+<div><label>Bez saigrača (može više)</label><details class="vise off" id="gr-bez"><summary id="gr-bez-n">— sve utakmice —</summary>
+<div class="vise-lista" id="gr-bez-l"></div></details></div>
 </div></div>
 <div id="gr-izlaz"></div>
 <p class="napomena" style="margin-top:18px">"Preko" = više od granice (npr. preko 14,5 = 15 ili više).
